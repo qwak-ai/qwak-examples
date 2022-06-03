@@ -1,4 +1,4 @@
-![Qwak](https://github.com/qwak-ai/qwak-examples/raw/main/_static/qwak-logo.png)
+![Qwak](https://github.com/qwak-ai/qwak-examples/raw/main/_static/qwak_logo.png)
 
 # Qwak Platform Examples
 
