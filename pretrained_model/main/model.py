@@ -5,6 +5,8 @@ from catboost import CatBoostClassifier, Pool
 from qwak.model.base import QwakModelInterface
 from qwak.model.schema import ModelSchema, InferenceOutput, RequestInput
 
+RUNNING_FILE_ABSOLUTE_PATH = os.path.dirname(os.path.abspath(__file__))
+
 
 class ChurnPrediction(QwakModelInterface):
 
@@ -21,7 +23,7 @@ class ChurnPrediction(QwakModelInterface):
         qwak.log_param(self.params)
 
     def build(self):
-        self.catboost.load_model('./model.cbm')
+        self.catboost.load_model(f'{RUNNING_FILE_ABSOLUTE_PATH}/model.cbm')
 
     def schema(self):
         return ModelSchema(

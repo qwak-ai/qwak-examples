@@ -8,6 +8,8 @@ from sklearn.metrics import accuracy_score, f1_score
 from sklearn.model_selection import train_test_split
 from qwak.model.schema import ModelSchema, InferenceOutput, RequestInput
 
+RUNNING_FILE_ABSOLUTE_PATH = os.path.dirname(os.path.abspath(__file__))
+
 
 class ChurnPrediction(QwakModelInterface):
 
@@ -24,7 +26,7 @@ class ChurnPrediction(QwakModelInterface):
         qwak.log_param(self.params)
 
     def build(self):
-        df = pd.read_csv("./data.csv")
+        df = pd.read_csv(f"{RUNNING_FILE_ABSOLUTE_PATH}/data.csv")
 
         y = df['churn']
         X = df.drop(['churn', 'User_Id'], axis=1)
