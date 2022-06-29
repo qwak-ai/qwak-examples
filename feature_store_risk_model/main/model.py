@@ -6,10 +6,6 @@ from qwak.model import QwakModelInterface
 from sklearn.model_selection import train_test_split
 from catboost import CatBoostRegressor, Pool, cv
 import numpy as np
-import os
-
-os.environ['QWAK_API_KEY'] = '52649023ab43f2fbb67d4623f51b3f05@-5056^}#L4xe12f953Lup7CXu0113pK^'
-
 
 class CreditRisk(QwakModelInterface):
 
