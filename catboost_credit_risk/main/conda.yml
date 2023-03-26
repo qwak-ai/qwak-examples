@@ -1,0 +1,12 @@
+name: CreditRiskCatBoostModel
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pip=22.2.2
+  - pandas=1.1.5
+  - scikit-learn=0.24.1
+  - catboost=0.26.1
+  - pip:
+      - --extra-index-url https://qwak:A3RX55aNSpE8dCV@qwak.jfrog.io/artifactory/api/pypi/qwak-pypi/simple qwak-sdk==0.9.141
