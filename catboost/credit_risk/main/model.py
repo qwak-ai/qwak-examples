@@ -143,7 +143,3 @@ class CatBoostCreditRiskModel(QwakModelInterface):
             self.model.predict_proba(df)[:, 1],
             columns=['Default_Probability']
         )
-    
-
-if __name__ == '__main__':
-    
