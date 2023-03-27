@@ -1,5 +1,9 @@
 from qwak.inference.clients import RealTimeClient
 
+# Please update MODEL_ID with your deployed model id
+MODEL_ID = 'catboost'
+
+
 if __name__ == '__main__':
   feature_vector = [
     {
