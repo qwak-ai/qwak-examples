@@ -1,16 +1,24 @@
 {
     "catboost": {
-        "path": "catboost_poetry/main",
-        "files": [
-            "__init__.py",
-            "conda.yml",
-            "model.py"        ]
+        "source": {
+            "folder": "catboost_poetry/main",
+            "files": [
+                "__init__.py",
+                "conda.yml",
+                "model.py"       
+            ]
+        }
+        
     },
     "transformers": {
-        "folder": "transformers_conda/main",
-        "files": [
-            "__init__.py",
-            "conda.yml",
-            "model.py"        ]
+        "source": {
+            "folder": "transformers_conda/main",
+            "files": [
+                "__init__.py",
+                "conda.yml",
+                "model.py"        
+            ]
+        },
+        "build_parameters": "--memory 8Gi"
     }
 }
