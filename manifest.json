@@ -4,13 +4,15 @@
             "folder": "catboost_poetry/main",
             "files": [
                 "__init__.py",
-                "conda.yml",
+                "pyproject.toml",
                 "model.py"       
             ]
+        },
+        "deploy": {
+            "pods": "1"
         }
-        
     },
-    "transformers": {
+    "huggingface": {
         "source": {
             "folder": "transformers_conda/main",
             "files": [
@@ -19,6 +21,12 @@
                 "model.py"        
             ]
         },
-        "build_parameters": "--memory 8Gi"
+        "build": {
+            "memory": "8192"
+        },
+        "deploy": {
+            "pods": "1",
+            "memory": "4096"
+        }
     }
 }
