@@ -1,0 +1,32 @@
+{
+    "catboost": {
+        "source": {
+            "folder": "catboost_poetry/main",
+            "files": [
+                "__init__.py",
+                "pyproject.toml",
+                "model.py"       
+            ]
+        },
+        "deploy": {
+            "pods": "1"
+        }
+    },
+    "huggingface": {
+        "source": {
+            "folder": "transformers_conda/main",
+            "files": [
+                "__init__.py",
+                "conda.yml",
+                "model.py"        
+            ]
+        },
+        "build": {
+            "memory": "8192"
+        },
+        "deploy": {
+            "pods": "1",
+            "memory": "4096"
+        }
+    }
+}
