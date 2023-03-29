@@ -135,8 +135,7 @@ class CatBoostCreditRiskModel(QwakModelInterface):
     @qwak.api()
     def predict(self, df: pd.DataFrame) -> pd.DataFrame:
         """
-        The predict(df) method is the actual inference method.
-        This method is called when the model received live inference requests
+        The predict(df) method is the actual inference method when the model receives inference requests.
         """
         df = df.drop(['UserId'], axis=1)
         return pd.DataFrame(

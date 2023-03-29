@@ -92,10 +92,3 @@ class HuggingFaceTokenizerModel(QwakModelInterface):
             response.logits.softmax(dim=1).tolist()
         )
 
-if __name__ == '__main__':
-    model = HuggingFaceTokenizerModel()
-    feature_vector = pd.DataFrame([{
-          'text': 'The best place ever!'
-    }]).to_json()
-
-    model.run_local(feature_vector)

@@ -1,5 +1,4 @@
 import os
-import numpy as np
 import pandas as pd
 import qwak
 import xgboost as xgb
@@ -86,7 +85,9 @@ class XGBoostChurnPredictionModel(QwakModelInterface):
 
     @qwak.analytics()
     def predict(self, df):
-
+        """
+        The predict(df) method is the actual inference method when the model receives inference requests.
+        """
         df = df.drop(['User_Id', 'State'], axis=1)
         predictions = self.model.predict(df)
 
@@ -94,31 +95,3 @@ class XGBoostChurnPredictionModel(QwakModelInterface):
             predictions,
             columns=['Churn_Probability']
         )
-
-
-
-if __name__ == '__main__':
-    model = XGBoostChurnPredictionModel()
-    feature_vector = [
-    {
-      "User_Id" : "acbd1234",
-      "State" : "CA",
-      "Account_Length" : 2000,
-      "Area_Code" : 20165,
-      "Intl_Plan" : 10,
-      "VMail_Plan" : 10,
-      "VMail_Message" : 10,
-      "Day_Mins" : 54.2,
-      "Day_Calls" : 10,
-      "Eve_Mins" : 25.2,
-      "Eve_Calls" : 10,
-      "Night_Mins" : 5.3,
-      "Night_Calls" : 10,
-      "Intl_Mins" : 9.6,
-      "Intl_Calls" : 12,
-      "CustServ_Calls" : 5,
-      "Agitation_Level" : 5,
-    }]
-    model.run_local(
-        pd.DataFrame(feature_vector).to_json()
-    )
