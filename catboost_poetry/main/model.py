@@ -13,13 +13,13 @@ RUNNING_FILE_ABSOLUTE_PATH = os.path.dirname(os.path.abspath(__file__))
 
 class CatBoostCreditRiskModel(QwakModelInterface):
     """ 
-    The model inherits QwakModelInterface to support the build, deploy
-    and all other functionalities on Qwak.
+    The model inherits QwakModelInterface to support the build, predict, schema
+    and other functionalities on Qwak.
     """
 
     def __init__(self):
         """
-        Initializes the model parameters, and creates a CatBoost classifier.
+        Initializes the model parameters and creates a CatBoost classifier.
         """
 
         # Set default model parameters
@@ -135,8 +135,7 @@ class CatBoostCreditRiskModel(QwakModelInterface):
     @qwak.api()
     def predict(self, df: pd.DataFrame) -> pd.DataFrame:
         """
-        The predict(df) method is the actual inference method.
-        This method is called when the model received live inference requests
+        The predict(df) method is the actual inference method when the model receives inference requests.
         """
         df = df.drop(['UserId'], axis=1)
         return pd.DataFrame(
