@@ -51,8 +51,9 @@ class XGBoostChurnPredictionModel(QwakModelInterface):
             eval_set=[(X_validation, y_validation)]
         )
 
+        # Log metrics into Qwak
         accuracy = self.model.score(X_validation, y_validation)
-        print("Accuracy:", accuracy)
+        qwak.log_metric({"val_accuracy" : accuracy})
 
     def schema(self):
         """

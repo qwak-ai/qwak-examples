@@ -4,7 +4,7 @@ import numpy as np
 import qwak
 import evaluate
 from qwak.model.base import QwakModelInterface
-from datasets import load_dataset,load_metric
+from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from transformers import TrainingArguments, Trainer
 
@@ -46,8 +46,6 @@ class HuggingFaceTokenizerModel(QwakModelInterface):
 
         # Defining parameters for the training process
         metric = evaluate.load('accuracy')
-        # metric = load_metric('accuracy')
-
 
         # A helper method to evaluate the model during training
         def compute_metrics(eval_pred):
@@ -72,6 +70,16 @@ class HuggingFaceTokenizerModel(QwakModelInterface):
 
         print('Training the model')
         trainer.train()
+
+        # Evaluate on the validation dataset
+        eval_output = trainer.evaluate()
+
+        # Extract the validation accuracy from the evaluation metrics
+        eval_acc = eval_output['eval_accuracy']
+
+        # Log metrics into Qwak
+        qwak.log_metric({"val_accuracy" : eval_acc})
+
     
     @qwak.api()
     def predict(self, df: pd.DataFrame) -> pd.DataFrame:
@@ -79,7 +87,6 @@ class HuggingFaceTokenizerModel(QwakModelInterface):
         The predict() method takes a pandas DataFrame object (df) as input and returns 
         another pandas DataFrame object with the prediction output.
         """
-
         input_data = list(df['text'].values)
         
         # Tokenize the input data using a pre-trained tokenizer
@@ -91,4 +98,3 @@ class HuggingFaceTokenizerModel(QwakModelInterface):
         return pd.DataFrame(
             response.logits.softmax(dim=1).tolist()
         )
-
