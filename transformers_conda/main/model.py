@@ -8,15 +8,12 @@ from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from transformers import TrainingArguments, Trainer
 
-RUNNING_FILE_ABSOLUTE_PATH = os.path.dirname(os.path.abspath(__file__))
 MODEL_ID = "distilbert-base-uncased"        
+RUNNING_FILE_ABSOLUTE_PATH = os.path.dirname(os.path.abspath(__file__))
 
 class HuggingFaceTokenizerModel(QwakModelInterface):
 
     def __init__(self):
-        """
-        Initializes model parameters and creates a HuggingFace Tokenizer classifier.
-        """
         
         self.tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
         self.model = AutoModelForSequenceClassification.from_pretrained(MODEL_ID, num_labels=2)
@@ -24,13 +21,14 @@ class HuggingFaceTokenizerModel(QwakModelInterface):
     def build(self):
         """
         The build() method is called once during the remote build process on Qwak.
-        We use this method to train a Tokenizer model on a Yelp dataset to detect text polarity
+        We use it to train the model on the Yelp dataset
         """
 
         def tokenize(examples):
-            return self.tokenizer(examples['text'], padding='max_length', truncation=True)
+            return self.tokenizer(examples['text'],
+                                  padding='max_length',
+                                  truncation=True)
 
-        # Load the Yelp Polarity database from HuggingFace for training
         dataset = load_dataset('yelp_polarity')
 
         print('Tokenizing dataset...')
@@ -40,7 +38,7 @@ class HuggingFaceTokenizerModel(QwakModelInterface):
         train_dataset = tokenized_dataset['train'].shuffle(seed=42).select(range(50))
         eval_dataset = tokenized_dataset['test'].shuffle(seed=42).select(range(50))
 
-        # We don't need the tokenized dataset so we can let the garbage collector free the memory.
+        # We don't need the tokenized dataset
         del tokenized_dataset
         del dataset
 
@@ -84,15 +82,17 @@ class HuggingFaceTokenizerModel(QwakModelInterface):
     @qwak.api()
     def predict(self, df: pd.DataFrame) -> pd.DataFrame:
         """
-        The predict() method takes a pandas DataFrame object (df) as input and returns 
-        another pandas DataFrame object with the prediction output.
+        The predict() method takes a pandas DataFrame (df) as input
+        and returns a pandas DataFrame with the prediction output.
         """
         input_data = list(df['text'].values)
         
         # Tokenize the input data using a pre-trained tokenizer
-        tokenized = self.tokenizer(input_data, padding='max_length', truncation=True, return_tensors='pt')
+        tokenized = self.tokenizer(input_data,
+                                   padding='max_length',
+                                   truncation=True,
+                                   return_tensors='pt')
         
-        # Pass the tokenized data to our trained model
         response = self.model(**tokenized)
 
         return pd.DataFrame(
