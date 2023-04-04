@@ -4,22 +4,13 @@ import qwak
 import xgboost as xgb
 from qwak.model.base import QwakModelInterface
 from qwak.model.schema import ExplicitFeature, ModelSchema, Prediction
-from sklearn.metrics import accuracy_score, f1_score
 from sklearn.model_selection import train_test_split
 
 RUNNING_FILE_ABSOLUTE_PATH = os.path.dirname(os.path.abspath(__file__))
 
-
 class XGBoostChurnPredictionModel(QwakModelInterface):
-    """ 
-    The model inherits QwakModelInterface to support the build, predict, schema
-    and other functionalities on Qwak.
-    """
 
     def __init__(self):
-        """
-        Initializes the model parameters and creates a XGBoost classifier.
-        """
                 
         self.params = {
             'n_estimators': int(os.getenv('n_estimators', 200)),
@@ -39,10 +30,13 @@ class XGBoostChurnPredictionModel(QwakModelInterface):
 
         # Creating the X and y variables
         y = df['churn']
-        X = df.drop(['churn', 'User_Id', '__index_level_0__', 'event date', 'Phone', 'State'], axis=1)
+        X = df.drop(['churn', 'User_Id', '__index_level_0__',
+                     'event date', 'Phone', 'State'], axis=1)
 
         # Spliting X and y into train and test version
-        X_train, X_validation, y_train, y_validation = train_test_split(X, y, test_size=0.25, random_state=42)
+        X_train, X_validation, y_train, y_validation = train_test_split(
+            X, y, test_size=0.25, random_state=42
+        )
 
         # Training our CatBoost model
         self.model.fit(
@@ -57,8 +51,8 @@ class XGBoostChurnPredictionModel(QwakModelInterface):
 
     def schema(self):
         """
-        schema() define the model input structure, and is used to enforce the correct structure 
-        of incoming prediction requests.
+        schema() define the model input structure.
+        Use it to enforce the structure of incoming requests.
         """
         model_schema = ModelSchema(
             features=[
@@ -87,7 +81,7 @@ class XGBoostChurnPredictionModel(QwakModelInterface):
     @qwak.analytics()
     def predict(self, df):
         """
-        The predict(df) method is the actual inference method when the model receives inference requests.
+        The predict(df) method is the actual inference method.
         """
         df = df.drop(['User_Id', 'State'], axis=1)
         predictions = self.model.predict(df)
