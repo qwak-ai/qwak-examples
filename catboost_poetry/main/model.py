@@ -7,8 +7,6 @@ from qwak.model.base import QwakModelInterface
 from qwak.model.schema import ExplicitFeature, ModelSchema, Prediction
 from sklearn.model_selection import train_test_split
 
-RUNNING_FILE_ABSOLUTE_PATH = os.path.dirname(os.path.abspath(__file__))
-
 class CatBoostCreditRiskModel(QwakModelInterface):
 
     def __init__(self):
@@ -36,7 +34,8 @@ class CatBoostCreditRiskModel(QwakModelInterface):
         """
 
         # Load the credit risk dataset
-        df_credit = pd.read_csv(f'{RUNNING_FILE_ABSOLUTE_PATH}/data.csv', index_col=0)
+        file_absolute_path = os.path.dirname(os.path.abspath(__file__))
+        df_credit = pd.read_csv(f'{file_absolute_path}/data.csv', index_col=0)
         
         # Create a categorical variable to handle the "Age Category"
         interval = (18, 25, 35, 60, 120)
