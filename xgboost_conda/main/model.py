@@ -6,8 +6,6 @@ from qwak.model.base import QwakModelInterface
 from qwak.model.schema import ExplicitFeature, ModelSchema, Prediction
 from sklearn.model_selection import train_test_split
 
-RUNNING_FILE_ABSOLUTE_PATH = os.path.dirname(os.path.abspath(__file__))
-
 class XGBoostChurnPredictionModel(QwakModelInterface):
 
     def __init__(self):
@@ -26,7 +24,8 @@ class XGBoostChurnPredictionModel(QwakModelInterface):
         qwak.log_param(self.params)
 
     def build(self):
-        df = pd.read_csv(f"{RUNNING_FILE_ABSOLUTE_PATH}/data.csv")
+        file_absolute_path = os.path.dirname(os.path.abspath(__file__))
+        df = pd.read_csv(f"{file_absolute_path}/data.csv")
 
         # Creating the X and y variables
         y = df['churn']

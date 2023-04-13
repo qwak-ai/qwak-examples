@@ -8,15 +8,12 @@ from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from transformers import TrainingArguments, Trainer
 
-MODEL_ID = "distilbert-base-uncased"        
-RUNNING_FILE_ABSOLUTE_PATH = os.path.dirname(os.path.abspath(__file__))
-
 class HuggingFaceTokenizerModel(QwakModelInterface):
 
     def __init__(self):
-        
-        self.tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
-        self.model = AutoModelForSequenceClassification.from_pretrained(MODEL_ID, num_labels=2)
+        model_id = "distilbert-base-uncased"                
+        self.tokenizer = AutoTokenizer.from_pretrained(model_id)
+        self.model = AutoModelForSequenceClassification.from_pretrained(model_id, num_labels=2)
 
     def build(self):
         """
@@ -66,7 +63,7 @@ class HuggingFaceTokenizerModel(QwakModelInterface):
             compute_metrics=compute_metrics
         )
 
-        print('Training the model')
+        print('Training the model...')
         trainer.train()
 
         # Evaluate on the validation dataset
