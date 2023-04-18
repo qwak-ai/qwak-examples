@@ -2,11 +2,11 @@ import os
 import pandas as pd
 import qwak
 import xgboost as xgb
-from qwak.model.base import QwakModelInterface
+from qwak.model.base import QwakModel
 from qwak.model.schema import ExplicitFeature, ModelSchema, Prediction
 from sklearn.model_selection import train_test_split
 
-class XGBoostChurnPredictionModel(QwakModelInterface):
+class XGBoostChurnPredictionModel(QwakModel):
 
     def __init__(self):
                 

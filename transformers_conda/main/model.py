@@ -3,12 +3,12 @@ import pandas as pd
 import numpy as np
 import qwak
 import evaluate
-from qwak.model.base import QwakModelInterface
+from qwak.model.base import QwakModel
 from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from transformers import TrainingArguments, Trainer
 
-class HuggingFaceTokenizerModel(QwakModelInterface):
+class HuggingFaceTokenizerModel(QwakModel):
 
     def __init__(self):
         model_id = "distilbert-base-uncased"                
