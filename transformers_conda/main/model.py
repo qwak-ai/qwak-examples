@@ -74,7 +74,6 @@ class HuggingFaceTokenizerModel(QwakModel):
 
         # Log metrics into Qwak
         qwak.log_metric({"val_accuracy" : eval_acc})
-
     
     @qwak.api()
     def predict(self, df: pd.DataFrame) -> pd.DataFrame:

@@ -77,7 +77,7 @@ class XGBoostChurnPredictionModel(QwakModel):
             ])
         return model_schema
 
-    @qwak.analytics()
+    @qwak.api()
     def predict(self, df):
         """
         The predict(df) method is the actual inference method.
