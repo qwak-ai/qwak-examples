@@ -13,5 +13,3 @@ dependencies:
   - pytorch
   - huggingface_hub
   - evaluate
-  - pip:
-      - --extra-index-url https://qwak:A3RX55aNSpE8dCV@qwak.jfrog.io/artifactory/api/pypi/qwak-pypi/simple qwak-sdk==0.9.141
