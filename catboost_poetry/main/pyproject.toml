@@ -10,13 +10,6 @@ python = ">=3.8,<3.10"
 pandas = "^1.5.3"
 scikit-learn = "^1.2.2"
 catboost = "^1.1.1"
-qwak-sdk = "^0.9.138"
-
-[[tool.poetry.source]]
-name = "qwak"
-url = "https://qwak:A3RX55aNSpE8dCV@qwak.jfrog.io/artifactory/api/pypi/qwak-pypi/simple"
-default = false
-secondary = true
 
 [build-system]
 requires = ["poetry-core"]
