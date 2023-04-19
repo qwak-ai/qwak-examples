@@ -3,11 +3,11 @@ import qwak
 import numpy as np
 import pandas as pd
 import catboost
-from qwak.model.base import QwakModelInterface
+from qwak.model.base import QwakModel
 from qwak.model.schema import ExplicitFeature, ModelSchema, Prediction
 from sklearn.model_selection import train_test_split
 
-class CatBoostCreditRiskModel(QwakModelInterface):
+class CatBoostCreditRiskModel(QwakModel):
 
     def __init__(self):
         

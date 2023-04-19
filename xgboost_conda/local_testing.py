@@ -1,4 +1,4 @@
-from qwak.inference.clients import RealTimeClient
+from qwak_inference import RealTimeClient
 
 # Please update MODEL_ID with your model id on Qwak
 QWAK_MODEL_ID = 'your-model-id'
