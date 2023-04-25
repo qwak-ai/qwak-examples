@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import catboost
 from qwak.model.base import QwakModel
-from qwak.model.schema import ExplicitFeature, ModelSchema, Prediction
+from qwak.model.schema import ExplicitFeature, ModelSchema, InferenceOutput
 from sklearn.model_selection import train_test_split
 
 class CatBoostCreditRiskModel(QwakModel):
@@ -104,7 +104,7 @@ class CatBoostCreditRiskModel(QwakModel):
         the correct structure of incoming prediction requests.
         """
         return ModelSchema(
-            features=[
+            inputs=[
                 ExplicitFeature(name='UserId', type=str),
                 ExplicitFeature(name='Age', type=int),
                 ExplicitFeature(name='Sex', type=str),
@@ -117,8 +117,8 @@ class CatBoostCreditRiskModel(QwakModel):
                 ExplicitFeature(name='Purpose', type=str),
                 ExplicitFeature(name='Age_cat', type=str)
             ],
-            predictions=[
-                Prediction(name='Default_Probability', type=float)
+            outputs=[
+                InferenceOutput(name='Default_Probability', type=float)
             ])
 
     @qwak.api()
