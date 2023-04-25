@@ -3,7 +3,7 @@ import pandas as pd
 import qwak
 import xgboost as xgb
 from qwak.model.base import QwakModel
-from qwak.model.schema import ExplicitFeature, ModelSchema, Prediction
+from qwak.model.schema import ExplicitFeature, ModelSchema, InferenceOutput
 from sklearn.model_selection import train_test_split
 
 class XGBoostChurnPredictionModel(QwakModel):
@@ -54,7 +54,7 @@ class XGBoostChurnPredictionModel(QwakModel):
         Use it to enforce the structure of incoming requests.
         """
         model_schema = ModelSchema(
-            features=[
+            inputs=[
                 ExplicitFeature(name="User_Id", type=str),
                 ExplicitFeature(name="State", type=str),
                 ExplicitFeature(name="Account_Length", type=int),
@@ -72,8 +72,8 @@ class XGBoostChurnPredictionModel(QwakModel):
                 ExplicitFeature(name="CustServ_Calls", type=int),
                 ExplicitFeature(name="Agitation_Level", type=int),
             ],
-            predictions=[
-                Prediction(name="Churn_Probability", type=float)
+            outputs=[
+                InferenceOutput(name="Churn_Probability", type=float)
             ])
         return model_schema
 
