@@ -2,14 +2,9 @@ channels:
   - defaults
   - conda-forge
   - huggingface
-  - pytorch
 dependencies:
   - python=3.9
   - pip
-  - pandas=1.1.5
   - transformers
-  - scikit-learn
   - datasets
-  - pytorch
-  - huggingface_hub
   - evaluate
