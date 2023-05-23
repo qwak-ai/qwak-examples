@@ -1,7 +1,8 @@
 from qwak_inference import RealTimeClient
 
 # Please update MODEL_ID with your model id on Qwak
-QWAK_MODEL_ID = 'your-model-id'
+# QWAK_MODEL_ID = 'huggingface_example'
+QWAK_MODEL_ID = 'huggingface_with_schema'
 
 if __name__ == '__main__':
   feature_vector = [{
