@@ -4,6 +4,7 @@ import numpy as np
 import qwak
 import evaluate
 from qwak.model.base import QwakModel
+from qwak.model.schema import ExplicitFeature, ModelSchema
 from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from transformers import TrainingArguments, Trainer
@@ -74,6 +75,18 @@ class HuggingFaceTokenizerModel(QwakModel):
 
         # Log metrics into Qwak
         qwak.log_metric({"val_accuracy" : eval_acc})
+
+
+    def schema(self):
+        """
+        schema() define the model input structure.
+        Use it to enforce the structure of incoming requests.
+        """
+        model_schema = ModelSchema(
+            inputs=[
+                ExplicitFeature(name="text", type=str),
+            ])
+        return model_schema
     
     @qwak.api()
     def predict(self, df: pd.DataFrame) -> pd.DataFrame:
