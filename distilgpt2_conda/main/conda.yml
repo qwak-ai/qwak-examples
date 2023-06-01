@@ -1,0 +1,15 @@
+channels:
+  - defaults
+  - conda-forge
+  - huggingface
+  - xformers
+dependencies:
+  - python=3.8
+  - pip
+  - pytorch
+  - transformers
+  - datasets
+  - evaluate
+  - accelerate
+  - einops
+  - xformers
