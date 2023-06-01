@@ -6,20 +6,20 @@ from qwak.model.base import QwakModel
 from qwak.model.schema import ExplicitFeature, ModelSchema, InferenceOutput
 from sklearn.model_selection import train_test_split
 
+
 class XGBoostChurnPredictionModel(QwakModel):
 
     def __init__(self):
-                
         self.params = {
             'n_estimators': int(os.getenv('n_estimators', 200)),
             'learning_rate': float(os.getenv('learning_rate', 0.06)),
             'objective': 'binary:logistic',
             'use_label_encoder': False
         }
-        
+
         # Create a XGBoost classifier with the specified parameters
         self.model = xgb.XGBClassifier(**self.params)
-        
+
         # Log model parameters to Qwak for tracking purposes
         qwak.log_param(self.params)
 
@@ -46,7 +46,7 @@ class XGBoostChurnPredictionModel(QwakModel):
 
         # Log metrics into Qwak
         accuracy = self.model.score(X_validation, y_validation)
-        qwak.log_metric({"val_accuracy" : accuracy})
+        qwak.log_metric({"val_accuracy": accuracy})
 
     def schema(self):
         """

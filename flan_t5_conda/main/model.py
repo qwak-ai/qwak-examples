@@ -40,4 +40,3 @@ class FLANT5BaseModel(QwakModel):
                 "generated_text": decoded_outputs
             }
         ])
-

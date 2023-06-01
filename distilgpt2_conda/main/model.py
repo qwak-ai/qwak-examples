@@ -37,7 +37,6 @@ class DistilGPT2Model(QwakModel):
 
     @qwak.api()
     def predict(self, df):
-
         # Taking the prompt values from the input dataframe
         prompts = list(df['prompt'].values)
 
@@ -79,4 +78,3 @@ class DistilGPT2Model(QwakModel):
                 "generated_text": decoded_outputs
             }
         ])
-

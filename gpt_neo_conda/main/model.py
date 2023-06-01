@@ -41,4 +41,3 @@ class GPTNeoModel(QwakModel):
                 "generated_text": decoded_outputs
             }
         ])
-

@@ -8,10 +8,11 @@ from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from transformers import TrainingArguments, Trainer
 
+
 class HuggingFaceTokenizerModel(QwakModel):
 
     def __init__(self):
-        model_id = "distilbert-base-uncased"                
+        model_id = "distilbert-base-uncased"
         self.tokenizer = AutoTokenizer.from_pretrained(model_id)
         self.model = AutoModelForSequenceClassification.from_pretrained(model_id, num_labels=2)
 
@@ -73,8 +74,7 @@ class HuggingFaceTokenizerModel(QwakModel):
         eval_acc = eval_output['eval_accuracy']
 
         # Log metrics into Qwak
-        qwak.log_metric({"val_accuracy" : eval_acc})
-
+        qwak.log_metric({"val_accuracy": eval_acc})
 
     def schema(self):
         """
@@ -86,7 +86,7 @@ class HuggingFaceTokenizerModel(QwakModel):
                 ExplicitFeature(name="text", type=str),
             ])
         return model_schema
-    
+
     @qwak.api()
     def predict(self, df: pd.DataFrame) -> pd.DataFrame:
         """
@@ -94,13 +94,13 @@ class HuggingFaceTokenizerModel(QwakModel):
         and returns a pandas DataFrame with the prediction output.
         """
         input_data = list(df['text'].values)
-        
+
         # Tokenize the input data using a pre-trained tokenizer
         tokenized = self.tokenizer(input_data,
                                    padding='max_length',
                                    truncation=True,
                                    return_tensors='pt')
-        
+
         response = self.model(**tokenized)
 
         return pd.DataFrame(

@@ -7,15 +7,15 @@ from qwak.model.base import QwakModel
 from qwak.model.schema import ExplicitFeature, ModelSchema, InferenceOutput
 from sklearn.model_selection import train_test_split
 
+
 class CatBoostCreditRiskModel(QwakModel):
 
     def __init__(self):
-        
         self.params = {
             'iterations': int(os.getenv('iterations', 1000)),
             'learning_rate': float(os.getenv('learning_rate', 0.1)),
             'random_seed': int(os.getenv('random_seed', 7)),
-            'loss_function' : os.getenv('loss_fn', 'Logloss'),
+            'loss_function': os.getenv('loss_fn', 'Logloss'),
             'eval_metric': 'Accuracy',
             'logging_level': 'Silent',
             'use_best_model': True
@@ -36,7 +36,7 @@ class CatBoostCreditRiskModel(QwakModel):
         # Load the credit risk dataset
         file_absolute_path = os.path.dirname(os.path.abspath(__file__))
         df_credit = pd.read_csv(f'{file_absolute_path}/data.csv', index_col=0)
-        
+
         # Create a categorical variable to handle the "Age Category"
         interval = (18, 25, 35, 60, 120)
         categories = ['Student', 'Young', 'Adult', 'Senior']
@@ -45,7 +45,7 @@ class CatBoostCreditRiskModel(QwakModel):
             interval,
             labels=categories
         ).astype(object)
-        
+
         # Fill in the missing values in the fields below
         df_credit['Saving accounts'] = df_credit['Saving accounts'].fillna('no_inf')
         df_credit['Checking account'] = df_credit['Checking account'].fillna('no_inf')
@@ -96,7 +96,7 @@ class CatBoostCreditRiskModel(QwakModel):
 
         max_accuracy = np.max(cv_data["test-Accuracy-mean"])
         print(f'Best cross validation accuracy:{max_accuracy}')
-        qwak.log_metric({"val_accuracy" : max_accuracy})
+        qwak.log_metric({"val_accuracy": max_accuracy})
 
     def schema(self):
         """

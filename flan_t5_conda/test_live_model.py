@@ -10,5 +10,3 @@ if __name__ == '__main__':
     client = RealTimeClient(model_id=QWAK_MODEL_ID)
     response = client.predict(input_)
     print(response)
-
-

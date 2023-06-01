@@ -20,5 +20,6 @@ def test_realtime_api(real_time_client):
         }
     ]
 
-    survived_probability: pd.DataFrame = real_time_client.predict(feature_vector, output_format=InferenceOutputFormat.PANDAS)
+    survived_probability: pd.DataFrame = real_time_client.predict(feature_vector,
+                                                                  output_format=InferenceOutputFormat.PANDAS)
     assert survived_probability["Survived_Probability"].values[0] > 0

@@ -30,13 +30,13 @@ class CodeGenModel(QwakModel):
     @qwak.api()
     def predict(self, df):
         input_text = list(df['prompt'].values)
-        input_ids = self.tokenizer(input_text, return_tensors="pt").input_ids
+        input_ids = self.tokenizer(input_text, return_tensors="pt")
 
         params = {
             "pad_token_id": self.tokenizer.eos_token_id,
             "max_new_tokens": self.max_new_tokens
         }
-        outputs = self.model.generate(input_ids, **params)
+        outputs = self.model.generate(**input_ids, **params)
         decoded_outputs = self.tokenizer.decode(outputs[0])
 
         return pd.DataFrame([

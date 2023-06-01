@@ -1,45 +1,45 @@
 {
-    "catboost": {
-        "source": {
-            "folder": "catboost_poetry/main",
-            "files": [
-                "__init__.py",
-                "pyproject.toml",
-                "model.py"       
-            ]
-        },
-        "deploy": {
-            "pods": "1"
-        }
+  "catboost": {
+    "source": {
+      "folder": "catboost_poetry/main",
+      "files": [
+        "__init__.py",
+        "pyproject.toml",
+        "model.py"
+      ]
     },
-    "xgboost": {
-        "source": {
-            "folder": "xgboost_conda/main",
-            "files": [
-                "__init__.py",
-                "conda.yml",
-                "model.py"       
-            ]
-        },
-        "deploy": {
-            "pods": "1"
-        }
-    },
-    "huggingface": {
-        "source": {
-            "folder": "transformers_conda/main",
-            "files": [
-                "__init__.py",
-                "conda.yml",
-                "model.py"        
-            ]
-        },
-        "build": {
-            "memory": "8192"
-        },
-        "deploy": {
-            "pods": "1",
-            "memory": "4096"
-        }
+    "deploy": {
+      "pods": "1"
     }
+  },
+  "xgboost": {
+    "source": {
+      "folder": "xgboost_conda/main",
+      "files": [
+        "__init__.py",
+        "conda.yml",
+        "model.py"
+      ]
+    },
+    "deploy": {
+      "pods": "1"
+    }
+  },
+  "huggingface": {
+    "source": {
+      "folder": "transformers_conda/main",
+      "files": [
+        "__init__.py",
+        "conda.yml",
+        "model.py"
+      ]
+    },
+    "build": {
+      "memory": "8192"
+    },
+    "deploy": {
+      "pods": "1",
+      "memory": "4096"
+    }
+  }
 }
