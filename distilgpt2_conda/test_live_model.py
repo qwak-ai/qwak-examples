@@ -4,7 +4,13 @@ from qwak_inference import RealTimeClient
 QWAK_MODEL_ID = 'your-model-id'
 
 if __name__ == '__main__':
-    input_ = {"prompt": "what is love?"}
-    client = RealTimeClient(model_id=QWAK_MODEL_ID)
-    response = client.predict(input_)
-    print(response)
+    from qwak_inference import RealTimeClient
+
+    feature_vector = [
+        {
+            "prompt": "what is love?"
+        }
+    ]
+
+    client = RealTimeClient(model_id="distilgpt2")
+    client.predict(feature_vector)
