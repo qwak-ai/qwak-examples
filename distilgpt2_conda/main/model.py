@@ -1,4 +1,7 @@
+from qwak.model.tools import run_local
+
 import torch
+import pandas as pd
 import qwak
 from qwak.model.base import QwakModel
 from qwak.model.schema import ExplicitFeature, ModelSchema
@@ -69,8 +72,11 @@ class DistilGPT2Model(QwakModel):
 
         # Slice the output_ids tensor to get only new tokens
         new_tokens = output_ids[0, len(input_ids[0]):]
-        output_text = self.tokenizer.decode(new_tokens, skip_special_tokens=True)
+        decoded_outputs = self.tokenizer.decode(new_tokens, skip_special_tokens=True)
 
-        return {
-            "generated_text": output_text
-        }
+        return pd.DataFrame([
+            {
+                "generated_text": decoded_outputs
+            }
+        ])
+

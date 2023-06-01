@@ -2,6 +2,7 @@ import qwak
 from qwak.model.base import QwakModel
 from qwak.model.schema import ExplicitFeature, ModelSchema
 from transformers import BertTokenizer, BertModel
+import pandas as pd
 
 
 class BERTModel(QwakModel):
@@ -32,7 +33,10 @@ class BERTModel(QwakModel):
 
         encoded_input = self.tokenizer(input_text[0], return_tensors='pt')
         output = self.model(**encoded_input)
-        decoded_output = self.tokenizer.convert_ids_to_tokens(output)
+        decoded_outputs = self.tokenizer.convert_ids_to_tokens(output)
 
-        return decoded_output
-
+        return pd.DataFrame([
+            {
+                "generated_text": decoded_outputs
+            }
+        ])

@@ -2,6 +2,7 @@ import qwak
 from qwak.model.base import QwakModel
 from qwak.model.schema import ExplicitFeature, ModelSchema
 from transformers import pipeline
+import pandas as pd
 
 
 class GPTNeoModel(QwakModel):
@@ -27,8 +28,14 @@ class GPTNeoModel(QwakModel):
 
     @qwak.api()
     def predict(self, df):
-        return self.model(
+        decoded_outputs = self.model(
             list(df['prompt'].values),
             do_sample=True,
             max_new_tokens=100
         )
+
+        return pd.DataFrame([
+            {
+                "generated_text": decoded_outputs
+            }
+        ])

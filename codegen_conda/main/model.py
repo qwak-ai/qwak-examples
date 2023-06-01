@@ -2,6 +2,7 @@ import qwak
 from qwak.model.base import QwakModel
 from qwak.model.schema import ExplicitFeature, ModelSchema
 from transformers import AutoModelForCausalLM, AutoTokenizer
+import pandas as pd
 
 
 class CodeGenModel(QwakModel):
@@ -38,4 +39,8 @@ class CodeGenModel(QwakModel):
         outputs = self.model.generate(input_ids, **params)
         decoded_outputs = self.tokenizer.decode(outputs[0])
 
-        return decoded_outputs
+        return pd.DataFrame([
+            {
+                "generated_text": decoded_outputs
+            }
+        ])

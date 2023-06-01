@@ -1,4 +1,3 @@
-from qwak.model.tools import run_local
 import pandas as pd
 import qwak
 from qwak.model.base import QwakModel
@@ -36,17 +35,9 @@ class FLANT5BaseModel(QwakModel):
                                       max_new_tokens=self.max_new_tokens)
         decoded_outputs = self.tokenizer.batch_decode(outputs, skip_special_tokens=True)
 
-        return decoded_outputs
-
-
-if __name__ == '__main__':
-    from qwak.model.tools import run_local
-    import pandas as pd
-
-    model = FLANT5BaseModel()
-    input_ = [
-        {"prompt": "what is love?"}
-    ]
-    response = run_local(model, pd.DataFrame(input_).to_json())
-    print(response)
+        return pd.DataFrame([
+            {
+                "generated_text": decoded_outputs
+            }
+        ])
 
