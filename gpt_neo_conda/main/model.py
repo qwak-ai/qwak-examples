@@ -1,5 +1,3 @@
-from qwak.model.tools import run_local
-
 import qwak
 from qwak.model.base import QwakModel
 from qwak.model.schema import ExplicitFeature, ModelSchema

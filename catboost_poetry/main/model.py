@@ -67,7 +67,7 @@ class CatBoostCreditRiskModel(QwakModel):
         y = df_credit['Risk_bad']
         categorical_features_indices = np.where(X.dtypes == object)[0]
 
-        # Spliting X and y into train and test version
+        # Splitting X and y into train and test version
         X_train, X_test, y_train, y_test = train_test_split(
             X,
             y,

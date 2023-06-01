@@ -5,7 +5,7 @@ from qwak.model.schema import ExplicitFeature, ModelSchema
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 
 
-class FLANT5BaseModel(QwakModel):
+class FLANT5Model(QwakModel):
 
     def __init__(self):
         self.model_id = "google/flan-t5-base"
