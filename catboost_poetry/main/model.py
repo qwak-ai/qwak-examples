@@ -128,6 +128,6 @@ class CatBoostCreditRiskModel(QwakModel):
         """
         df = df.drop(['UserId'], axis=1)
         return pd.DataFrame(
-            self.model.predict_proba(df)[:, 1],
+            self.model.predict_proba(df[self.model.feature_names_])[:, 1],
             columns=['Default_Probability']
         )

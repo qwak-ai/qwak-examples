@@ -1,3 +1,4 @@
+from qwak.model.tools import run_local
 import os
 import qwak
 import numpy as np
@@ -91,5 +92,6 @@ class TitanicSurvivalPrediction(QwakModel):
     def predict(self, df: pd.DataFrame) -> pd.DataFrame:
         df = df.drop(["PassengerId"], axis=1)
         return pd.DataFrame(
-            self.model.predict_proba(df)[:, 1], columns=["Survived_Probability"]
+            self.model.predict_proba(df[self.model.feature_names_])[:, 1],
+            columns=['Survived_Probability']
         )
