@@ -10,6 +10,7 @@ class GPTNeoModel(QwakModel):
     def __init__(self):
         self.model_id = 'EleutherAI/gpt-neo-125M'
         self.model = None
+        self.max_new_tokens = 100
 
     def build(self):
         pass
@@ -31,7 +32,7 @@ class GPTNeoModel(QwakModel):
         decoded_outputs = self.model(
             list(df['prompt'].values),
             do_sample=True,
-            max_new_tokens=100
+            max_new_tokens=self.max_new_tokens
         )
 
         return pd.DataFrame([
