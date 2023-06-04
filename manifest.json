@@ -41,5 +41,74 @@
       "pods": "1",
       "memory": "4096"
     }
+  },
+  "bert": {
+    "source": {
+      "folder": "bert_conda/main",
+      "files": [
+        "__init__.py",
+        "conda.yml",
+        "model.py"
+      ]
+    },
+    "deploy": {
+      "pods": "1",
+      "memory": "4096"
+    }
+  },
+  "codegen": {
+    "source": {
+      "folder": "codegen_conda/main",
+      "files": [
+        "__init__.py",
+        "conda.yml",
+        "model.py"
+      ]
+    },
+    "deploy": {
+      "pods": "1",
+      "memory": "4096"
+    }
+  },
+  "distilgpt2": {
+    "source": {
+      "folder": "distilgpt2_conda/main",
+      "files": [
+        "__init__.py",
+        "conda.yml",
+        "model.py"
+      ]
+    },
+    "deploy": {
+      "pods": "1",
+      "memory": "4096"
+    }
+  },
+  "gpt_neo": {
+    "source": {
+      "folder": "gpt_neo_conda/main",
+      "files": [
+        "__init__.py",
+        "conda.yml",
+        "model.py"
+      ]
+    },
+    "deploy": {
+      "pods": "1",
+      "memory": "4096"
+    }
+  },
+  "titanic": {
+    "source": {
+      "folder": "titanic_conda/main",
+      "files": [
+        "__init__.py",
+        "conda.yml",
+        "model.py"
+      ]
+    },
+    "deploy": {
+      "pods": "1"
+    }
   }
 }
