@@ -1,6 +1,7 @@
 {
   "huggingface": {
     "name": "Yelp Polarity Prediction",
+    "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/hugging_face.png",
     "source": {
       "folder": "transformers_conda/main",
       "files": [
@@ -19,6 +20,7 @@
   },
   "catboost": {
     "name": "Titanic Survival Prediction",
+    "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/catboost.png",
     "source": {
       "folder": "titanic_conda/main",
       "files": [
@@ -33,6 +35,7 @@
   },
   "xgboost": {
     "name": "User Churn Estimation",
+    "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/xg_boost.png",
     "source": {
       "folder": "xgboost_conda/main",
       "files": [
@@ -49,6 +52,7 @@
     "bert": {
       "name": "BERT base",
       "description": "Popular transformer-based model for uncased text processing",
+      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/bert.png",
       "source": {
         "folder": "bert_conda/main",
         "files": [
@@ -68,6 +72,7 @@
     "codegen": {
       "name": "CodeGen",
       "description": "Autoregressive language models for program synthesis and code generation",
+      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/codegen.png",
       "source": {
         "folder": "codegen_conda/main",
         "files": [
@@ -88,6 +93,7 @@
     "distilgpt2": {
       "name": "DistilGPT2",
       "description": "A lightweight version of the GPT-2 language generation model",
+      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/hugging_face.png",
       "source": {
         "folder": "distilgpt2_conda/main",
         "files": [
@@ -108,6 +114,7 @@
     "flan_t5": {
       "name": "FLAN-T5",
       "description": "An enhanced T5 model finetuned on a mixture of tasks",
+      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/t5.png",
       "source": {
         "folder": "flan_t5_conda/main",
         "files": [
@@ -127,6 +134,7 @@
     "gpt_neo": {
       "name": "GPT-Neo",
       "description": "An open-source variant of the GPT language model series",
+      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/eleuther.png",
       "source": {
         "folder": "gpt_neo_conda/main",
         "files": [
