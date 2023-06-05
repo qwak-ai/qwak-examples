@@ -1,4 +1,3 @@
-from qwak.model.tools import run_local
 import os
 import qwak
 import numpy as np

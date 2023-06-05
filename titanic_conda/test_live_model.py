@@ -4,7 +4,6 @@ from qwak_inference import RealTimeClient
 QWAK_MODEL_ID = 'your-model-id'
 
 if __name__ == '__main__':
-
     feature_vector = [
         {
             "PassengerId": 762,
