@@ -1,31 +1,6 @@
 {
-  "catboost": {
-    "source": {
-      "folder": "catboost_poetry/main",
-      "files": [
-        "__init__.py",
-        "pyproject.toml",
-        "model.py"
-      ]
-    },
-    "deploy": {
-      "pods": "1"
-    }
-  },
-  "xgboost": {
-    "source": {
-      "folder": "xgboost_conda/main",
-      "files": [
-        "__init__.py",
-        "conda.yml",
-        "model.py"
-      ]
-    },
-    "deploy": {
-      "pods": "1"
-    }
-  },
   "huggingface": {
+    "name": "Yelp Polarity Prediction",
     "source": {
       "folder": "transformers_conda/main",
       "files": [
@@ -43,6 +18,8 @@
     }
   },
   "bert": {
+    "name": "BERT base",
+    "description": "Popular transformer-based model for uncased text processing",
     "source": {
       "folder": "bert_conda/main",
       "files": [
@@ -54,9 +31,12 @@
     "deploy": {
       "pods": "1",
       "memory": "4096"
-    }
+    },
+    "tags": ["MLM"]
   },
   "codegen": {
+    "name": "CodeGen",
+    "description": "Autoregressive language models for program synthesis and code generation",
     "source": {
       "folder": "codegen_conda/main",
       "files": [
@@ -68,9 +48,12 @@
     "deploy": {
       "pods": "1",
       "memory": "4096"
-    }
+    },
+    "tags": ["Generative AI", "LLM"]
   },
   "distilgpt2": {
+    "name": "DistilGPT2",
+    "description": "A lightweight version of the GPT-2 language generation model",
     "source": {
       "folder": "distilgpt2_conda/main",
       "files": [
@@ -82,9 +65,29 @@
     "deploy": {
       "pods": "1",
       "memory": "4096"
-    }
+    },
+    "tags": ["Generative AI", "LLM"]
+  },
+  "flan_t5": {
+    "name": "FLAN-T5",
+    "description": "An enhanced T5 model finetuned on a mixture of tasks",
+    "source": {
+      "folder": "flan_t5_conda/main",
+      "files": [
+        "__init__.py",
+        "conda.yml",
+        "model.py"
+      ]
+    },
+    "deploy": {
+      "pods": "1",
+      "memory": "4096"
+    },
+    "tags": ["LLM"]
   },
   "gpt_neo": {
+    "name": "GPT-Neo",
+    "description": "An open-source variant of the GPT language model series",
     "source": {
       "folder": "gpt_neo_conda/main",
       "files": [
@@ -96,9 +99,39 @@
     "deploy": {
       "pods": "1",
       "memory": "4096"
+    },
+    "tags": ["Generative AI", "LLM"]
+  },
+  "catboost": {
+    "name": "Credit Risk Classifier",
+    "source": {
+      "folder": "catboost_poetry/main",
+      "files": [
+        "__init__.py",
+        "pyproject.toml",
+        "model.py"
+      ]
+    },
+    "deploy": {
+      "pods": "1"
+    }
+  },
+  "xgboost": {
+    "name": "User Churn Estimation",
+    "source": {
+      "folder": "xgboost_conda/main",
+      "files": [
+        "__init__.py",
+        "conda.yml",
+        "model.py"
+      ]
+    },
+    "deploy": {
+      "pods": "1"
     }
   },
   "titanic": {
+    "name": "Titanic Survival Prediction",
     "source": {
       "folder": "titanic_conda/main",
       "files": [
