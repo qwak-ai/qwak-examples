@@ -12,7 +12,8 @@
     },
     "deploy": {
       "pods": "1"
-    }
+    },
+    "tags": ["Example model"]
   },
   "xgboost": {
     "name": "User Churn Estimation",
@@ -27,7 +28,8 @@
     },
     "deploy": {
       "pods": "1"
-    }
+    },
+    "tags": ["Example model"]
   },
   "llm": {
     "bert": {
