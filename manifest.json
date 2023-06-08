@@ -47,7 +47,7 @@
         "memory": "4096"
       },
       "tags": [
-        "MLM"
+        "LLM"
       ]
     },
     "codegen": {
