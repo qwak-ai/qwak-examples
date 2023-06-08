@@ -58,6 +58,7 @@ class XGBoostChurnPredictionModel(QwakModel):
                 ExplicitFeature(name="User_Id", type=str),
                 ExplicitFeature(name="State", type=str),
                 ExplicitFeature(name="Account_Length", type=int),
+                ExplicitFeature(name="Area_Code", type=str),
                 ExplicitFeature(name="Intl_Plan", type=int),
                 ExplicitFeature(name="VMail_Plan", type=int),
                 ExplicitFeature(name="VMail_Message", type=int),
