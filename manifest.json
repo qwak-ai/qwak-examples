@@ -62,6 +62,9 @@
           "model.py"
         ]
       },
+      "build": {
+        "memory": "4096"
+      },
       "deploy": {
         "pods": "1",
         "memory": "4096"
