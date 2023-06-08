@@ -86,6 +86,9 @@
           "model.py"
         ]
       },
+      "build": {
+        "memory": "4096"
+      },
       "deploy": {
         "pods": "1",
         "memory": "4096"
@@ -107,6 +110,9 @@
           "model.py"
         ]
       },
+      "build": {
+        "memory": "4096"
+      },
       "deploy": {
         "pods": "1",
         "memory": "4096"
@@ -126,6 +132,9 @@
           "conda.yml",
           "model.py"
         ]
+      },
+      "build": {
+        "memory": "4096"
       },
       "deploy": {
         "pods": "1",
