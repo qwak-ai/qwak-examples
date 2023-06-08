@@ -35,8 +35,4 @@ class GPTNeoModel(QwakModel):
             max_new_tokens=self.max_new_tokens
         )
 
-        return pd.DataFrame([
-            {
-                "generated_text": decoded_outputs
-            }
-        ])
+        return pd.DataFrame(decoded_outputs)
