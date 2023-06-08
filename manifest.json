@@ -1,23 +1,4 @@
 {
-  "huggingface": {
-    "name": "Yelp Polarity Prediction",
-    "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/hugging_face.png",
-    "source": {
-      "folder": "transformers_conda/main",
-      "files": [
-        "__init__.py",
-        "conda.yml",
-        "model.py"
-      ]
-    },
-    "build": {
-      "memory": "8192"
-    },
-    "deploy": {
-      "pods": "1",
-      "memory": "4096"
-    }
-  },
   "catboost": {
     "name": "Titanic Survival Prediction",
     "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/catboost.png",
