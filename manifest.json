@@ -65,11 +65,11 @@
         ]
       },
       "build": {
-        "memory": "4096"
+        "memory": "8192"
       },
       "deploy": {
         "pods": "1",
-        "memory": "4096"
+        "memory": "8192"
       },
       "tags": [
         "Generative AI",
