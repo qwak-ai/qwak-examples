@@ -1,9 +1,16 @@
+import os
+
 import pandas as pd
 import torch
 
 
 def get_device():
-    return 'cuda' if torch.cuda.is_available() else 'cpu'
+    pid = os.getpid()
+    return (
+        torch.device("cuda", pid % torch.cuda.device_count())
+        if torch.cuda.is_available()
+        else torch.device("cpu")
+    )
 
 
 def load_data(input_path: str, max_length=None):

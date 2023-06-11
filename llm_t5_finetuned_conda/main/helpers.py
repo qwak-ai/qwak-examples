@@ -93,6 +93,7 @@ def train_model(dataframe: DataFrame,
     # Defining the model. We are using t5-base model and added a Language model layer on top for generation of Summary.
     # Further this model is sent to device (GPU/TPU) for using the hardware.
     device = get_device()
+    print(f"Using device: {device}")
     model = T5ForConditionalGeneration.from_pretrained(model_params["model"])
     model = model.to(device)
 

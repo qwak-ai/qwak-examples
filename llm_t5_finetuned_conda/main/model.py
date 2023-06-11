@@ -27,7 +27,7 @@ class FineTuneFLANT5Model(QwakModel):
             "max_source_text_length": 512,
             "max_target_text_length": 50,
             "seed": 42,
-            "data_rows": -1,
+            "data_rows": 1000,
             "input_path": "https://raw.githubusercontent.com/shivanandroy/t5-finetuning-pytorch/main/data/news_summary.csv"
         }
 

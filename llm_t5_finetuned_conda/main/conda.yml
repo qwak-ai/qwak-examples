@@ -2,6 +2,7 @@ channels:
   - defaults
   - conda-forge
   - huggingface
+  - nvidia
 dependencies:
   - python=3.8
   - pip
