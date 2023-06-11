@@ -6,7 +6,7 @@ from qwak.model.schema import ModelSchema, ExplicitFeature
 from qwak.model.tools import run_local
 from transformers import T5Tokenizer
 
-from trainer import train_model
+from helpers import train_model
 from utils import load_data
 
 
