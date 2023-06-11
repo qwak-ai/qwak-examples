@@ -6,8 +6,8 @@ import torch
 from torch.utils.data import DataLoader
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 
-from text_dataset import TextDataset
 from helpers import train, validate, get_device
+from text_dataset import TextDataset
 
 device = get_device()
 

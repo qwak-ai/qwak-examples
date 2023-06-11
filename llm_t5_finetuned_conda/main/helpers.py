@@ -1,5 +1,4 @@
 import torch
-
 from torch.version import cuda
 
 

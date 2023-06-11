@@ -1,13 +1,13 @@
 import pandas as pd
-from pandas import DataFrame
 import qwak
+from pandas import DataFrame
+from qwak.model.base import QwakModel
 from qwak.model.schema import ModelSchema, ExplicitFeature
 from qwak.model.tools import run_local
-from qwak.model.base import QwakModel
 from transformers import T5Tokenizer
 
-from utils import load_data
 from trainer import T5Trainer
+from utils import load_data
 
 
 class FineTuneFLANT5Model(QwakModel):
