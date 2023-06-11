@@ -85,7 +85,10 @@ def train_model(dataframe: DataFrame,
     torch.backends.cudnn.deterministic = True
 
     # Tokenizer for encoding the text
-    tokenizer = T5Tokenizer.from_pretrained(model_params["model"])
+    tokenizer = T5Tokenizer.from_pretrained(
+        model_params["model"],
+        model_max_length=model_params["max_source_text_length"]
+    )
 
     # Defining the model. We are using t5-base model and added a Language model layer on top for generation of Summary.
     # Further this model is sent to device (GPU/TPU) for using the hardware.

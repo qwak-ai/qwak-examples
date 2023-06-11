@@ -13,7 +13,7 @@ from utils import load_data
 class FineTuneFLANT5Model(QwakModel):
 
     def __init__(self):
-        self.model_id = "google/flan-t5-small"
+        self.model_id = "t5-base"
         self.max_new_tokens = 100
         self.model = None
         self.tokenizer = None
@@ -21,7 +21,7 @@ class FineTuneFLANT5Model(QwakModel):
         self.model = None
         self.trainer = None
         self.model_params = {
-            "model": "t5-small",
+            "model": self.model_id,
             "train_batch_size": 8,
             "valid_batch_size": 8,
             "train_epochs": 1,
@@ -30,6 +30,7 @@ class FineTuneFLANT5Model(QwakModel):
             "max_source_text_length": 512,
             "max_target_text_length": 50,
             "seed": 42,
+            "data_rows": 100,
             "input_path": "https://raw.githubusercontent.com/shivanandroy/t5-finetuning-pytorch/main/data/news_summary.csv"
         }
 
@@ -38,7 +39,7 @@ class FineTuneFLANT5Model(QwakModel):
         Training the T5 model
         """
         dataframe = load_data(
-            max_length=10,
+            max_length=self.model_params["data_rows"],
             input_path=self.model_params["input_path"]
         )
         # Adding the summarization request to each training row
@@ -60,7 +61,10 @@ class FineTuneFLANT5Model(QwakModel):
         return model_schema
 
     def initialize_model(self):
-        self.tokenizer = T5Tokenizer.from_pretrained(self.model_id)
+        self.tokenizer = T5Tokenizer.from_pretrained(
+            self.model_id,
+            model_max_length=self.model_params["max_source_text_length"]
+        )
 
     @qwak.api()
     def predict(self, df):
@@ -96,7 +100,7 @@ class FineTuneFLANT5Model(QwakModel):
 if __name__ == '__main__':
     model = FineTuneFLANT5Model()
     vector = {
-        'prompt': "Today I wanted to go to school but it was raining"
+        'prompt': """Investigators searching for a lost plane carrying Argentine forward Emiliano Sala found two seat cushions on French coast that "likely" belonged to the aircraft. The investigators said they'll now launch an underwater seabed search for aircraft wreckage. The Cardiff City footballer was travelling from France's Nantes to Wales' Cardiff when his plane disappeared over English Channel on January 21."""
     }
     input_ = DataFrame([vector]).to_json()
 
