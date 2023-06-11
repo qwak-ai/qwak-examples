@@ -1,0 +1,13 @@
+channels:
+  - defaults
+  - conda-forge
+  - huggingface
+dependencies:
+  - python=3.8
+  - pip
+  - pytorch
+  - transformers
+  - datasets
+  - evaluate
+  - accelerate
+  - sentencepiece
