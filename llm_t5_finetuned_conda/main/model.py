@@ -17,9 +17,6 @@ class FineTuneFLANT5Model(QwakModel):
         self.max_new_tokens = 100
         self.model = None
         self.tokenizer = None
-        self.max_new_tokens = 100
-        self.model = None
-        self.trainer = None
         self.model_params = {
             "model": self.model_id,
             "train_batch_size": 8,
@@ -30,7 +27,7 @@ class FineTuneFLANT5Model(QwakModel):
             "max_source_text_length": 512,
             "max_target_text_length": 50,
             "seed": 42,
-            "data_rows": 100,
+            "data_rows": 1000,
             "input_path": "https://raw.githubusercontent.com/shivanandroy/t5-finetuning-pytorch/main/data/news_summary.csv"
         }
 
