@@ -20,3 +20,7 @@ def load_data(input_path: str, max_length=None):
         return csv_df.head(max_length)
 
     return csv_df
+
+
+def write_data(output_path: str, df):
+    df.to_csv(output_path, index=False)

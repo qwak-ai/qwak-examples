@@ -1,3 +1,5 @@
+import os
+
 import pandas as pd
 import qwak
 from pandas import DataFrame
@@ -9,11 +11,13 @@ from transformers import T5Tokenizer
 from helpers import train_model
 from utils import load_data
 
+RUNNING_FILE_ABSOLUTE_PATH = os.path.dirname(os.path.abspath(__file__))
+
 
 class FineTuneFLANT5Model(QwakModel):
 
     def __init__(self):
-        self.model_id = "t5-base"
+        self.model_id = "t5-small"
         self.max_new_tokens = 100
         self.model = None
         self.tokenizer = None
@@ -28,7 +32,7 @@ class FineTuneFLANT5Model(QwakModel):
             "max_target_text_length": 50,
             "seed": 42,
             "data_rows": 1000,
-            "input_path": "https://raw.githubusercontent.com/shivanandroy/t5-finetuning-pytorch/main/data/news_summary.csv"
+            "input_path": f"{RUNNING_FILE_ABSOLUTE_PATH}/data.csv"
         }
 
     def build(self):
@@ -70,8 +74,8 @@ class FineTuneFLANT5Model(QwakModel):
         :param df:
         :return:
         """
-        input_text = list(df['prompt'].values)
         # Tokenizing input text
+        input_text = list(df['prompt'].values)
         input_ids = self.tokenizer(
             input_text,
             return_tensors="pt"
@@ -95,6 +99,7 @@ class FineTuneFLANT5Model(QwakModel):
 
 
 if __name__ == '__main__':
+
     model = FineTuneFLANT5Model()
     vector = {
         'prompt': """Investigators searching for a lost plane carrying Argentine forward Emiliano Sala found two seat cushions on French coast that "likely" belonged to the aircraft. The investigators said they'll now launch an underwater seabed search for aircraft wreckage. The Cardiff City footballer was travelling from France's Nantes to Wales' Cardiff when his plane disappeared over English Channel on January 21."""
