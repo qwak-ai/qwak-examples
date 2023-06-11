@@ -32,7 +32,7 @@ class XGBoostChurnPredictionModel(QwakModel):
         X = df.drop(['churn', 'User_Id', '__index_level_0__',
                      'event date', 'Phone', 'State'], axis=1)
 
-        # Spliting X and y into train and test version
+        # Splitting X and y into train and test version
         X_train, X_validation, y_train, y_validation = train_test_split(
             X, y, test_size=0.25, random_state=42
         )
@@ -83,8 +83,15 @@ class XGBoostChurnPredictionModel(QwakModel):
         """
         The predict(df) method is the actual inference method.
         """
-        df = df.drop(['User_Id', 'State'], axis=1)
-        predictions = self.model.predict(df)
+        # Getting the original columns order
+        feature_order = self.model.get_booster().feature_names
+
+        # Reformatting the prediction data order
+        prediction_data = df.drop(
+            ['User_Id', 'State'], axis=1
+        ).reindex(columns=feature_order)
+
+        predictions = self.model.predict(prediction_data)
 
         return pd.DataFrame(
             predictions,
