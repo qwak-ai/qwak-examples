@@ -15,7 +15,7 @@ from text_dataset import TextDataset
 def perform_training_cycle(epoch, tokenizer, model, device, loader, optimizer):
     model.train()
     for i, data in enumerate(loader, 0):
-        print("Training round", i)
+        print("Training epoch", epoch, "batch", i)
         y = data["target_ids"].to(device, dtype=torch.long)
         y_ids = y[:, :-1].contiguous()
         lm_labels = y[:, 1:].clone().detach()

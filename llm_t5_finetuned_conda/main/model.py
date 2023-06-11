@@ -21,13 +21,13 @@ class FineTuneFLANT5Model(QwakModel):
             "model": self.model_id,
             "train_batch_size": 8,
             "valid_batch_size": 8,
-            "train_epochs": 1,
+            "train_epochs": 3,
             "val_epochs": 1,
             "learning_rate": 1e-4,
             "max_source_text_length": 512,
             "max_target_text_length": 50,
             "seed": 42,
-            "data_rows": 1000,
+            "data_rows": -1,
             "input_path": "https://raw.githubusercontent.com/shivanandroy/t5-finetuning-pytorch/main/data/news_summary.csv"
         }
 
