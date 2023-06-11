@@ -4,19 +4,10 @@ import numpy as np
 import pandas as pd
 import torch
 from torch.utils.data import DataLoader
-from torch.version import cuda
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 
-from dataset_class import CustomDataSetClass
-from validating_model import validate
-from training_model import train
-
-
-def get_device():
-    if not cuda:
-        return 'cpu'
-    return 'cuda' if cuda.is_available() else 'cpu'
-
+from text_dataset import TextDataset
+from helpers import train, validate, get_device
 
 device = get_device()
 
@@ -27,7 +18,7 @@ def T5Trainer(dataframe, source_text, target_text, model_params, output_dir="./o
     np.random.seed(model_params["SEED"])  # numpy random seed
     torch.backends.cudnn.deterministic = True
 
-    # tokenzier for encoding the text
+    # Tokenizer for encoding the text
     tokenizer = T5Tokenizer.from_pretrained(model_params["MODEL"])
 
     # Defining the model. We are using t5-base model and added a Language model layer on top for generation of Summary.
@@ -46,7 +37,7 @@ def T5Trainer(dataframe, source_text, target_text, model_params, output_dir="./o
     train_dataset = train_dataset.reset_index(drop=True)
 
     # Creating the Training and Validation dataset for further creation of Dataloader
-    training_set = CustomDataSetClass(
+    training_set = TextDataset(
         train_dataset,
         tokenizer,
         model_params["MAX_SOURCE_TEXT_LENGTH"],
@@ -55,7 +46,7 @@ def T5Trainer(dataframe, source_text, target_text, model_params, output_dir="./o
         target_text,
     )
 
-    val_set = CustomDataSetClass(
+    val_set = TextDataset(
         val_dataset,
         tokenizer,
         model_params["MAX_SOURCE_TEXT_LENGTH"],
@@ -97,8 +88,11 @@ def T5Trainer(dataframe, source_text, target_text, model_params, output_dir="./o
 
     # evaluating test dataset
     for epoch in range(model_params["VAL_EPOCHS"]):
-        predictions, actuals = validate(epoch, tokenizer, model, device, val_loader)
-        final_df = pd.DataFrame({"Generated Text": predictions, "Actual Text": actuals})
+        predictions, actual_results = validate(epoch, tokenizer, model, device, val_loader)
+        final_df = pd.DataFrame({
+            "Generated Text": predictions,
+            "Actual Text": actual_results
+        })
         final_df.to_csv(os.path.join(output_dir, "predictions.csv"))
 
     return model
