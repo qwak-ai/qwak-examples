@@ -4,10 +4,7 @@ from qwak_inference import RealTimeClient
 QWAK_MODEL_ID = 'your-model-id'
 
 if __name__ == '__main__':
-    feature_vector = [{
-        'text': 'This is the best place ever!'
-    }]
-
+    input_ = {"prompt": "Would you like some coffee?"}
     client = RealTimeClient(model_id=QWAK_MODEL_ID)
-    response = client.predict(feature_vector)
+    response = client.predict(input_)
     print(response)

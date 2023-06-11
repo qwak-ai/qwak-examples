@@ -6,20 +6,20 @@ from qwak.model.base import QwakModel
 from qwak.model.schema import ExplicitFeature, ModelSchema, InferenceOutput
 from sklearn.model_selection import train_test_split
 
+
 class XGBoostChurnPredictionModel(QwakModel):
 
     def __init__(self):
-                
         self.params = {
             'n_estimators': int(os.getenv('n_estimators', 200)),
             'learning_rate': float(os.getenv('learning_rate', 0.06)),
             'objective': 'binary:logistic',
             'use_label_encoder': False
         }
-        
+
         # Create a XGBoost classifier with the specified parameters
         self.model = xgb.XGBClassifier(**self.params)
-        
+
         # Log model parameters to Qwak for tracking purposes
         qwak.log_param(self.params)
 
@@ -32,7 +32,7 @@ class XGBoostChurnPredictionModel(QwakModel):
         X = df.drop(['churn', 'User_Id', '__index_level_0__',
                      'event date', 'Phone', 'State'], axis=1)
 
-        # Spliting X and y into train and test version
+        # Splitting X and y into train and test version
         X_train, X_validation, y_train, y_validation = train_test_split(
             X, y, test_size=0.25, random_state=42
         )
@@ -46,7 +46,7 @@ class XGBoostChurnPredictionModel(QwakModel):
 
         # Log metrics into Qwak
         accuracy = self.model.score(X_validation, y_validation)
-        qwak.log_metric({"val_accuracy" : accuracy})
+        qwak.log_metric({"val_accuracy": accuracy})
 
     def schema(self):
         """
@@ -58,6 +58,7 @@ class XGBoostChurnPredictionModel(QwakModel):
                 ExplicitFeature(name="User_Id", type=str),
                 ExplicitFeature(name="State", type=str),
                 ExplicitFeature(name="Account_Length", type=int),
+                ExplicitFeature(name="Area_Code", type=str),
                 ExplicitFeature(name="Intl_Plan", type=int),
                 ExplicitFeature(name="VMail_Plan", type=int),
                 ExplicitFeature(name="VMail_Message", type=int),
@@ -82,8 +83,15 @@ class XGBoostChurnPredictionModel(QwakModel):
         """
         The predict(df) method is the actual inference method.
         """
-        df = df.drop(['User_Id', 'State'], axis=1)
-        predictions = self.model.predict(df)
+        # Getting the original columns order
+        feature_order = self.model.get_booster().feature_names
+
+        # Reformatting the prediction data order
+        prediction_data = df.drop(
+            ['User_Id', 'State'], axis=1
+        ).reindex(columns=feature_order)
+
+        predictions = self.model.predict(prediction_data)
 
         return pd.DataFrame(
             predictions,
