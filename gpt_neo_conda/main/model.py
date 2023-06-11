@@ -26,6 +26,7 @@ class GPTNeoModel(QwakModel):
         self.model = pipeline('text-generation',
                               model=self.model_id,
                               pad_token_id=50256)
+        qwak.log_metric({"val_accuracy": 1})
 
     @qwak.api()
     def predict(self, df):

@@ -34,6 +34,7 @@ class DistilGPT2Model(QwakModel):
             self.model_id,
             trust_remote_code=True,
         )
+        qwak.log_metric({"val_accuracy": 1})
 
     @qwak.api()
     def predict(self, df):

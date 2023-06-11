@@ -26,6 +26,7 @@ class CodeGenModel(QwakModel):
     def initialize_model(self):
         self.model = AutoModelForCausalLM.from_pretrained(self.model_id)
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_id)
+        qwak.log_metric({"val_accuracy": 1})
 
     @qwak.api()
     def predict(self, df):
