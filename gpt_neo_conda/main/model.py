@@ -13,7 +13,7 @@ class GPTNeoModel(QwakModel):
         self.max_new_tokens = 100
 
     def build(self):
-        pass
+        qwak.log_metric({"val_accuracy": 1})
 
     def schema(self):
         model_schema = ModelSchema(
@@ -26,7 +26,6 @@ class GPTNeoModel(QwakModel):
         self.model = pipeline('text-generation',
                               model=self.model_id,
                               pad_token_id=50256)
-        qwak.log_metric({"val_accuracy": 1})
 
     @qwak.api()
     def predict(self, df):

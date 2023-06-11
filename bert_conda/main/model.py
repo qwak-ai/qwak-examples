@@ -14,7 +14,7 @@ class BERTModel(QwakModel):
         self.tokenizer = None
 
     def build(self):
-        pass
+        qwak.log_metric({"val_accuracy": 1})
 
     def schema(self):
         model_schema = ModelSchema(
@@ -26,7 +26,6 @@ class BERTModel(QwakModel):
     def initialize_model(self):
         self.model = BertModel.from_pretrained(self.model_id)
         self.tokenizer = BertTokenizer.from_pretrained(self.model_id)
-        qwak.log_metric({"val_accuracy": 1})
 
     @qwak.api()
     def predict(self, df):

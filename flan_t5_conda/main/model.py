@@ -14,7 +14,7 @@ class FLANT5Model(QwakModel):
         self.tokenizer = None
 
     def build(self):
-        pass
+        qwak.log_metric({"val_accuracy": 1})
 
     def schema(self):
         model_schema = ModelSchema(
@@ -26,7 +26,6 @@ class FLANT5Model(QwakModel):
     def initialize_model(self):
         self.tokenizer = T5Tokenizer.from_pretrained(self.model_id)
         self.model = T5ForConditionalGeneration.from_pretrained(self.model_id)
-        qwak.log_metric({"val_accuracy": 1})
 
     @qwak.api()
     def predict(self, df):

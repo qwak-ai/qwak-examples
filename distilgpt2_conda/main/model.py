@@ -16,7 +16,7 @@ class DistilGPT2Model(QwakModel):
         self.tokenizer = None
 
     def build(self):
-        pass
+        qwak.log_metric({"val_accuracy": 1})
 
     def schema(self):
         model_schema = ModelSchema(
@@ -34,7 +34,6 @@ class DistilGPT2Model(QwakModel):
             self.model_id,
             trust_remote_code=True,
         )
-        qwak.log_metric({"val_accuracy": 1})
 
     @qwak.api()
     def predict(self, df):
