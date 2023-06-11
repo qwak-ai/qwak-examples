@@ -1,17 +1,14 @@
 import torch
-from torch.version import cuda
 
 
 def get_device():
-    if not cuda:
-        return 'cpu'
-    return 'cuda' if cuda.is_available() else 'cpu'
+    return 'cuda' if torch.cuda.is_available() else 'cpu'
 
 
-def train(epoch, tokenizer, model, device, loader, optimizer):
+def perform_training_cycle(epoch, tokenizer, model, device, loader, optimizer):
     model.train()
     for i, data in enumerate(loader, 0):
-        print("round", i)
+        print("Training round", i)
         y = data["target_ids"].to(device, dtype=torch.long)
         y_ids = y[:, :-1].contiguous()
         lm_labels = y[:, 1:].clone().detach()
@@ -32,14 +29,14 @@ def train(epoch, tokenizer, model, device, loader, optimizer):
         optimizer.step()
 
 
-def validate(epoch, tokenizer, model, device, loader):
+def perform_validation_cycle(epoch, tokenizer, model, device, loader):
     """
     Function to evaluate model for predictions
 
     """
     model.eval()
     predictions = []
-    actuals = []
+    actual_results = []
     with torch.no_grad():
         for _, data in enumerate(loader, 0):
             y = data['target_ids'].to(device, dtype=torch.long)
@@ -55,10 +52,15 @@ def validate(epoch, tokenizer, model, device, loader):
                 length_penalty=1.0,
                 early_stopping=True
             )
-            preds = [tokenizer.decode(g, skip_special_tokens=True, clean_up_tokenization_spaces=True) for g in
-                     generated_ids]
-            target = [tokenizer.decode(t, skip_special_tokens=True, clean_up_tokenization_spaces=True) for t in y]
+            model_predictions = [
+                tokenizer.decode(g, skip_special_tokens=True, clean_up_tokenization_spaces=True)
+                for g in generated_ids
+            ]
+            target = [
+                tokenizer.decode(t, skip_special_tokens=True, clean_up_tokenization_spaces=True)
+                for t in y
+            ]
 
-            predictions.extend(preds)
-            actuals.extend(target)
-    return predictions, actuals
+            predictions.extend(model_predictions)
+            actual_results.extend(target)
+    return predictions, actual_results
