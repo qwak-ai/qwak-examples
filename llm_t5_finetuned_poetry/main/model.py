@@ -3,7 +3,7 @@ import qwak
 from qwak.model.base import QwakModel
 from qwak.model.schema import ModelSchema, ExplicitFeature
 from transformers import T5Tokenizer
-from helpers import train_model, load_data, SnowflakeClient
+from helpers import train_model, load_data
 
 
 class FineTuneFLANT5Model(QwakModel):
@@ -26,8 +26,7 @@ class FineTuneFLANT5Model(QwakModel):
 
     def build(self):
         dataframe = load_data(
-            max_length=self.model_params["data_rows"],
-            input_path=SnowflakeClient()
+            max_length=self.model_params["data_rows"]
         )
         # Adding the summarization request to each training row
         dataframe["text"] = "summarize: " + dataframe["text"]
