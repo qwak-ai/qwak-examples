@@ -25,12 +25,9 @@ class FineTuneFLANT5Model(QwakModel):
         }
 
     def build(self):
-        dataframe = load_data(
-            max_length=self.model_params["data_rows"]
-        )
+        dataframe = load_data(max_length=self.model_params["data_rows"])
         # Adding the summarization request to each training row
         dataframe["text"] = "summarize: " + dataframe["text"]
-
         self.model = train_model(
             dataframe=dataframe,
             source_text="text",
@@ -60,5 +57,5 @@ class FineTuneFLANT5Model(QwakModel):
         # Decode model output
         decoded_outputs = self.tokenizer.batch_decode(outputs, skip_special_tokens=True)
         return pd.DataFrame([{
-                "generated_text": decoded_outputs
+            "generated_text": decoded_outputs
         }])
