@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "t5_finetuned"
+version = "0.1.0"
+description = ""
+authors = ["Qwak <info@qwak.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.7.1,<3.10"
+pip = "22.2.2"
+pandas = "^1.3.5"
+torch = "^1.12.0"
+torchvision = "^0.13.0"
+transformers = "*"
+datasets = "*"
+evaluate = "*"
+accelerate = "*"
+sentencepiece = "*"

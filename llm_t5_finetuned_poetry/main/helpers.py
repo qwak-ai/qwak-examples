@@ -1,15 +1,40 @@
 import os
-from typing import Dict
-
 import numpy as np
 import pandas as pd
 import torch
 from pandas import DataFrame
 from torch.utils.data import DataLoader
 from transformers import T5Tokenizer, T5ForConditionalGeneration
-
-from utils import get_device
 from text_dataset import TextDataset
+from typing import Dict
+
+RUNNING_FILE_ABSOLUTE_PATH = os.path.dirname(os.path.abspath(__file__))
+
+
+def SnowflakeClient():
+    return f"{RUNNING_FILE_ABSOLUTE_PATH}/data.csv"
+
+
+def get_device():
+    pid = os.getpid()
+    return (
+        torch.device("cuda", pid % torch.cuda.device_count())
+        if torch.cuda.is_available()
+        else torch.device("cpu")
+    )
+
+
+def load_data(input_path: str, max_length=None):
+    csv_df = pd.read_csv(input_path)
+
+    if max_length and max_length > 0:
+        return csv_df.head(max_length)
+
+    return csv_df
+
+
+def write_data(output_path: str, df):
+    df.to_csv(output_path, index=False)
 
 
 def perform_training_cycle(epoch, tokenizer, model, device, loader, optimizer):
@@ -86,7 +111,7 @@ def train_model(dataframe: DataFrame,
 
     # Tokenizer for encoding the text
     tokenizer = T5Tokenizer.from_pretrained(
-        model_params["model"],
+        model_params["model_id"],
         model_max_length=model_params["max_source_text_length"]
     )
 
@@ -94,7 +119,7 @@ def train_model(dataframe: DataFrame,
     # Further this model is sent to device (GPU/TPU) for using the hardware.
     device = get_device()
     print(f"Using device: {device}")
-    model = T5ForConditionalGeneration.from_pretrained(model_params["model"])
+    model = T5ForConditionalGeneration.from_pretrained(model_params["model_id"])
     model = model.to(device)
 
     # Importing the raw dataset

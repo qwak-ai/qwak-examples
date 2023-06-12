@@ -1,0 +1,2 @@
+qwak models build --model-id flan_t5_fine_tuned --gpu-type NVIDIA_A10G --gpu-amount 1 -T A10G -T t5-small .
+qwak models build --model-id flan_t5_fine_tuned --gpu-type NVIDIA_T4 --gpu-amount 1 -T T4 -T t5-small .
