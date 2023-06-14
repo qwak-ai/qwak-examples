@@ -1,12 +1,14 @@
 import os
+from typing import Dict
+
 import numpy as np
 import pandas as pd
 import torch
 from pandas import DataFrame
 from torch.utils.data import DataLoader
 from transformers import T5Tokenizer, T5ForConditionalGeneration
+
 from text_dataset import TextDataset
-from typing import Dict
 
 RUNNING_FILE_ABSOLUTE_PATH = os.path.dirname(os.path.abspath(__file__))
 
@@ -21,9 +23,8 @@ def get_device():
 
 
 def load_data(input_path: str = None, max_length=None):
-
     if not input_path:
-        input_path =  f"{RUNNING_FILE_ABSOLUTE_PATH}/data.csv"
+        input_path = f"{RUNNING_FILE_ABSOLUTE_PATH}/data.csv"
 
     csv_df = pd.read_csv(input_path)
 
