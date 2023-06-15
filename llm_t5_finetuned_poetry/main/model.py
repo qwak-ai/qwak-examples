@@ -1,19 +1,21 @@
 import pandas as pd
 import qwak
-from qwak.model.base import QwakModel
+from qwak import QwakModelInterface
 from qwak.model.schema import ModelSchema, ExplicitFeature
 from transformers import T5Tokenizer
 
-from helpers import train_model, load_data
+from helpers import train_model, load_data, get_device
 
 
-class FineTuneFLANT5Model(QwakModel):
-
+class FineTuneFLANT5Model(QwakModelInterface):
+    # Works with NVIDIA T4 GPUs
+    
     def __init__(self):
         self.model = None
         self.tokenizer = None
+        self.device = None
         self.model_params = {
-            "model_id": "t5-small",
+            "model_id": "t5-base",
             "train_batch_size": 8,
             "valid_batch_size": 8,
             "train_epochs": 3,
@@ -22,7 +24,7 @@ class FineTuneFLANT5Model(QwakModel):
             "max_source_text_length": 512,
             "max_target_text_length": 50,
             "seed": 42,
-            "data_rows": 1000,
+            "data_rows": 10000,
         }
 
     def build(self):
@@ -39,7 +41,7 @@ class FineTuneFLANT5Model(QwakModel):
 
     def schema(self):
         return ModelSchema(
-            inputs=[
+            features=[
                 ExplicitFeature(name="prompt", type=str),
             ])
 
@@ -48,11 +50,14 @@ class FineTuneFLANT5Model(QwakModel):
             self.model_params["model_id"],
             model_max_length=self.model_params["max_source_text_length"]
         )
+        self.device = get_device()
+        print(f"Inference using device: {self.device}")
 
     @qwak.api()
     def predict(self, df):
+        
         # Tokenize input text
-        input_ids = self.tokenizer(list(df['prompt'].values), return_tensors="pt")
+        input_ids = self.tokenizer(list(df['prompt'].values), return_tensors="pt").to(self.device)
         # Generate prediction
         outputs = self.model.generate(**input_ids, max_new_tokens=self.model_params["max_target_text_length"])
         # Decode model output
