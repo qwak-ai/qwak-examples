@@ -4,7 +4,6 @@ from qwak_inference import RealTimeClient
 QWAK_MODEL_ID = 'your-model-id'
 
 if __name__ == '__main__':
-
     input_ = [{
         "prompt": "The 1,000-year-old citadel that rises out of the Atlantic Ocean"
     }]

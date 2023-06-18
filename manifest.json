@@ -13,7 +13,10 @@
     "deploy": {
       "pods": "1"
     },
-    "tags": ["Example model", "CatBoost"]
+    "tags": [
+      "Example model",
+      "CatBoost"
+    ]
   },
   "xgboost": {
     "name": "User Churn Estimation",
@@ -29,7 +32,10 @@
     "deploy": {
       "pods": "1"
     },
-    "tags": ["Example model", "XGBoost"]
+    "tags": [
+      "Example model",
+      "XGBoost"
+    ]
   },
   "llm": {
     "bert": {
@@ -183,8 +189,7 @@
         ]
       },
       "deploy": {
-        "pods": "1",
-        "memory": "4096"
+        "pods": "1"
       },
       "tags": [
         "Embeddings",

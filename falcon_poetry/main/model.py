@@ -2,10 +2,8 @@ import pandas as pd
 import qwak
 import torch
 import transformers
-from pandas import DataFrame
 from qwak.model.base import QwakModel
 from qwak.model.schema import ModelSchema, ExplicitFeature
-from qwak.model.tools import run_local
 from transformers import AutoTokenizer
 
 
@@ -48,11 +46,3 @@ class FalconModel(QwakModel):
         )
 
         return pd.DataFrame(decoded_outputs)
-
-
-if __name__ == '__main__':
-    model = FalconModel()
-    input_ = DataFrame([{
-        "prompt": "what is love?"
-    }])
-    run_local(model, input_.to_json())

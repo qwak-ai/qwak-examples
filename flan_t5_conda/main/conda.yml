@@ -7,7 +7,6 @@ dependencies:
   - pip
   - pytorch
   - transformers
-  - datasets
   - evaluate
   - accelerate
   - sentencepiece

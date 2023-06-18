@@ -1,8 +1,8 @@
+import pandas as pd
 import qwak
 from qwak.model.base import QwakModel
 from qwak.model.schema import ExplicitFeature, ModelSchema
 from transformers import BertTokenizer, BertModel
-import pandas as pd
 
 
 class BERTModel(QwakModel):

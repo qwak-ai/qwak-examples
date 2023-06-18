@@ -1,8 +1,6 @@
-from qwak.model.tools import run_local
-
-import torch
 import pandas as pd
 import qwak
+import torch
 from qwak.model.base import QwakModel
 from qwak.model.schema import ExplicitFeature, ModelSchema
 from transformers import AutoModelForCausalLM, AutoTokenizer

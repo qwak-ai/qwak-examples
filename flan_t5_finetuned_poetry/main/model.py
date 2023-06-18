@@ -11,7 +11,7 @@ from helpers import train_model, load_data, get_device
 
 class FineTuneFLANT5Model(QwakModel):
     # Works with NVIDIA T4 GPUs
-    
+
     def __init__(self):
         self.model = None
         self.tokenizer = None
@@ -59,7 +59,6 @@ class FineTuneFLANT5Model(QwakModel):
 
     @qwak.api()
     def predict(self, df):
-        
         # Tokenize input text
         input_ids = self.tokenizer(list(df['prompt'].values), return_tensors="pt").to(self.device)
         # Generate prediction
@@ -72,7 +71,6 @@ class FineTuneFLANT5Model(QwakModel):
 
 
 if __name__ == '__main__':
-
     m = FineTuneFLANT5Model()
     input_ = DataFrame(
         [{

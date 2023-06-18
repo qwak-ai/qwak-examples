@@ -1,7 +1,8 @@
 import os
-import qwak
+
 import numpy as np
 import pandas as pd
+import qwak
 from catboost import CatBoostClassifier, Pool, cv
 from catboost.datasets import titanic
 from qwak.model.base import QwakModel

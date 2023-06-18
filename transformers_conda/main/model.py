@@ -1,10 +1,10 @@
-import pandas as pd
-import numpy as np
-import qwak
 import evaluate
+import numpy as np
+import pandas as pd
+import qwak
+from datasets import load_dataset
 from qwak.model.base import QwakModel
 from qwak.model.schema import ExplicitFeature, ModelSchema
-from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from transformers import TrainingArguments, Trainer
 
