@@ -14,7 +14,7 @@ class FalconModel(QwakModel):
     def __init__(self):
         self.model = None
         self.tokenizer = None
-        self.model_id = "tiiuae/falcon-7b"
+        self.model_id = "tiiuae/falcon-7b-instruct"
 
     def build(self):
         pass
@@ -27,12 +27,6 @@ class FalconModel(QwakModel):
 
     def initialize_model(self):
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_id)
-        # model = AutoModelForCausalLM.from_pretrained(self.model_id, 
-        #                                              trust_remote_code=True,
-        #                                              torch_dtype=torch.bfloat16,
-        #                                              device_map="auto",
-        #                                             )
-
         self.model = transformers.pipeline(
             "text-generation",
             model=self.model_id,

@@ -123,6 +123,29 @@
         "LLM"
       ]
     },
+    "flan_t5_finetuned": {
+      "name": "FLAN-T5",
+      "description": "An enhanced T5 model finetuned on a mixture of tasks",
+      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/t5.png",
+      "source": {
+        "folder": "flan_t5_conda/main",
+        "files": [
+          "__init__.py",
+          "conda.yml",
+          "model.py"
+        ]
+      },
+      "build": {
+        "memory": "4096"
+      },
+      "deploy": {
+        "pods": "1",
+        "memory": "4096"
+      },
+      "tags": [
+        "LLM"
+      ]
+    },
     "gpt_neo": {
       "name": "GPT-Neo",
       "description": "An open-source variant of the GPT language model series",
@@ -149,7 +172,7 @@
     },
     "embeddings": {
       "name": "Sentence Embeddings",
-      "description": "An open-source embeddings model for semantic search use cases",
+      "description": "The all-MiniLM-L12-v2 embeddings model for semantic search use cases",
       "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/hugging_face.png",
       "source": {
         "folder": "sentence_transformers_poetry/main",

@@ -33,7 +33,7 @@ class SentenceEmbeddingsModel(QwakModel):
         print(f"PID is {self.pid}, device count is {torch.cuda.device_count()}")
         print(f"Using device type: {self.device.type} with index: {self.device.index}")
         self.model = SentenceTransformer(
-            model_name_or_path="sentence-transformers/all-MiniLM-L12-v2",
+            model_name_or_path=" ",
             device=self.device,
         )
 
