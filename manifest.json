@@ -146,6 +146,27 @@
         "Generative AI",
         "LLM"
       ]
+    },
+    "embeddings": {
+      "name": "Sentence Embeddings",
+      "description": "An open-source embeddings model for semantic search use cases",
+      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/hugging_face.png",
+      "source": {
+        "folder": "sentence_transformers_poetry/main",
+        "files": [
+          "__init__.py",
+          "pyproject.toml",
+          "model.py"
+        ]
+      },
+      "deploy": {
+        "pods": "1",
+        "memory": "4096"
+      },
+      "tags": [
+        "Embeddings",
+        "Semantic search"
+      ]
     }
   }
 }

@@ -1,11 +1,13 @@
 import os
+
 import qwak
 import torch
-from helpers import get_device
 from qwak.model.adapters import JsonOutputAdapter
 from qwak.model.base import QwakModel
 from qwak.model.schema import ModelSchema, ExplicitFeature
 from sentence_transformers import SentenceTransformer
+
+from helpers import get_device
 
 
 class SentenceEmbeddingsModel(QwakModel):
