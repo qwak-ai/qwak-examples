@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "falcon_7b"
+name = "sentence_embeddings"
 version = "0.1.0"
 description = ""
 authors = ["Qwak <info@qwak.com>"]
