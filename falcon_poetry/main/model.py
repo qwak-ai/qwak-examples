@@ -1,14 +1,15 @@
-from qwak import QwakModelInterface
-from transformers import AutoTokenizer, AutoModelForCausalLM
-import transformers
-import torch
 import pandas as pd
 import qwak
+import torch
+import transformers
 from pandas import DataFrame
+from qwak.model.base import QwakModel
 from qwak.model.schema import ModelSchema, ExplicitFeature
+from qwak.model.tools import run_local
+from transformers import AutoTokenizer
 
 
-class FalconModel(QwakModelInterface):
+class FalconModel(QwakModel):
 
     def __init__(self):
         self.model = None
@@ -20,7 +21,7 @@ class FalconModel(QwakModelInterface):
 
     def schema(self):
         return ModelSchema(
-            features=[
+            inputs=[
                 ExplicitFeature(name="prompt", type=str),
             ])
 
@@ -60,4 +61,4 @@ if __name__ == '__main__':
     input_ = DataFrame([{
         "prompt": "what is love?"
     }])
-    model.run_local(input_.to_json())
+    run_local(model, input_.to_json())
