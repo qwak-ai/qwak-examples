@@ -14,10 +14,3 @@ transformers = "*"
 datasets = "*"
 accelerate = "*"
 sentencepiece = "*"
-qwak-sdk = {version = "^0.9.150", source = "qwak"}
-
-[[tool.poetry.source]]
-name = "qwak"
-url = "https://qwak:A3RX55aNSpE8dCV@qwak.jfrog.io/artifactory/api/pypi/qwak-pypi/simple"
-default = false
-secondary = false

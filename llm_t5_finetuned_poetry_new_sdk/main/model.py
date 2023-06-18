@@ -1,13 +1,15 @@
 import pandas as pd
 import qwak
-from qwak import QwakModelInterface
+from pandas import DataFrame
+from qwak.model.base import QwakModel
 from qwak.model.schema import ModelSchema, ExplicitFeature
+from qwak.model.tools import run_local
 from transformers import T5Tokenizer
 
 from helpers import train_model, load_data, get_device
 
 
-class FineTuneFLANT5Model(QwakModelInterface):
+class FineTuneFLANT5Model(QwakModel):
     # Works with NVIDIA T4 GPUs
     
     def __init__(self):
@@ -15,7 +17,7 @@ class FineTuneFLANT5Model(QwakModelInterface):
         self.tokenizer = None
         self.device = None
         self.model_params = {
-            "model_id": "t5-base",
+            "model_id": "t5-small",
             "train_batch_size": 8,
             "valid_batch_size": 8,
             "train_epochs": 3,
@@ -25,10 +27,12 @@ class FineTuneFLANT5Model(QwakModelInterface):
             "max_target_text_length": 50,
             "seed": 42,
             "data_rows": 10000,
+            "input_path": "https://qwak-public.s3.amazonaws.com/example_data/t5_finetuning_data.csv"
         }
 
     def build(self):
-        dataframe = load_data(max_length=self.model_params["data_rows"])
+        dataframe = load_data(input_path=self.model_params["input_path"],
+                              max_length=self.model_params["data_rows"])
         # Adding the summarization request to each training row
         dataframe["text"] = "summarize: " + dataframe["text"]
         self.model = train_model(
@@ -41,7 +45,7 @@ class FineTuneFLANT5Model(QwakModelInterface):
 
     def schema(self):
         return ModelSchema(
-            features=[
+            inputs=[
                 ExplicitFeature(name="prompt", type=str),
             ])
 
@@ -65,3 +69,14 @@ class FineTuneFLANT5Model(QwakModelInterface):
         return pd.DataFrame([{
             "generated_text": decoded_outputs
         }])
+
+
+if __name__ == '__main__':
+
+    m = FineTuneFLANT5Model()
+    input_ = DataFrame(
+        [{
+            "prompt": "test"
+        }]
+    ).to_json()
+    run_local(m, input_)
