@@ -58,30 +58,6 @@
         "LLM"
       ]
     },
-    "codegen": {
-      "name": "CodeGen",
-      "description": "Autoregressive language models for program synthesis and code generation",
-      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/codegen.png",
-      "source": {
-        "folder": "codegen_conda/main",
-        "files": [
-          "__init__.py",
-          "conda.yml",
-          "model.py"
-        ]
-      },
-      "build": {
-        "memory": "8192"
-      },
-      "deploy": {
-        "pods": "1",
-        "memory": "8192"
-      },
-      "tags": [
-        "Generative AI",
-        "LLM"
-      ]
-    },
     "distilgpt2": {
       "name": "DistilGPT2",
       "description": "A lightweight version of the GPT-2 language generation model",
@@ -108,7 +84,7 @@
     },
     "flan_t5": {
       "name": "FLAN-T5",
-      "description": "An enhanced T5 model finetuned on a mixture of tasks",
+      "description": "An enhanced T5 model trained on a mixture of tasks",
       "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/t5.png",
       "source": {
         "folder": "flan_t5_conda/main",
@@ -130,14 +106,14 @@
       ]
     },
     "flan_t5_finetuned": {
-      "name": "FLAN-T5",
-      "description": "An enhanced T5 model finetuned on a mixture of tasks",
+      "name": "Finetuned FLAN-T5",
+      "description": "An finetuned T5 model on a unique set of data",
       "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/t5.png",
       "source": {
-        "folder": "flan_t5_conda/main",
+        "folder": "flan_t5_finetuned_poetry/main",
         "files": [
           "__init__.py",
-          "conda.yml",
+          "pyproject.toml",
           "model.py"
         ]
       },
@@ -149,6 +125,78 @@
         "memory": "4096"
       },
       "tags": [
+        "LLM"
+      ]
+    },
+    "embeddings": {
+      "name": "Sentence Embeddings",
+      "description": "The all-MiniLM-L12-v2 model for semantic search",
+      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/hugging_face.png",
+      "source": {
+        "folder": "sentence_transformers_poetry/main",
+        "files": [
+          "__init__.py",
+          "pyproject.toml",
+          "model.py"
+        ]
+      },
+      "deploy": {
+        "pods": "1"
+      },
+      "tags": [
+        "Embeddings",
+        "Semantic Search"
+      ]
+    },
+    "falcon_7b": {
+      "name": "Falcon 7B Instruct",
+      "description": "A leading open source generative LLM ",
+      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/t5.png",
+      "source": {
+        "folder": "flan_t5_conda/main",
+        "files": [
+          "__init__.py",
+          "conda.yml",
+          "model.py"
+        ]
+      },
+      "build": {
+        "memory": "4096",
+        "gpu_compatible": "true"
+      },
+      "deploy": {
+        "pods": "1",
+        "workers": "1",
+        "gpu_type": "A10G",
+        "gpu_amount": "2",
+        "timeout": "50000"
+      },
+      "tags": [
+        "LLM",
+        "Generative AI"
+      ]
+    },
+    "codegen": {
+      "name": "CodeGen",
+      "description": "Autoregressive language models for program synthesis and code generation",
+      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/codegen.png",
+      "source": {
+        "folder": "codegen_conda/main",
+        "files": [
+          "__init__.py",
+          "conda.yml",
+          "model.py"
+        ]
+      },
+      "build": {
+        "memory": "8192"
+      },
+      "deploy": {
+        "pods": "1",
+        "memory": "8192"
+      },
+      "tags": [
+        "Generative AI",
         "LLM"
       ]
     },
@@ -174,26 +222,6 @@
       "tags": [
         "Generative AI",
         "LLM"
-      ]
-    },
-    "embeddings": {
-      "name": "Sentence Embeddings",
-      "description": "The all-MiniLM-L12-v2 embeddings model for semantic search use cases",
-      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/hugging_face.png",
-      "source": {
-        "folder": "sentence_transformers_poetry/main",
-        "files": [
-          "__init__.py",
-          "pyproject.toml",
-          "model.py"
-        ]
-      },
-      "deploy": {
-        "pods": "1"
-      },
-      "tags": [
-        "Embeddings",
-        "Semantic search"
       ]
     }
   }
