@@ -13,7 +13,10 @@
     "deploy": {
       "pods": "1"
     },
-    "tags": ["Example model", "CatBoost"]
+    "tags": [
+      "Example model",
+      "CatBoost"
+    ]
   },
   "xgboost": {
     "name": "User Churn Estimation",
@@ -29,7 +32,10 @@
     "deploy": {
       "pods": "1"
     },
-    "tags": ["Example model", "XGBoost"]
+    "tags": [
+      "Example model",
+      "XGBoost"
+    ]
   },
   "llm": {
     "bert": {
@@ -123,6 +129,29 @@
         "LLM"
       ]
     },
+    "flan_t5_finetuned": {
+      "name": "FLAN-T5",
+      "description": "An enhanced T5 model finetuned on a mixture of tasks",
+      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/t5.png",
+      "source": {
+        "folder": "flan_t5_conda/main",
+        "files": [
+          "__init__.py",
+          "conda.yml",
+          "model.py"
+        ]
+      },
+      "build": {
+        "memory": "4096"
+      },
+      "deploy": {
+        "pods": "1",
+        "memory": "4096"
+      },
+      "tags": [
+        "LLM"
+      ]
+    },
     "gpt_neo": {
       "name": "GPT-Neo",
       "description": "An open-source variant of the GPT language model series",
@@ -145,6 +174,26 @@
       "tags": [
         "Generative AI",
         "LLM"
+      ]
+    },
+    "embeddings": {
+      "name": "Sentence Embeddings",
+      "description": "The all-MiniLM-L12-v2 embeddings model for semantic search use cases",
+      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/hugging_face.png",
+      "source": {
+        "folder": "sentence_transformers_poetry/main",
+        "files": [
+          "__init__.py",
+          "pyproject.toml",
+          "model.py"
+        ]
+      },
+      "deploy": {
+        "pods": "1"
+      },
+      "tags": [
+        "Embeddings",
+        "Semantic search"
       ]
     }
   }

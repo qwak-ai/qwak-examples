@@ -1,0 +1,48 @@
+import pandas as pd
+import qwak
+import torch
+import transformers
+from qwak.model.base import QwakModel
+from qwak.model.schema import ModelSchema, ExplicitFeature
+from transformers import AutoTokenizer
+
+
+class FalconModel(QwakModel):
+
+    def __init__(self):
+        self.model = None
+        self.tokenizer = None
+        self.model_id = "tiiuae/falcon-7b-instruct"
+
+    def build(self):
+        pass
+
+    def schema(self):
+        return ModelSchema(
+            inputs=[
+                ExplicitFeature(name="prompt", type=str),
+            ])
+
+    def initialize_model(self):
+        self.tokenizer = AutoTokenizer.from_pretrained(self.model_id)
+        self.model = transformers.pipeline(
+            "text-generation",
+            model=self.model_id,
+            tokenizer=self.tokenizer,
+            torch_dtype=torch.bfloat16,
+            trust_remote_code=True,
+            device_map="auto",
+        )
+
+    @qwak.api()
+    def predict(self, df):
+        decoded_outputs = self.model(
+            list(df['prompt'].values),
+            max_length=200,
+            do_sample=True,
+            top_k=10,
+            num_return_sequences=1,
+            eos_token_id=self.tokenizer.eos_token_id,
+        )
+
+        return pd.DataFrame(decoded_outputs)

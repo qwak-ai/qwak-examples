@@ -1,4 +1,5 @@
 import os
+
 import pandas as pd
 import qwak
 import xgboost as xgb
@@ -13,8 +14,7 @@ class XGBoostChurnPredictionModel(QwakModel):
         self.params = {
             'n_estimators': int(os.getenv('n_estimators', 200)),
             'learning_rate': float(os.getenv('learning_rate', 0.06)),
-            'objective': 'binary:logistic',
-            'use_label_encoder': False
+            'objective': 'binary:logistic'
         }
 
         # Create a XGBoost classifier with the specified parameters

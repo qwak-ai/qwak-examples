@@ -1,5 +1,4 @@
 import pandas as pd
-from qwak.testing.fixtures import real_time_client
 from qwak_inference.realtime_client.client import InferenceOutputFormat
 
 

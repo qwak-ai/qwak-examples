@@ -1,8 +1,9 @@
 import os
-import qwak
+
+import catboost
 import numpy as np
 import pandas as pd
-import catboost
+import qwak
 from qwak.model.base import QwakModel
 from qwak.model.schema import ExplicitFeature, ModelSchema, InferenceOutput
 from sklearn.model_selection import train_test_split
