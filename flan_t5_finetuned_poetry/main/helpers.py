@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 import torch
 from pandas import DataFrame
+from torch.optim import Adam
 from torch.utils.data import DataLoader
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 
@@ -20,9 +21,11 @@ def get_device():
     )
 
 
-def load_data(input_path: str = None, max_length=None):
+def load_data(input_path: str = None, max_length : int = None) -> DataFrame:
+    """
+    Load data from a CSV in either a remote or local path
+    """
     csv_df = pd.read_csv(input_path)
-
     if max_length and max_length > 0:
         return csv_df.head(max_length)
 
@@ -30,10 +33,22 @@ def load_data(input_path: str = None, max_length=None):
 
 
 def write_data(output_path: str, df):
+    """
+    Saving data to a local CSV file
+    """
     df.to_csv(output_path, index=False)
 
 
-def perform_training_cycle(epoch, tokenizer, model, device, loader, optimizer):
+def perform_training_cycle(epoch: int,
+                           tokenizer: T5Tokenizer,
+                           model: T5ForConditionalGeneration,
+                           device: torch.device,
+                           loader: DataLoader,
+                           optimizer: Adam
+                           ):
+    """
+    Run a single training epoch
+    """
     model.train()
     for i, data in enumerate(loader, 0):
         print("Training epoch", epoch, "batch", i)
@@ -57,10 +72,14 @@ def perform_training_cycle(epoch, tokenizer, model, device, loader, optimizer):
         optimizer.step()
 
 
-def perform_validation_cycle(epoch, tokenizer, model, device, loader):
+def perform_validation_cycle(epoch: int,
+                             tokenizer: T5Tokenizer,
+                             model: T5ForConditionalGeneration,
+                             device: torch.device,
+                             loader: DataLoader
+                             ):
     """
-    Function to evaluate model for predictions
-
+    Evaluate model for predictions
     """
     model.eval()
     predictions = []
@@ -100,6 +119,10 @@ def train_model(dataframe: DataFrame,
                 model_params: Dict,
                 output_dir: str = "./outputs/"
                 ):
+    """
+    Perform full model training cycle
+    """
+
     # Set random seeds for numpy and pytorch for reproducibility
     torch.manual_seed(model_params["seed"])
     np.random.seed(model_params["seed"])
@@ -111,8 +134,6 @@ def train_model(dataframe: DataFrame,
         model_max_length=model_params["max_source_text_length"]
     )
 
-    # Defining the model. We are using t5-base model and added a Language model layer on top for generation of Summary.
-    # Further this model is sent to device (GPU/TPU) for using the hardware.
     device = get_device()
     print(f"Using device: {device}")
     model = T5ForConditionalGeneration.from_pretrained(model_params["model_id"])
@@ -121,8 +142,7 @@ def train_model(dataframe: DataFrame,
     # Importing the raw dataset
     dataframe = dataframe[[source_text, target_text]]
 
-    # Creation of Dataset and Dataloader
-    # Defining the train size. So 80% of the data will be used for training and the rest for validation.
+    # Defining the train size, 80% of the data will be used for training and the rest for validation.
     train_size = 0.8
     train_dataset = dataframe.sample(frac=train_size, random_state=model_params["seed"])
     val_dataset = dataframe.drop(train_dataset.index).reset_index(drop=True)

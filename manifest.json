@@ -105,6 +105,32 @@
         "LLM"
       ]
     },
+    "finetuned_flan_t5": {
+      "name": "Finetuned FLAN-T5",
+      "description": "Finetuning FLAN-T5 model on proprietary data",
+      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/t5.png",
+      "source": {
+        "folder": "flan_t5_finetuned_poetry/main",
+        "files": [
+          "__init__.py",
+          "pyproject.toml",
+          "model.py",
+          "text_dataset.py",
+          "helpers.py"
+        ]
+      },
+      "build": {
+        "memory": "8128"
+      },
+      "deploy": {
+        "pods": "1",
+        "memory": "8128"
+      },
+      "tags": [
+        "LLM",
+        "Generative AI"
+      ]
+    },
     "embeddings": {
       "name": "Sentence Embeddings",
       "description": "The all-MiniLM-L12-v2 model for semantic search",

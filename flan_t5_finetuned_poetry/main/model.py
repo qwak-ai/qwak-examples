@@ -1,16 +1,12 @@
 import pandas as pd
 import qwak
-from pandas import DataFrame
 from qwak.model.base import QwakModel
 from qwak.model.schema import ModelSchema, ExplicitFeature
-from qwak.model.tools import run_local
 from transformers import T5Tokenizer
-
 from helpers import train_model, load_data, get_device
 
 
 class FineTuneFLANT5Model(QwakModel):
-    # Works with NVIDIA T4 GPUs
 
     def __init__(self):
         self.model = None
@@ -31,8 +27,10 @@ class FineTuneFLANT5Model(QwakModel):
         }
 
     def build(self):
-        dataframe = load_data(input_path=self.model_params["input_path"],
-                              max_length=self.model_params["data_rows"])
+        dataframe = load_data(
+            input_path=self.model_params["input_path"],
+            max_length=self.model_params["data_rows"]
+        )
         # Adding the summarization request to each training row
         dataframe["text"] = "summarize: " + dataframe["text"]
         self.model = train_model(
@@ -68,13 +66,3 @@ class FineTuneFLANT5Model(QwakModel):
         return pd.DataFrame([{
             "generated_text": decoded_outputs
         }])
-
-
-if __name__ == '__main__':
-    m = FineTuneFLANT5Model()
-    input_ = DataFrame(
-        [{
-            "prompt": "test"
-        }]
-    ).to_json()
-    run_local(m, input_)

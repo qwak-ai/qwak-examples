@@ -1,11 +1,21 @@
 import torch
+from pandas import DataFrame
 from torch.utils.data import Dataset
+from transformers import T5Tokenizer
 
 
 class TextDataset(Dataset):
-
+    """
+    Textual dataset loader
+    """
     def __init__(
-            self, dataframe, tokenizer, source_len, target_len, source_text, target_text
+            self,
+            dataframe: DataFrame,
+            tokenizer: T5Tokenizer,
+            source_len: int,
+            target_len: int,
+            source_text: str,
+            target_text: str
     ):
         self.tokenizer = tokenizer
         self.data = dataframe
