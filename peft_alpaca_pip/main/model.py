@@ -62,8 +62,6 @@ class PEFTModel(QwakModel):
         self.model, self.tokenizer, self.fabric = load_model(
             checkpoint_dir=self.checkpoint_path
         )
-        # self.device = get_device()
-        # print(f"Inference using device: {self.device}")
 
     @qwak.api()
     def predict(self, df):
