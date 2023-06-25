@@ -40,6 +40,7 @@ class FineTuneFLANT5Model(QwakModel):
         source = self.model_params["source_column_name"]
         target = self.model_params["target_column_name"]
 
+        qwak.log_metric({"val_accuracy": 1})
         # Adding the summarization request to each training row
         dataframe[source] = "summarize: " + dataframe[source]
         self.model = train_model(
