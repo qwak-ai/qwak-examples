@@ -26,7 +26,7 @@ class FineTuneFLANT5Model(QwakModel):
             "max_source_text_length": 512,
             "max_target_text_length": 50,
             "seed": 42,
-            "data_rows": 10000,
+            "max_rows": 10000,
             "input_path": "https://qwak-public.s3.amazonaws.com/example_data/financial_qa.csv",
             "source_column_name": "instruction",
             "target_column_name": "output"
@@ -35,7 +35,7 @@ class FineTuneFLANT5Model(QwakModel):
     def build(self):
         dataframe = load_data(
             input_path=self.model_params["input_path"],
-            max_length=self.model_params["data_rows"]
+            max_length=self.model_params["max_rows"]
         )
         source = self.model_params["source_column_name"]
         target = self.model_params["target_column_name"]
