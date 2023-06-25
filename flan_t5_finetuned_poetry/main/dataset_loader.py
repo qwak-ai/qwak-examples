@@ -8,6 +8,7 @@ class TextDataset(Dataset):
     """
     Textual dataset loader
     """
+
     def __init__(
             self,
             dataframe: DataFrame,

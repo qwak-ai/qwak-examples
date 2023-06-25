@@ -115,7 +115,8 @@
           "__init__.py",
           "pyproject.toml",
           "model.py",
-          "text_dataset.py",
+          "training.py",
+          "dataset_loader.py",
           "helpers.py"
         ]
       },
