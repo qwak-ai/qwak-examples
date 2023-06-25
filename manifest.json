@@ -107,7 +107,7 @@
     },
     "finetuned_flan_t5": {
       "name": "Finetuned FLAN-T5",
-      "description": "Finetuning FLAN-T5 model on proprietary data",
+      "description": "Finetuning FLAN-T5 on financial QA data",
       "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/t5.png",
       "source": {
         "folder": "flan_t5_finetuned_poetry/main",
@@ -121,11 +121,11 @@
         ]
       },
       "build": {
-        "memory": "8128"
+        "memory": "4096"
       },
       "deploy": {
         "pods": "1",
-        "memory": "8128"
+        "memory": "4096"
       },
       "tags": [
         "LLM",
