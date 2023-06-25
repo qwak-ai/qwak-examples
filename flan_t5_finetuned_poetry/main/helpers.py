@@ -41,9 +41,9 @@ def load_data(input_path: str = None, max_length: int = None) -> DataFrame:
     Load data from a CSV in either a remote or local path
     """
     if is_valid_uri(input_path):
-        file_path = get_local_path(input_path)
-    else:
         file_path = input_path
+    else:
+        file_path = get_local_path(input_path)
 
     csv_df = pd.read_csv(file_path)
     if max_length and max_length > 0:
