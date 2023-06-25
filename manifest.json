@@ -99,7 +99,7 @@
       },
       "build": {
         "memory": "4096",
-        "cpu": "4",
+        "cpu": "4"
       },
       "deploy": {
         "pods": "1",
