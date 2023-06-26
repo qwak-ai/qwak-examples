@@ -52,7 +52,6 @@ class PEFTModel(QwakModel):
         return ModelSchema(
             inputs=[
                 ExplicitFeature(name="prompt", type=str),
-                ExplicitFeature(name="input", type=str),
             ])
 
     def initialize_model(self):
@@ -64,7 +63,6 @@ class PEFTModel(QwakModel):
     @qwak.api()
     def predict(self, df):
         user_prompt = list(df['prompt'].values)[0]
-        user_input = list(df['input'].values)[0] if 'input' in df else ""
 
         if not user_prompt:
             return pd.DataFrame([{
@@ -72,10 +70,10 @@ class PEFTModel(QwakModel):
             }])
 
         prompt = generate_prompt({
-            "instruction": user_prompt,
-            "input": user_input or ""
+            "instruction": user_prompt
         })
-        encoded = self.tokenizer.encode(prompt, device=self.model.device)
+        encoded = self.tokenizer.encode(prompt,
+                                        device=self.model.device)
         output = generate_prediction(self.model,
                                      self.tokenizer,
                                      self.fabric,
