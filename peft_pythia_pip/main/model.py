@@ -22,7 +22,7 @@ class PEFTModel(QwakModel):
         self.model = None
         self.tokenizer = None
         self.fabric = None
-        self.model_id = "EleutherAI/pythia-1.4b"
+        self.model_id = "EleutherAI/pythia-410m"
         self.checkpoint_path = Path("checkpoints").joinpath(self.model_id)
         self.data_path = Path("data/finance-alpaca")
         self.model_params = {
