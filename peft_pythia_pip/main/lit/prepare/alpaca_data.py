@@ -14,9 +14,16 @@ sys.path.append(str(wd))
 
 from lit_gpt.tokenizer import Tokenizer
 
-DATA_FILE_URL = "https://raw.githubusercontent.com/tloen/alpaca-lora/main/alpaca_data_cleaned_archive.json"
-DATA_FILE_NAME = "alpaca_data_cleaned_archive.json"
-DESTINATION_PATH = Path("data/alpaca")
+# Original from Alpaca
+# DATA_FILE_URL = "https://raw.githubusercontent.com/tloen/alpaca-lora/main/alpaca_data_cleaned_archive.json"
+# DATA_FILE_NAME = "alpaca_data_cleaned_archive.json"
+# DESTINATION_PATH = Path("data/alpaca")
+
+# Financial Data
+DATA_FILE_URL = "https://huggingface.co/datasets/gbharti/finance-alpaca/resolve/main/Cleaned_date.json"
+DATA_FILE_NAME = "Cleaned_date.json"
+DESTINATION_PATH = Path("data/finance-alpaca")
+
 CHECKPOINT_DIR = Path("checkpoints/stabilityai/stablelm-base-alpha-3b")
 TEST_SPLIT_SIZE = 2000
 IGNORE_INDEX = -1

@@ -1,9 +1,11 @@
 --pre
-#--index-url https://download.pytorch.org/whl/nightly/cpu
+# When running on CPU
+# --extra-index-url https://download.pytorch.org/whl/nightly/cpu
+# When running on GPU
 --extra-index-url https://download.pytorch.org/whl/nightly/cu118
 lit-gpt@ git+https://github.com/Lightning-AI/lit-gpt.git
 torch>=2.1.0dev
 pandas
 jsonargparse
 huggingface-hub
-pydantic==1.10.8
+pydantic==1.10.9
