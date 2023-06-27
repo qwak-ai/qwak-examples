@@ -22,7 +22,8 @@ class PEFTModel(QwakModel):
         self.model = None
         self.tokenizer = None
         self.fabric = None
-        self.model_id = "EleutherAI/pythia-410m"
+        self.model_id = "togethercomputer/RedPajama-INCITE-Base-3B-v1"
+        # self.model_id = "EleutherAI/pythia-410m-deduped"
         self.checkpoint_path = Path("checkpoints").joinpath(self.model_id)
         self.data_path = Path("data/finance-alpaca")
         self.model_params = {
@@ -70,7 +71,8 @@ class PEFTModel(QwakModel):
             }])
 
         prompt = generate_prompt({
-            "instruction": user_prompt
+            "instruction": user_prompt,
+            "input": None
         })
         encoded = self.tokenizer.encode(prompt,
                                         device=self.model.device)
