@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 import torch
 from pandas import DataFrame
-from torch.optim import Adam
+from torch.optim import AdamW
 from torch.utils.data import DataLoader
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 
@@ -18,7 +18,7 @@ def perform_training_cycle(epoch: int,
                            model: T5ForConditionalGeneration,
                            device: torch.device,
                            loader: DataLoader,
-                           optimizer: Adam
+                           optimizer: AdamW
                            ):
     """
     Run a single training epoch
@@ -158,14 +158,15 @@ def train_model(dataframe: DataFrame,
     val_loader = DataLoader(val_set, **val_params)
 
     # Defining the optimizer that will be used to tune the weights of the network in the training session.
-    optimizer = torch.optim.Adam(
-        params=model.parameters(), lr=model_params["learning_rate"]
+    optimizer = torch.optim.AdamW(
+        params=model.parameters(),
+        lr=model_params["learning_rate"]
     )
 
     for epoch in range(model_params["train_epochs"]):
-        print("Training started")
+        print("Training cycle started")
         perform_training_cycle(epoch, tokenizer, model, device, training_loader, optimizer)
-        print("Training ended")
+        print("Training cycle ended")
 
     # Saving the model after training
     path = os.path.join(output_dir, "model_files")
