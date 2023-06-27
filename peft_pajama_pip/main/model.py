@@ -22,14 +22,15 @@ class PEFTModel(QwakModel):
         self.model = None
         self.tokenizer = None
         self.fabric = None
-        self.model_id = "togethercomputer/RedPajama-INCITE-Base-3B-v1"
-        # self.model_id = "EleutherAI/pythia-410m-deduped"
+        self.model_id = "togethercomputer/RedPajama-INCITE-Instruct-3B-v1"
         self.checkpoint_path = Path("checkpoints").joinpath(self.model_id)
         self.data_path = Path("data/finance-alpaca")
         self.model_params = {
             "max_new_tokens": 100,
             "top_k": 200,
             "temperature": 0.8,
+            "precision": "16-true",  # For fine-tuning on V100
+            # "precision": "bf16-mixed",  # For fine-tuning on A10 / A100
         }
         torch.set_float32_matmul_precision('high')
 
@@ -44,7 +45,9 @@ class PEFTModel(QwakModel):
 
         # Fine-tuning the model
         setup(checkpoint_dir=self.checkpoint_path,
-              data_dir=self.data_path)
+              data_dir=self.data_path,
+              precision=self.model_params["precision"]
+              )
 
         # Logging metrics for automation
         qwak.log_metric({"val_accuracy": 1})
