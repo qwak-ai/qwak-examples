@@ -21,7 +21,7 @@ MODELS = {
     "Falcon 7b": {
         "model_id": FALCON_7B_MODEL_ID,
         "fn": falcon_completion
-    },
+    }
 }
 
 
