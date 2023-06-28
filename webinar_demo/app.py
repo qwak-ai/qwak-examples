@@ -6,8 +6,8 @@ from PIL import Image
 from streamlit_chat import message
 from streamlit_extras.add_vertical_space import add_vertical_space
 
-from inference import falcon_completion, flan_completion, generate_embeddings, peft_completion, \
-    FLAN_T5_FINETUNED_MODEL_ID, FLAN_T5_MODEL_ID, FALCON_7B_MODEL_ID, PYTHIA_MODEL_ID
+from inference import falcon_completion, flan_completion, generate_embeddings, \
+    FLAN_T5_FINETUNED_MODEL_ID, FLAN_T5_MODEL_ID, FALCON_7B_MODEL_ID
 
 MODELS = {
     "FLAN T5": {
@@ -40,7 +40,7 @@ def get_text():
 
 
 st.set_page_config(page_title="LLMs on Qwak")
-show_image('qwak_cover_llm.png')
+show_image('llm_cover_1.png')
 add_vertical_space(2)
 
 col1, col2 = st.columns([1, 3])
