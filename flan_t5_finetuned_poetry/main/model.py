@@ -17,7 +17,7 @@ class FineTuneFLANT5Model(QwakModel):
         self.tokenizer = None
         self.device = None
         self.model_params = {
-            "model_id": "t5-small",
+            "model_id": "t5-large",
             "train_batch_size": 8,
             "valid_batch_size": 8,
             "train_epochs": 3,
@@ -42,7 +42,8 @@ class FineTuneFLANT5Model(QwakModel):
 
         qwak.log_metric({"val_accuracy": 1})
         # Adding the summarization request to each training row
-        dataframe[source] = "summarize: " + dataframe[source]
+        dataframe[source] = "question: " + dataframe[source]
+        dataframe[target] = "answer: " + dataframe[target]
         self.model = train_model(
             dataframe=dataframe,
             source_text=source,

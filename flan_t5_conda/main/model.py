@@ -8,7 +8,7 @@ from transformers import T5Tokenizer, T5ForConditionalGeneration
 class FLANT5Model(QwakModel):
 
     def __init__(self):
-        self.model_id = "google/flan-t5-base"
+        self.model_id = "google/flan-t5-large"
         self.max_new_tokens = 100
         self.model = None
         self.tokenizer = None
