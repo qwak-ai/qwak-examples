@@ -17,7 +17,7 @@ class FineTuneFLANT5Model(QwakModel):
         self.tokenizer = None
         self.device = None
         self.model_params = {
-            "model_id": "t5-small",
+            "model_id": "t5-base",
             "train_batch_size": 8,
             "valid_batch_size": 8,
             "train_epochs": 3,
