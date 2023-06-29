@@ -1,8 +1,7 @@
 from qwak_inference import RealTimeClient
 
 SENTENCE_EMBEDDINGS_MODEL_ID = 'sentence_embeddings'
-# FLAN_T5_FINETUNED_MODEL_ID = 'finetuned_flan_t5'
-FLAN_T5_FINETUNED_MODEL_ID = 'flan_t5_fine_tuned'  # Old model
+FLAN_T5_FINETUNED_MODEL_ID = 'flan_t5_fine_tuned'
 FLAN_T5_MODEL_ID = 'flan_t5_large'
 FALCON_7B_MODEL_ID = 'falcon_7b'
 PYTHIA_MODEL_ID = 'parameter_efficient_fine_tuning'
