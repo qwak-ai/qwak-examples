@@ -30,8 +30,7 @@ def show_image(image_path):
     st.image(image, use_column_width="always")
 
 
-def generate_response(prompt: str, model_id: str, inference_fn: Callable):
-    # print(model_id, prompt)
+def generate_response(prompt: str, inference_fn: Callable):
     return inference_fn(prompt)
 
 
@@ -40,7 +39,7 @@ def get_text():
 
 
 st.set_page_config(page_title="LLMs on Qwak")
-show_image('llm_cover_1.png')
+show_image('llm_cover.png')
 add_vertical_space(2)
 
 col1, col2 = st.columns([1, 3])
@@ -53,7 +52,6 @@ with st.container():
         )
     with col2:
         user_input = get_text()
-
 
 add_vertical_space(2)
 
@@ -68,7 +66,10 @@ with st.container():
     with response_container:
         if user_input:
             with st.spinner('Loading...'):
-                response = generate_response(user_input, current_model, MODELS[current_model]["fn"])
+                response = generate_response(
+                    user_input,
+                    MODELS[current_model]["fn"]
+                )
                 if response:
                     message(response)
 
