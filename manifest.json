@@ -52,7 +52,7 @@
       },
       "deploy": {
         "pods": "1",
-        "memory": "4096"
+        "memory": "4"
       },
       "tags": [
         "LLM"
@@ -71,11 +71,11 @@
         ]
       },
       "build": {
-        "memory": "4096"
+        "memory": "4"
       },
       "deploy": {
         "pods": "1",
-        "memory": "4096"
+        "memory": "4"
       },
       "tags": [
         "Generative AI",
@@ -98,13 +98,13 @@
         ]
       },
       "build": {
-        "memory": "4096",
+        "memory": "4",
         "cpu": "4"
       },
       "deploy": {
         "pods": "1",
         "cpu": "2",
-        "memory": "4096"
+        "memory": "4"
       },
       "tags": [
         "LLM",
@@ -124,11 +124,11 @@
         ]
       },
       "build": {
-        "memory": "4096"
+        "memory": "4"
       },
       "deploy": {
         "pods": "1",
-        "memory": "4096"
+        "memory": "4"
       },
       "tags": [
         "LLM"
@@ -167,11 +167,11 @@
         ]
       },
       "build": {
-        "memory": "8192"
+        "memory": "8"
       },
       "deploy": {
         "pods": "1",
-        "memory": "8192"
+        "memory": "8"
       },
       "tags": [
         "Generative AI",
@@ -191,11 +191,11 @@
         ]
       },
       "build": {
-        "memory": "4096"
+        "memory": "4"
       },
       "deploy": {
         "pods": "1",
-        "memory": "4096"
+        "memory": "4"
       },
       "tags": [
         "Generative AI",
