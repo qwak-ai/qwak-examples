@@ -98,7 +98,7 @@
         ]
       },
       "build": {
-        "memory": "8192",
+        "memory": "16384",
         "cpu": "4"
       },
       "deploy": {
