@@ -98,13 +98,13 @@
         ]
       },
       "build": {
-        "memory": "4096",
+        "memory": "8192",
         "cpu": "4"
       },
       "deploy": {
         "pods": "1",
         "cpu": "2",
-        "memory": "4096"
+        "memory": "8192"
       },
       "tags": [
         "LLM",
