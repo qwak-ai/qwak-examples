@@ -98,8 +98,8 @@
         ]
       },
       "build": {
-        "memory": "16384",
-        "cpu": "4"
+        "cpu": "2",
+        "memory": "8192"
       },
       "deploy": {
         "pods": "1",
