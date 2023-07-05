@@ -130,7 +130,7 @@
         ]
       },
       "build": {
-        "memory": "4"
+        "memory": "8"
       },
       "deploy": {
         "pods": "1",
