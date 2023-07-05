@@ -11,7 +11,9 @@
       ]
     },
     "deploy": {
-      "pods": "1"
+      "pods": "1",
+      "cpu": "2",
+      "memory": "8"
     },
     "tags": [
       "Example model",
@@ -30,7 +32,9 @@
       ]
     },
     "deploy": {
-      "pods": "1"
+      "pods": "1",
+      "cpu": "2",
+      "memory": "8"
     },
     "tags": [
       "Example model",
@@ -52,7 +56,8 @@
       },
       "deploy": {
         "pods": "1",
-        "memory": "4"
+        "cpu": "2",
+        "memory": "8"
       },
       "tags": [
         "LLM"
@@ -75,7 +80,8 @@
       },
       "deploy": {
         "pods": "1",
-        "memory": "4"
+        "cpu": "2",
+        "memory": "8"
       },
       "tags": [
         "Generative AI",
@@ -104,7 +110,7 @@
       "deploy": {
         "pods": "1",
         "cpu": "2",
-        "memory": "4"
+        "memory": "8"
       },
       "tags": [
         "LLM",
@@ -128,7 +134,8 @@
       },
       "deploy": {
         "pods": "1",
-        "memory": "4"
+        "cpu": "2",
+        "memory": "8"
       },
       "tags": [
         "LLM"
@@ -147,7 +154,9 @@
         ]
       },
       "deploy": {
-        "pods": "1"
+        "pods": "1",
+        "cpu": "2",
+        "memory": "8"
       },
       "tags": [
         "Embeddings",
@@ -171,6 +180,7 @@
       },
       "deploy": {
         "pods": "1",
+        "cpu": "2",
         "memory": "8"
       },
       "tags": [
@@ -195,7 +205,8 @@
       },
       "deploy": {
         "pods": "1",
-        "memory": "4"
+        "cpu": "2",
+        "memory": "8"
       },
       "tags": [
         "Generative AI",
