@@ -11,7 +11,9 @@
       ]
     },
     "deploy": {
-      "pods": "1"
+      "pods": "1",
+      "cpu": "2",
+      "memory": "8"
     },
     "tags": [
       "Example model",
@@ -30,7 +32,9 @@
       ]
     },
     "deploy": {
-      "pods": "1"
+      "pods": "1",
+      "cpu": "2",
+      "memory": "8"
     },
     "tags": [
       "Example model",
@@ -52,7 +56,8 @@
       },
       "deploy": {
         "pods": "1",
-        "memory": "4096"
+        "cpu": "2",
+        "memory": "8"
       },
       "tags": [
         "LLM"
@@ -70,12 +75,10 @@
           "model.py"
         ]
       },
-      "build": {
-        "memory": "4096"
-      },
       "deploy": {
         "pods": "1",
-        "memory": "4096"
+        "cpu": "2",
+        "memory": "8"
       },
       "tags": [
         "Generative AI",
@@ -99,12 +102,12 @@
       },
       "build": {
         "cpu": "2",
-        "memory": "8192"
+        "memory": "8"
       },
       "deploy": {
         "pods": "1",
         "cpu": "2",
-        "memory": "8192"
+        "memory": "8"
       },
       "tags": [
         "LLM",
@@ -123,12 +126,10 @@
           "model.py"
         ]
       },
-      "build": {
-        "memory": "4096"
-      },
       "deploy": {
         "pods": "1",
-        "memory": "4096"
+        "cpu": "2",
+        "memory": "8"
       },
       "tags": [
         "LLM"
@@ -147,7 +148,9 @@
         ]
       },
       "deploy": {
-        "pods": "1"
+        "pods": "1",
+        "cpu": "2",
+        "memory": "8"
       },
       "tags": [
         "Embeddings",
@@ -166,12 +169,10 @@
           "model.py"
         ]
       },
-      "build": {
-        "memory": "8192"
-      },
       "deploy": {
         "pods": "1",
-        "memory": "8192"
+        "cpu": "2",
+        "memory": "8"
       },
       "tags": [
         "Generative AI",
@@ -190,12 +191,10 @@
           "model.py"
         ]
       },
-      "build": {
-        "memory": "4096"
-      },
       "deploy": {
         "pods": "1",
-        "memory": "4096"
+        "cpu": "2",
+        "memory": "8"
       },
       "tags": [
         "Generative AI",
