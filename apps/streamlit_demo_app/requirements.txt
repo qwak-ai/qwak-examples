@@ -1,0 +1,6 @@
+Pillow
+requests
+streamlit
+streamlit_chat
+streamlit_extras
+faker
