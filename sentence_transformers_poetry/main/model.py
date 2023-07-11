@@ -1,7 +1,6 @@
-import os
-
 import qwak
-import torch
+from qwak.model.tools import run_local
+from pandas import DataFrame
 from qwak.model.adapters import JsonOutputAdapter
 from qwak.model.base import QwakModel
 from qwak.model.schema import ModelSchema, ExplicitFeature
@@ -16,7 +15,6 @@ class SentenceEmbeddingsModel(QwakModel):
         self.model_id = "sentence-transformers/all-MiniLM-L12-v2"
         self.model = None
         self.device = None
-        self.pid = None
 
     def build(self):
         pass
@@ -28,12 +26,10 @@ class SentenceEmbeddingsModel(QwakModel):
             ])
 
     def initialize_model(self):
-        self.pid = os.getpid()
         self.device = get_device()
-        print(f"PID is {self.pid}, device count is {torch.cuda.device_count()}")
-        print(f"Using device type: {self.device.type} with index: {self.device.index}")
+        print(f"Inference using device: {self.device}")
         self.model = SentenceTransformer(
-            model_name_or_path=" ",
+            model_name_or_path=self.model_id,
             device=self.device,
         )
 
@@ -48,3 +44,13 @@ class SentenceEmbeddingsModel(QwakModel):
             batch_size=128,
         ).tolist()
         return text_embeds
+
+
+if __name__ == '__main__':
+    m = SentenceEmbeddingsModel()
+    input_ = DataFrame(
+        [{
+            "text": "Why does it matter if a Central Bank has a negative rather than 0% interest rate?"
+        }]
+    ).to_json()
+    run_local(m, input_)
