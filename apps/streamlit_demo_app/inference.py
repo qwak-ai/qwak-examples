@@ -39,7 +39,7 @@ def get_api_inference(model_input: str, model_id: str, qwak_token: str = None, a
     if not qwak_token:
         qwak_token = get_qwak_token(api_key)
 
-    prompt = "Question: " + model_input
+    prompt = "question: " + model_input
 
     res = requests.post(
         url=f'https://models.llm-demo.qwak.ai/v1/{model_id}/predict',
@@ -57,13 +57,36 @@ def get_api_inference(model_input: str, model_id: str, qwak_token: str = None, a
     return res.json()[0]["generated_text"][0]
 
 
-def generate_embeddings(input_text: str, model_id=SENTENCE_EMBEDDINGS_MODEL_ID):
-    feature_vector = [{
-        'text': "Question: " + input_text
-    }]
-    client = RealTimeClient(model_id=model_id)
-    response = client.predict(feature_vector)
-    return response
+def generate_embeddings(input_text: str, model_id=SENTENCE_EMBEDDINGS_MODEL_ID, qwak_token: str = None):
+
+    prompt = "Question: " + input_text
+
+    res = requests.post(
+        url=f'https://models.llm-demo.qwak.ai/v1/{model_id}/predict',
+        headers={
+            'Content-Type': 'application/json',
+            'Authorization': f'Bearer {qwak_token}'
+        },
+        json={
+            'columns': ["text"],
+            'index': [0],
+            "data": [[prompt]]
+        }
+    )
+
+    return res.json()
+
+    # client = RealTimeClient(model_id=model_id)
+    # response = client.predict(feature_vector)
+    # return response
+
+# def generate_embeddings(input_text: str, model_id=SENTENCE_EMBEDDINGS_MODEL_ID):
+#     feature_vector = [{
+#         'text': "Question: " + input_text
+#     }]
+#     client = RealTimeClient(model_id=model_id)
+#     response = client.predict(feature_vector)
+#     return response
 
 
 def flan_completion(input_text: str, model_id=FLAN_T5_MODEL_ID):

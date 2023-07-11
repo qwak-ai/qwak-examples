@@ -12,17 +12,18 @@ from inference import generate_embeddings, FLAN_T5_FINETUNED_MODEL_ID, FLAN_T5_M
 API_KEY = 'your-key'
 
 # Fetch a token upon startup
-qwak_token = get_qwak_token(API_KEY)
+if 'qwak_token' not in st.session_state:
+    st.session_state['qwak_token'] = get_qwak_token(API_KEY)
 
 
 MODELS = {
     "FLAN T5": {
         "model_id": FLAN_T5_MODEL_ID,
-        "fn": partial(get_api_inference, qwak_token=qwak_token)
+        "fn": partial(get_api_inference, qwak_token=st.session_state['qwak_token'])
     },
     "Finetuned T5": {
         "model_id": FLAN_T5_FINETUNED_MODEL_ID,
-        "fn": partial(get_api_inference, qwak_token=qwak_token)
+        "fn": partial(get_api_inference, qwak_token=st.session_state['qwak_token'])
     },
 }
 
@@ -33,6 +34,7 @@ def show_image(image_path):
 
 
 def generate_response(prompt: str, model_id: str, inference_fn: Callable):
+    print(prompt, model_id)
     return inference_fn(model_input=prompt, model_id=model_id)
 
 
@@ -80,7 +82,8 @@ with st.container():
             with st.container():
                 with st.spinner("Generating conversation embeddings..."):
                     embedding_input = f"Question: {user_input} Answer: {response}"
-                    embeddings = generate_embeddings(embedding_input)
+                    embeddings = generate_embeddings(input_text=embedding_input,
+                                                     qwak_token=st.session_state['qwak_token'])
                     if embeddings:
                         with st.expander("View embeddings"):
                             st.write(embedding_input)
