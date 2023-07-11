@@ -9,9 +9,7 @@ from streamlit_extras.add_vertical_space import add_vertical_space
 from inference import generate_embeddings, FLAN_T5_FINETUNED_MODEL_ID, FLAN_T5_MODEL_ID,\
     get_qwak_token, get_api_inference
 
-# API_KEY = 'your-key'
-API_KEY = 'eu-5731d1422fb34029b6e60b702ddfb9a3@5m))6Im#MAaDlL0eV1ahL990))ge^9t-'
-
+API_KEY = 'your-key'
 
 # Fetch a token upon startup
 if 'qwak_token' not in st.session_state:
