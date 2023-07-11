@@ -54,16 +54,16 @@ def get_api_inference(model_input: str, model_id: str, qwak_token: str = None, a
         }
     )
 
-    return res.json()
+    return res.json()[0]["generated_text"][0]
 
 
 def generate_embeddings(input_text: str, model_id=SENTENCE_EMBEDDINGS_MODEL_ID):
     feature_vector = [{
-        'prompt': "Question: " + input_text
+        'text': "Question: " + input_text
     }]
     client = RealTimeClient(model_id=model_id)
     response = client.predict(feature_vector)
-    return response[0]["generated_text"][0]
+    return response
 
 
 def flan_completion(input_text: str, model_id=FLAN_T5_MODEL_ID):
