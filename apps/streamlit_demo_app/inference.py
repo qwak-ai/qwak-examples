@@ -1,5 +1,4 @@
 import requests
-from qwak_inference import RealTimeClient
 
 SENTENCE_EMBEDDINGS_MODEL_ID = 'sentence_embeddings'
 FLAN_T5_FINETUNED_MODEL_ID = 'fine_tuned_flan_t5'
@@ -76,20 +75,10 @@ def generate_embeddings(input_text: str, model_id=SENTENCE_EMBEDDINGS_MODEL_ID, 
 
     return res.json()
 
-    # client = RealTimeClient(model_id=model_id)
-    # response = client.predict(feature_vector)
-    # return response
-
-# def generate_embeddings(input_text: str, model_id=SENTENCE_EMBEDDINGS_MODEL_ID):
-#     feature_vector = [{
-#         'text': "Question: " + input_text
-#     }]
-#     client = RealTimeClient(model_id=model_id)
-#     response = client.predict(feature_vector)
-#     return response
-
 
 def flan_completion(input_text: str, model_id=FLAN_T5_MODEL_ID):
+    from qwak_inference import RealTimeClient
+
     feature_vector = [{
         'prompt': "Question: " + input_text
     }]
@@ -99,6 +88,8 @@ def flan_completion(input_text: str, model_id=FLAN_T5_MODEL_ID):
 
 
 def falcon_completion(input_text: str, model_id=FALCON_7B_MODEL_ID):
+    from qwak_inference import RealTimeClient
+
     feature_vector = [{
         'prompt': "Provide a short answer: " + input_text
     }]
@@ -108,6 +99,8 @@ def falcon_completion(input_text: str, model_id=FALCON_7B_MODEL_ID):
 
 
 def peft_completion(input_text: str, model_id=PYTHIA_MODEL_ID):
+    from qwak_inference import RealTimeClient
+
     feature_vector = [{
         'prompt': "question: " + input_text
     }]
