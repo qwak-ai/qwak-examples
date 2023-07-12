@@ -31,6 +31,7 @@ class XGBoostChurnPredictionModel(QwakModel):
         y = df['churn']
         X = df.drop(['churn', 'User_Id', '__index_level_0__',
                      'event date', 'Phone', 'State'], axis=1)
+        qwak.log_data(dataframe=X, tag="train_data")
 
         # Splitting X and y into train and test version
         X_train, X_validation, y_train, y_validation = train_test_split(
