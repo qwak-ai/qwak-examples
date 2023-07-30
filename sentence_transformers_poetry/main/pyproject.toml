@@ -8,5 +8,5 @@ authors = ["Qwak <info@qwak.com>"]
 python = ">=3.9.13,<3.10"
 transformers = "^4.25.1"
 sentence_transformers = "*"
-accelerate = "^0.15.0"
-sentencepiece = "^0.1.97"
+accelerate = "*"
+sentencepiece = "*"
