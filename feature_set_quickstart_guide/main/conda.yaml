@@ -1,0 +1,14 @@
+name: feature_set_quickstart_guide
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - scipy
+  - scikit-learn
+  - pandas
+  - catboost
+  - pip:
+    - qwak-sdk # SDK for Qwak platform - latest version
+    - pyathena # Athena query engine - required for local Feature Store testing
+    - pyarrow # Apache Arrow library - required for local Feature Store testing
