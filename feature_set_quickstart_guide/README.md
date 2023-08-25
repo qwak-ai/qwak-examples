@@ -20,6 +20,8 @@ The code is designed to work in conjunction with the [Quickstart Guide](https://
 
     ```bash
     conda env create -f main/conda.yaml
+    conda activate feature_set_quickstart_guide
+
     ```
 
 
