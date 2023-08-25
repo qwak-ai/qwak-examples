@@ -6,7 +6,9 @@ This project demonstrates how to extract, process, store, and consume features u
 
 The code is designed to work in conjunction with the [Quickstart Guide](https://docs-saas.qwak.com/docs/getting-started-copy) provided by Qwak.
 
+
 ## How to Test Locally
+
 
 1. **Clone the Repository**: Clone this GitHub repository to your local machine.
 
@@ -21,7 +23,6 @@ The code is designed to work in conjunction with the [Quickstart Guide](https://
     ```bash
     conda env create -f main/conda.yaml
     conda activate feature_set_quickstart_guide
-
     ```
 
 
@@ -30,6 +31,7 @@ The code is designed to work in conjunction with the [Quickstart Guide](https://
    ```bash
    python test_model_locally.py
    ```
+
 <br>
 
 Note: Ensure that the data source and feature set have been registered previously as described in the Quickstart Guide.
@@ -53,6 +55,7 @@ Note: Ensure that the data source and feature set have been registered previousl
     qwak models build --model-id credit_risk_model ./feature_set_quickstart_guide
     ```
 
+
 2. **Deploy the Model on the Qwak Platform with a Real-Time Endpoint**:
 
     To deploy your model via the CLI, use the following command:
@@ -60,6 +63,7 @@ Note: Ensure that the data source and feature set have been registered previousl
     ```bash
     qwak models deploy realtime --model-id credit_risk_model --build-id <your-build-id>
     ```
+
 
 <br>
 
