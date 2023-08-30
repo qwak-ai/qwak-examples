@@ -1,22 +1,33 @@
+
+# Importing the QwakModel interface
 from qwak.model.base import QwakModel
-from catboost import cv, CatBoostRegressor, Pool
+
+# Importing the Feature Store clients used to fetch results
 from qwak.feature_store.offline.client import OfflineClient
 from qwak.feature_store.online.client import OnlineClient
+
+# Importing the Features schema and prediction adapters
 from qwak.model.schema import ModelSchema, InferenceOutput
 from qwak.model.schema_entities import FeatureStoreInput
+
+from catboost import cv, CatBoostRegressor, Pool
 from sklearn.model_selection import train_test_split
+
+# Utility methods to log metrics and model parameters to Qwak Cloud
 from qwak import log_param, log_metric
+
 from datetime import date
-#from multiprocessing import Pool
-from typing import Tuple
 import pandas as pd
 import numpy as np
 import qwak
+
+from main.utils import features_cleaning
 from main.feature_set import entity
 
 # CreditRiskModel class definition, inheriting from QwakModel
 class CreditRiskModel(QwakModel):
    
+   # Class constructor - anything initialized here will be `pickled` with the Docker Image
     def __init__(self):
 
         # Initializing CatBoost Regressor with specific hyperparameters
@@ -27,13 +38,17 @@ class CreditRiskModel(QwakModel):
             learning_rate=None
         )
 
-        """
-        Creating an OnlineClient once, to fetch features every time during prediction. 
-        This object will be serialized along with the model class and re-created after deployment.
-        """
-        self.online_client = OnlineClient()
+        # Define the date range for data retrieval
+        self.feature_range_start = date(2020, 1, 1)
+        self.feature_range_end = date.today()
+
+        # Logging training set date range for tracking and reproducibility
+        # The parameters will also be available in the Qwak UI for each Model Build
+        log_param({"features_start_range": self.feature_range_start, 
+                   "features_end_range": self.feature_range_end})
 
 
+    # Method called by the Qwak Cloud to train and build the model
     def build(self):
 
         # Define the features to be used for the model and fetched from the Offline Feature Store
@@ -51,18 +66,13 @@ class CreditRiskModel(QwakModel):
             ]
         }
 
-        # Creating an OfflineClient to fetch historical feature data
         offline_client = OfflineClient()
-
-        # Define the date range for data retrieval
-        start_date = date(2020, 1, 1)
-        end_date = date.today()
 
         # Fetch data from the offline client
         data = offline_client.get_feature_range_values(
             entity_key_to_features=key_to_features,
-            start_date=start_date,
-            end_date=end_date
+            start_date=self.feature_range_start,
+            end_date=self.feature_range_end
         )
 
         # Logging hyperparameters for tracking and reproducibility
@@ -71,7 +81,7 @@ class CreditRiskModel(QwakModel):
         log_param({"iterations": params['iterations'], "loss_function": params['loss_function']})
 
         # Clean and split the features
-        X, y = self.features_cleaning(data)
+        X, y = features_cleaning(data)
         x_train, x_test, y_train, y_test = train_test_split(X, y, train_size=0.85, random_state=42)
         cate_features_index = np.where(x_train.dtypes != int)[0]
 
@@ -101,23 +111,33 @@ class CreditRiskModel(QwakModel):
             }
         )
 
+    # Method called at deployment to initialize the model before it starts predicting
+    def initialize_model(self):
+
+        """
+        Creating an OnlineClient once, to fetch features every time during prediction. 
+        This object will be serialized along with the model class and re-created after deployment.
+        """
+        self.online_client = OnlineClient()
+
+        return super().initialize_model()
+
 
     # Define the schema for the Model and Feature Store
     # This tells Qwak how to deserialize the output of the Predictiom method as well as what 
     # features to retrieve from the Online Feature Store for inference without explicitly specifying every time.
     def schema(self) -> ModelSchema:
 
-        model_schema = ModelSchema(entities=[entity],
-                                   inputs=[
-                                        FeatureStoreInput(name='user-credit-risk-features.checking_account', entity=entity),
-                                        FeatureStoreInput(name='user-credit-risk-features.age', entity=entity),
-                                        FeatureStoreInput(name='user-credit-risk-features.job', entity=entity),
-                                        FeatureStoreInput(name='user-credit-risk-features.duration', entity=entity),
-                                        FeatureStoreInput(name='user-credit-risk-features.credit_amount', entity=entity),
-                                        FeatureStoreInput(name='user-credit-risk-features.housing', entity=entity),
-                                        FeatureStoreInput(name='user-credit-risk-features.purpose', entity=entity),
-                                        FeatureStoreInput(name='user-credit-risk-features.saving_account', entity=entity),
-                                        FeatureStoreInput(name='user-credit-risk-features.sex', entity=entity),
+        model_schema = ModelSchema(inputs=[
+                                        FeatureStoreInput(name='user-credit-risk-features.checking_account'),
+                                        FeatureStoreInput(name='user-credit-risk-features.age'),
+                                        FeatureStoreInput(name='user-credit-risk-features.job'),
+                                        FeatureStoreInput(name='user-credit-risk-features.duration'),
+                                        FeatureStoreInput(name='user-credit-risk-features.credit_amount'),
+                                        FeatureStoreInput(name='user-credit-risk-features.housing'),
+                                        FeatureStoreInput(name='user-credit-risk-features.purpose'),
+                                        FeatureStoreInput(name='user-credit-risk-features.saving_account'),
+                                        FeatureStoreInput(name='user-credit-risk-features.sex'),
                                     ],
                                     outputs=[InferenceOutput(name="score", type=float)])
         return model_schema
@@ -128,12 +148,12 @@ class CreditRiskModel(QwakModel):
     @qwak.api()
     def predict(self, df: pd.DataFrame) -> pd.DataFrame:
         # Prediction method that takes a DataFrame with the User IDs as input and returns predictions
-        
+
         # Calling the OnlineClient to retrieve the features for the given User ID
         features = self.online_client.get_feature_values(self.schema(), df)
 
         # Cleaning the features to prepare them for inference
-        X, y = self.features_cleaning(features)
+        X, y = features_cleaning(features)
 
         print("Retrieved the following features from the Online Feature Store:\n\n", X)
 
@@ -141,56 +161,3 @@ class CreditRiskModel(QwakModel):
         prediction = self.model.predict(X).tolist()
 
         return prediction
-
-
-
-    # Utility function
-    def features_cleaning(self, data: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
-        # Method to clean and prepare the features for training or prediction
-        # This includes renaming columns, selecting specific features, and handling missing values
-        
-        data = data.rename(
-            columns={
-                "user-credit-risk-features.checking_account": "checking_account",
-                "user-credit-risk-features.age": "age",
-                "user-credit-risk-features.job": "job",
-                "user-credit-risk-features.duration": "duration",
-                "user-credit-risk-features.credit_amount": "credit_amount",
-                "user-credit-risk-features.housing": "housing",
-                "user-credit-risk-features.purpose": "purpose",
-                "user-credit-risk-features.saving_account": "saving_account",
-                "user-credit-risk-features.sex": "sex",
-            }
-        )
-
-        data = data[
-            [
-                "checking_account",
-                "age",
-                "job",
-                "credit_amount",
-                "housing",
-                "purpose",
-                "saving_account",
-                "sex",
-                "duration",
-            ]
-        ]
-        data = data.dropna()  # in production, we should fill the missing values
-        # but we don't have a second data source for the missing data, so let's drop them
-
-        X = data[
-            [
-                "checking_account",
-                "age",
-                "job",
-                "credit_amount",
-                "housing",
-                "purpose",
-                "saving_account",
-                "sex",
-            ]
-        ]
-        y = data[["duration"]]
-
-        return X, y

@@ -11,4 +11,4 @@ dependencies:
   - pip:
     - qwak-sdk # SDK for Qwak platform - latest version
     - pyathena # Athena query engine - required for local Feature Store testing
-    - pyarrow # Apache Arrow library - required for local Feature Store testing
+    - pyarrow<=12.0.1   # Apache Arrow library - required for local Feature Store testing

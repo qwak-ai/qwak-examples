@@ -1,6 +1,10 @@
 from qwak.feature_store.entities.entity import Entity
 from datetime import datetime
+
+# Import the batch decorator from Qwak's feature_store module
 from qwak.feature_store.feature_sets import batch
+
+# Import the SQL Spark Transformation to be used as output in our feature set method definition
 from qwak.feature_store.feature_sets.transformations import SparkSqlTransformation
 
 

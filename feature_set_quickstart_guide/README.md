@@ -12,21 +12,28 @@ The code is designed to work in conjunction with the [Quickstart Guide](https://
 
 1. **Clone the Repository**: Clone this GitHub repository to your local machine.
 
-2. **Register the Data Source and Feature Set**: Follow the instructions in the [Quickstart Guide](https://docs-saas.qwak.com/docs/feature-store-quickstart-guide) to register the data source and feature set using the code provided in this repository.
-
-    ```bash
-    qwak features register
-    ```
-
-3. **Install Dependencies**: Make sure you have the required dependencies installed, as specified in the `conda.yml` file.
+2. **Install Dependencies**: Make sure you have the required dependencies installed, as specified in the `conda.yml` file.
 
     ```bash
     conda env create -f main/conda.yaml
     conda activate feature_set_quickstart_guide
     ```
 
+3. **Configure the Qwak SDK**: Use your account [Qwak API Key](https://docs-saas.qwak.com/docs/getting-started#configuring-qwak-sdk) to set up your SDK locally.
 
-4. **Run the Model Locally**: Execute the following command to test the model locally:
+    ```bash
+    qwak configure
+    ```
+
+
+4. **Register the Data Source and Feature Set**: Follow the instructions in the [Quickstart Guide](https://docs-saas.qwak.com/docs/feature-store-quickstart-guide) to register the data source and feature set using the code provided in this repository.
+
+    ```bash
+    qwak features register
+    ```
+
+
+5. **Run the Model Locally**: Execute the following command to test the model locally:
 
    ```bash
    python test_model_locally.py
@@ -64,6 +71,19 @@ Note: Ensure that the data source and feature set have been registered previousl
     qwak models deploy realtime --model-id credit_risk_model --build-id <your-build-id>
     ```
 
+3. **Test the Live Model with a Sample Request**:
+
+    Install the Qwak Inference SDK:
+
+    ```bash
+    pip install qwak-inference
+    ```
+
+    Call the Real-Time endpoint using your Model ID from the Qwak platform:
+
+    ```bash
+    python test_live_mode.py <your-qwak-model-id>
+    ```
 
 <br>
 
@@ -74,16 +94,18 @@ Note: Ensure that the data source and feature set have been registered previousl
 .
 ├── main                   # Main directory containing core code
 │   ├── __init__.py        # An empty file that indicates this directory is a Python package
+│   ├── data_source.py     # Defines the Data source and Entity
+│   ├── feature_set.py     # Defines the Feature set
+│   ├── utils.py           # Utilities related to the model
 │   ├── model.py           # Defines the Credit Risk Model
-│   ├── feature_set.py     # Defines the feature set
-│   ├── data_source.py     # Defines the CSV data source for credit risk 
 │   └── conda.yaml         # Conda environment configurationdata
 |
 ├── tests                  # Empty directory reserved for future test 
 │   └── ...                # Future tests
 |
-├── test_model_locally.py  # Script to test the model locallyimplementations
-└── README.md              # This file
+├── test_model_locally.py  # Script to test the model locally
+├── test_live_model.py     # Script to test the live model with a sample REST request
+└── README.md              # Documentation
 ```
 
 
