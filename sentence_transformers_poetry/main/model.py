@@ -1,11 +1,9 @@
 import qwak
 from qwak.model.tools import run_local
-from pandas import DataFrame
-from qwak.model.adapters import JsonOutputAdapter
 from qwak.model.base import QwakModel
 from qwak.model.schema import ModelSchema, ExplicitFeature
 from sentence_transformers import SentenceTransformer
-
+from pandas import DataFrame
 from helpers import get_device
 
 
@@ -33,24 +31,23 @@ class SentenceEmbeddingsModel(QwakModel):
             device=self.device,
         )
 
-    @qwak.api(output_adapter=JsonOutputAdapter())
+    @qwak.api()
     def predict(self, df):
-        data = list(df['text'].values)
         text_embeds = self.model.encode(
-            data,
+            df['input'].values.tolist(),
             convert_to_tensor=True,
             normalize_embeddings=True,
             device=self.device,
             batch_size=128,
         ).tolist()
-        return text_embeds
+        return DataFrame({"embeddings": text_embeds})
 
 
 if __name__ == '__main__':
     m = SentenceEmbeddingsModel()
     input_ = DataFrame(
         [{
-            "text": "Why does it matter if a Central Bank has a negative rather than 0% interest rate?"
+            "input": "Why does it matter if a Central Bank has a negative rather than 0% interest rate?"
         }]
     ).to_json()
-    run_local(m, input_)
+    print(run_local(m, input_))
