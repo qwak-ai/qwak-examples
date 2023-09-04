@@ -1,5 +1,4 @@
 import qwak
-from qwak.model.tools import run_local
 from qwak.model.base import QwakModel
 from qwak.model.schema import ModelSchema, ExplicitFeature
 from sentence_transformers import SentenceTransformer
@@ -41,13 +40,3 @@ class SentenceEmbeddingsModel(QwakModel):
             batch_size=128,
         ).tolist()
         return DataFrame({"embeddings": text_embeds})
-
-
-if __name__ == '__main__':
-    m = SentenceEmbeddingsModel()
-    input_ = DataFrame(
-        [{
-            "input": "Why does it matter if a Central Bank has a negative rather than 0% interest rate?"
-        }]
-    ).to_json()
-    print(run_local(m, input_))
