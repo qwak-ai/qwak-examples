@@ -20,7 +20,7 @@ class SentenceEmbeddingsModel(QwakModel):
     def schema(self):
         return ModelSchema(
             inputs=[
-                ExplicitFeature(name="text", type=str),
+                ExplicitFeature(name="input", type=str),
             ])
 
     def initialize_model(self):
