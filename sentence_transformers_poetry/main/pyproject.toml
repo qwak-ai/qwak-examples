@@ -6,7 +6,7 @@ authors = ["Qwak <info@qwak.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.9.13,<3.10"
-transformers = "^4.25.1"
+transformers = "^4.32.1"
 sentence_transformers = "*"
 accelerate = "*"
 sentencepiece = "*"
