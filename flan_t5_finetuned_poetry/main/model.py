@@ -1,9 +1,7 @@
 import pandas as pd
 import qwak
-from pandas import DataFrame
 from qwak.model.base import QwakModel
 from qwak.model.schema import ModelSchema, ExplicitFeature
-from qwak.model.tools import run_local
 from transformers import T5Tokenizer
 
 from helpers import load_data, get_device
@@ -77,13 +75,3 @@ class FineTuneFLANT5Model(QwakModel):
         return pd.DataFrame([{
             "generated_text": decoded_outputs
         }])
-
-
-if __name__ == '__main__':
-    m = FineTuneFLANT5Model()
-    input_ = DataFrame(
-        [{
-            "prompt": "Why does it matter if a Central Bank has a negative rather than 0% interest rate?"
-        }]
-    ).to_json()
-    run_local(m, input_)
