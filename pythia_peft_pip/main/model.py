@@ -3,10 +3,8 @@ from pathlib import Path
 import pandas as pd
 import qwak
 import torch
-from pandas import DataFrame
 from qwak.model.base import QwakModel
 from qwak.model.schema import ModelSchema, ExplicitFeature
-from qwak.model.tools import run_local
 
 from lit.finetune.adapter import setup
 from lit.generate.adapter import load_model, generate_prediction
@@ -92,13 +90,3 @@ class PEFTModel(QwakModel):
         return pd.DataFrame([{
             "generated_text": output
         }])
-
-
-if __name__ == '__main__':
-    m = PEFTModel()
-    input_ = DataFrame(
-        [{
-            "prompt": "Why does it matter if a Central Bank has a negative rather than 0% interest rate?",
-        }]
-    ).to_json()
-    run_local(m, input_)
