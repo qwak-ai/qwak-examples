@@ -1,0 +1,13 @@
+name: feature_set_quickstart_guide
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - scipy
+  - scikit-learn
+  - pandas
+  - catboost
+  - pip:
+    - pyathena          # Athena query engine - required for working with the Feature Store
+    - pyarrow<=12.0.1   # Apache Arrow library - required for working with the Feature Store
