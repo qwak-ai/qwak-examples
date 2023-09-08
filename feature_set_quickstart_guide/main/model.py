@@ -22,7 +22,7 @@ import numpy as np
 import qwak
 
 from main.utils import features_cleaning
-from main.feature_set import entity
+from main.feature_set import ENTITY_KEY, FEATURE_SET
 
 # CreditRiskModel class definition, inheriting from QwakModel
 class CreditRiskModel(QwakModel):
@@ -53,16 +53,16 @@ class CreditRiskModel(QwakModel):
 
         # Define the features to be used for the model and fetched from the Offline Feature Store
         # These are the specific features that the model will be trained on
-        key_to_features = {'user': [
-            'user-credit-risk-features.checking_account',
-            'user-credit-risk-features.age',
-            'user-credit-risk-features.job',
-            'user-credit-risk-features.duration',
-            'user-credit-risk-features.credit_amount',
-            'user-credit-risk-features.housing',
-            'user-credit-risk-features.purpose',
-            'user-credit-risk-features.saving_account',
-            'user-credit-risk-features.sex'
+        key_to_features = {ENTITY_KEY: [
+            f'{FEATURE_SET}.checking_account',
+            f'{FEATURE_SET}.age',
+            f'{FEATURE_SET}.job',
+            f'{FEATURE_SET}.duration',
+            f'{FEATURE_SET}.credit_amount',
+            f'{FEATURE_SET}.housing',
+            f'{FEATURE_SET}.purpose',
+            f'{FEATURE_SET}.saving_account',
+            f'{FEATURE_SET}.sex'
             ]
         }
 
@@ -111,17 +111,6 @@ class CreditRiskModel(QwakModel):
             }
         )
 
-    # Method called at deployment to initialize the model before it starts predicting
-    def initialize_model(self):
-
-        """
-        Creating an OnlineClient once, to fetch features every time during prediction. 
-        This object will be serialized along with the model class and re-created after deployment.
-        """
-        self.online_client = OnlineClient()
-
-        return super().initialize_model()
-
 
     # Define the schema for the Model and Feature Store
     # This tells Qwak how to deserialize the output of the Predictiom method as well as what 
@@ -129,15 +118,15 @@ class CreditRiskModel(QwakModel):
     def schema(self) -> ModelSchema:
 
         model_schema = ModelSchema(inputs=[
-                                        FeatureStoreInput(name='user-credit-risk-features.checking_account'),
-                                        FeatureStoreInput(name='user-credit-risk-features.age'),
-                                        FeatureStoreInput(name='user-credit-risk-features.job'),
-                                        FeatureStoreInput(name='user-credit-risk-features.duration'),
-                                        FeatureStoreInput(name='user-credit-risk-features.credit_amount'),
-                                        FeatureStoreInput(name='user-credit-risk-features.housing'),
-                                        FeatureStoreInput(name='user-credit-risk-features.purpose'),
-                                        FeatureStoreInput(name='user-credit-risk-features.saving_account'),
-                                        FeatureStoreInput(name='user-credit-risk-features.sex'),
+                                        FeatureStoreInput(name=f'{FEATURE_SET}.checking_account'),
+                                        FeatureStoreInput(name=f'{FEATURE_SET}.age'),
+                                        FeatureStoreInput(name=f'{FEATURE_SET}.job'),
+                                        FeatureStoreInput(name=f'{FEATURE_SET}.duration'),
+                                        FeatureStoreInput(name=f'{FEATURE_SET}.credit_amount'),
+                                        FeatureStoreInput(name=f'{FEATURE_SET}.housing'),
+                                        FeatureStoreInput(name=f'{FEATURE_SET}.purpose'),
+                                        FeatureStoreInput(name=f'{FEATURE_SET}.saving_account'),
+                                        FeatureStoreInput(name=f'{FEATURE_SET}.sex'),
                                     ],
                                     outputs=[InferenceOutput(name="score", type=float)])
         return model_schema
@@ -145,15 +134,13 @@ class CreditRiskModel(QwakModel):
 
     # The Qwak API decorator wraps the predict function with additional functionality and wires additional adependencies. 
     # This allows external services to call this method for making predictions.
-    @qwak.api()
-    def predict(self, df: pd.DataFrame) -> pd.DataFrame:
-        # Prediction method that takes a DataFrame with the User IDs as input and returns predictions
 
-        # Calling the OnlineClient to retrieve the features for the given User ID
-        features = self.online_client.get_feature_values(self.schema(), df)
+    @qwak.api(feature_extraction=True)
+    def predict(self, df: pd.DataFrame, extracted_df: pd.DataFrame) -> pd.DataFrame:
+        # Prediction method that takes a DataFrame with the User IDs as input, enriches it with Features and returns predictions
 
         # Cleaning the features to prepare them for inference
-        X, y = features_cleaning(features)
+        X, y = features_cleaning(extracted_df)
 
         print("Retrieved the following features from the Online Feature Store:\n\n", X)
 

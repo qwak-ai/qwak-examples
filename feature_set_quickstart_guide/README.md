@@ -59,7 +59,7 @@ Note: Ensure that the data source and feature set have been registered previousl
     Initiate a model build with:
 
     ```bash
-    qwak models build --model-id credit_risk_model ./feature_set_quickstart_guide
+    qwak models build --model-id <your-model-id> ./feature_set_quickstart_guide
     ```
 
 
@@ -68,7 +68,7 @@ Note: Ensure that the data source and feature set have been registered previousl
     To deploy your model via the CLI, use the following command:
 
     ```bash
-    qwak models deploy realtime --model-id credit_risk_model --build-id <your-build-id>
+    qwak models deploy realtime --model-id <your-model-id> --build-id <your-build-id>
     ```
 
 3. **Test the Live Model with a Sample Request**:

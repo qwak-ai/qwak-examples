@@ -1,6 +1,8 @@
 from typing import Tuple
 import pandas as pd
 
+from main.feature_set import FEATURE_SET
+
 # Utility function
 def features_cleaning(data: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
     # Method to clean and prepare the features for training or prediction
@@ -8,15 +10,15 @@ def features_cleaning(data: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
     
     data = data.rename(
         columns={
-            "user-credit-risk-features.checking_account": "checking_account",
-            "user-credit-risk-features.age": "age",
-            "user-credit-risk-features.job": "job",
-            "user-credit-risk-features.duration": "duration",
-            "user-credit-risk-features.credit_amount": "credit_amount",
-            "user-credit-risk-features.housing": "housing",
-            "user-credit-risk-features.purpose": "purpose",
-            "user-credit-risk-features.saving_account": "saving_account",
-            "user-credit-risk-features.sex": "sex",
+            f'{FEATURE_SET}.checking_account': "checking_account",
+            f'{FEATURE_SET}.age': "age",
+            f'{FEATURE_SET}.job': "job",
+            f'{FEATURE_SET}.duration': "duration",
+            f'{FEATURE_SET}.credit_amount': "credit_amount",
+            f'{FEATURE_SET}.housing': "housing",
+            f'{FEATURE_SET}.purpose': "purpose",
+            f'{FEATURE_SET}.saving_account': "saving_account",
+            f'{FEATURE_SET}.sex': "sex",
         }
     )
 

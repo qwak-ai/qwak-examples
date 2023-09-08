@@ -8,14 +8,17 @@ from qwak.feature_store.feature_sets import batch
 from qwak.feature_store.feature_sets.transformations import SparkSqlTransformation
 
 
+# Constants to use across the project to identify FeatureSet objects
+FEATURE_SET = "user-credit-risk-features"
+ENTITY_KEY = "user"
+
 """
 Entity is the key that uniquely identifies each feature vector in the Feature Set.
 """
 entity = Entity(
      name='user',
-     description='A User ID'
+     description='A Registered User'
 )
-
 
 """
 @batch.feature_set()    -> Defining the FeatureSet with its Data Source and Entity key
@@ -27,8 +30,8 @@ entity = Entity(
 @batch.backfill()       -> Backfill all the data starting with 1st Jan 2015 until today.
 """
 @batch.feature_set(
-    name="user-credit-risk-features",
-    entity="user",
+    name=FEATURE_SET,
+    entity=ENTITY_KEY,
     data_sources=["credit_risk_data"],
 )
 @batch.metadata(

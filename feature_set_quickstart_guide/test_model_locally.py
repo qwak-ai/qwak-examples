@@ -2,6 +2,7 @@ from pandas import DataFrame
 from qwak.model.tools import run_local
 
 from main.model import CreditRiskModel
+from main.feature_set import ENTITY_KEY
 
 if __name__ == '__main__':
     # Create a new instance of the model
@@ -9,7 +10,7 @@ if __name__ == '__main__':
 
     # Define the columns
     columns = [
-            "user"
+            ENTITY_KEY
         ]
 
     # Define the data
