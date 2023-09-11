@@ -60,3 +60,22 @@ if __name__ == '__main__':
     flow = BatchFeaturesAndBatchInferenceApp()
     flow.execute(schedule="0 * * * *")
     flow.execute_now()
+
+    with QwakApplication("fs-batch-model") as app:
+        fs = BatchFeatureSetOperator(name="user-credit-risk-features")
+
+        execution_spec = ExecutionConfig.Execution(
+            model_id="batch_churn_model",
+            access_token_name="api-token",
+            access_secret_name="api-secret",
+            source_bucket="input_s3_bucket",
+            source_folder="data_folder",
+            input_file_type="csv",
+            destination_bucket="output_s3_bucket",
+            destination_folder="output_data_folder",
+            output_file_type="csv",
+        )
+        execution_config = ExecutionConfig(execution=execution_spec)
+        model = BatchModelInference(config=execution_config)
+
+
