@@ -4,7 +4,6 @@ from qwak.clients.batch_job_management import BatchJobManagerClient
 from qwak.clients.batch_job_management.executions_config import ExecutionConfig
 
 # QwakApplication wraps DAG
-
 def run_batch_fs_to_batch_model():
 
     with QwakApplication("batch-fs-to-batch-model", schedule="daily") as app:
@@ -13,22 +12,13 @@ def run_batch_fs_to_batch_model():
 
         execution_spec = ExecutionConfig.Execution(
             model_id="batch_churn_model",
-            access_token_name="api-token",
-            access_secret_name="api-secret",
-            source_bucket="input_s3_bucket",
-            source_folder="data_folder",
-            input_file_type="csv",
-            destination_bucket="output_s3_bucket",
-            destination_folder="output_data_folder",
-            output_file_type="csv",
         )
         execution_config = ExecutionConfig(execution=execution_spec)
-        model = BatchModelInferenceOperator(config=execution_config, app=app)
+        for i in range(10):
+            model = BatchModelInferenceOperator(config=execution_config, app=app, tag=i)
 
         # Chaining the operators
         fs >> model
-
-
 
 
 class BatchFeaturesAndBatchInferenceApp(QwakApplication):
