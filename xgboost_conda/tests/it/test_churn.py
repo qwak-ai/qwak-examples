@@ -1,7 +1,6 @@
 from qwak.testing.fixtures import real_time_client
 from qwak_inference.realtime_client.client import InferenceOutputFormat
 
-
 def test_realtime_churn(real_time_client):
     feature_vector = [
         {
