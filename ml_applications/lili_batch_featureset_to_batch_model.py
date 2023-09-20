@@ -78,7 +78,6 @@ def run_fs_model_application():
             )
         )
 
-
         model = BatchModelInferenceOperator(config=execution_config,
                                             app=app,
                                             batch_size=100,
