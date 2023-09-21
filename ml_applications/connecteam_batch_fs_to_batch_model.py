@@ -1,32 +1,45 @@
-from qwak import QwakClient
 from qwak.clients.batch_job_management import ExecutionConfig
 from qwak.applications import QwakApplication
-from qwak.applications.operators import BatchFeatureSetOperator
+from qwak.applications.operators import BatchFeatureSetOperator, BatchModelInferenceOperator, ModelBuildOperator
 
-def run_fs_model_application():
 
-    client = QwakClient()
+def run():
+
     with QwakApplication("batch-fs-to-batch-model", schedule="daily") as app:
+        model_id = "conversion_to_paid_probability"
+        feature_set_id = "user-conversion-features"
 
-        # Get all relevant Batch FS we want to run (in parallel)
-        batch_fs = BatchFeatureSetOperator(name="user-conversion-features", app=app)
-
-        execution_config = ExecutionConfig(
-            execution=ExecutionConfig.Execution(
-                model_id="conversion_to_paid_probability"
-            )
+        # Setup an operator to run a batch feature set
+        batch_fs = BatchFeatureSetOperator(
+            name=feature_set_id,
+            app=app
         )
 
-        model = BatchModelInferenceOperator(config=execution_config,
-                                            app=app,
-                                            batch_size=100,
-                                            # Define BigQuery / File input and output
-                                            )
+        # Building a new model
+        model_build = ModelBuildOperator(
+            model_id=model_id,
+            instance="medium"
+        )
 
-        # Run all the fs_jobs and then the model
-        batch_fs >> model
+        # Running batch model inference
+        # We need to take the latest model build for the model inference
+        execution_config = ExecutionConfig(
+            execution=ExecutionConfig.Execution(
+                model_id=model_id,
+                build_id=model_build.build_id   # if we cannot use this, we'll use the QwakClient
+            )
+        )
+        batch_model = BatchModelInferenceOperator(
+            config=execution_config,
+            app=app,
+            batch_size=100,
+            # Define BigQuery / File input and output
+        )
+
+        # Run all operators sequentially
+        batch_fs >> model_build >> batch_model
 
 
 if __name__ == '__main__':
-    run_fs_model_application()
+    run()
 
