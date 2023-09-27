@@ -56,17 +56,6 @@ class XGBoostChurnPredictionModel(QwakModel):
             columns=['Churn_Probability']
         )
 
-
-
-
-
-
-
-
-
-
-
-
     def schema(self):
         """
         schema() define the model input structure.

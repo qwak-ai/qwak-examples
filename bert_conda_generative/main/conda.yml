@@ -1,11 +1,10 @@
-name: gpt-neo-conda
+name: bert_generative_model
 channels:
   - defaults
   - conda-forge
   - huggingface
-  - xformers
 dependencies:
-  - python=3.8
+  - python=3.9
   - pip
   - pytorch
   - transformers

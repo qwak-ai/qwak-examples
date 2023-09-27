@@ -6,16 +6,10 @@ from qwak_inference import RealTimeClient
 def main(model_id):
 
     # Define the columns
-    columns = [
-            "prompt"
-        ]
+    columns = ["prompt"]
 
     # Define the data
-    data = [
-        ["Would you like some coffee?"],
-        ["I love cats and also dogs."],
-        ["I feel a bit under the weather today and I hate it."]
-    ]
+    data = [["The weather is"]]
 
     input_ = pd.DataFrame(data, columns=columns)    
     client = RealTimeClient(model_id=model_id)

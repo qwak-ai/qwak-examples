@@ -1,11 +1,17 @@
-# Feature Set - Quickstart Guide Project
+# Generative Code Model with Transformers and Qwak
 
 ## Overview
 
-This project demonstrates how to extract, process, store, and consume features using [Qwak's Feature Store](https://www.qwak.com/product/feature-store). It includes examples of defining a Data Source, working with Feature Sets, and running a Credit Risk Machine Learning model. 
+This project utilizes a pre-trained Salesforce CodeGen model for code generation, integrated with [Qwak's Machine Learning Platform](https://www.qwak.com/). 
 
-The code is designed to work in conjunction with the [Quickstart Guide](https://docs-saas.qwak.com/docs/getting-started-copy) provided by Qwak.
+It covers:
+- QwakModel class definition
+- Model initialization
+- Text generation via Qwak's Predict API
 
+The code is designed to work seamlessly with Qwak's platform and serves as a practical example.
+
+<br>
 
 ## How to Test Locally
 
@@ -16,23 +22,15 @@ The code is designed to work in conjunction with the [Quickstart Guide](https://
 
     ```bash
     conda env create -f main/conda.yaml
-    conda activate feature_set_quickstart_guide
+    conda activate codegen_conda
     ```
 
 3. **Install and Configure the Qwak SDK**: Use your account [Qwak API Key](https://docs-saas.qwak.com/docs/getting-started#configuring-qwak-sdk) to set up your SDK locally.
 
     ```bash
-    pip install qwak-sdk qwak-inference
+    pip install qwak-sdk
     qwak configure
     ```
-
-
-4. **Register the Data Source and Feature Set**: Follow the instructions in the [Quickstart Guide](https://docs-saas.qwak.com/docs/feature-store-quickstart-guide) to register the data source and feature set using the code provided in this repository.
-
-    ```bash
-    qwak features register
-    ```
-
 
 5. **Run the Model Locally**: Execute the following command to test the model locally:
 
@@ -41,8 +39,6 @@ The code is designed to work in conjunction with the [Quickstart Guide](https://
    ```
 
 <br>
-
-Note: Ensure that the data source and feature set have been registered previously as described in the Quickstart Guide.
 
 <br>
 
@@ -53,14 +49,14 @@ Note: Ensure that the data source and feature set have been registered previousl
     Create a new model on Qwak using the command:
 
     ```bash
-    qwak models create "Credit Risk With Feature Store" --project "Sample Project"
+    qwak models create "Code Generator" --project "Sample Project"
     ```
 
 
     Initiate a model build with:
 
     ```bash
-    qwak models build --model-id <your-model-id> ./feature_set_quickstart_guide
+    qwak models build --model-id <your-model-id> ./bert_conda_generative
     ```
 
 
@@ -95,14 +91,8 @@ Note: Ensure that the data source and feature set have been registered previousl
 .
 ├── main                   # Main directory containing core code
 │   ├── __init__.py        # An empty file that indicates this directory is a Python package
-│   ├── data_source.py     # Defines the Data source and Entity
-│   ├── feature_set.py     # Defines the Feature set
-│   ├── utils.py           # Utilities related to the model
-│   ├── model.py           # Defines the Credit Risk Model
+│   ├── model.py           # Defines the Code Generation Model
 │   └── conda.yaml         # Conda environment configurationdata
-|
-├── tests                  # Empty directory reserved for future test 
-│   └── ...                # Future tests
 |
 ├── test_model_locally.py  # Script to test the model locally
 ├── test_live_model.py     # Script to test the live model with a sample REST request

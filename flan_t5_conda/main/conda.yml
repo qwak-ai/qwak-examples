@@ -1,3 +1,4 @@
+name: flan_t5
 channels:
   - defaults
   - conda-forge
