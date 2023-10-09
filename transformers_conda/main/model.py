@@ -1,3 +1,4 @@
+# Import required libraries
 import evaluate
 import numpy as np
 import pandas as pd
@@ -7,40 +8,51 @@ from qwak.model.base import QwakModel
 from qwak.model.schema import ExplicitFeature, ModelSchema
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from transformers import TrainingArguments, Trainer
+import torch
 
-
+# Define the model class
 class HuggingFaceTokenizerModel(QwakModel):
 
     def __init__(self):
+        # Initialize tokenizer and model
         model_id = "distilbert-base-uncased"
         self.tokenizer = AutoTokenizer.from_pretrained(model_id)
         self.model = AutoModelForSequenceClassification.from_pretrained(model_id, num_labels=2)
+        self.device = torch.device("cpu")
+
+        # Device configuration (MPS for MacOS, otherwise CUDA or CPU)
+        if not torch.backends.mps.is_available():
+            if not torch.backends.mps.is_built():
+                print("MPS not available because the current PyTorch install was not built with MPS enabled.")
+                self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+            else:
+                print("MPS not available because the current MacOS version is not 12.3+ or no MPS-enabled device.")
+                self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        else:
+            self.device = torch.device("mps")
+
 
     def build(self):
         """
-        The build() method is called once during the remote build process on Qwak.
-        We use it to train the model on the Yelp dataset
+        Train the model on the Yelp dataset. Called once during the remote build process on Qwak.
         """
-
+        # Tokenization function
         def tokenize(examples):
-            return self.tokenizer(examples['text'],
-                                  padding='max_length',
-                                  truncation=True)
+            return self.tokenizer(examples['text'], padding='max_length', truncation=True)
 
+        # Load and tokenize dataset
         dataset = load_dataset('yelp_polarity')
-
-        print('Tokenizing dataset...')
         tokenized_dataset = dataset.map(tokenize, batched=True)
 
-        print('Splitting data to training and evaluation sets')
+        # Split dataset into training and evaluation sets
         train_dataset = tokenized_dataset['train'].shuffle(seed=42).select(range(50))
         eval_dataset = tokenized_dataset['test'].shuffle(seed=42).select(range(50))
 
-        # We don't need the tokenized dataset
+        # Cleanup
         del tokenized_dataset
         del dataset
 
-        # Defining parameters for the training process
+        # Define training arguments and metrics
         metric = evaluate.load('accuracy')
 
         # A helper method to evaluate the model during training
@@ -48,61 +60,45 @@ class HuggingFaceTokenizerModel(QwakModel):
             logits, labels = eval_pred
             predictions = np.argmax(logits, axis=1)
             return metric.compute(predictions=predictions, references=labels)
+        
+        training_args = TrainingArguments(output_dir='training_output', evaluation_strategy='epoch', num_train_epochs=1)
 
-        training_args = TrainingArguments(
-            output_dir='training_output',
-            evaluation_strategy='epoch',
-            num_train_epochs=1
-        )
+        # Initialize Trainer
+        trainer = Trainer(model=self.model, 
+                          args=training_args, 
+                          train_dataset=train_dataset, 
+                          eval_dataset=eval_dataset,
+                          compute_metrics=compute_metrics)
 
-        # Defining all the training parameters for our tokenizer model
-        trainer = Trainer(
-            model=self.model,
-            args=training_args,
-            train_dataset=train_dataset,
-            eval_dataset=eval_dataset,
-            compute_metrics=compute_metrics
-        )
-
-        print('Training the model...')
+        # Train the model
         trainer.train()
 
-        # Evaluate on the validation dataset
+        # Evaluate and log metrics
         eval_output = trainer.evaluate()
+        qwak.log_metric({"eval_accuracy": eval_output['eval_accuracy']})
 
-        # Extract the validation accuracy from the evaluation metrics
-        eval_acc = eval_output['eval_accuracy']
-
-        # Log metrics into Qwak
-        qwak.log_metric({"val_accuracy": eval_acc})
 
     def schema(self):
         """
-        schema() define the model input structure.
-        Use it to enforce the structure of incoming requests.
+        Define the model input schema.
         """
-        model_schema = ModelSchema(
-            inputs=[
-                ExplicitFeature(name="text", type=str),
-            ])
-        return model_schema
+        return ModelSchema(inputs=[ExplicitFeature(name="text", type=str)])
+
 
     @qwak.api()
     def predict(self, df: pd.DataFrame) -> pd.DataFrame:
         """
-        The predict() method takes a pandas DataFrame (df) as input
-        and returns a pandas DataFrame with the prediction output.
+        Make predictions on input DataFrame and return output as DataFrame.
         """
+        # Extract text data and tokenize
         input_data = list(df['text'].values)
+        tokenized = self.tokenizer(input_data, padding='max_length', truncation=True, return_tensors='pt')
 
-        # Tokenize the input data using a pre-trained tokenizer
-        tokenized = self.tokenizer(input_data,
-                                   padding='max_length',
-                                   truncation=True,
-                                   return_tensors='pt')
+        # Move tensors to the configured device
+        tokenized = {k: v.to(self.device) for k, v in tokenized.items()}
 
+        # Make predictions
         response = self.model(**tokenized)
 
-        return pd.DataFrame(
-            response.logits.softmax(dim=1).tolist()
-        )
+        # Return softmax probabilities as DataFrame
+        return pd.DataFrame(response.logits.softmax(dim=1).tolist())

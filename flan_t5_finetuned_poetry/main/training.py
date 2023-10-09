@@ -9,8 +9,8 @@ from torch.optim import AdamW
 from torch.utils.data import DataLoader
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 
-from helpers import get_device
-from dataset_loader import TextDataset
+from main.helpers import get_device
+from main.dataset_loader import TextDataset
 
 
 def perform_training_cycle(epoch: int,

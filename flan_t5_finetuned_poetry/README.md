@@ -1,15 +1,21 @@
-# DistilGPT2 Text Generation Model with Transformers and Qwak
+# Generates Financial Text using Fine-Tuned FLAN-T5
 
 ## Overview
 
-This project uses a simplified version of the GPT-2 model, known as DistilGPT2, for efficient text generation. It's implemented using the [Qwak's Machine Learning Platform](https://www.qwak.com/)  and Transformers libraries.
+This project leverages a fine-tuned FLAN-T5 model for generating text based on financial questions and answers. It's implemented using [Qwak's Machine Learning Platform](https://www.qwak.com/) and the T5 library.
 
-It covers:
-- QwakModel class definition
-- Model initialization
-- Text generation via Qwak's Predict API
+### Features
 
-The code is designed to work seamlessly with Qwak's platform and serves as a practical example.
+- **Custom FLAN-T5 Class Definition**: Customizes the base QwakModel to work with the fine-tuned FLAN-T5 model for financial text generation.
+  
+- **Model Initialization**: Initializes the FLAN-T5 base model with user-defined hyperparameters. The model is trained on a financial Q&A dataset and fine-tuned for optimal text generation.
+
+- **Financial Text Generation via Qwak's Predict API**: Utilizes Qwak's Predict API for generating text based on financial prompts.
+
+### Functionality
+
+The primary functionality is to generate text for financial questions and answers. The code is designed for seamless integration with Qwak's platform and serves as a practical example for financial text generation tasks.
+
 
 <br>
 
@@ -18,11 +24,10 @@ The code is designed to work seamlessly with Qwak's platform and serves as a pra
 
 1. **Clone the Repository**: Clone this GitHub repository to your local machine.
 
-2. **Install Dependencies**: Make sure you have the required dependencies installed, as specified in the `conda.yml` file.
+2. **Install Dependencies**: Make sure you have the required dependencies installed, as specified in the `pyproject.toml` file.
 
     ```bash
-    conda env create -f main/conda.yaml
-    conda activate distilgpt2
+    poetry -C main install
     ```
 
 3. **Install and Configure the Qwak SDK**: Use your account [Qwak API Key](https://docs-saas.qwak.com/docs/getting-started#configuring-qwak-sdk) to set up your SDK locally.
@@ -35,7 +40,7 @@ The code is designed to work seamlessly with Qwak's platform and serves as a pra
 5. **Run the Model Locally**: Execute the following command to test the model locally:
 
    ```bash
-   python test_model_locally.py
+   poetry run python test_model_locally.py
    ```
 
 <br>
@@ -49,14 +54,14 @@ The code is designed to work seamlessly with Qwak's platform and serves as a pra
     Create a new model on Qwak using the command:
 
     ```bash
-    qwak models create "DistilGPT2 LLM" --project "Sample Project"
+    qwak models create "Finetuned Flan T5" --project "Sample Project"
     ```
 
 
     Initiate a model build with:
 
     ```bash
-    qwak models build --model-id <your-model-id> ./distilgpt2_conda
+    qwak models build --model-id <your-model-id> .
     ```
 
 
@@ -91,8 +96,11 @@ The code is designed to work seamlessly with Qwak's platform and serves as a pra
 .
 ├── main                   # Main directory containing core code
 │   ├── __init__.py        # An empty file that indicates this directory is a Python package
-│   ├── model.py           # Defines the Code Generation Model
-│   └── conda.yaml         # Conda environment configurationdata
+│   ├── model.py           # Defines the Flan T5 Base Model
+│   ├── training.py        # Trains the model on the financial dataset Model
+│   ├── helpers.py         # Defines a variety of helpers for the Model
+│   ├── dataset_loader.py  # Loads the online dataset
+│   └── pyproject.toml     # Poetry configuration
 |
 ├── test_model_locally.py  # Script to test the model locally
 ├── test_live_model.py     # Script to test the live model with a sample REST request

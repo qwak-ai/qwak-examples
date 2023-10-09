@@ -10,6 +10,19 @@ from sklearn.model_selection import train_test_split
 
 class XGBoostChurnPredictionModel(QwakModel):
 
+    def __init__(self):
+        self.params = {
+            'n_estimators': int(os.getenv('n_estimators', 300)),
+            'learning_rate': float(os.getenv('learning_rate', 0.05)),
+            'objective': 'binary:logistic'
+        }
+
+        # Create a XGBoost classifier with the specified parameters
+        self.model = xgb.XGBClassifier(**self.params)
+
+        # Log model parameters to Qwak for tracking purposes
+        qwak.log_param(self.params)
+
     def build(self):
         file_absolute_path = os.path.dirname(os.path.abspath(__file__))
         df = pd.read_csv(f"{file_absolute_path}/data.csv")
@@ -34,7 +47,7 @@ class XGBoostChurnPredictionModel(QwakModel):
         # Log metrics into Qwak
         accuracy = self.model.score(X_validation, y_validation)
         qwak.log_metric({"val_accuracy": accuracy})
-        qwak.log_data(dataframe=X, tag="train_data")
+        #qwak.log_data(dataframe=X, tag="train_data")
 
     @qwak.api()
     def predict(self, df):
@@ -85,16 +98,3 @@ class XGBoostChurnPredictionModel(QwakModel):
                 InferenceOutput(name="Churn_Probability", type=float)
             ])
         return model_schema
-
-    def __init__(self):
-        self.params = {
-            'n_estimators': int(os.getenv('n_estimators', 300)),
-            'learning_rate': float(os.getenv('learning_rate', 0.05)),
-            'objective': 'binary:logistic'
-        }
-
-        # Create a XGBoost classifier with the specified parameters
-        self.model = xgb.XGBClassifier(**self.params)
-
-        # Log model parameters to Qwak for tracking purposes
-        qwak.log_param(self.params)

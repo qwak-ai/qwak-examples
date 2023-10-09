@@ -1,15 +1,22 @@
-# DistilGPT2 Text Generation Model with Transformers and Qwak
+# XGBoost Churn Prediction Model with Qwak
 
 ## Overview
 
-This project uses a simplified version of the GPT-2 model, known as DistilGPT2, for efficient text generation. It's implemented using the [Qwak's Machine Learning Platform](https://www.qwak.com/)  and Transformers libraries.
+This project employs the XGBoost algorithm for customer churn prediction. It's implemented using the [Qwak's Machine Learning Platform](https://www.qwak.com/) and the XGBoost library.
 
-It covers:
-- QwakModel class definition
-- Model initialization
-- Text generation via Qwak's Predict API
+### Features
 
-The code is designed to work seamlessly with Qwak's platform and serves as a practical example.
+- **Custom XGBoostChurnPredictionModel Class Definition**: Customizes the base QwakModel to work with the XGBoost algorithm for churn prediction.
+
+- **Model Initialization**: Initializes the XGBoost model with user-defined or default hyperparameters. The model is trained on a customer churn dataset and fine-tuned for optimal performance.
+
+- **Churn Prediction via Qwak's Predict API**: Utilizes Qwak's Predict API for assessing the probability of customer churn based on various features like account length, area code, international plan, etc.
+
+### Functionality
+
+The primary functionality is to predict the probability of customer churn. The code is designed for seamless integration with Qwak's platform and serves as a practical example for churn prediction tasks.
+
+
 
 <br>
 
@@ -22,7 +29,7 @@ The code is designed to work seamlessly with Qwak's platform and serves as a pra
 
     ```bash
     conda env create -f main/conda.yaml
-    conda activate distilgpt2
+    conda activate churn_model
     ```
 
 3. **Install and Configure the Qwak SDK**: Use your account [Qwak API Key](https://docs-saas.qwak.com/docs/getting-started#configuring-qwak-sdk) to set up your SDK locally.
@@ -49,14 +56,14 @@ The code is designed to work seamlessly with Qwak's platform and serves as a pra
     Create a new model on Qwak using the command:
 
     ```bash
-    qwak models create "DistilGPT2 LLM" --project "Sample Project"
+    qwak models create "Churn Prediction Model" --project "Sample Project"
     ```
 
 
     Initiate a model build with:
 
     ```bash
-    qwak models build --model-id <your-model-id> ./distilgpt2_conda
+    qwak models build --model-id <your-model-id> ./churn_model_new
     ```
 
 
@@ -91,7 +98,8 @@ The code is designed to work seamlessly with Qwak's platform and serves as a pra
 .
 ├── main                   # Main directory containing core code
 │   ├── __init__.py        # An empty file that indicates this directory is a Python package
-│   ├── model.py           # Defines the Code Generation Model
+│   ├── model.py           # Defines the Churn Model
+│   ├── data.csv           # Defines the data to train the Model
 │   └── conda.yaml         # Conda environment configurationdata
 |
 ├── test_model_locally.py  # Script to test the model locally

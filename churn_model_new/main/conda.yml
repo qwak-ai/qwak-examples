@@ -1,3 +1,4 @@
+name: churn_model
 channels:
   - defaults
   - conda-forge

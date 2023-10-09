@@ -4,8 +4,8 @@ from qwak.model.base import QwakModel
 from qwak.model.schema import ModelSchema, ExplicitFeature
 from transformers import T5Tokenizer
 
-from helpers import load_data, get_device
-from training import train_model
+from main.helpers import load_data, get_device
+from main.training import train_model
 
 
 class FineTuneFLANT5Model(QwakModel):
@@ -15,7 +15,7 @@ class FineTuneFLANT5Model(QwakModel):
         self.tokenizer = None
         self.device = None
         self.model_params = {
-            "model_id": "t5-small",
+            "model_id": "t5-base",
             "train_batch_size": 8,
             "valid_batch_size": 8,
             "train_epochs": 3,

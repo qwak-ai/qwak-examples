@@ -8,19 +8,25 @@ def main(model_id):
     # Define the data
     feature_vector = [
         {
-            "PassengerId": 762,
-            "Pclass": 3,
-            "Name": "Nirva, Mr. Iisakki Antino Aijo",
-            "Sex": "female",
-            "Age": 34,
-            "SibSp": 4,
-            "Parch": 3,
-            "Ticket": "a",
-            "Fare": 1.0,
-            "Cabin": "A",
-            "Embarked": "A",
-        }
-    ]
+            'User_Id': 166056434,
+            'State': "AZ",
+            'Account_Length': 140,
+            'Area_Code': 408,
+            'Intl_Plan': 0,
+            'VMail_Plan': 0,
+            'VMail_Message': 0,
+            'Day_Mins': 149.8,
+            'Day_Calls': 134,
+            'Eve_Mins': 164.4,
+            'Eve_Calls': 98,
+            'Night_Mins' : 294.7,
+            'Night_Calls' : 124,
+            'Intl_Mins' : 8.1,
+            'Intl_Calls' : 2,
+            'CustServ_Calls' : 100,
+            'Agitation_Level' : 70
+        }]
+
     input_ = pd.DataFrame(feature_vector)    
     client = RealTimeClient(model_id=model_id)
     

@@ -9,7 +9,7 @@ if __name__ == '__main__':
 
     # Define the columns
     columns = [
-            "prompt"
+            "text"
         ]
 
     # Define the data
