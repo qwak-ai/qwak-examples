@@ -1,3 +1,4 @@
+name: codegen_conda
 channels:
   - defaults
   - conda-forge

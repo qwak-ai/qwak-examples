@@ -1,3 +1,4 @@
+name: titanic_conda
 channels:
   - defaults
   - conda-forge

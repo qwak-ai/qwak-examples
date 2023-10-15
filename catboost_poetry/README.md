@@ -1,48 +1,49 @@
-# Feature Set - Quickstart Guide Project
+# Predicts loan default risk using CatBoost
 
 ## Overview
 
-This project demonstrates how to extract, process, store, and consume features using [Qwak's Feature Store](https://www.qwak.com/product/feature-store). It includes examples of defining a Data Source, working with Feature Sets, and running a Credit Risk Machine Learning model. 
+This project leverages the CatBoost machine learning algorithm for credit risk assessment. It's implemented using [Qwak's Machine Learning Platform](https://www.qwak.com/) and the CatBoost library.
 
-The code is designed to work in conjunction with the [Quickstart Guide](https://docs-saas.qwak.com/docs/getting-started-copy) provided by Qwak.
+### Features
 
+- **Custom CatBoost Class Definition**: Customizes the base QwakModel to work with the CatBoost algorithm for credit risk prediction.
+  
+- **Model Initialization**: Initializes the CatBoost model with user-defined or default hyperparameters. The model is trained on a credit risk dataset and fine-tuned for optimal performance.
+
+- **Credit Risk Prediction via Qwak's Predict API**: Utilizes Qwak's Predict API for assessing the probability of default based on various features like age, sex, job, housing, etc.
+
+### Functionality
+
+The primary functionality is to predict the probability of default for credit applications. The code is designed for seamless integration with Qwak's platform and serves as a practical example for credit risk assessment tasks.
+
+
+<br>
 
 ## How to Test Locally
 
 
 1. **Clone the Repository**: Clone this GitHub repository to your local machine.
 
-2. **Install Dependencies**: Make sure you have the required dependencies installed, as specified in the `conda.yml` file.
+2. **Install Dependencies**: Make sure you have the required dependencies installed, as specified in the `pyproject.toml` file.
 
     ```bash
-    conda env create -f main/conda.yaml
-    conda activate feature_set_quickstart_guide
+    poetry -C main install
     ```
 
 3. **Install and Configure the Qwak SDK**: Use your account [Qwak API Key](https://docs-saas.qwak.com/docs/getting-started#configuring-qwak-sdk) to set up your SDK locally.
 
     ```bash
-    pip install qwak-sdk qwak-inference
+    pip install qwak-sdk
     qwak configure
     ```
-
-
-4. **Register the Data Source and Feature Set**: Follow the instructions in the [Quickstart Guide](https://docs-saas.qwak.com/docs/feature-store-quickstart-guide) to register the data source and feature set using the code provided in this repository.
-
-    ```bash
-    qwak features register
-    ```
-
 
 5. **Run the Model Locally**: Execute the following command to test the model locally:
 
    ```bash
-   python test_model_locally.py
+   poetry run python test_model_locally.py
    ```
 
 <br>
-
-Note: Ensure that the data source and feature set have been registered previously as described in the Quickstart Guide.
 
 <br>
 
@@ -53,14 +54,14 @@ Note: Ensure that the data source and feature set have been registered previousl
     Create a new model on Qwak using the command:
 
     ```bash
-    qwak models create "Credit Risk With Feature Store" --project "Sample Project"
+    qwak models create "Credit Risk" --project "Sample Project"
     ```
 
 
     Initiate a model build with:
 
     ```bash
-    qwak models build --model-id <your-model-id> ./feature_set_quickstart_guide
+    qwak models build --model-id <your-model-id> .
     ```
 
 
@@ -95,14 +96,9 @@ Note: Ensure that the data source and feature set have been registered previousl
 .
 ├── main                   # Main directory containing core code
 │   ├── __init__.py        # An empty file that indicates this directory is a Python package
-│   ├── data_source.py     # Defines the Data source and Entity
-│   ├── feature_set.py     # Defines the Feature set
-│   ├── utils.py           # Utilities related to the model
 │   ├── model.py           # Defines the Credit Risk Model
-│   └── conda.yaml         # Conda environment configurationdata
-|
-├── tests                  # Empty directory reserved for future test 
-│   └── ...                # Future tests
+│   ├── data.csv           # Defines the data to train the Model
+│   └── pyproject.toml     # Poetry configuration
 |
 ├── test_model_locally.py  # Script to test the model locally
 ├── test_live_model.py     # Script to test the live model with a sample REST request

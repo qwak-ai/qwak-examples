@@ -1,9 +1,10 @@
+name: bert_sentiment_analysis
 channels:
   - defaults
   - conda-forge
   - huggingface
 dependencies:
-  - python=3.8
+  - python=3.9
   - pip
   - pytorch
   - transformers

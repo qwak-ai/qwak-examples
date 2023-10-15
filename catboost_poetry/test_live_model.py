@@ -1,13 +1,28 @@
 import argparse
+import pandas as pd
 from qwak_inference import RealTimeClient
 
 
 def main(model_id):
 
-    input_ = [{
-        "prompt": "Question: What are three great types of food?"
-    }]
-     
+    # Define the data
+    feature_vector = [
+        {
+            "UserId": "male",
+            "Age": 3,
+            "Sex": "male",
+            "Job": 2,
+            "Housing": "male",
+            "Saving accounts": "male",
+            "Checking account": "male",
+            "Credit amount": 54.2,
+            "Duration": 4,
+            "Purpose": "male",
+            "Age_cat": "male",
+
+        }]
+
+    input_ = pd.DataFrame(feature_vector)    
     client = RealTimeClient(model_id=model_id)
     
     response = client.predict(input_)

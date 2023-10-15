@@ -1,14 +1,32 @@
-# Please update MODEL_ID with your model id on Qwak
-QWAK_MODEL_ID = 'your-model-id'
+import argparse
+import pandas as pd
+from qwak_inference import RealTimeClient
 
+
+def main(model_id):
+
+    # Define the columns
+    columns = ["prompt"]
+
+    # Define the data
+    data = [["what is love?"]]
+
+    input_ = pd.DataFrame(data, columns=columns)    
+    client = RealTimeClient(model_id=model_id)
+    
+    response = client.predict(input_)
+    print(response)
+
+
+"""
+USAGE:
+
+>> python main/test_live_model.py <your_model_id>
+
+"""
 if __name__ == '__main__':
-    from qwak_inference import RealTimeClient
+    parser = argparse.ArgumentParser(description='Predict using the following Qwak model-id.')
+    parser.add_argument('model_id', type=str, help='The Qwak model ID to call for prediction.')
 
-    feature_vector = [
-        {
-            "prompt": "what is love?"
-        }
-    ]
-
-    client = RealTimeClient(model_id="distilgpt2")
-    client.predict(feature_vector)
+    args = parser.parse_args()
+    main(args.model_id)

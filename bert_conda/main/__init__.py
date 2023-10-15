@@ -1,5 +1,5 @@
-from .model import BERTModel
+from .model import BERTSentimentAnalysis
 
 
 def load_model():
-    return BERTModel()
+    return BERTSentimentAnalysis()
