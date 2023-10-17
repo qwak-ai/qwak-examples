@@ -13,7 +13,7 @@ class FLANT5Model(QwakModel):
 
     # Initialize model parameters
     def __init__(self):
-        self.model_id = "google/flan-t5-base"
+        self.model_id = "google/flan-t5-small"
         self.max_new_tokens = 50
         self.model = None
         self.tokenizer = None
