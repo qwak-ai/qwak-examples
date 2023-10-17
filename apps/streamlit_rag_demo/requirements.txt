@@ -1,0 +1,10 @@
+streamlit
+uuid
+langchain
+streamlit-chat
+tiktoken
+transformers
+torch
+python-dotenv
+qwak-sdk
+qwak-inference
