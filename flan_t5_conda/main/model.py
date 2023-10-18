@@ -36,6 +36,7 @@ class FLANT5Model(QwakModel):
         self.model = T5ForConditionalGeneration.from_pretrained(self.model_id)
 
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        print(f"Inference using device: {self.device}")
 
     # Generate text based on the input prompt
     @qwak.api(output_adapter=AutodetectOutputAdapter())
