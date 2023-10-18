@@ -24,11 +24,10 @@ The code is designed for seamless integration with Qwak's platform and serves as
 
 1. **Clone the Repository**: Clone this GitHub repository to your local machine.
 
-2. **Install Dependencies**: Make sure you have the required dependencies installed, as specified in the `conda.yml` file.
+2. **Install Dependencies**: Make sure you have the required dependencies installed, as specified in the `pyproject.toml` file.
 
     ```bash
-    conda env create -f main/conda.yaml
-    conda activate flan_t5
+    poetry -C main install
     ```
 
 3. **Install and Configure the Qwak SDK**: Use your account [Qwak API Key](https://docs-saas.qwak.com/docs/getting-started#configuring-qwak-sdk) to set up your SDK locally.
@@ -41,11 +40,10 @@ The code is designed for seamless integration with Qwak's platform and serves as
 5. **Run the Model Locally**: Execute the following command to test the model locally:
 
    ```bash
-   python test_model_locally.py
+   poetry run python test_model_locally.py
    ```
 
 <br>
-
 <br>
 
 ## How to Run Remotely on Qwak
@@ -62,7 +60,7 @@ The code is designed for seamless integration with Qwak's platform and serves as
     Initiate a model build with:
 
     ```bash
-    qwak models build --model-id <your-model-id> ./flan_t5_conda
+    qwak models build --model-id <your-model-id> ./flan_t5_poetry
     ```
 
 
@@ -98,7 +96,7 @@ The code is designed for seamless integration with Qwak's platform and serves as
 ├── main                   # Main directory containing core code
 │   ├── __init__.py        # An empty file that indicates this directory is a Python package
 │   ├── model.py           # Defines the Code Generation Model
-│   └── conda.yaml         # Conda environment configurationdata
+│   └── poetry.toml        # Poetry environment configuration data
 |
 ├── test_model_locally.py  # Script to test the model locally
 ├── test_live_model.py     # Script to test the live model with a sample REST request
