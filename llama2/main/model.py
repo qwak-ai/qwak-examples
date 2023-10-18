@@ -20,7 +20,7 @@ class Llama2MT(QwakModel):
 
     def build(self):
         secret_service: SecretServiceClient = SecretServiceClient()
-        hf_token = secret_service.get_secret("hugging-face")
+        hf_token = secret_service.get_secret("<huggingface-secret-name>")
         login(token=hf_token)
         tokenizer = AutoTokenizer.from_pretrained(self.model_id)
         model = AutoModelForCausalLM.from_pretrained(self.model_id)
@@ -35,7 +35,7 @@ class Llama2MT(QwakModel):
     def initialize_model(self):
         self.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
         secret_service: SecretServiceClient = SecretServiceClient()
-        hf_token = secret_service.get_secret("hugging-face")
+        hf_token = secret_service.get_secret("<huggingface-secret-name>")
         login(token=hf_token)
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_id)
         self.model = AutoModelForCausalLM.from_pretrained(self.model_id)
