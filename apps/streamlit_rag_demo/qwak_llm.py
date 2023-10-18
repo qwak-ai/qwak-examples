@@ -11,7 +11,7 @@ from qwak_inference import RealTimeClient
 logger = logging.getLogger(__name__)
 
 
-class QwakLLM(LLM):
+class Qwak(LLM):
     """Qwak large language models.
 
     To use, you should have the ``qwak-inference`` python package installed.
@@ -28,7 +28,7 @@ class QwakLLM(LLM):
     """
 
     model_id: str = ""
-    """Qwak model id endpoint to use"""
+    """Qwak model id to use"""
 
     model_kwargs: Dict[str, Any] = Field(default_factory=dict)
     """Holds any model parameters valid for `create` call not
@@ -68,7 +68,7 @@ class QwakLLM(LLM):
     @property
     def _llm_type(self) -> str:
         """Return type of llm."""
-        return "qwak-llm"
+        return "qwak"
 
     def _call(
             self,
@@ -77,22 +77,22 @@ class QwakLLM(LLM):
             run_manager: Optional[CallbackManagerForLLMRun] = None,
             **kwargs: Any,
     ) -> str:
-        """Call to Modal endpoint."""
+        """Call to Qwak RealTime model"""
         params = self.model_kwargs or {}
         params = {**params, **kwargs}
 
         columns = ["prompt"]
         data = [[prompt]]
         input_ = pd.DataFrame(data, columns=columns)
+        # TODO - Replace this with a POST request so we don't import RealTimeClient
         client = RealTimeClient(model_id=self.model_id)
 
         response = client.predict(input_)
         try:
             text = response[0]["generated_text"]
-            print("Response:")
-            print(text)
         except KeyError:
             raise ValueError("LangChain requires 'generated_text' key in response.")
+
         if stop is not None:
             # I believe this is required since the stop tokens
             # are not enforced by the model parameters
