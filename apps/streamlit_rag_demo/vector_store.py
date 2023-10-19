@@ -1,5 +1,4 @@
 from typing import List
-
 from qwak.vector_store import VectorStoreClient
 
 

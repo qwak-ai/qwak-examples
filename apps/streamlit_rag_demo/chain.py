@@ -1,6 +1,5 @@
 import streamlit as st
 from langchain.chains import LLMChain
-from langchain.memory import ConversationSummaryBufferMemory
 from langchain.prompts import PromptTemplate
 from qwak_llm import Qwak
 
@@ -13,27 +12,30 @@ def llm_chain_response(model_id: str) -> LLMChain:
     :param model_id: The model ID on Qwak
     :return: LLMChain
     """
-    prompt = PromptTemplate(
-        input_variables=[
-            "history",
-            "input"
-        ],
-        template="Answer the question based on the context below."
-                 " If you cannot answer based on the context truthfully, answer that you don't know."
-                 " Use Markdown and text formatting to format your answer. "
-                 "\n\nCurrent conversation:\n{history}\nHuman: {input}\nAI:"
-    )
+
+    prompt_template = """
+<<SYS>>
+You are a helpful, respectful and honest assistant. Always answer as helpfully as possible, while being safe. Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.
+If a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information.
+Answer the question based on the context below
+<</SYS>>
+
+
+[INST]
+{context}
+Question: {input}[/INST]
+Answer:
+"""
+
+    prompt = PromptTemplate.from_template(prompt_template)
 
     llm = Qwak(
         model_id=model_id
     )
 
-    chat_chain = LLMChain(
-        llm=llm,
+    chain = LLMChain(
         prompt=prompt,
-        memory=ConversationSummaryBufferMemory(
-            llm=llm,
-            max_token_limit=256
-        )
+        llm=llm,
     )
-    return chat_chain
+
+    return chain

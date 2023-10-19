@@ -94,7 +94,5 @@ class Qwak(LLM):
             raise ValueError("LangChain requires 'generated_text' key in response.")
 
         if stop is not None:
-            # I believe this is required since the stop tokens
-            # are not enforced by the model parameters
             text = enforce_stop_tokens(text, stop)
         return text
