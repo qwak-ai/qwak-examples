@@ -72,5 +72,5 @@ def insert_text_into_vector_store(input_path: str):
 
 if __name__ == '__main__':
     insert_text_into_vector_store(
-        input_path='data/out.txt'
+        input_path='data/Tesla-10k.txt'
     )

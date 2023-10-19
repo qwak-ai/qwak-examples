@@ -25,6 +25,6 @@ def pdf_to_text(pdf_file_path: str, text_file_path: str):
 if __name__ == '__main__':
     # Usage: python3 pdf_totext.py data/myfile.pdf
     # pdf_in = sys.argv[1]
-    pdf_in = "data/wellsfargo_10k_report.pdf"
-    txt_out = "data/out.txt"
+    pdf_in = "data/Tesla-10k.pdf"
+    txt_out = "data/Tesla-10k.txt"
     pdf_to_text(pdf_in, txt_out)
