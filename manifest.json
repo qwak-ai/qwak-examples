@@ -157,6 +157,32 @@
         "Semantic Search"
       ]
     },
+    "llama2": {
+      "name": "Llama-2",
+      "description": "A leading open-source LLM",
+      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/hugging_face.png",
+      "source": {
+        "folder": "llama2/main",
+        "files": [
+          "__init__.py",
+          "requirements.txt",
+          "model.py"
+        ]
+      },
+      "build": {
+        "cpu": "2",
+        "memory": "8"
+      },
+      "deploy": {
+        "pods": "1",
+        "cpu": "4",
+        "memory": "16"
+      },
+      "tags": [
+        "LLM",
+        "Generative AI"
+      ]
+    },
     "codegen": {
       "name": "CodeGen",
       "description": "Autoregressive language models for program synthesis and code generation",
