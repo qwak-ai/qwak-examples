@@ -1,0 +1,4588 @@
+ 
+   
+  
+ 
+              
+                        
+   
+        
+                                                         
+                           
+      
+      
+      
+        
+     
+   
+ 
+      
+         
+                  
+   
+                  
+   
+                  
+                  
+                  
+                  
+                  
+              
+        
+       
+                            
+                             
+                            
+                           
+            
+                       
+                         
+          
+                        
+                  
+        
+               
+                
+              
+                         
+                   
+                        
+                     
+                 
+                         
+                  
+                    
+                  
+                          
+                         
+            
+   
+     
+                
+                      
+   
+               
+                
+    
+   
+  
+               
+            
+    
+         
+   
+       
+       
+       
+       
+         
+  
+       
+  
+   
+       
+            
+                 
+      
+                 
+      
+                     
+                     
+                     
+                     
+                     
+                 
+         
+       
+                       
+                         
+                            
+                           
+        
+                       
+                         
+   
+                        
+                  
+        
+     
+     
+   
+                         
+               
+                        
+                     
+      
+                         
+            
+                    
+                 
+                      
+                        
+            
+    
+       
+                                  
+        
+              
+               UNITED STATES 
+SECURITIES AND EXCHANGE COMMISSION 
+Washington, D.C. 20549 
+Form 10-K 
+Annual Report Pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934 
+For the fiscal year ended December 31, 2022 Commission File Number 001-2979 
+WELLS FARGO & COMPANY 
+(Exact name of registrant as specified in its charter) 
+Delaware No. 41-0449260 
+(State of incorporation) (I.R.S. Employer Identification No.) 
+420 Montgomery Street, San Francisco, California 94104 
+(Address of principal executive offices) (Zip code) 
+Registrant’s telephone number, including area code: 1-866-249-3302 
+Securities registered pursuant to Section 12(b) of the Act: 
+Name of 
+Title of Each Class Trading
+Symbols Each Exchange on
+Which Registered 
+New York Stock 
+Common Stock, par value $1-2/3 WFC Exchange
+(NYSE) 
+7.5% Non-Cumulative Perpetual Convertible Class A Preferred Stock, Series L WFC.PRL NYSE 
+Depositary Shares, each representing a 1/1000th interest in a share of 5.85% Fixed-to-Floating Rate Non-Cumulative Perpetual Class A
+Preferred Stock, Series Q WFC.PRQ NYSE 
+Depositary Shares, each representing a 1/1000th interest in a share of 6.625% Fixed-to-Floating Rate Non-Cumulative Perpetual Class A
+Preferred Stock, Series R WFC.PRR NYSE 
+Depositary Shares, each representing a 1/1000th interest in a share of Non-Cumulative Perpetual Class A Preferred Stock, Series Y WFC.PRY NYSE 
+Depositary Shares, each representing a 1/1000th interest in a share of Non-Cumulative Perpetual Class A Preferred Stock, Series Z WFC.PRZ NYSE 
+Depositary Shares, each representing a 1/1000th interest in a share of Non-Cumulative Perpetual Class A Preferred Stock, Series AA WFC.PRA NYSE 
+Depositary Shares, each representing a 1/1000th interest in a share of Non-Cumulative Perpetual Class A Preferred Stock, Series CC WFC.PRC NYSE 
+Depositary Shares, each representing a 1/1000th interest in a share of Non-Cumulative Perpetual Class A Preferred Stock, Series DD WFC.PRD NYSE 
+Guarantee of Medium-Term Notes, Series A, due October 30, 2028 of Wells Fargo Finance LLC WFC/28A NYSE 
+Securities registered pursuant to Section 12(g) of the Act: 
+Dividend Equalization Preferred Shares, no par value 
+Indicate by check mark if the registrant is a well-known seasoned issuer, as defined in Rule 405 of the Securities Act. Yes ¨ No þ
+Indicate by check mark if the registrant is not required to file reports pursuant to Section 13 or Section 15(d) of the Act. Yes ¨ No þ
+Indicate by check mark whether the registrant (1) has filed all reports required to be filed by Section 13 or 15(d) of the Securities Exchange Act of 1934 
+during the preceding 12 months (or for such shorter period that the registrant was required to file such reports), and (2) has been subject to such filing 
+requirements for the past 90 days. Yes þ No ¨
+Indicate by check mark whether the registrant has submitted electronically every Interactive Data File required to be submitted pursuant to Rule 405 of 
+Regulation S-T (§ 232.405 of this chapter) during the preceding 12 months (or for such shorter period that the registrant was required to submit such 
+files). Yes þ No ¨
+Indicate by check mark whether the registrant is a large accelerated filer, an accelerated filer, a non-accelerated filer, a smaller reporting company, or an 
+emerging growth company. See the definitions of “large accelerated filer,” “accelerated filer,” “smaller reporting company,” and “emerging growth 
+company” in Rule 12b-2 of the Exchange Act. 
+Large accelerated filer þ	 Accelerated filer ☐
+Non-accelerated filer ☐ Smaller reporting company ☐
+Emerging growth company ☐
+If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any 
+new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act. ¨
+Indicate by check mark whether the registrant has filed a report on and attestation to its management’s assessment of the effectiveness of its internal 
+control over financial reporting under Section 404(b) of the Sarbanes-Oxley Act (15 U.S.C. 7262(b)) by the registered public accounting firm that 
+prepared or issued its audit report. ☑
+If securities are registered pursuant to Section 12(b) of the Act, indicate by check mark whether the financial statements of the registrant included in the 
+filing reflect the correction of an error to previously issued financial statements. ¨
+Indicate by check mark whether any of those error corrections are restatements that required a recovery analysis of incentive-based compensation 
+received by any of the registrant’s executive officers during the relevant recovery period pursuant to § 240.10D-1(b). ¨
+Indicate by check mark whether the registrant is a shell company (as defined in Rule 12b-2 of the Act). Yes ☐ No þ
+At June 30, 2022, the aggregate market value of common stock held by non-affiliates was approximately $148.3 billion, based on a closing price of 
+$39.17. At February 10, 2023, 3,793,867,540 shares of common stock were outstanding. 
+Documents Incorporated by Reference 
+Incorporated Documents Where incorporated in Form 10-K 
+1. Portions of the Company’s Annual Report to Shareholders for the year ended December 31, 2022 Part I – Items 1, 1A and 3; Part II – Items 5, 7, 7A, 8 and 9A; and 
+(“2022 Annual Report to Shareholders”) Part IV– Item 15
+2. Portions of the Company’s Proxy Statement for the Annual Meeting of Shareholders to be held
+April 25, 2023 (“2023 Proxy Statement”) Part III – Items 10, 11, 12, 13 and 14  
+ 
+           
+           
+         
+             
+          
+         
+           
+       
+         
+             
+            
+          
+          
+           
+ 
+          
+          
+      
+       
+          
+          
+      
+  
+          
+        
+         
+       
+      
+         
+           
+        
+          
+          
+       
+        
+       
+         
+       
+  
+          
+      
+       
+       
+        
+      
+ 
+             
+          
+     
+         
+              
+            
+                  
+        
+        
+          
+    
+  
+   
+    
+   
+    
+    
+         
+         
+  
+        
+         
+         
+     
+        
+       
+      
+       
+      
+       
+  
+          
+     
+         
+       
+          
+        
+         
+            
+  
+            
+        
+         
+        
+           
+        
+         
+         
+            
+          
+            
+  
+        
+         
+          
+         
+           
+        
+           
+        
+        
+         
+         
+                           
+        
+             
+           
+           
+         
+             
+          
+         
+           
+       
+ 
+         
+           
+           
+          
+          
+           
+  
+          
+          
+       
+       
+          
+          
+      
+   
+ 
+          
+        
+         
+       
+      
+         
+           
+        
+          
+          
+       
+        
+       
+         
+       
+   
+          
+      
+       
+       
+        
+       
+  
+             
+          
+     
+         
+ 
+              
+            
+               
+   
+    
+     
+    
+     
+      
+         
+         
+  
+       
+         
+         
+      
+         
+       
+      
+       
+       
+       
+  
+           
+     
+         
+       
+ 
+         
+        
+         
+            
+  
+           
+        
+         
+        
+           
+        
+         
+         
+            
+           
+            
+   
+       
+         
+          
+         
+           
+        
+           
+        
+        
+         
+         
+        
+ We have set common expectations for everyone at the PART I. Company. These expectations guide how we lead ourselves, 
+collaborate with our colleagues, and make decisions. The 
+ITEM 1. BUSINESS following expectations apply to everyone at Wells Fargo, at every 
+Wells Fargo & Company is a corporation organized under the laws 
+of Delaware and a financial holding company and a bank holding 
+company registered under the Bank Holding Company Act of 
+1956, as amended (BHC Act). Its principal business is to act as a 
+holding company for its subsidiaries. References in this report to 
+“the Parent” mean the holding company. References to “we,” 
+“our,” “us” or “the Company” mean the holding company and its 
+subsidiaries that are consolidated for financial reporting 
+purposes. 
+At December 31, 2022, we had assets of approximately 
+$1.9 trillion, loans of $955.9 billion, deposits of $1.4 trillion and 
+stockholders’ equity of $180 billion. Based on assets, we were the 
+fourth largest bank holding company in the United States. At 
+December 31, 2022, Wells Fargo Bank, N.A. was the Company’s 
+principal subsidiary with assets of $1.7 trillion, or 91% of the 
+Company’s assets. 
+Our annual reports on Form 10-K, quarterly reports on Form 
+10-Q, current reports on Form 8-K, and amendments to those 
+reports, are available for free at www.wellsfargo.com/about/ 
+investor-relations/filings as soon as reasonably practicable after 
+they are electronically filed with or furnished to the Securities 
+and Exchange Commission (SEC). They are also available for free 
+on the SEC’s website at www.sec.gov1. 
+DESCRIPTION OF BUSINESS 
+General 
+We are a leading financial services company that provides a 
+diversified set of banking, investment and mortgage products 
+and services, as well as consumer and commercial finance, 
+through banking locations and offices, the internet 
+(www.wellsfargo.com) and other distribution channels to 
+individuals, businesses and institutions in all 50 states, the 
+District of Columbia and in countries outside the U.S. We provide 
+consumer financial products and services including checking and 
+savings accounts, credit and debit cards, and auto, mortgage and 
+home equity, and small business lending. In addition, we offer 
+financial planning, private banking, investment management, and 
+fiduciary services. We also provide financial solutions to 
+businesses through products and services including traditional 
+commercial loans and lines of credit, letters of credit, asset-
+based lending, trade financing, treasury management, and 
+investment banking services. 
+As of December 31, 2022, we had four reportable operating 
+segments for management reporting purposes: Consumer 
+Banking and Lending; Commercial Banking; Corporate and 
+Investment Banking; and Wealth and Investment Management. 
+The 2022 Annual Report to Shareholders includes financial 
+information and descriptions of these operating segments. 
+Human Capital 
+Our people are what set Wells Fargo apart and are critical to our 
+success. Wells Fargo continues to invest in our employees by 
+offering market competitive compensation, career-development 
+opportunities, a broad array of benefits, and strong work-life 
+programs. 
+1 We do not control this website. Wells Fargo has provided this link for 
+your convenience, but does not endorse and is not responsible for the 
+content, links, privacy policy, or security policy of this website. level, and in every role: 
+• Embrace candor 
+• Do what’s right 
+• Be great at execution 
+• Learn and grow 
+• Champion diversity and inclusion 
+• Build high-performing teams (for managers) 
+At December 31, 2022, we had approximately 238,000 active 
+employees, with approximately 81% of employees based in the 
+United States. 
+Compensation and benefits. Wells Fargo's compensation program 
+is linked to performance management and is designed to 
+promote prudent risk management and reinforce its culture and 
+operating standards. The compensation principles include: 
+• Pay for performance : Compensation is linked to company, 
+line of business, and individual performance, including 
+meeting regulatory expectations and creating long-term 
+value consistent with the interests of shareholders. 
+• Promote effective risk management : Compensation promotes 
+effective risk management and discourages imprudent or 
+excessive risk-taking. 
+• Attract and retain talent : People are one of Wells Fargo's 
+competitive advantages; therefore, compensation helps 
+attract, motivate, and retain people with the skills, talent, 
+and experience to drive superior long-term company 
+performance. 
+In addition, we provide all eligible full- and part-time employees 
+(and their eligible dependents, as applicable) with a 
+comprehensive set of benefits designed to protect their physical 
+and financial health and to help them make the most of their 
+financial future. 
+Pay Equity Review. Wells Fargo is committed to fair and equitable 
+compensation practices and, since 2015, has conducted an 
+annual pay equity review through engagement with a third-party 
+expert. The review analyzes employee compensation by taking 
+into account gender, race, and ethnicity and factors such as role, 
+tenure, and geography. The review process can include 
+compensation adjustments in the event we identify gaps. The 
+2022 review, modified for adjustments as described, showed that 
+women at Wells Fargo earn more than 99 cents for every $1 
+earned by their male peers, and U.S. employees that are racially/ 
+ethnically diverse earn more than 99 cents for every $1 earned by 
+their Caucasian/white peers. 
+Promoting Diversity, Equity and Inclusion. Meeting the 
+increasingly diverse needs of Wells Fargo’s global customer base 
+is critical to our Company’s long-term growth and success. Wells 
+Fargo values and promotes diversity, equity and inclusion (DE&I) 
+in every aspect of our business. We are dedicated to recruitment 
+and career development practices that support our employees 
+and promote diversity in our workforce at all levels of our 
+Company, including leadership positions. We have a strong 
+record of recruiting, promoting, and rewarding women and 
+racially/ethnically diverse employees at all levels of our Company, 
+including a goal to increase diverse representation in leadership 
+roles. Our Head of Diverse Segments, Representation and 
+1            
+       
+           
+            
+         
+  
+          
+          
+        
+            
+       
+          
+      
+      
+     
+         
+       
+        
+           
+          
+        
+          
+         
+       
+         
+         
+            
+        
+          
+       
+             
+             
+       
+        
+ 
+          
+            
+       
+         
+          
+     
+        
+        
+        
+      
+         
+       
+        
+         
+       
+        
+   
+        
+         
+       
+        
+          
+       
+        
+               
+    
+  
+         
+       
+          
+         
+         
+         
+        
+           
+          
+        
+         
+       
+           
+       
+         
+         
+            
+           
+          
+         
+          
+       
+          
+    
+              
+          
+          
+          
+         
+           
+         
+           
+           
+        
+         
+        
+            
+         
+                
+        
+          
+            
+         
+            
+  
+ 
+          
+           
+        
+        
+           
+         
+         
+        
+           
+          
+                  
+        
+           
+            
+         
+  
+         
+          
+        
+            
+       
+          
+      
+      
+      
+        
+       
+        
+           
+          
+        
+          
+         
+       
+         
+         
+            
+        
+          
+       
+             
+             
+       
+        
+  
+          
+            
+       
+         
+          
+     
+ 
+        
+        
+        
+      
+         
+       
+        
+         
+       
+        
+    
+        
+         
+       
+        
+          
+       
+        
+               
+     
+   
+         
+       
+          
+         
+         
+         
+        
+           
+          
+        
+         
+       
+           
+        
+         
+         
+            
+           
+          
+         
+          
+       
+          
+     
+ 
+            
+          
+          
+          
+         
+           
+         
+           
+                   
+        
+        
+            
+         
+                
+        
+          
+            
+         
+            
+  
+         
+           
+        
+        
+           
+         
+         
+        
+           
+          
+        
+ Inclusion reports directly to our CEO and leads our DE&I efforts, 
+with responsibility for driving a Company-wide DE&I strategy. 
+As of December 31, 2022, our global workforce was 52% female 
+and 48% male, and our U.S. workforce was 55% female and 45% 
+male. Our U.S. workforce was 54% Caucasian/white and 46% 
+racially/ethnically diverse. 
+Employee training and development. We invest heavily in coaching 
+and training for employees and managers. We believe that when 
+our employees feel properly supported, engaged, and confident 
+in their skills, they are more effective and can provide an even 
+better customer experience. During 2022, we invested 
+approximately $200 million in a variety of employee learning and 
+development programs, including functional training, regulatory 
+compliance, leadership and professional development, early 
+talent development programs, and tuition reimbursement. 
+Work-life programs and the COVID-19 Pandemic. Wells Fargo 
+offers many benefits, programs, and work arrangements 
+intended to provide employees with flexibility and work-life 
+balance. In March 2022, Wells Fargo began its Return to Office 
+program for employees who had been working from home during 
+the COVID-19 pandemic. Wells Fargo believes the Company 
+benefits from employees seeing each other on a regular basis. 
+When together, it is easier to build relationships, get in-the-
+moment coaching, identify career opportunities, and brainstorm 
+ideas. Ultimately, when employees work together we believe they 
+learn more about the customers and communities the Company 
+serves and how to serve them better. With this in mind, Wells 
+Fargo's approach emphasizes spending time together in the 
+office, and also provides flexible work options for employees in 
+certain jobs. For example, employees in certain non-customer-
+facing roles have flexibility to have up to two days a week of 
+remote work, and spend a minimum of three days a week in the 
+office. Expectations for other roles, including customer-facing, 
+operations, technology, and non-U.S. based employees, vary by 
+business need. 
+The health and safety of employees also remains a priority. 
+All employees globally may take up to four hours of paid time 
+away for each COVID-19 vaccine appointment (including 
+boosters). U.S. employees are additionally eligible to receive free 
+COVID-19 test kits from Wells Fargo or through their medical 
+plan, at no additional cost. 
+Competition The financial services industry is highly competitive. Our 
+subsidiaries compete with financial services providers such as 
+banks, savings and loan associations, credit unions, finance 
+companies, mortgage banking companies, insurance companies, 
+investment banks and mutual fund companies. They also face 
+increased competition from nonbank institutions such as 
+brokerage houses, private equity firms and online lending 
+companies, as well as from financial services subsidiaries of 
+commercial and manufacturing companies. Many of these 
+competitors enjoy fewer regulatory constraints and some may 
+have lower cost structures. 
+Securities firms and insurance companies that elect to 
+become financial holding companies may acquire banks and other 
+financial institutions. Combinations of this type could 
+significantly change the competitive environment in which we 
+conduct business. The financial services industry is also likely to 
+become more competitive as further technological advances 
+enable more companies to provide financial services. These 
+technological advances may diminish the importance of depository institutions and other financial intermediaries in the 
+transfer of funds between parties. 
+REGULATION AND SUPERVISION 
+We describe below, and in Note 25 (Regulatory Capital 
+Requirements and Other Restrictions) to Financial Statements 
+included in the 2022 Annual Report to Shareholders, the material 
+elements of the regulatory framework applicable to us. Banking 
+statutes, regulations and policies are continually under review by 
+Congress and state legislatures and federal and state regulatory 
+agencies, as well as non-U.S. governments and financial 
+regulators, and a change in them, including changes in how they 
+are interpreted or implemented, could have a material effect on 
+our business. The regulatory framework applicable to depository 
+institutions and bank holding companies (BHCs) is intended to 
+protect depositors, federal deposit insurance funds, consumers 
+and the banking system as a whole, and not necessarily investors 
+in bank holding companies such as the Company. 
+Statutes, regulations and policies could restrict our ability to 
+diversify into other areas of financial services, make acquisitions, 
+and pay dividends on our capital stock. They may also require us 
+to provide financial support to one or more of our subsidiary 
+banks, maintain capital balances in excess of amounts desired by 
+management, and pay higher deposit insurance premiums as a 
+result of assessments or a general deterioration in the financial 
+condition of depository institutions. See the “Regulatory 
+Matters” and “Risk Factors” sections in the 2022 Annual Report 
+to Shareholders for additional information. 
+General Parent Bank Holding Company. As a BHC, the Parent is subject to 
+regulation under the BHC Act and to inspection, examination and 
+supervision by its primary regulator, the Board of Governors of 
+the Federal Reserve System (Federal Reserve Board or FRB). The 
+Parent is also subject to the disclosure and regulatory 
+requirements of the Securities Act of 1933, as amended, and the 
+Securities Exchange Act of 1934, as amended, both as 
+administered by the SEC. As a company with securities listed on 
+the New York Stock Exchange (NYSE), the Parent is subject to 
+the rules of the NYSE for listed companies. 
+Subsidiary Banks. Our subsidiary national banks, and their 
+subsidiaries, are subject to regulation and examination primarily 
+by the Office of the Comptroller of the Currency (OCC) and also 
+by the Federal Deposit Insurance Corporation (FDIC), the FRB, 
+the Consumer Financial Protection Bureau (CFPB), the SEC and 
+the Commodities Futures Trading Commission (CFTC). The non-
+U.S. branches and representative offices of our subsidiary 
+national banks are subject to regulation and examination by their 
+respective financial regulators as well as by the OCC and the FRB. 
+Non-U.S. subsidiaries of our national bank subsidiaries may be 
+subject to the laws and regulations of the countries in which they 
+conduct business. 
+Nonbank Subsidiaries. Many of our nonbank subsidiaries are also 
+subject to regulation by the FRB and other applicable federal and 
+state agencies. Our insurance subsidiaries are subject to 
+regulation by applicable state insurance regulatory agencies, as 
+well as the FRB. Our brokerage subsidiaries are regulated by the 
+SEC, the Financial Industry Regulatory Authority (FINRA) and, in 
+some cases, the CFTC and the Municipal Securities Rulemaking 
+Board, and state securities regulators. Our other nonbank 
+subsidiaries may be subject to the laws and regulations of the 
+federal government and/or the various states as well as non-U.S. 
+countries in which they conduct business or operate. 
+2     
+          
+           
+            
+           
+          
+         
+         
+        
+       
+        
+      
+         
+          
+         
+       
+         
+         
+           
+         
+           
+           
+            
+           
+           
+           
+             
+          
+        
+          
+            
+         
+        
+    
+           
+        
+          
+           
+         
+        
+          
+         
+           
+         
+            
+            
+           
+          
+        
+        
+          
+           
+            
+           
+          
+          
+    
+         
+          
+          
+          
+            
+           
+                  
+          
+             
+           
+           
+        
+          
+    
+ 
+          
+       
+          
+       
+         
+        
+         
+         
+        
+        
+           
+  
+ 
+           
+         
+           
+           
+        
+         
+         
+        
+          
+        
+           
+          
+           
+          
+       
+         
+        
+        
+   
+        
+           
+        
+         
+          
+          
+          
+          
+           
+         
+         
+             
+         
+         
+            
+          
+         
+         
+    
+          
+           
+         
+              
+         
+          
+            
+           
+          
+         
+         
+        
+       
+        
+      
+         
+          
+         
+       
+         
+          
+           
+         
+           
+           
+            
+           
+           
+           
+             
+          
+        
+          
+            
+         
+        
+     
+           
+        
+          
+           
+         
+        
+          
+         
+           
+         
+            
+            
+           
+          
+        
+        
+          
+           
+            
+           
+          
+          
+    
+        
+          
+          
+          
+            
+           
+                  
+                       
+           
+           
+        
+          
+     
+        
+       
+          
+       
+         
+        
+         
+         
+        
+        
+           
+   
+  
+           
+         
+           
+           
+        
+         
+         
+        
+          
+        
+           
+          
+           
+          
+       
+         
+        
+        
+    
+        
+           
+        
+         
+          
+          
+          
+          
+           
+         
+         
+             
+         
+         
+            
+          
+         
+         
+     
+          
+           
+         
+         
+ Parent Bank Holding Company Activities 
+“Financial in Nature” Requirement. We became a financial holding 
+company effective March 13, 2000. We continue to maintain our 
+status as a BHC for purposes of various FRB regulations. As a 
+BHC that has elected to be treated as a financial holding 
+company pursuant to the BHC Act, we may affiliate with 
+securities firms and insurance companies and engage in other 
+activities that are financial in nature or incidental or 
+complementary to activities that are financial in nature. 
+“Financial in nature” activities include securities underwriting, 
+dealing, and market making; sponsoring mutual funds and 
+investment companies; insurance underwriting and agency; 
+merchant banking; and activities that the FRB, in consultation 
+with the Secretary of the U.S. Treasury, determines to be 
+financial in nature or incidental to such financial activity. 
+“Complementary activities” are activities that the FRB 
+determines upon application to be complementary to a financial 
+activity and do not pose a safety and soundness risk. 
+FRB approval is generally not required for us to acquire a 
+company (other than a BHC, bank or savings association) 
+engaged in activities that are financial in nature or incidental to 
+activities that are financial in nature, as determined by the FRB. 
+Prior notice to the FRB may be required, however, if the company 
+to be acquired has total consolidated assets of $10 billion or 
+more. Prior FRB approval is required before we may acquire the 
+beneficial ownership or control of more than 5% of the voting 
+shares or substantially all of the assets of a BHC, bank or savings 
+association. In addition, the FRB has implemented a final rule 
+under the Dodd-Frank Wall Street Reform and Consumer 
+Protection Act (Dodd-Frank Act) that also prohibits our ability to 
+merge, acquire all or substantially all of the assets of, or acquire 
+control of another company if our total resulting consolidated 
+liabilities would exceed 10% of the aggregate consolidated 
+liabilities of all financial companies. 
+Because we are a financial holding company, if any of our 
+subsidiary banks receives a rating under the Community 
+Reinvestment Act of 1977, as amended (CRA), of less than 
+satisfactory, we will be prohibited, until the rating is raised to 
+satisfactory or better, from engaging in new activities or 
+acquiring companies other than BHCs, banks or savings 
+associations, except that we could engage in new activities, or 
+acquire companies engaged in activities, that are closely related 
+to banking under the BHC Act. CRA performance is also taken 
+into account by regulators in reviewing applications to establish 
+bank branches. In addition, if the FRB finds that the Company or 
+any one of our subsidiary banks is not well capitalized or well 
+managed, we would be required to enter into an agreement with 
+the FRB to comply with all applicable capital and management 
+requirements and which may contain additional limitations or 
+conditions. Until corrected, we could be prohibited from 
+engaging in any new activity or acquiring companies engaged in 
+activities that are not closely related to banking under the BHC 
+Act without prior FRB approval. If we fail to correct any such 
+condition within a prescribed period, the FRB could order us to 
+divest our banking subsidiaries or, in the alternative, to cease 
+engaging in activities other than those closely related to banking 
+under the BHC Act. 
+Interstate Banking . Under the Riegle-Neal Interstate Banking and 
+Branching Act (Riegle-Neal Act), a BHC may acquire banks in 
+states other than its home state, subject to any state 
+requirement that the bank has been organized and operating for 
+a minimum period of time, not to exceed five years, and the 
+requirement that the BHC not control, prior to or following the 
+proposed acquisition, more than 10% of the total amount of deposits of insured depository institutions nationwide or, unless 
+the acquisition is the bank holding company’s initial entry into 
+the state, more than 30% of such deposits in the state (or such 
+lesser or greater amount set by the state). The Riegle-Neal Act 
+also authorizes banks to merge across state lines, subject to the 
+same deposit limits noted above, thereby creating interstate 
+branches. Banks are also permitted to acquire and to establish 
+new branches in other states. 
+Regulatory Approval. In determining whether to approve a 
+proposed bank acquisition, federal banking regulators will 
+consider, among other factors, the effect of the acquisition on 
+competition, financial condition, and future prospects including 
+current and projected capital ratios and levels, the competence, 
+experience, and integrity of management and record of 
+compliance with laws and regulations, the convenience and needs 
+of the communities to be served, including the acquiring 
+institution’s record of compliance under the CRA, the 
+effectiveness of the acquiring institution in combating money 
+laundering activities and the risk to the stability of the United 
+States banking system. 
+Dividend Restrictions 
+The Parent is a legal entity separate and distinct from its 
+subsidiary banks and other subsidiaries. A significant source of 
+funds to pay dividends on our common and preferred stock and 
+principal and interest on our debt is dividends from the Parent’s 
+subsidiaries. Various federal and state statutory provisions and 
+regulations limit the amount of dividends the Parent’s subsidiary 
+banks and certain other subsidiaries may pay without regulatory 
+approval. Federal banking regulators have the authority to 
+prohibit the Parent’s subsidiary banks from engaging in unsafe or 
+unsound practices in conducting their businesses. The payment 
+of dividends, depending on the financial condition of the bank in 
+question, could be deemed an unsafe or unsound practice. The 
+ability of the Parent’s subsidiary banks to pay dividends in the 
+future is currently, and could be further, influenced by bank 
+regulatory policies and capital requirements. For information 
+about the restrictions applicable to the Parent’s subsidiary banks, 
+see Note 25 (Regulatory Capital Requirements and Other 
+Restrictions) to Financial Statements included in the 2022 
+Annual Report to Shareholders. 
+Furthermore, under a Support Agreement dated June 28, 
+2017, as amended and restated on June 26, 2019 (the “Support 
+Agreement”), among the Parent, WFC Holdings, LLC, an 
+intermediate holding company and subsidiary of the Parent (the 
+“IHC”), Wells Fargo Bank, N.A., Wells Fargo Securities, LLC, Wells 
+Fargo Clearing Services, LLC, and certain other subsidiaries of the 
+Parent designated from time to time as material entities for 
+resolution planning purposes or identified from time to time as 
+related support entities in our resolution plan, the IHC may be 
+restricted from making dividend payments to the Parent if 
+certain liquidity and/or capital metrics fall below defined triggers, 
+or if the Parent’s board of directors authorizes it to file a case 
+under the U.S. Bankruptcy Code. Any such restriction could 
+materially and adversely impact the Parent’s liquidity and its 
+ability to satisfy its debt and other obligations, as well as its 
+ability to make dividend payments on its common and preferred 
+stock. See the “Regulatory Matters” and “Risk Factors” sections 
+of the 2022 Annual Report to Shareholders for additional 
+information on the Support Agreement. 
+In addition to these restrictions on the ability of our 
+subsidiary banks to pay dividends to us, the FRB requires large 
+BHCs, including Wells Fargo, to submit annual capital plans 
+describing planned capital distributions, such as the payment of 
+3          
+        
+           
+        
+         
+        
+         
+         
+          
+       
+        
+        
+         
+         
+        
+       
+          
+       
+      
+  
+          
+           
+           
+        
+       
+         
+         
+             
+          
+           
+           
+         
+          
+           
+         
+          
+           
+        
+          
+               
+             
+        
+         
+            
+     
+           
+           
+           
+             
+     
+ 
+           
+         
+           
+          
+          
+        
+         
+          
+          
+         
+       
+         
+           
+           
+         
+           
+           
+           
+            
+           
+         
+         
+           
+   
+ 
+          
+        
+           
+         
+           
+         
+      
+        
+        
+        
+         
+          
+           
+        
+         
+          
+         
+       
+      
+          
+        
+       
+        
+         
+        
+         
+          
+            
+            
+          
+         
+  
+        
+        
+        
+         
+         
+        
+      
+          
+  
+          
+       
+         
+        
+          
+        
+                 
+        
+           
+        
+         
+        
+         
+         
+          
+        
+        
+        
+         
+         
+        
+       
+          
+       
+       
+   
+         
+           
+           
+        
+       
+         
+         
+                       
+           
+           
+         
+          
+           
+         
+          
+           
+        
+          
+             
+             
+        
+         
+            
+      
+           
+           
+           
+             
+      
+          
+         
+           
+          
+          
+        
+         
+          
+          
+         
+               
+           
+           
+         
+           
+           
+           
+            
+           
+         
+         
+           
+    
+  
+          
+        
+           
+         
+           
+         
+      
+        
+        
+        
+         
+          
+           
+        
+         
+          
+         
+        
+       
+          
+        
+       
+        
+         
+        
+         
+          
+            
+            
+          
+         
+  
+        
+        
+        
+         
+         
+        
+      
+          
+   
+          
+       
+         
+        
+          
+        
+        
+ dividends. Large BHCs, like Wells Fargo, and their insured 
+depository institutions also must comply with various capital 
+requirements, including the reforms known as Basel III, as well as 
+rules that require leverage and supplementary leverage ratio 
+requirements. We are also subject to the FRB's rule 
+implementing an additional capital surcharge on those U.S. 
+banking organizations, such as the Company, that are designated 
+as global systemically important banks (G-SIBs). The failure to 
+meet any of these requirements could result in limitations or 
+restrictions on our ability to make capital distributions. 
+In addition, the FRB’s enhanced supervision regulations for 
+large BHCs, like Wells Fargo, impose capital distribution 
+restrictions, including on the payment of dividends, upon the 
+occurrence of capital, stress test, risk management, or liquidity 
+risk management triggers. For more information on regulations 
+or arrangements that may impose capital distribution 
+restrictions on the Company and its subsidiaries, see the “Capital 
+Management,” “Regulatory Matters” and “Risk Factors” sections 
+of the 2022 Annual Report to Shareholders. 
+Holding Company Structure 
+Transfer of Funds from Subsidiary Banks. The Parent’s subsidiary 
+banks are subject to restrictions under federal law that limit the 
+transfer of funds or other assets from such subsidiaries to the 
+Parent and its nonbank subsidiaries (including affiliates) in so-
+called “covered transactions.” In general, covered transactions 
+include loans and other extensions of credit, investments and 
+asset purchases, as well as certain other transactions involving 
+the transfer of value from a subsidiary bank to an affiliate or for 
+the benefit of an affiliate. Unless an exemption applies, covered 
+transactions by a subsidiary bank with a single affiliate are limited 
+to 10% of the subsidiary bank’s capital and surplus and, with 
+respect to all covered transactions with affiliates in the 
+aggregate, to 20% of the subsidiary bank’s capital and surplus. 
+Also, loans and extensions of credit to affiliates generally must be 
+secured by qualifying collateral. A bank’s transactions with its 
+nonbank affiliates are also generally required to be on arm’s 
+length terms. The Company is also subject to lending limits and 
+qualitative requirements on loans to executive officers, directors 
+and principal shareholders of the Parent and its subsidiary banks. 
+Source of Strength. The FRB has a policy that a BHC is expected 
+to act as a source of financial and managerial strength to each of 
+its subsidiary banks and, under appropriate circumstances, to 
+commit resources to support each such subsidiary bank. This 
+support may be required at times when the BHC may not have 
+the resources to provide the support. 
+The OCC may order an assessment of the Parent if the 
+capital of one of its national bank subsidiaries were to become 
+impaired. If the Parent failed to pay the assessment within three 
+months, the OCC could order the sale of the Parent’s stock in the 
+national bank to cover the deficiency. 
+Depositor Preference. In the event of the “liquidation or other 
+resolution” of an insured depository institution, the claims of 
+deposits payable in the United States (including the claims of the 
+FDIC as subrogee of insured depositors) and certain claims for 
+administrative expenses of the FDIC as a receiver will have 
+priority over other general unsecured claims against the 
+institution. If an insured depository institution fails, claims of 
+insured and uninsured U.S. depositors, along with claims of the 
+FDIC, will have priority in payment ahead of unsecured creditors, 
+including the Parent, and depositors whose deposits are solely 
+payable at such insured depository institution’s non-U.S. offices. Liability of Commonly Controlled Institutions. The Company’s 
+subsidiaries include banks in the U.S., such as Wells Fargo Bank, 
+N.A., that are insured by the FDIC. Under the Federal Deposit 
+Insurance Act, insured depository institutions can be held liable 
+for any loss incurred, or reasonably expected to be incurred, by 
+the FDIC due to the default of an insured depository institution 
+controlled by the same BHC, and for any assistance provided by 
+the FDIC to an insured depository institution that is in danger of 
+default and that is controlled by the same BHC. “Default” means 
+generally the appointment of a conservator or receiver. “In 
+danger of default” means generally the existence of certain 
+conditions indicating that a default is likely to occur in the 
+absence of regulatory assistance. 
+Dodd-Frank Act 
+The Dodd-Frank Act and the numerous rules to implement its 
+provisions have resulted in enhanced regulation and supervision 
+of large BHCs, such as Wells Fargo. This includes, among other 
+things, rules to promote financial stability and prevent or 
+mitigate the risks that may arise from the material distress or 
+failure of a large BHC; enhance consumer protections; prohibit 
+proprietary trading; and implement enhanced prudential 
+requirements for large BHCs regarding risk-based capital and 
+leverage, risk and liquidity management, stress testing, and 
+recovery and resolution planning. The Dodd-Frank Act, including 
+current and future rules implementing its provisions and the 
+interpretation of those rules, has affected, and we expect will 
+continue to affect, most of our businesses in some way, either 
+directly through regulation of specific activities or indirectly 
+through regulation of concentration risks, capital or liquidity. For 
+more information about the Dodd-Frank Act and its effect on 
+our business, see the “Regulatory Matters” and “Risk Factors” 
+sections of the 2022 Annual Report to Shareholders. 
+Capital and Liquidity Requirements and Capital Planning 
+The Company and each of our insured depository institutions are 
+subject to various regulatory capital adequacy and liquidity 
+requirements administered by federal banking regulators. The 
+capital rules, among other things, establish required minimum 
+ratios relating capital to different categories of assets and 
+exposures. Federal banking regulators have also imposed a 
+leverage ratio and supplementary leverage ratio on large BHCs, 
+like Wells Fargo, and their insured depository institutions, as well 
+as a liquidity coverage ratio and a net stable funding ratio. The 
+FRB has also finalized rules to address the amount of equity and 
+unsecured long-term debt a G-SIB must hold to improve its 
+resolvability and resiliency, often referred to as total loss 
+absorbing capacity. 
+From time to time, federal banking regulators propose 
+changes and amendments to, and issue interpretations of, risk-
+based capital requirements and related reporting instructions. In 
+addition, the FRB closely monitors capital levels of the 
+institutions it supervises and may require such institutions to 
+modify capital levels based on FRB determinations. Such 
+determinations, proposals or interpretations could, if 
+implemented in the future, affect our reported capital ratios and 
+net risk-adjusted assets. 
+As an additional means to identify problems in the financial 
+management of depository institutions, the Federal Deposit 
+Insurance Act (FDI Act) requires federal banking regulators to 
+establish certain non-capital safety and soundness standards for 
+institutions for which they are the primary federal regulator. The 
+standards relate generally to operations and management, asset 
+quality, interest rate exposure, executive compensation and risk 
+4         
+        
+         
+       
+        
+       
+          
+          
+     
+         
+       
+       
+        
+          
+         
+    
+        
+         
+   
+  
+         
+           
+          
+            
+         
+          
+         
+ 
+         
+          
+          
+    
+        
+         
+            
+          
+         
+         
+            
+         
+      
+ 
+   
+          
+         
+          
+            
+        
+          
+        
+        
+       
+        
+        
+         
+          
+            
+            
+        
+ 
+       
+   
+       
+                    
+        
+          
+        
+        
+         
+       
+        
+         
+          
+         
+         
+        
+        
+   
+       
+         
+        
+        
+         
+        
+          
+          
+        
+      
+       
+        
+          
+         
+       
+          
+        
+        
+         
+        
+         
+ 
+  
+       
+        
+           
+        
+          
+          
+       
+           
+        
+      
+        
+         
+         
+        
+   
+   
+         
+          
+          
+         
+       
+         
+       
+          
+                
+         
+         
+       
+        
+       
+          
+          
+      
+         
+       
+       
+        
+          
+         
+     
+        
+         
+    
+   
+         
+           
+          
+            
+         
+          
+         
+  
+         
+          
+          
+     
+        
+         
+            
+          
+         
+         
+            
+         
+       
+    
+          
+         
+          
+            
+        
+          
+        
+        
+       
+        
+        
+         
+          
+            
+                     
+       
+    
+       
+                    
+        
+          
+        
+        
+         
+       
+        
+         
+          
+         
+         
+        
+        
+    
+       
+         
+        
+        
+         
+        
+          
+          
+         
+      
+       
+        
+          
+         
+       
+          
+        
+        
+         
+        
+          
+   
+       
+        
+           
+        
+          
+          
+       
+           
+        
+      
+        
+         
+         
+        
+    
+    
+         
+          
+          
+         
+       
+        
+       
+          
+        
+ management. Federal banking regulators are authorized to take 
+action against institutions that fail to meet such standards. 
+The FDI Act requires federal banking regulators to take 
+“prompt corrective action” with respect to FDIC-insured 
+depository institutions that do not meet minimum capital 
+requirements. A depository institution’s treatment for purposes 
+of the prompt corrective action provisions will depend upon how 
+its capital levels compare to various capital measures and certain 
+other factors, as established by regulation. 
+In addition, the FRB’s capital plan rule establishes capital 
+planning and other requirements that govern capital 
+distributions, including dividends and share repurchases, by 
+certain BHCs, including Wells Fargo. Federal banking regulators 
+also require stress tests to evaluate whether an institution has 
+sufficient capital to continue to operate during periods of 
+adverse economic and financial conditions. 
+For more information on our capital requirements and 
+planning, see the “Capital Management” section of the 2022 
+Annual Report to Shareholders. 
+Deposit Insurance Assessments 
+The Company’s subsidiaries include banks, such as Wells Fargo 
+Bank, N.A., that are insured by the FDIC. Through the Deposit 
+Insurance Fund (DIF) maintained by the FDIC, the FDIC insures 
+the deposits of our insured banks up to prescribed limits for each 
+depositor and funds the DIF through assessments on member 
+banks. To maintain the DIF, member institutions are assessed an 
+insurance premium based on an assessment base and an 
+assessment rate. 
+The FDIC has adopted a comprehensive, long-range plan for 
+DIF management, targeting a designated reserve ratio of 2%. For 
+the year ended December 31, 2022, the Company's FDIC deposit 
+insurance assessments totaled $679 million. 
+The FDIC may terminate a depository institution’s deposit 
+insurance upon a finding that the institution’s financial condition 
+is unsafe or unsound or that the institution or its directors have 
+engaged in unsafe or unsound practices or have violated any 
+applicable law, regulation, order or condition enacted or imposed 
+by the institution’s regulatory agency. The termination of deposit 
+insurance for one or more of our bank subsidiaries could have a 
+material adverse effect on our earnings, depending on the 
+collective size of the particular banks involved. 
+Fiscal and Monetary Policies 
+Our business and earnings are affected significantly by the fiscal 
+and monetary policies of the federal government and its 
+agencies. We are particularly affected by the monetary policies of 
+the FRB, which regulates the supply of money and credit in the 
+United States. Among the instruments of monetary policy 
+available to the FRB are (a) conducting open market operations 
+in United States government securities, (b) changing the 
+discount rates of borrowings of depository institutions, (c) 
+imposing or changing reserve requirements against depository 
+institutions’ deposits, and (d) imposing or changing reserve 
+requirements against certain borrowings by banks and their 
+affiliates. These methods are used in varying degrees and 
+combinations to directly affect the availability of bank loans and 
+deposits, as well as the interest rates charged on loans and paid 
+on deposits. The policies of the FRB may have a material effect 
+on our business, results of operations and financial condition. 
+Privacy Provisions of the Gramm-Leach-Bliley Act and 
+Restrictions on Affiliate Marketing 
+Federal banking regulators, as required under the Gramm-Leach-
+Bliley Act (the GLB Act), have adopted rules limiting the ability of banks and other financial institutions to disclose nonpublic 
+information about consumers to nonaffiliated third parties. The 
+rules require disclosure of privacy policies to consumers and, in 
+some circumstances, allow consumers to prevent disclosure of 
+certain personal information to nonaffiliated third parties. The 
+privacy provisions of the GLB Act affect how consumer 
+information is transmitted through diversified financial services 
+companies and conveyed to outside vendors. Federal financial 
+regulators have issued regulations under the Fair and Accurate 
+Credit Transactions Act that have the effect of increasing the 
+length of the waiting period, after privacy disclosures are 
+provided to new customers, before information can be shared 
+among different affiliated companies for the purpose of 
+marketing products and services by those affiliated companies. 
+Sarbanes-Oxley Act of 2002 
+The Sarbanes-Oxley Act of 2002 (Sarbanes-Oxley) implemented 
+a broad range of corporate governance and accounting measures 
+to increase corporate responsibility, to provide for enhanced 
+penalties for accounting and auditing improprieties at publicly 
+traded companies, and to protect investors by improving the 
+accuracy and reliability of disclosures under federal securities 
+laws. We are subject to Sarbanes-Oxley because we are required 
+to file periodic reports with the SEC under the Securities 
+Exchange Act of 1934. Among other things, Sarbanes-Oxley and/ 
+or its implementing regulations established membership 
+requirements and additional responsibilities for our audit 
+committee, imposed restrictions on the relationship between us 
+and our outside auditors (including restrictions on the types of 
+non-audit services our auditors may provide to us), imposed 
+additional responsibilities for our external financial statements 
+on our chief executive officer and chief financial officer, expanded 
+the disclosure requirements for our corporate insiders, required 
+our management to evaluate our disclosure controls and 
+procedures and our internal control over financial reporting, and 
+required our independent registered public accounting firm to 
+issue a report on our internal control over financial reporting. 
+USA PATRIOT Act 
+The Uniting and Strengthening America by Providing 
+Appropriate Tools Required to Intercept and Obstruct Terrorism 
+Act of 2001 (USA PATRIOT Act) is intended to strengthen the 
+ability of U.S. law enforcement agencies and intelligence 
+communities to work together to combat terrorism on a variety 
+of fronts. The USA PATRIOT Act has significant implications for 
+depository institutions, brokers, dealers and other businesses 
+involved in the transfer of money. The USA PATRIOT Act requires 
+the implementation of policies and procedures relating to 
+anti‑money laundering, economic sanctions, suspicious activities, 
+and currency transaction reporting and due diligence on 
+customers. The USA PATRIOT Act also requires federal banking 
+regulators to evaluate the effectiveness of an applicant in 
+combating money laundering in determining whether to approve 
+a proposed bank acquisition. 
+Future Legislation or Regulation 
+Economic, market and political conditions during the past several 
+years have led to a significant amount of legislation and 
+regulation in the U.S. and abroad affecting the financial services 
+industry, as well as heightened expectations and scrutiny of 
+financial services companies from banking regulators. Further 
+legislative changes and additional regulations may change our 
+operating environment in substantial and unpredictable ways. 
+Such legislation and regulations could increase our cost of doing 
+business, affect our compensation structure, restrict or expand 
+5            
+        
+        
+          
+          
+      
+ 
+            
+        
+        
+       
+            
+           
+        
+       
+ 
+   
+ 
+ 
+    
+ 
+   
+ 
+    
+    
+      
+     
+    
+ 
+  
+   
+   
+    
+ 
+  
+  
+ 
+   
+   
+  
+   
+ 
+   
+ 
+         
+                                 
+      
+            
+         
+         
+         
+            
+        
+          
+           
+          
+              
+          
+                     
+        
+        
+          
+          
+       
+  
+            
+        
+        
+      
+       
+            
+           
+        
+        
+    
+ 
+  
+    
+  
+    
+  
+     
+      
+        
+       
+     
+   
+    
+     
+     
+      
+   
+    
+    
+   
+     
+     
+    
+    
+  
+  
+   
+     
+   
+          
+                                  
+       
+           
+         
+        
+         
+            
+        
+          
+           
+          
+              
+          
+           
+  the activities in which we may engage or affect the competitive 
+balance among banks, savings associations, credit unions, and 
+other financial institutions. We cannot predict whether future 
+legislative proposals will be enacted and, if enacted, the effect 
+that they, or any implementing regulations, would have on our 
+business, results of operations or financial condition. 
+ADDITIONAL INFORMATION 
+Additional information in response to this Item 1 can be found in 
+the 2022 Annual Report to Shareholders under “Financial 
+Review” and under “Financial Statements.” That information is 
+incorporated into this item by reference. 
+ITEM 2. PROPERTIES ITEM 1A. RISK FACTORS 
+Information in response to this Item 1A can be found in this 
+report under Item 1 and in the 2022 Annual Report to 
+Shareholders under “Financial Review – Risk Factors.” That 
+information is incorporated into this item by reference. 
+ITEM 1B. UNRESOLVED STAFF 
+COMMENTS 
+Not applicable. 
+December 31, 2022 Approximate square
+footage
+(in millions) 
+We occupy properties in: 
+United States 
+San Francisco-Oakland-Berkeley, CA metro area 
+420 Montgomery Street (corporate headquarters) 0.4 
+All other San Francisco metro area locations 2.8 
+Total San Francisco, CA metro area 3.2 
+Top 10 other U.S. locations: 
+Charlotte-Concord-Gastonia, NC-SC 7.0 
+Minneapolis-St. Paul-Bloomington, MN-WI 4.4 
+New York-Newark-Jersey City, NY-NJ-PA 3.1 
+Los Angeles-Long Beach-Anaheim, CA 2.9 
+Des Moines-West Des Moines, IA 2.9 
+Phoenix-Mesa-Chandler, AZ 2.9 
+St. Louis, MO-IL 2.2 
+Dallas-Fort Worth-Arlington, TX 1.6 
+Philadelphia-Camden-Wilmington, PA-NJ-DE-MD 1.5 
+Miami-Fort Lauderdale-Pompano Beach, FL 1.3 
+All other U.S. locations 32.3 
+Total United States 65.3 
+Top 5 International locations: 
+India 3.9 
+Philippines 0.9 
+United Kingdom 0.3 
+All other international locations 0.3 
+Total International 5.4 
+Total square footage of property occupied for business operations (1) 
+(1) In addition to the total square footage of property occupied, Wells Fargo held 2.8 million square feet of real estate as of December 31, 2022, that was vacant pending disposition, leased to retail 
+tenants or leased-to-term by third-party office tenants. 
+As of December 31, 2022, we provided a diversified set of 
+banking, investment and mortgage products and services, as well 
+as consumer and commercial finance, through banking locations 
+and offices under ownership and lease agreements. The locations 
+and offices occupied by the Company are used across all of our 
+reportable operating segments and for corporate purposes. We 
+continue to evaluate our owned and leased properties and may 
+determine from time to time that certain of our properties are 
+no longer necessary for our operations. There is no assurance 
+that we will be able to dispose of any excess properties or that we 
+will not incur charges in connection with such dispositions, which 
+could be material to our operating results in a given period. 
+6 70.7   
+             
+        
+          
+       
+   
+ 
+ 
+    
+   
+  
+    
+ 
+  
+          
+         
+       
+           
+          
+        
+          
+          
+          
+       
+        
+         
+            
+          
+        
+        
+        
+        
+             
+           
+         
+      
+       
+          
+          
+ 
+          
+        
+           
+        
+          
+          
+        
+        
+          
+          
+         
+          
+  
+   
+         
+   
+  
+ 
+      
+       
+      
+  
+                               
+                
+             
+        
+          
+        
+     
+  
+  
+     
+   
+  
+    
+  
+  
+          
+         
+       
+          
+          
+ 
+ 
+        
+          
+          
+          
+       
+          
+         
+            
+         
+        
+        
+        
+        
+             
+           
+         
+      
+       
+          
+          
+  
+          
+        
+           
+        
+          
+         
+        
+ 
+        
+          
+         
+         
+          
+   
+   
+    
+       
+           
+     
+    
+    
+  
+                                
+             
+ ITEM 3. LEGAL PROCEEDINGS 
+Information in response to this Item 3 can be found in the 2022 
+Annual Report to Shareholders under “Financial Statements – 
+Notes to Financial Statements – Note 13 (Legal Actions).” That 
+information is incorporated into this item by reference. 
+ITEM 4. MINE SAFETY DISCLOSURES 
+Not applicable. 
+PART II 
+ITEM 5. MARKET FOR REGISTRANT’S 
+COMMON EQUITY, RELATED 
+STOCKHOLDER MATTERS 
+AND ISSUER PURCHASES OF 
+EQUITY SECURITIES 
+MARKET INFORMATION 
+The Company’s common stock is listed on the NYSE (symbol 
+“WFC”). The “Stock Performance” section of the 2022 Annual 
+Report to Shareholders provides stockholder return comparisons 
+and is incorporated herein by reference. At February 10, 2023, 
+there were 231,886 holders of record of the Company’s common 
+stock. 
+DIVIDENDS 
+The dividend restrictions discussions in the “Regulation and 
+Supervision – Dividend Restrictions” section under Item 1 of this 
+report and in the 2022 Annual Report to Shareholders under 
+“Financial Statements – Notes to Financial Statements – Note 25 
+(Regulatory Capital Requirements and Other Restrictions)” are 
+incorporated into this item by reference. REPURCHASES OF EQUITY SECURITIES 
+In January 2021, our Board of Directors authorized the 
+repurchase of up to 500 million shares of our common stock. At 
+December 31, 2022, we had remaining Board authority to 
+repurchase approximately 250 million shares of common stock, 
+subject to regulatory and legal conditions. The authorizations 
+cover shares repurchased to meet employee benefit plan 
+requirements. The Company maintains a variety of retirement 
+plans for its employees and typically is a net issuer of shares of 
+common stock to these plans. From time to time, it also 
+purchases shares of common stock from these plans to 
+accommodate employee preferences. Share repurchases are 
+subtracted from the Company’s repurchase authority without 
+offset for share issuances. Shares may be repurchased from the 
+different benefit plans or in the open market, subject to 
+regulatory approval. 
+The amount and timing of stock repurchases will be based 
+on various factors, including our capital requirements, the 
+number of shares we expect to issue for employee benefit plans 
+and acquisitions, market conditions (including the trading price 
+of our stock), and regulatory and legal considerations. See the 
+“Capital Management” section in the 2022 Annual Report to 
+Shareholders for additional information about our common stock 
+repurchases. 
+The following table shows Company repurchases of its 
+common stock for each calendar month in the quarter ended 
+December 31, 2022. In fourth quarter 2022, common stock 
+repurchases were limited to repurchases in connection with the 
+Wells Fargo & Company Stock Purchase Plan and the Company’s 
+deferred compensation plans. 
+Maximum number of 
+shares that may yet 
+Total number of Weighted-average be repurchased under 
+Calendar month shares repurchased (1) price paid per share the authorization 
+October 52,876 $ 43.67 250,466,216 
+November 43,423 46.77 250,422,793 
+December 32,959 42.94 250,389,834 
+Total 129,258 
+(1) All shares were repurchased under an authorization covering up to 500 million shares of common stock approved by the Board of Directors and publicly announced by the Company on January 15, 
+2021. Unless modified or revoked by the Board, this authorization does not expire. 
+7  
+   
+    
+    
+            
+         
+        
+   
+  
+  
+             
+         
+       
+     
+    
+ 
+             
+       
+        
+         
+     
+  
+   
+  
+ 
+   
+           
+        
+         
+  
+ 
+   
+   
+ 
+ 
+ 
+      
+    
+    
+          
+           
+                   
+      
+           
+         
+     
+                             
+   
+              
+          
+   
+                 
+ 
+             
+                  
+                 
+  
+              
+      
+ 
+                 
+                    
+                 
+         
+     
+  
+       
+               
+         
+                 
+   
+       
+    
+             
+       
+        
+         
+  
+  
+        
+     
+     
+           
+                              
+       
+            
+          
+     
+                             
+    
+               
+          
+    
+                 
+  
+              
+                   
+          
+ ITEM 6. [RESERVED] 
+ITEM 7. MANAGEMENT’S DISCUSSION 
+AND ANALYSIS OF FINANCIAL 
+CONDITION AND RESULTS OF 
+OPERATIONS 
+Information in response to this Item 7 can be found in the 
+2022 Annual Report to Shareholders under “Financial Review.” 
+That information is incorporated into this item by reference. 
+ITEM 7A. QUANTITATIVE AND 
+QUALITATIVE DISCLOSURES 
+ABOUT MARKET RISK 
+Information in response to this Item 7A can be found in the 2022 
+Annual Report to Shareholders under “Financial Review – Risk 
+Management – Asset/Liability Management.” That information is 
+incorporated into this item by reference. 
+ITEM 8. FINANCIAL STATEMENTS AND 
+SUPPLEMENTARY DATA 
+Information in response to this Item 8 can be found in the 2022 
+Annual Report to Shareholders under “Financial Statements,” 
+under “Notes to Financial Statements” and under “Quarterly 
+Financial Data.” That information is incorporated into this item 
+by reference. 
+PART III ITEM 9. CHANGES IN AND 
+DISAGREEMENTS WITH 
+ACCOUNTANTS ON ACCOUNTING 
+AND FINANCIAL DISCLOSURE 
+Not applicable. 
+ITEM 9A. CONTROLS AND PROCEDURES 
+Information in response to this Item 9A can be found in the 
+2022 Annual Report to Shareholders under “Controls and 
+Procedures.” That information is incorporated into this item by 
+reference. 
+ITEM 9B. OTHER INFORMATION 
+Not applicable. 
+ITEM 9C. DISCLOSURE REGARDING 
+FOREIGN JURISDICTIONS THAT 
+PREVENT INSPECTIONS 
+Not applicable. 
+ITEM 10. DIRECTORS, EXECUTIVE OFFICERS AND CORPORATE GOVERNANCE 
+INFORMATION ABOUT OUR EXECUTIVE OFFICERS 
+Muneera S. Carr (age 54) 
+Executive Vice President, Chief Accounting Officer and Controller since March 2020; 
+Executive Vice President and Controller from January 2020 to March 2020; 
+Executive Vice President from February 2013 to October 2019 and Chief Financial Officer from January 2018 to October 2019 
+at Comerica, Incorporated, a financial services company; 
+Chief Accounting Officer at Comerica Incorporated from July 2010 to January 2018. 
+Ms. Carr has served with the Company for 3 years. 
+William M. Daley (age 74) 
+Vice Chairman of Public Affairs since November 2019; 
+Vice Chairman and a member of the Executive Committee at Bank of New York Mellon, a financial services company, from June 
+2019 to October 2019; 
+Managing Partner at Argentiere Capital, an investment management firm, from May 2014 to June 2019. 
+Mr. Daley has served with the Company for 3 years. 
+Kristy Fercho (age 56) 
+Senior Executive Vice President, Head of Diverse Segments, Representation and Inclusion and Head of Home Lending since 
+October 2022; 
+Executive Vice President and Head of Home Lending from July 2020 to October 2022; 
+President of the Mortgage Division at Flagstar Bancorp, Inc., a financial services company, from August 2017 to July 2020. 
+Ms. Fercho has served with the Company for 2 years. 
+8     
+           
+                
+               
+            
+    
+           
+                                
+            
+   
+           
+                 
+ 
+         
+    
+              
+          
+              
+          
+                 
+       
+            
+    
+                             
+    
+                  
+ 
+         
+    
+         
+                
+ 
+         
+    
+           
+                
+     
+                 
+                  
+ 
+          
+    
+                             
+    
+                 
+         
+    
+                           
+ 
+                  
+ 
+              
+                            
+                
+             
+     
+            
+                                  
+             
+    
+            
+                 
+  
+          
+     
+               
+           
+              
+           
+                 
+        
+             
+     
+                              
+     
+                  
+  
+          
+     
+          
+                
+  
+          
+     
+           
+                
+     
+                  
+                  
+  
+          
+     
+                              
+     
+                  
+          
+     
+                            
+  
+                  
+  
+          
+ Derek A. Flowers (age 51) 
+Senior Executive Vice President and Chief Risk Officer since January 2022; 
+Senior Executive Vice President and Head of Strategic Execution and Operations from June 2019 to January 2022; 
+Executive Vice President and Chief Credit and Market Risk Officer from July 2016 to June 2019. 
+Mr. Flowers has served with the Company or its predecessors for 24 years. 
+Kyle G. Hranicky (age 53) 
+Senior Executive Vice President and CEO of Commercial Banking since September 2021; 
+Executive Vice President and Head of Wells Fargo Middle Market Banking from August 2018 to September 2021; 
+Executive Vice President and Head of Wells Fargo Corporate Banking Group from April 2015 to July 2018. 
+Mr. Hranicky has served with the Company or its predecessors for 28 years. 
+Bei Ling (age 52) 
+Senior Executive Vice President and Head of Human Resources since October 2021; 
+Managing Director, Human Resources at JPMorgan Chase & Co., a financial services company, from April 2013 to 
+September 2021. 
+Ms. Ling has served with the Company for 1 year. 
+Mary T. Mack (age 60) 
+Senior Executive Vice President and CEO of Consumer and Small Business Banking since February 2020; 
+Interim CEO of Consumer Lending from February 2020 to April 2020; 
+Senior Executive Vice President (Consumer Banking), reflecting the renamed Consumer Banking organization which combined 
+Community Banking and Consumer Lending, from April 2019 to February 2020; 
+Senior Executive Vice President (Consumer Lending) from December 2017 to April 2019 and Senior Executive Vice President 
+(Community Banking) from November 2016 to April 2019. 
+Ms. Mack has served with the Company or its predecessors for 38 years. 
+Lester J. Owens (age 65) 
+Senior Executive Vice President and Head of Operations since July 2020; 
+Senior Executive Vice President and Head of Operations at Bank of New York Mellon, a financial services company, from 
+February 2019 to April 2020; 
+Managing Director for Wholesale Banking Operations at JPMorgan Chase & Co., a financial services company, from 2007 to 
+December 2018. 
+Mr. Owens has served with the Company for 2 years. 
+Ellen R. Patterson (age 49) 
+Senior Executive Vice President and General Counsel since March 2020; 
+Group Head, General Counsel at The Toronto-Dominion Bank, a financial services company, from November 2017 to 
+March 2020. 
+Ms. Patterson has served with the Company for 2 years. 
+Scott E. Powell (age 60) 
+Senior Executive Vice President and Chief Operating Officer since December 2019; 
+President and Chief Executive Officer of Santander Consumer USA Holdings Inc., a financial services company, from 
+August 2017 to December 2019; 
+Senior Executive Vice President of Santander Bank, N.A., a financial services company, from August 2017 to December 2019; 
+President and Chief Executive Officer of Santander Holdings USA Inc., a financial services company, from March 2015 to 
+December 2019. 
+Mr. Powell has served with the Company for 3 years. 
+Michael P. Santomassimo (age 47) 
+Senior Executive Vice President and Chief Financial Officer since October 2020; 
+Senior Executive Vice President and Chief Financial Officer at Bank of New York Mellon, a financial services company, from 
+January 2018 to July 2020; 
+Chief Financial Officer of Investment Services at Bank of New York Mellon from July 2016 to January 2018. 
+Mr. Santomassimo has served with the Company for 2 years. 
+Kleber R. Santos (age 49) 
+Senior Executive Vice President and CEO of Consumer Lending since July 2022; 
+Senior Executive Vice President and Head of Diverse Segments, Representation and Inclusion from November 2020 to 
+October 2022; 
+President, Retail and Direct Banking at Capital One Financial Corporation, a financial services company, from March 2017 to 
+October 2020. 
+Mr. Santos has served with the Company for 2 years. 
+9     
+        
+                   
+         
+   
+             
+                  
+  
+         
+    
+           
+                  
+    
+          
+    
+             
+            
+             
+         
+    
+              
+                
+     
+         
+ 
+                     
+    
+  
+           
+         
+           
+          
+          
+         
+          
+          
+          
+          
+       
+    
+         
+         
+       
+        
+      
+     
+        
+           
+          
+     
+  
+         
+        
+            
+          
+          
+                           
+          
+    
+              
+                  
+   
+          
+     
+           
+                  
+     
+           
+     
+              
+             
+              
+          
+     
+               
+                
+     
+          
+                     
+     
+     
+                   
+                  
+                     
+                
+          
+                       
+                   
+                  
+                      
+                  
+      
+     
+ 
+         
+         
+       
+        
+      
+     
+ 
+ Charles W. Scharf (age 57) 
+Chief Executive Officer and President since October 2019; 
+Chief Executive Officer of Bank of New York Mellon, a financial services company, from July 2017 to September 2019. 
+Mr. Scharf has served with the Company for 3 years. 
+Barry Sommers (age 53) 
+Senior Executive Vice President and CEO of Wealth and Investment Management since June 2020; 
+Chief Executive Officer of Wealth Management at JPMorgan Chase & Co., a financial services company, from September 2016 
+to April 2019. 
+Mr. Sommers has served with the Company for 2 years. 
+Saul Van Beurden (age 53) 
+Senior Executive Vice President and Head of Technology since April 2019; 
+Chief Information Officer of Consumer and Community Banking at JPMorgan Chase & Co., a financial services company, from 
+August 2016 to January 2019. 
+Mr. Van Beurden has served with the Company for 3 years. 
+Jonathan G. Weiss (age 65) 
+Senior Executive Vice President and CEO of Corporate and Investment Banking since February 2020; 
+Interim CEO of Wealth and Investment Management from February 2020 to June 2020; 
+Senior Executive Vice President (Wealth and Investment Management) from July 2017 to February 2020. 
+Mr. Weiss has served with the Company for 17 years. 
+Ather Williams III (age 52) 
+Senior Executive Vice President and Head of Strategy, Digital Platform, and Innovation since October 2020; 
+Managing Director, Head of Business Banking at Bank of America Corporation, a financial services company, from 
+September 2017 to July 2020. 
+Mr. Williams has served with the Company for 2 years. 
+There is no family relationship between any of the Company’s executive officers or directors. All executive officers serve at the pleasure 
+of the Board of Directors. 
+AUDIT COMMITTEE INFORMATION 
+The Audit Committee is a standing audit committee of the Board 
+of Directors established in accordance with Section 3(a)(58)(A) 
+of the Securities Exchange Act of 1934. The Committee has four 
+members: Mark A. Chancy, Theodore F. Craver, Jr. (Chair), CeCelia 
+G. Morken, and Ronald L. Sargent. Each member is independent, 
+as independence for audit committee members is defined by 
+NYSE rules. The Board of Directors has determined, in its 
+business judgment, that each member of the Audit Committee is 
+financially literate, as required by NYSE rules, and that Messrs. 
+Chancy, Craver, Jr., and Sargent each qualifies as an “audit 
+committee financial expert” as defined by SEC regulations. 
+CODE OF ETHICS AND BUSINESS 
+CONDUCT 
+The Company’s Code of Ethics and Business Conduct applicable 
+to employees (including executive officers) as well as directors, 
+the Company’s corporate governance guidelines, and the 
+charters for the Audit, Governance and Nominating, Human 
+Resources, Corporate Responsibility, Finance, and Risk 
+Committees are available at www.wellsfargo.com/about/ 
+corporate/governance . ADDITIONAL INFORMATION 
+Additional information with respect to our directors, executive 
+officers, and corporate governance in response to this Item 10 
+will be in the Company’s 2023 Proxy Statement and is 
+incorporated into this item by reference. 
+ITEM 11. EXECUTIVE COMPENSATION 
+Information with respect to our executive officer and director 
+compensation and with respect to the Human Resources 
+Committee of the Board of Directors in response to this Item 11 
+will be in the Company’s 2023 Proxy Statement and is 
+incorporated into this item by reference. 
+10     
+   
+   
+  
+   
+        
+         
+          
+         
+         
+           
+          
+ 
+   
+     
+  
+ 
+ 
+    
+ 
+       
+  
+  
+ 
+ 
+   
+            
+           
+      
+                       
+                            
+                            
+                        
+                                   
+                            
+                          
+   
+                              
+                              
+                 
+       
+  
+  
+  
+     
+    
+   
+    
+          
+ 
+      
+       
+  
+        
+  
+  
+   
+      
+      
+    
+  
+        
+ 
+ 
+         
+          
+                   
+        
+           
+       
+          
+               
+   
+   
+  
+ 
+   
+ 
+        
+         
+          
+         
+         
+           
+          
+  
+    
+   
+    
+        
+       
+       
+      
+            
+             
+             
+    
+                         
+                             
+                           
+                         
+                                    
+                             
+                           
+    
+                               
+                              
+                  
+   
+   
+  
+ 
+    
+   
+   
+          
+      
+     
+      
+       
+  
+   
+   
+   
+          
+      
+     
+    
+  
+                 
+          
+           
+              
+                    
+                    
+ ITEM 12. SECURITY OWNERSHIP OF 
+CERTAIN BENEFICIAL OWNERS 
+AND MANAGEMENT AND 
+RELATED STOCKHOLDER 
+MATTERS 
+EQUITY COMPENSATION PLAN 
+INFORMATION 
+The following table provides information about our equity 
+compensation plans in effect on December 31, 2022, separately 
+aggregated for plans approved by shareholders and for plans not 
+approved by shareholders. A description of the material features 
+of each equity compensation plan not approved by shareholders 
+follows the table. All outstanding awards relate to shares of our 
+common stock. Information is as of December 31, 2022, unless 
+otherwise indicated. 
+Equity Compensation Plan Information 
+(a) (b) (c) 
+# of shares remaining 
+# of shares to be available for future 
+issued upon exercise Weighted-average issuance under equity 
+of outstanding exercise price of compensation plans 
+options, warrants outstanding options, (excluding securities 
+Plan category and rights warrants and rights (1) reflected in column (a)) 
+Equity compensation plans approved by security holders 60,458,799 (2) $ 0.00 131,346,845 (3) 
+Equity compensation plans not approved by security holders 5,259,807 (4) NA 3,089,783 (5) 
+Total 65,718,606 0.00 134,436,628 
+(1) Does not reflect restricted share rights (RSRs), restricted share units (RSUs), performance share awards or deferred compensation benefits because they have no exercise price. 
+(2) For the Wells Fargo & Company 2022 Long-Term Incentive Plan (2022 LTIP) and its predecessor the Long-Term Incentive Compensation Plan (LTICP), consists of 53,237,143 shares subject to RSRs, 
+and a maximum of 5,731,327 performance shares. For the Supplemental 401(k) Plan, consists of 1,126,379 shares issuable upon distribution of benefits. For the Directors Stock Compensation and 
+Deferral Plan (Directors Plan), consists of 228,946 shares issuable upon distribution of deferred stock awards, and 135,004 shares issuable upon distribution of deferred compensation benefits. 
+(3) We could have issued the number of shares of our common stock indicated in the table below captioned “Plans approved by security holders” pursuant to any of the award types listed for the plan or, 
+if indicated for the plan, pursuant to distributions of deferred compensation benefits. No information is provided for the LTICP because no future awards will be made under this plan. 
+(4) This consists of shares of common stock issuable upon distribution of deferred compensation benefits and 617 shares issuable upon distribution related to the Norwest Corporation Directors’ 
+Formula Stock Award Plan. 
+(5) We could have issued the number of shares of our common stock indicated in the table below captioned “Plans not approved by security holders” pursuant to distributions of deferred compensation 
+benefits. No information is provided for the Norwest Corporation Directors’ Formula Stock Award Plan because no future awards or deferrals will be made under this plan and because column (a) 
+reflects all shares issuable under those plans upon exercise or distribution of outstanding awards or deferred compensation benefits. 
+# of shares remaining
+available for future 
+issuance under equity
+compensation plans
+(excluding # of shares to
+be issued upon exercise
+of outstanding options, 
+Plans approved by security holders warrants and rights) Award types 
+Stock, restricted stock, RSRs, performance shares, 
+2022 LTIP 129,493,577 performance units 
+Supplemental 401(k) Plan 1,723,509 Deferral distribution 
+Directors Plan 129,759 Stock options, deferral distribution 
+Total 131,346,845 
+# of shares remaining
+available for future 
+issuance under equity 
+Plans not approved by security holders compensation plans Award types 
+Deferred Compensation Plan 2,942,642 Deferral distribution 
+Non-Qualified Deferred Compensation Plan for Independent
+Contractors 147,141 Deferral distribution 
+Total 3,089,783 
+Material Features of Equity Compensation Plans Not Approved Deferral elections are irrevocable once made except for limited 
+by Shareholders re-deferral opportunities. We treat amounts deferred by a 
+participant as if invested in the earnings options selected by the 
+Deferred Compensation Plan . Under the Deferred Compensation participant, and determine the deferred compensation benefit 
+Plan, eligible employees may defer receipt of salary, bonuses and payable to the participant based on the performance of those 
+certain other compensation subject to the terms of the plan. earnings options. The plan offers a number of earnings options, 
+11          
+        
+         
+            
+          
+     
+      
+        
+       
+        
+          
+          
+           
+         
+           
+       
+           
+         
+       
+           
+          
+         
+        
+           
+        
+          
+            
+        
+         
+           
+          
+        
+         
+        
+         
+            
+           
+            
+          
+          
+       
+       
+       
+         
+         
+          
+           
+      
+ 
+        
+          
+            
+          
+       
+   
+ 
+        
+         
+           
+     
+    
+ 
+        
+            
+          
+ 
+    
+ 
+   
+       
+         
+           
+          
+    
+         
+         
+                
+        
+         
+            
+          
+      
+      
+      
+       
+        
+          
+          
+           
+         
+           
+       
+           
+         
+       
+           
+          
+         
+        
+           
+        
+          
+            
+        
+         
+           
+          
+         
+        
+        
+         
+            
+           
+            
+          
+          
+       
+       
+       
+         
+         
+          
+           
+       
+  
+        
+          
+            
+          
+         
+   
+  
+        
+         
+           
+      
+     
+  
+        
+            
+          
+ 
+  
+     
+  
+   
+       
+         
+           
+          
+ 
+    
+         
+         
+        
+ including one based on our common stock with dividends 
+reinvested. We generally distribute amounts allocated to the 
+common stock option in shares of common stock. Participants 
+have no direct interest in any of the earnings options and are 
+general unsecured creditors of the Company with respect to their 
+deferred compensation benefits under the plan. 
+Non-Qualified Deferred Compensation Plan for Independent 
+Contractors . Under the Non-Qualified Deferred Compensation 
+Plan for Independent Contractors participants who performed 
+qualifying investment or other financial services for participating 
+affiliates as independent contractors were able to defer all or 
+part of their eligible compensation payable to them by the 
+affiliate subject to the terms of the plan. Deferral elections were 
+irrevocable once made. Amounts deferred by a participant were 
+treated as if invested in the earnings options selected by the 
+participant, which determine the deferred compensation benefit 
+payable to the participant. The plan offered a number of earnings 
+options, including one based on our common stock with 
+dividends reinvested. We generally distribute amounts allocated 
+to the common stock option in shares of common stock. No 
+future deferrals may be made under this plan and participants 
+may no longer reallocate their existing account balances under 
+the plan among different investment options. Shares remaining 
+available for issuance under the plan consist of shares issuable as 
+a result of amounts credited to participant accounts 
+denominated in our common stock to reflect cash dividends paid 
+on the common stock. The plan is sponsored by a wholly owned 
+subsidiary, WF Deferred Compensation Holdings, Inc. We have 
+guaranteed its obligations under the plan. Participants have no 
+direct interest in any of the earnings options and are general 
+unsecured creditors of the plan sponsor and the Company with 
+respect to their deferred compensation benefits under the plan. 
+Norwest Corporation Directors’ Formula Stock Award Plan . Under 
+the Norwest Corporation Directors’ Formula Stock Award Plan 
+we awarded shares of common stock to non-employee directors. 
+The plan allowed participants to defer receipt of all or a portion 
+of their awards, with dividends reinvested, until a future year or 
+years as selected by the participants subject to the terms of the 
+plan. Participants can elect one time to defer commencement of 
+distribution of their deferral accounts if the election is made 
+sufficiently in advance of the original distribution 
+commencement date and the new distribution commencement 
+date is sufficiently beyond the original distribution 
+commencement date. Participants have no direct interest in the 
+shares deferred under the plan and are general unsecured 
+creditors of the Company with respect to payment of their 
+deferred stock awards under the plan. No future stock awards or 
+deferrals may be made under this plan. 
+ADDITIONAL INFORMATION 
+Additional information with respect to security ownership of 
+certain beneficial owners of our common stock and the security 
+ownership of our management in response to this Item 12 will be 
+in the Company’s 2023 Proxy Statement and is incorporated into 
+this item by reference. ITEM 13. CERTAIN RELATIONSHIPS AND 
+RELATED TRANSACTIONS, AND 
+DIRECTOR INDEPENDENCE 
+Information with respect to certain relationships and related 
+transactions and director independence in response to this Item 
+13 will be in the Company’s 2023 Proxy Statement and is 
+incorporated into this item by reference. 
+ITEM 14. PRINCIPAL ACCOUNTANT FEES 
+AND SERVICES 
+Information with respect to principal accountant fees and 
+services in response to this Item 14 will be in the Company’s 
+2023 Proxy Statement and is incorporated into this item by 
+reference. 
+PART IV 
+ITEM 15. EXHIBIT AND FINANCIAL 
+STATEMENT SCHEDULES 
+1. FINANCIAL STATEMENTS 
+The Company’s consolidated financial statements, including the 
+Notes thereto, and the report of the independent registered 
+public accounting firm thereon, are set forth in the 2022 Annual 
+Report to Shareholders, and are incorporated into this item by 
+reference. 
+2. FINANCIAL STATEMENT SCHEDULES 
+All financial statement schedules for the Company have been 
+included in the consolidated financial statements or the related 
+footnotes, or are either inapplicable or not required. 
+12   
+ 
+                           
+                     
+    
+                      
+                   
+        
+            
+          
+        
+    
+          
+       
+  
+       
+             
+            
+     
+   
+               
+       
+   
+       
+            
+       
+   
+       
+        
+         
+       
+   
+      
+           
+        
+    
+            
+        
+    
+        
+        
+           
+               
+        
+    
+               
+        
+     
+               
+        
+    
+               
+        
+    
+          
+                           
+                     
+     
+                     
+                   
+         
+   
+ 
+                   
+          
+     
+         
+      
+   
+      
+           
+           
+     
+      
+                
+      
+   
+               
+           
+   
+               
+               
+     
+              
+           
+     
+           
+       
+     
+      
+          
+            
+ 
+               
+       
+     
+               
+       
+     
+               
+       
+     
+               
+       
+     
+        
+ 3. EXHIBITS 
+A list of exhibits to this Form 10-K is set forth below. Shareholders may obtain a copy of any of the following exhibits, upon payment of a 
+reasonable fee, by writing to Wells Fargo & Company, Office of the Corporate Secretary, MAC J0193-610, 30 Hudson Yards, 61st Floor, 
+New York, New York 10001. 
+The Company’s SEC file number is 001-2979. On and before November 2, 1998, the Company filed documents with the SEC under 
+the name Norwest Corporation. The former Wells Fargo & Company filed documents under SEC file number 001-6214. The former 
+Wachovia Corporation filed documents under SEC file number 001-10000. 
+Exhibit Description Location 
+Number 
+3(a) Restated Certificate of Incorporation, as amended and in effect on Incorporated by reference to Exhibit 3(a) to the 
+the date hereof. Company’s Quarterly Report on Form 10-Q for the
+quarter ended September 30, 2022. 
+3(b) By-Laws. Incorporated by reference to Exhibit 3.1 to the
+Company’s Current Report on Form 8-K filed
+March 1, 2018. 
+4(a) See Exhibits 3(a) and 3(b). 
+4(b) The Company agrees to furnish upon request to the Commission a
+copy of each instrument defining the rights of holders of senior and
+subordinated debt of the Company. 
+4(c) Description of Securities. Filed herewith. 
+10(a)* Wells Fargo & Company 2022 Long-Term Incentive Plan. Incorporated by reference to Exhibit 10(a) to the
+Company’s Current Report on Form 8-K filed
+April 29, 2022. 
+Long-Term Incentive Compensation Plan (as amended and Incorporated by reference to Exhibit 10(b) to the 
+restated on April 26, 2019). Company’s Current Report on Form 8-K filed
+April 26, 2019. 
+Long-Term Incentive Compensation Plan (as amended and Incorporated by reference to Exhibit 10(b) to the 
+restated on April 23, 2013), which includes Performance-Based Company’s Current Report on Form 8-K filed 
+Compensation Policy. April 26, 2013. 
+Amendment to Long-Term Incentive Compensation Plan, Incorporated by reference to Exhibit 10(a) to the 
+effective January 1, 2016. Company’s Annual Report on Form 10-K for the
+year ended December 31, 2015. 
+Long-Term Incentive Compensation Plan. Incorporated by reference to Exhibit 10(a) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended June 30, 2009. 
+Forms of Performance Share Award Agreement: 
+For grants on or after January 24, 2023; Filed herewith. 
+For grants to non-employee directors on or after January 1, Filed herewith. 
+2023; 
+For grants on or after April 27, 2022; Incorporated by reference to Exhibit 10(c) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended June 30, 2022. 
+For grants on or after January 25, 2022; Incorporated by reference to Exhibit 10(a) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2021. 
+For grants on or after January 26, 2021; Incorporated by reference to Exhibit 10(a) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2020. 
+For grants on or after February 24, 2020; Incorporated by reference to Exhibit 10(a) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2019. 
+* Management contract or compensatory plan or arrangement. 
+13                
+        
+    
+               
+        
+    
+               
+        
+    
+               
+        
+    
+                
+        
+    
+               
+        
+    
+         
+        
+               
+        
+    
+               
+        
+    
+               
+        
+    
+               
+        
+    
+         
+             
+       
+  
+               
+        
+    
+               
+        
+    
+               
+        
+    
+               
+        
+    
+               
+        
+    
+                
+        
+     
+   
+        
+                                 
+        
+       
+        
+        
+                        
+        
+      
+                                                        
+       
+     
+       
+       
+     
+       
+       
+     
+       
+       
+     
+       
+       
+     
+       
+       
+     
+  
+       
+       
+     
+       
+       
+     
+       
+       
+     
+       
+       
+     
+       
+      
+   
+       
+       
+     
+       
+       
+     
+       
+       
+     
+       
+       
+     
+       
+       
+     
+       
+       
+     
+ Exhibit Description
+Number Location 
+For grants on or after February 26, 2019; Incorporated by reference to Exhibit 10(a) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2018. 
+For grants on or after February 26, 2018; Incorporated by reference to Exhibit 10(a) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2017. 
+For grants on or after February 28, 2017; Incorporated by reference to Exhibit 10(a) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2016. 
+For grants on or after February 23, 2016; Incorporated by reference to Exhibit 10(a) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2015. 
+For grants on or after February 24, 2015 ; and Incorporated by reference to Exhibit 10(a) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2014. 
+For grants on or after February 26, 2013 . Incorporated by reference to Exhibit 10(a) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2012. 
+Forms of Restricted Share Rights Award Agreement: 
+For grants on or after January 24, 2023; Filed herewith. 
+For grants on or after April 27, 2022; Incorporated by reference to Exhibit 10(b) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended June 30, 2022. 
+For grants on or after January 25, 2022; Incorporated by reference to Exhibit 10(a) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2021. 
+For grants on or after January 26, 2021; Incorporated by reference to Exhibit 10(a) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2020. 
+For grants on or after February 24, 2020; Incorporated by reference to Exhibit 10(a) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2019. 
+Restricted Share Rights Award Agreement for grant to Charles
+W. Scharf on October 21, 2019; Incorporated by reference to Exhibit 10(a) to the
+Company’s Current Report on Form 8-K filed
+October 25, 2019. 
+For grants on or after April 7, 2019; Incorporated by reference to Exhibit 10(a) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended June 30, 2019. 
+For grants on or after February 26, 2019; Incorporated by reference to Exhibit 10(a) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended March 31, 2019. 
+For grants on or after December 14, 2017; Incorporated by reference to Exhibit 10(a) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2017. 
+For grants on or after February 28, 2017; Incorporated by reference to Exhibit 10(a) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended June 30, 2017. 
+For grants on or after February 23, 2016; Incorporated by reference to Exhibit 10(a) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2015. 
+For grants on or after February 24, 2015; and Incorporated by reference to Exhibit 10(a) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2014. 
+14                  
+        
+    
+               
+        
+    
+          
+                 
+        
+    
+        
+          
+        
+    
+                
+        
+     
+                
+        
+    
+                
+        
+    
+      
+          
+        
+    
+                
+        
+    
+                
+        
+    
+       
+             
+        
+    
+                
+        
+    
+                
+        
+    
+                
+        
+    
+                
+        
+    
+      
+           
+        
+    
+             
+        
+    
+          
+   
+         
+        
+     
+   
+               
+       
+     
+             
+       
+     
+             
+                 
+       
+     
+        
+          
+       
+     
+       
+        
+       
+     
+       
+        
+       
+     
+       
+        
+       
+     
+     
+          
+       
+     
+       
+        
+       
+     
+       
+        
+       
+     
+      
+             
+       
+     
+       
+        
+       
+     
+       
+        
+       
+     
+       
+        
+       
+     
+       
+        
+       
+     
+     
+          
+       
+     
+              
+       
+     
+       
+           
+       
+     
+ Exhibit 
+Number Description Location 
+For grants on or after February 26, 2013. Incorporated by reference to Exhibit 10(a) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2012. 
+Form of Non-Qualified Stock Option Agreement. Incorporated by reference to Exhibit 10(b) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended June 30, 2013. 
+10(b)* Wells Fargo Bonus Plan, as amended effective January 1, 2023. Filed herewith. 
+Wells Fargo Bonus Plan, as amended effective January 1, 2022. Incorporated by reference to Exhibit 10(b) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2021. 
+10(c)* Deferred Compensation Plan, as amended and restated effective
+October 8, 2020. Incorporated by reference to Exhibit 10(c) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2020. 
+Deferred Compensation Plan, as amended effective January 1,
+2008. Incorporated by reference to Exhibit 10(f) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2009. 
+Amendment to Deferred Compensation Plan, effective January 1,
+2022. Incorporated by reference to Exhibit 10(a) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended March 31, 2022. 
+Amendment to Deferred Compensation Plan, effective January 1,
+2021. Incorporated by reference to Exhibit 10(c) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2020. 
+Amendment to Deferred Compensation Plan, effective
+December 31, 2018. Incorporated by reference to Exhibit 10(c) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2018. 
+Amendment to Deferred Compensation Plan, effective July 1,
+2017. Incorporated by reference to Exhibit 10(c) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended June 30, 2017. 
+Amendment to Deferred Compensation Plan, effective January 1,
+2017. Incorporated by reference to Exhibit 10(d) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2016. 
+Amendments to Deferred Compensation Plan, effective August
+1, 2016 and January 1, 2017. Incorporated by reference to Exhibit 10(a) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended June 30, 2016. 
+Amendment to Deferred Compensation Plan, effective January 1,
+2016. Incorporated by reference to Exhibit 10(e) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2015. 
+Amendment to Deferred Compensation Plan, effective January 1,
+2015. Incorporated by reference to Exhibit 10(a) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended June 30, 2014. 
+Amendment to Deferred Compensation Plan, effective January 1,
+2013. Incorporated by reference to Exhibit 10(e) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2012. 
+Amendment to Deferred Compensation Plan, effective January 1,
+2011. Incorporated by reference to Exhibit 10(a) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended June 30, 2011. 
+Amendment to Deferred Compensation Plan, effective
+December 1, 2009. Incorporated by reference to Exhibit 10(f) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2009. 
+10(d)* Directors Stock Compensation and Deferral Plan. Incorporated by reference to Exhibit 10(f) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2007. 
+Amendment to Directors Stock Compensation and Deferral Plan,
+effective April 1, 2013. Incorporated by reference to Exhibit 10(a) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended June 30, 2013. 
+15           
+   
+         
+        
+    
+          
+   
+         
+        
+    
+          
+   
+         
+        
+    
+          
+   
+         
+        
+    
+          
+    
+         
+        
+     
+           
+            
+        
+    
+         
+         
+                 
+        
+    
+           
+              
+        
+    
+                
+        
+       
+                   
+        
+     
+          
+       
+   
+                
+        
+    
+                
+        
+    
+                
+        
+    
+       
+         
+        
+    
+                
+        
+    
+      
+           
+        
+    
+           
+       
+   
+       
+          
+        
+     
+   
+       
+           
+       
+     
+       
+           
+       
+     
+       
+           
+       
+     
+       
+           
+       
+     
+      
+            
+       
+     
+       
+           
+       
+     
+      
+        
+                
+       
+     
+        
+              
+       
+     
+                 
+       
+       
+               
+       
+     
+           
+      
+   
+       
+        
+       
+     
+       
+        
+       
+     
+       
+        
+       
+     
+      
+         
+       
+     
+                
+       
+     
+     
+          
+       
+     
+            
+      
+   
+      
+          
+       
+     
+ Exhibit 
+Number Description Location 
+Amendment to Directors Stock Compensation and Deferral Plan,
+effective January 1, 2013. Incorporated by reference to Exhibit 10(a) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended March 31, 2013. 
+Amendment to Directors Stock Compensation and Deferral Plan,
+effective January 24, 2012. Incorporated by reference to Exhibit 10(f) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2011. 
+Amendment to Directors Stock Compensation and Deferral Plan,
+effective January 25, 2011. Incorporated by reference to Exhibit 10(d) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended March 31, 2011. 
+Amendment to Directors Stock Compensation and Deferral Plan,
+effective February 24, 2009. Incorporated by reference to Exhibit 10(a) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended March 31, 2009. 
+Amendments to Directors Stock Compensation and Deferral
+Plan, effective September 23, 2008. Incorporated by reference to Exhibit 10(a) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended September 30, 2008. 
+Amendment to Directors Stock Compensation and Deferral Plan,
+effective January 22, 2008. Incorporated by reference to Exhibit 10(f) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2007. 
+Action of Governance and Nominating Committee Increasing
+Amount of Formula Stock and Option Awards Under Directors
+Stock Compensation and Deferral Plan, effective January 1, 2007. Incorporated by reference to Exhibit 10(f) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2006. 
+Form of Non-Qualified Stock Option Agreement for grants to
+directors on or before April 29, 2008. Incorporated by reference to Exhibit 10(b) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended June 30, 2013. 
+10(e)* Deferral Plan for Directors of the former Wells Fargo. Incorporated by reference to Exhibit 10(b) to the
+former Wells Fargo’s Annual Report on Form 10-K
+for the year ended December 31, 1997. 
+Amendment to Deferral Plan, effective January 1, 2004. Incorporated by reference to Exhibit 10(d) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended September 30, 2003. 
+10(f)* Supplemental 401(k) Plan. Incorporated by reference to Exhibit 10(c) to the
+Company’s Current Report on Form 8-K filed
+May 4, 2009. 
+Amendment to Supplemental 401(k) Plan, effective January 1,
+2022. Incorporated by reference to Exhibit 10(b) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended March 31, 2022. 
+Amendment to Supplemental 401(k) Plan, effective January 1,
+2021. Incorporated by reference to Exhibit 10(f) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2020. 
+Amendment to Supplemental 401(k) Plan, effective January 1,
+2020. Incorporated by reference to Exhibit 10(b) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended June 30, 2020. 
+Amendment to Supplemental 401(k) Plan, effective December
+31, 2018. Incorporated by reference to Exhibit 10(i) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2018. 
+Amendment to Supplemental 401(k) Plan, effective July 1, 2017. Incorporated by reference to Exhibit 10(d) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended June 30, 2017. 
+Amendment to Supplemental 401(k) Plan, effective
+January 1, 2015. Incorporated by reference to Exhibit 10(b) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended June 30, 2014. 
+10(g)* Supplemental Cash Balance Plan. Incorporated by reference to Exhibit 10(b) to the
+Company’s Current Report on Form 8-K filed
+May 4, 2009. 
+Amendment to Supplemental Cash Balance Plan, effective
+January 1, 2022 . Incorporated by reference to Exhibit 10(c) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended March 31, 2022. 
+16        
+          
+        
+    
+       
+          
+        
+    
+       
+          
+        
+    
+                 
+        
+    
+           
+        
+     
+                
+        
+     
+           
+        
+     
+            
+        
+    
+      
+             
+        
+    
+        
+             
+        
+    
+        
+              
+      
+    
+       
+           
+        
+    
+                 
+        
+     
+                 
+        
+    
+                 
+        
+    
+                 
+        
+    
+                 
+        
+    
+                 
+        
+    
+            
+      
+         
+   
+      
+          
+       
+     
+      
+          
+       
+     
+      
+          
+       
+     
+        
+        
+       
+     
+            
+       
+     
+             
+       
+     
+            
+       
+     
+             
+       
+     
+      
+             
+       
+     
+        
+             
+       
+     
+        
+              
+     
+     
+      
+           
+       
+     
+                
+       
+     
+        
+        
+       
+     
+                
+       
+     
+                
+       
+     
+                
+       
+     
+        
+        
+       
+     
+             
+     
+        
+ Exhibit 
+Number Description Location 
+Amendment to Supplemental Cash Balance Plan, effective
+January 1, 2020. Incorporated by reference to Exhibit 10(c) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended June 30, 2020. 
+Amendment to Supplemental Cash Balance Plan, effective
+February 1, 2019. Incorporated by reference to Exhibit 10(j) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2018. 
+Amendment to Supplemental Cash Balance Plan, effective
+December 31, 2018. Incorporated by reference to Exhibit 10(h) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2019. 
+Amendment to Supplemental Cash Balance Plan, effective July 1,
+2017. Incorporated by reference to Exhibit 10(e) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended June 30, 2017. 
+10(h)* Supplemental Long-Term Disability Plan. Incorporated by reference to Exhibit 10(f) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 1990. 
+Amendment to Supplemental Long-Term Disability Plan. Incorporated by reference to Exhibit 10(g) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 1992. 
+10(i)* Description of Relocation Program. Incorporated by reference to Exhibit 10(y) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2003. 
+10(j)* Description of Chairman/CEO Post-Retirement Policy. Incorporated by reference to Exhibit 10(w) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2008. 
+10(k)* Description of the Company’s Non-Employee Director
+Compensation Program, effective April 1, 2022. Incorporated by reference to Exhibit 10(f) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended March 31, 2022. 
+10(l)* Description of Wells Fargo Bank, N.A. Non-Employee Director
+Compensation Program, effective April 1, 2022. Incorporated by reference to Exhibit 10(g) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended March 31, 2022. 
+10(m)* Amended and Restated Wachovia Corporation Elective Deferral Plan
+(as amended and restated effective January 1, 2009). Incorporated by reference to Exhibit (10)(a) to
+Wachovia Corporation’s Current Report on Form
+8-K filed December 29, 2008. 
+Amendment to Wachovia Corporation Elective Deferral Plan,
+effective January 1, 2022. Incorporated by reference to Exhibit 10(d) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended March 31, 2022. 
+Amendment to Elective Deferral Plan, effective January 1, 2020. Incorporated by reference to Exhibit 10(m) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2021. 
+Amendment to Elective Deferral Plan, effective December 31, 
+2018. Incorporated by reference to Exhibit 10(m) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2021. 
+Amendment to Elective Deferral Plan, effective July 1, 2017. Incorporated by reference to Exhibit 10(m) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2021. 
+Amendment to Elective Deferral Plan, effective August 1, 2016. Incorporated by reference to Exhibit 10(m) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2021. 
+Amendment to Elective Deferral Plan, effective June 21, 2013. Incorporated by reference to Exhibit 10(m) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2021. 
+Amendment to Elective Deferral Plan, effective December 14, 
+2012. Incorporated by reference to Exhibit 10(m) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2021. 
+10(n)* Wachovia Corporation Executive Deferred Compensation Plan. Incorporated by reference to Exhibit (10)(d) to
+Wachovia Corporation’s Annual Report on Form
+10-K for the year ended December 31, 1997. 
+17       
+           
+      
+    
+              
+      
+    
+           
+      
+        
+       
+           
+        
+    
+       
+           
+        
+    
+       
+           
+        
+    
+       
+           
+        
+    
+       
+           
+        
+    
+      
+         
+      
+    
+        
+         
+      
+    
+      
+        
+         
+            
+        
+    
+          
+        
+    
+                 
+       
+   
+   
+      
+           
+     
+     
+       
+       
+     
+     
+           
+     
+        
+      
+           
+       
+     
+      
+           
+       
+     
+      
+           
+       
+     
+      
+           
+       
+     
+      
+           
+       
+     
+     
+        
+     
+     
+     
+        
+     
+     
+      
+       
+        
+            
+       
+     
+           
+       
+     
+                  
+      
+   
+ Exhibit 
+Number Description Location 
+10(o)* Wachovia Corporation Supplemental Executive Long-Term Disability
+Plan, as amended and restated. Incorporated by reference to Exhibit (99) to
+Wachovia Corporation’s Current Report on Form
+8-K filed January 5, 2005. 
+10(p)* Amended and Restated Wachovia Corporation Savings Restoration
+Plan. Incorporated by reference to Exhibit 10(b) to
+Wachovia Corporation’s Current Report on Form
+8-K filed December 29, 2008. 
+Wachovia Corporation Savings Restoration Plan. Incorporated by reference to Exhibit 10(gg) to
+Wachovia Corporation’s Annual Report on Form
+10-K for the year ended December 31, 2002. 
+Amendment to Wachovia Corporation Savings Restoration Plan,
+effective January 1, 2022. Incorporated by reference to Exhibit 10(e) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended March 31, 2022. 
+Amendment to Wachovia Corporation Savings Restoration Plan,
+effective January 1, 2020. Incorporated by reference to Exhibit 10(a) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended June 30, 2020. 
+Amendment to Wachovia Corporation Savings Restoration Plan,
+effective December 31, 2018. Incorporated by reference to Exhibit 10(s) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2018. 
+Amendment to Wachovia Corporation Savings Restoration Plan,
+effective July 1, 2017. Incorporated by reference to Exhibit 10(f) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended June 30, 2017. 
+Amendments to Wachovia Corporation Savings Restoration Plan,
+effective August 1, 2016. Incorporated by reference to Exhibit 10(b) to the
+Company’s Quarterly Report on Form 10-Q for the
+quarter ended June 30, 2016. 
+Amendment 2008-1 to Wachovia Corporation Savings
+Restoration Plan. Incorporated by reference to Exhibit 10(c) to
+Wachovia Corporation’s Current Report on Form
+8-K filed December 29, 2008. 
+Amendment 2007-1 to Wachovia Corporation Savings
+Restoration Plan. Incorporated by reference to Exhibit 10(b) to
+Wachovia Corporation’s Current Report on Form
+8-K filed December 20, 2007. 
+10(q)* Amended and Restated SouthTrust Corporation Additional
+Retirement Benefit Plan (Pension) effective July 15, 1992,
+Addendum thereto dated April 20, 1994, and Amendment 2008-1
+thereto dated December 29, 2008. Incorporated by reference to Exhibit 10(bb) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2014. 
+10(r)* Key/Specified Employee Policy. Incorporated by reference to Exhibit 10(v) to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2018. 
+10(s)* Offer Letter to Charles W. Scharf, dated September 26, 2019. Incorporated by reference to Exhibit 10(a) to the
+Company’s Current Report on Form 8-K filed
+September 27, 2019. 
+18      
+    
+        
+               
+        
+    
+       
+   
+         
+      
+          
+     
+         
+           
+     
+         
+           
+     
+          
+     
+      
+      
+      
+      
+         
+  
+   
+  
+   
+        
+       
+         
+               
+       
+     
+          
+      
+         
+        
+          
+       
+         
+          
+      
+         
+          
+      
+         
+   
+        
+         
+         
+         
+         
+            
+   
+     
+  
+ Exhibit 
+Number Description Location 
+13 2022 Annual Report to Shareholders. Filed herewith. 
+21 Subsidiaries of the Company. Filed herewith. 
+22 Subsidiary guarantors and issuers of guaranteed securities and 
+affiliates whose securities collateralize securities of the registrant. Incorporated by reference to Exhibit 22 to the
+Company’s Annual Report on Form 10-K for the
+year ended December 31, 2020. 
+23 Consent of Independent Registered Public Accounting Firm. Filed herewith. 
+24 Powers of Attorney. Filed herewith. 
+31(a) Certification of principal executive officer pursuant to Section 302
+of the Sarbanes-Oxley Act of 2002. Filed herewith. 
+31(b) Certification of principal financial officer pursuant to Section 302 of
+the Sarbanes-Oxley Act of 2002. Filed herewith. 
+32(a) Certification of Periodic Financial Report by Chief Executive Officer
+Pursuant to Section 906 of the Sarbanes-Oxley Act of 2002 and
+18 U.S.C. § 1350. Furnished herewith. 
+32(b) Certification of Periodic Financial Report by Chief Financial Officer
+Pursuant to Section 906 of the Sarbanes-Oxley Act of 2002 and
+18 U.S.C. § 1350. Furnished herewith. 
+99 Description of Replacement Capital Covenants of Wells Fargo and
+Wachovia. Filed herewith. 
+101.SCH XBRL Taxonomy Extension Schema Document. Filed herewith. 
+101.CAL XBRL Taxonomy Extension Calculation Linkbase Document. Filed herewith. 
+101.LAB XBRL Taxonomy Extension Label Linkbase Document. Filed herewith. 
+101.PRE XBRL Taxonomy Extension Presentation Linkbase Document. Filed herewith. 
+101.DEF XBRL Taxonomy Extension Definitions Linkbase Document. Filed herewith. 
+104 Cover Page Interactive Data File. Formatted as Inline XBRL and contained 
+in Exhibit 101. 
+ITEM 16. FORM 10-K SUMMARY 
+Not applicable. 
+19  
+                         
+                
+ 
+   
+ 
+   
+  
+    
+ 
+                      
+            
+ 
+   
+  
+    
+  
+  
+   
+  
+        
+  
+  
+   
+  
+        
+  
+  
+ 
+                      
+   
+ 
+        
+         
+      
+       
+   
+  
+  
+   
+                       
+                
+    
+     
+   
+     
+                      
+             
+     
+   
+     
+   
+   
+     
+   
+        
+   
+   
+     
+   
+        
+   
+   
+                      
+    
+      
+      
+      
+             
+       
+   
+   
+     
+   
+   
+   
+ SIGNATURES 
+Pursuant to the requirements of Section 13 or 15(d) of the Securities Exchange Act of 1934, the registrant has duly caused this report 
+to be signed on its behalf by the undersigned, thereunto duly authorized, on February 21, 2023. 
+WELLS FARGO & COMPANY 
+By: /s/ CHARLES W. SCHARF 
+Charles W. Scharf 
+President and Chief Executive Officer 
+Pursuant to the requirements of the Securities Exchange Act of 1934, this report has been signed below by the following persons on 
+behalf of the registrant and in the capacities and on the dates indicated. 
+By: /s/ CHARLES W. SCHARF 
+Charles W. Scharf 
+President and Chief Executive Officer 
+(Principal Executive Officer) 
+February 21, 2023 
+By: /s/ MICHAEL P. SANTOMASSIMO 
+Michael P. Santomassimo 
+Senior Executive Vice President and Chief Financial Officer 
+(Principal Financial Officer) 
+February 21, 2023 
+By: /s/ MUNEERA S. CARR 
+Muneera S. Carr 
+Executive Vice President, Chief Accounting Officer and Controller 
+(Principal Accounting Officer) 
+February 21, 2023 
+The Directors of Wells Fargo & Company listed below have duly executed powers of attorney empowering Steven D. Black to sign this 
+document on their behalf. 
+Steven D. Black Richard K. Davis Felicia F. Norwood Charles W. Scharf 
+Mark A. Chancy Wayne M. Hewett Richard B. Payne, Jr. Suzanne M. Vautrinot 
+Celeste A. Clark CeCelia G. Morken Juan A. Pujadas 
+Theodore F. Craver, Jr. Maria R. Morris Ronald L. Sargent 
+By: /s/ STEVEN D. BLACK 
+Steven D. Black 
+Director and Attorney-in-fact 
+February 21, 2023 
+20 

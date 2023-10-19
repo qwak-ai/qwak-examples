@@ -4,7 +4,8 @@ from qwak.vector_store import VectorStoreClient
 
 
 def retrieve_vector_context(query: str,
-                            output_properties: List[str],
+                            properties: List[str],
+                            output_key: str,
                             collection_name: str = "articles",
                             top_results: int = 2
                             ) -> str:
@@ -12,7 +13,8 @@ def retrieve_vector_context(query: str,
     Retrieve the context from the Vector Store
 
     :param query: User query
-    :param output_properties: Metadata fields to return with the query
+    :param properties: Metadata fields to return with the query
+    :param output_key: Which key to use as the output for the context
     :param collection_name: Name of the vector store collection
     :param top_results: The number of results to return
 
@@ -24,11 +26,11 @@ def retrieve_vector_context(query: str,
     vector_results = collection.search(
         natural_input=query,
         top_results=top_results,
-        output_properties=output_properties
+        output_properties=properties
     )
 
     contexts = [
-        x.properties["text"] for x in vector_results
+        x.properties[output_key] for x in vector_results
     ]
 
     vector_contexts = (

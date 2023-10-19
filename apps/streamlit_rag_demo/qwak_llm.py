@@ -89,7 +89,7 @@ class Qwak(LLM):
 
         response = client.predict(input_)
         try:
-            text = response[0]["generated_text"]
+            text = response[0]["generated_text"][0]
         except KeyError:
             raise ValueError("LangChain requires 'generated_text' key in response.")
 

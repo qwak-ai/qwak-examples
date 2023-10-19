@@ -4,7 +4,7 @@ from streamlit_chat import message
 from chain import llm_chain_response
 from vector_store import retrieve_vector_context
 
-QWAK_MODEL_ID = 'flan_t5'
+QWAK_MODEL_ID = 'llama2'
 
 
 def get_text() -> str:
@@ -13,12 +13,12 @@ def get_text() -> str:
     :return: string
     """
     input_text = st.text_input(label="You: ",
-                               value="Who is the biggest duck alive?",
+                               # value="",
                                key="input")
     return input_text
 
 
-# StreamLit UI.
+# StreamLit UI
 st.write("### FAQ Demo")
 
 if "generated" not in st.session_state:
@@ -41,9 +41,10 @@ def main():
         with st.spinner("Thinking..."):
             query = user_input
             vector_contexts = retrieve_vector_context(query=query,
-                                                      output_properties=[
-                                                          "title",
-                                                          "text"
+                                                      collection_name="financial-data",
+                                                      output_key='chunk_text',
+                                                      properties=[
+                                                          "chunk_text"
                                                       ])
 
             prompt = f"{query} \nContext: {vector_contexts}"
