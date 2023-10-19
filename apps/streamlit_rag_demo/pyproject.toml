@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "streamlit-rag-demo"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.9.7 || >3.9.7,<3.10"
+streamlit = "^1.27.2"
+langchain = "^0.0.317"
+streamlit-chat = "^0.1.1"
+transformers = "^4.34.1"
+torch = "^2.1.0"
+qwak-sdk = "^0.5.32"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

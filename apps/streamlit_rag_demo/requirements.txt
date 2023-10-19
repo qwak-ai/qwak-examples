@@ -1,7 +1,0 @@
-streamlit
-langchain
-streamlit-chat
-transformers
-torch
-qwak-sdk
-qwak-inference
