@@ -1,5 +1,6 @@
 from typing import List
 from uuid import uuid4
+import tqdm
 from qwak.vector_store import VectorStoreClient
 
 
@@ -27,7 +28,7 @@ def transform_record(record: str,
     transformed_records = []
     record_id = str(uuid4())
     for i, chunk in enumerate(chunks):
-        chunk_id = f"{record_id}-{i+1}"
+        chunk_id = f"{record_id}-{i + 1}"
         transformed_records.append({
             'chunk_id': chunk_id,
             'chunk_parent_id': record_id,
@@ -36,22 +37,31 @@ def transform_record(record: str,
     return transformed_records
 
 
-def insert_vector_data(chunks_array: List[dict],
-                       collection_name: str):
+def split_list_into_batches(input_list, batch_size):
+    for i in range(0, len(input_list), batch_size):
+        yield input_list[i:i + batch_size]
 
+
+def insert_vector_data(chunks_array: List[dict],
+                       collection_name: str,
+                       batch_size: int = 10):
     client = VectorStoreClient()
     collection = client.get_collection_by_name(collection_name)
 
+    batches = list(split_list_into_batches(chunks_array, batch_size))
+    batches = tqdm.tqdm(batches)
+
     # Ingesting all the records in the vector store
-    collection.upsert(
-        ids=[
-            str(uuid4()) for _ in range(len(chunks_array))
-        ],
-        natural_inputs=[
-            c["chunk_text"] for c in chunks_array
-        ],
-        properties=chunks_array
-    )
+    for batch in batches:
+        collection.upsert(
+            ids=[
+                str(uuid4()) for _ in range(len(batch))
+            ],
+            natural_inputs=[
+                c["chunk_text"] for c in batch
+            ],
+            properties=batch
+        )
 
 
 def insert_text_into_vector_store(input_path: str):
@@ -67,7 +77,8 @@ def insert_text_into_vector_store(input_path: str):
         for chunk in chunk_array:
             chunked_data.append(chunk)
 
-        insert_vector_data(chunk_array, collection_name="financial-data")
+        insert_vector_data(chunks_array=chunk_array,
+                           collection_name="financial-data")
 
 
 if __name__ == '__main__':

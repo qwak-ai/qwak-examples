@@ -1,11 +1,10 @@
+import streamlit as st
+from streamlit_chat import message
 
 from chain import llm_chain_response
 from vector_store import retrieve_vector_context
 
 QWAK_MODEL_ID = 'llama2'
-
-import streamlit as st
-from streamlit_chat import message
 
 
 def get_text() -> str:
@@ -14,7 +13,6 @@ def get_text() -> str:
     :return: string
     """
     input_text = st.text_input(label="You: ",
-                               # value="",
                                key="input")
     return input_text
 
@@ -25,7 +23,13 @@ def extract_answer(text):
 
 
 # StreamLit UI
-st.write("### FAQ Demo")
+left_co, cent_co, last_co = st.columns(3)
+with cent_co:
+    image = open("qwak.png", "rb").read()
+    st.image(image, use_column_width="auto")
+
+st.write("### Vector Store RAG Demo")
+
 
 if "generated" not in st.session_state:
     st.session_state["generated"] = []
@@ -42,7 +46,7 @@ def main():
     # Get a new chat chain to query LLMs
     chat_chain = llm_chain_response(model_id=QWAK_MODEL_ID)
 
-    use_content = st.checkbox(label="Use Vector Context", key="context-input")
+    use_content = st.checkbox(label="Use Vector Store", key="use-vector-store")
     user_input = get_text()
 
     if user_input:
@@ -59,8 +63,8 @@ def main():
             else:
                 context = ""
 
-            print(f"Prompt:\n {query}")
-            print(f"Context:\n {context}")
+            print(f"Prompt:\n{query}")
+            print(f"Context:\n{context}")
             output = chat_chain({
                 "input": query,
                 "context": context
