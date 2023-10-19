@@ -63,15 +63,11 @@ def main():
             else:
                 context = ""
 
-            print(f"Prompt:\n{query}")
-            print(f"Context:\n{context}")
             output = chat_chain({
                 "input": query,
                 "context": context
             })
             answer = extract_answer(output["text"])
-
-            print(f"Output:\n{answer}")
 
             # Add the responses to the chat state
             st.session_state.past.append(user_input)
