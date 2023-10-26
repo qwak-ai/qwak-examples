@@ -114,7 +114,7 @@
       "description": "An enhanced T5 model trained on a mixture of tasks",
       "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/t5.png",
       "source": {
-        "folder": "flan_t5_conda/main",
+        "folder": "flan_t5_poetry/main",
         "files": [
           "__init__.py",
           "conda.yml",
