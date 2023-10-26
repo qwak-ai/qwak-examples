@@ -12,8 +12,7 @@
     },
     "deploy": {
       "pods": "1",
-      "cpu": "2",
-      "memory": "8"
+      "instance": "small"
     },
     "tags": [
       "Example model",
@@ -33,8 +32,7 @@
     },
     "deploy": {
       "pods": "1",
-      "cpu": "2",
-      "memory": "8"
+      "instance": "small"
     },
     "tags": [
       "Example model",
@@ -56,8 +54,7 @@
       },
       "deploy": {
         "pods": "1",
-        "cpu": "2",
-        "memory": "8"
+        "instance": "small"
       },
       "tags": [
         "LLM"
@@ -77,8 +74,7 @@
       },
       "deploy": {
         "pods": "1",
-        "cpu": "2",
-        "memory": "8"
+        "instance": "small"
       },
       "tags": [
         "Generative AI",
@@ -101,13 +97,12 @@
         ]
       },
       "build": {
-        "cpu": "2",
-        "memory": "8"
+        "instance": "gpu.a10.xl"
       },
       "deploy": {
-        "pods": "1",
-        "cpu": "2",
-        "memory": "8"
+        "workers": "1",
+        "instance": "gpu.a10.xl",
+        "timeout": 50000
       },
       "tags": [
         "LLM",
@@ -128,8 +123,7 @@
       },
       "deploy": {
         "pods": "1",
-        "cpu": "2",
-        "memory": "8"
+        "instance": "small"
       },
       "tags": [
         "LLM"
@@ -149,8 +143,7 @@
       },
       "deploy": {
         "pods": "1",
-        "cpu": "2",
-        "memory": "8"
+        "instance": "small"
       },
       "tags": [
         "Embeddings",
@@ -169,14 +162,16 @@
           "model.py"
         ]
       },
+      "disabled": true,
       "build": {
-        "cpu": "2",
-        "memory": "8"
+        "instance": "small",
+        "gpu_compatible": true
       },
       "deploy": {
         "pods": "1",
-        "cpu": "4",
-        "memory": "16"
+        "workers": "1",
+        "instance": "gpu.a10.2xl",
+        "timeout": 50000
       },
       "tags": [
         "LLM",
@@ -197,8 +192,7 @@
       },
       "deploy": {
         "pods": "1",
-        "cpu": "2",
-        "memory": "8"
+        "instance": "small"
       },
       "tags": [
         "Generative AI",
@@ -219,8 +213,7 @@
       },
       "deploy": {
         "pods": "1",
-        "cpu": "2",
-        "memory": "8"
+        "instance": "small"
       },
       "tags": [
         "Generative AI",
