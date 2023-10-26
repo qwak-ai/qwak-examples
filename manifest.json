@@ -101,7 +101,7 @@
       },
       "deploy": {
         "workers": "1",
-        "instance": "gpu.a10.2xl",
+        "instance": "gpu.a10.xl",
         "timeout": 50000
       },
       "tags": [
