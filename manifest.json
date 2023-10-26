@@ -97,11 +97,12 @@
         ]
       },
       "build": {
-        "instance": "gpu.a10.xl"
+        "instance": "medium"
       },
       "deploy": {
         "workers": "1",
-        "instance": "gpu.a10.xl",
+        "pods": "1",
+        "instance": "medium",
         "timeout": 50000
       },
       "tags": [
