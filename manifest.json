@@ -74,7 +74,8 @@
       },
       "deploy": {
         "pods": "1",
-        "instance": "small"
+        "instance": "small",
+        "timeout": 50000
       },
       "tags": [
         "Generative AI",
@@ -124,7 +125,8 @@
       },
       "deploy": {
         "pods": "1",
-        "instance": "small"
+        "instance": "small",
+        "timeout": 50000
       },
       "tags": [
         "LLM"
@@ -193,7 +195,8 @@
       },
       "deploy": {
         "pods": "1",
-        "instance": "small"
+        "instance": "small",
+        "timeout": 50000
       },
       "tags": [
         "Generative AI",
@@ -214,7 +217,8 @@
       },
       "deploy": {
         "pods": "1",
-        "instance": "small"
+        "instance": "small",
+        "timeout": 50000
       },
       "tags": [
         "Generative AI",
