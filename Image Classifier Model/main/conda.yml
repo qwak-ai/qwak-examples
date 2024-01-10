@@ -1,0 +1,12 @@
+name: clip
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pandas
+  - numpy
+  - pip:
+      - tensorflow
+      - pillow
+      - imageio
