@@ -72,9 +72,6 @@
           "model.py"
         ]
       },
-      "build": {
-        "instance": "medium"
-      },
       "deploy": {
         "pods": "1",
         "instance": "small",
