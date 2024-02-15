@@ -5,6 +5,7 @@ channels:
   - huggingface
 dependencies:
   - python=3.9
+  - urllib3==1.26
   - pip
   - transformers
   - datasets
