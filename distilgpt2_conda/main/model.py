@@ -21,6 +21,14 @@ class DistilGPT2Model(QwakModel):
     def build(self):
         qwak.log_metric({"val_accuracy": 1})  # Log validation accuracy as 1 (placeholder)
 
+        self.model = AutoModelForCausalLM.from_pretrained(
+            self.model_id,
+            trust_remote_code=True,
+        )
+        self.tokenizer = AutoTokenizer.from_pretrained(
+            self.model_id,
+            trust_remote_code=True,
+        )
 
     # Define the schema for the model's input
     def schema(self):
