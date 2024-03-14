@@ -91,6 +91,18 @@ class TitanicSurvivalPrediction(QwakModel):
     @qwak.api()
     def predict(self, df: pd.DataFrame) -> pd.DataFrame:
         df = df.drop(["PassengerId"], axis=1)
+
+        # Fill missing values in categorical features
+        default_values = {
+            "Sex": "Unknown",
+            "Ticket": "Unknown",
+            "Cabin": "Unknown",
+            "Embarked": "Unknown"
+        }
+        for column, default_value in default_values.items():
+            if column in df.columns:
+                df[column].fillna(default_value, inplace=True)
+
         return pd.DataFrame(
             self.model.predict_proba(df[self.model.feature_names_])[:, 1],
             columns=['Survived_Probability']
