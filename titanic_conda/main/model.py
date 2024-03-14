@@ -57,11 +57,11 @@ class TitanicSurvivalPrediction(QwakModel):
             eval_set=(x_test, y_test),
         )
 
-        # Cross validating the model (5-fold)
+        # Cross validating the model (2-fold)
         cv_data = cv(
             Pool(x, y, cat_features=cate_features_index),
             self.model.get_params(),
-            fold_count=5,
+            fold_count=2,
         )
         print(
             "the best cross validation accuracy is :{}".format(
@@ -99,11 +99,11 @@ class TitanicSurvivalPrediction(QwakModel):
             "Cabin": "Unknown",
             "Embarked": "Unknown"
         }
-        for column, default_value in default_values.items():
-            if column in df.columns:
-                df[column].fillna(default_value, inplace=True)
+
+        # Fill missing values in the DataFrame with default values
+        df.fillna(default_values, inplace=True)
 
         return pd.DataFrame(
-            self.model.predict_proba(df[self.model.feature_names_])[:, 1],
-            columns=['Survived_Probability']
-        )
+                self.model.predict_proba(df[self.model.feature_names_])[:, 1],
+                columns=['Survived_Probability']
+            )
