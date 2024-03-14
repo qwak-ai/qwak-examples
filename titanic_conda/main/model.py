@@ -97,7 +97,8 @@ class TitanicSurvivalPrediction(QwakModel):
             "Sex": "Unknown",
             "Ticket": "Unknown",
             "Cabin": "Unknown",
-            "Embarked": "Unknown"
+            "Embarked": "Unknown",
+            "Name": "Unknown"
         }
 
         # Fill missing values in the DataFrame with default values
