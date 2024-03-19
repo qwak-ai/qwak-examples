@@ -218,7 +218,7 @@
       "name": "GPT-Neo",
       "description": "An open-source variant of the GPT language model series",
       "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/eleuther.png",
-      "license": "Apache-2.0",
+      "license": "Apache 2.0",
       "source": {
         "folder": "gpt_neo_conda/main",
         "files": [
