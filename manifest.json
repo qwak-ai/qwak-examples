@@ -44,6 +44,7 @@
       "name": "BERT base",
       "description": "Popular transformer-based model for uncased text processing",
       "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/bert.png",
+      "featured": true,
       "source": {
         "folder": "bert_conda/main",
         "files": [
@@ -64,6 +65,7 @@
       "name": "DistilGPT2",
       "description": "A lightweight version of the GPT-2 language generation model",
       "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/hugging_face.png",
+      "featured": true,
       "source": {
         "folder": "distilgpt2_conda/main",
         "files": [
@@ -115,6 +117,7 @@
       "name": "FLAN-T5",
       "description": "An enhanced T5 model trained on a mixture of tasks",
       "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/t5.png",
+      "featured": true,
       "source": {
         "folder": "flan_t5_poetry/main",
         "files": [
@@ -136,6 +139,7 @@
       "name": "Sentence Embeddings",
       "description": "The all-MiniLM-L12-v2 model for semantic search",
       "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/hugging_face.png",
+      "featured": true,
       "source": {
         "folder": "sentence_transformers_poetry/main",
         "files": [
