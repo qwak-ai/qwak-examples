@@ -45,6 +45,7 @@
       "description": "Popular transformer-based model for uncased text processing",
       "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/bert.png",
       "featured": true,
+      "license": "Apache 2.0",
       "source": {
         "folder": "bert_conda/main",
         "files": [
@@ -66,6 +67,7 @@
       "description": "A lightweight version of the GPT-2 language generation model",
       "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/hugging_face.png",
       "featured": true,
+      "license": "Apache 2.0",
       "source": {
         "folder": "distilgpt2_conda/main",
         "files": [
@@ -88,6 +90,7 @@
       "name": "Finetuned FLAN-T5",
       "description": "Finetuning FLAN-T5 on financial QA data",
       "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/t5.png",
+      "license": "Apache 2.0",
       "source": {
         "folder": "flan_t5_finetuned_poetry/main",
         "files": [
@@ -118,6 +121,7 @@
       "description": "An enhanced T5 model trained on a mixture of tasks",
       "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/t5.png",
       "featured": true,
+      "license": "Apache 2.0",
       "source": {
         "folder": "flan_t5_poetry/main",
         "files": [
@@ -138,6 +142,7 @@
     "embeddings": {
       "name": "Sentence Embeddings",
       "description": "The all-MiniLM-L12-v2 model for semantic search",
+      "license": "Apache 2.0",
       "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/hugging_face.png",
       "featured": true,
       "source": {
@@ -160,6 +165,7 @@
     "llama2": {
       "name": "Llama-2",
       "description": "A leading open-source LLM",
+      "license": "Llama 2",
       "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/hugging_face.png",
       "source": {
         "folder": "llama2/main",
@@ -188,6 +194,7 @@
     "codegen": {
       "name": "CodeGen",
       "description": "Autoregressive language models for program synthesis and code generation",
+      "license": "Apache-2.0",
       "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/codegen.png",
       "source": {
         "folder": "codegen_conda/main",
@@ -211,6 +218,7 @@
       "name": "GPT-Neo",
       "description": "An open-source variant of the GPT language model series",
       "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/eleuther.png",
+      "license": "Apache-2.0",
       "source": {
         "folder": "gpt_neo_conda/main",
         "files": [
