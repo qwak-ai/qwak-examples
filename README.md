@@ -25,7 +25,7 @@ To get started with these examples:
 3. Follow the README and installation instructions within each project folder.
 
 
-## Projects
+## Qwak Model Examples
 
 | Example | Category | Model | Info |
 |---------|------|----------|------|
@@ -41,6 +41,12 @@ To get started with these examples:
 | [Sentiment Classification](./transformers_conda/) | ![Predictive](https://img.shields.io/badge/-Predictive-blue) | ![DistilBERT](https://img.shields.io/badge/-DistilBERT-%23D3D3D3) ![Transformers](https://img.shields.io/badge/-Transformers-%23D3D3D3) | DistilBERT-based text classifier for Yelp reviews on Qwak platform.[Conda] |
 | [Vector Similarity Search](./vector_store/) | ![Embeddings](https://img.shields.io/badge/-Embeddings-orange) | ![VectorStore](https://img.shields.io/badge/-VectorStore-%23D3D3D3) | Vectorizes product descriptions for similarity-based search. |
 
+
+## Qwak Feature Store Examples
+
+| Example | Category | FeatureSet | Info |
+|---------|------|----------|------|
+| [Batch Feature Set with SQL Transformation](./feature_store/batch_feature_set_sql_transformation.ipynb) | ![Guide](https://img.shields.io/badge/-Guide-blue) | ![Batch](https://img.shields.io/badge/-Batch-%23D3D3D3) | Define, register and use a Batch Feature Set in a Qwak Model |
 
 
 ## Contributing
