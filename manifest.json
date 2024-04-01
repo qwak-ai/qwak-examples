@@ -43,7 +43,7 @@
     "bert": {
       "name": "BERT base",
       "description": "Popular transformer-based model for uncased text processing",
-      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/bert.png",
+      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/google.svg",
       "featured": true,
       "license": "Apache 2.0",
       "source": {
@@ -65,7 +65,7 @@
     "distilgpt2": {
       "name": "DistilGPT2",
       "description": "A lightweight version of the GPT-2 language generation model",
-      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/hugging_face.png",
+      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/huggingface.png",
       "featured": true,
       "license": "Apache 2.0",
       "source": {
@@ -89,7 +89,7 @@
     "finetuned_flan_t5": {
       "name": "Finetuned FLAN-T5",
       "description": "Finetuning FLAN-T5 on financial QA data",
-      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/t5.png",
+      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/google.svg",
       "license": "Apache 2.0",
       "source": {
         "folder": "flan_t5_finetuned_poetry/main",
@@ -119,7 +119,7 @@
     "flan_t5": {
       "name": "FLAN-T5",
       "description": "An enhanced T5 model trained on a mixture of tasks",
-      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/t5.png",
+      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/google.svg",
       "featured": true,
       "license": "Apache 2.0",
       "source": {
@@ -143,7 +143,7 @@
       "name": "Sentence Embeddings",
       "description": "The all-MiniLM-L12-v2 model for semantic search",
       "license": "Apache 2.0",
-      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/hugging_face.png",
+      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/huggingface.png",
       "featured": true,
       "source": {
         "folder": "sentence_transformers_poetry/main",
@@ -166,7 +166,7 @@
       "name": "Llama-2",
       "description": "A leading open-source LLM",
       "license": "Llama 2",
-      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/hugging_face.png",
+      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/huggingface.png",
       "source": {
         "folder": "llama2/main",
         "files": [
@@ -195,7 +195,7 @@
       "name": "CodeGen",
       "description": "Autoregressive language models for program synthesis and code generation",
       "license": "Apache-2.0",
-      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/codegen.png",
+      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/codegen.svg",
       "source": {
         "folder": "codegen_conda/main",
         "files": [
@@ -217,7 +217,7 @@
     "gpt_neo": {
       "name": "GPT-Neo",
       "description": "An open-source variant of the GPT language model series",
-      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/eleuther.png",
+      "image": "https://qwak-public.s3.amazonaws.com/qwak-frontend/onboarding/huggingface.png",
       "license": "Apache 2.0",
       "source": {
         "folder": "gpt_neo_conda/main",
