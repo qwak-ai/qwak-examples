@@ -46,7 +46,9 @@ To get started with these examples:
 
 | Example | Category | FeatureSet | Info |
 |---------|------|----------|------|
-| [Batch Feature Set with SQL Transformation](./feature_store/batch_feature_set_sql_transformation.ipynb) | ![Guide](https://img.shields.io/badge/-Guide-blue) | ![Batch](https://img.shields.io/badge/-Batch-%23D3D3D3) | Define, register and use a Batch Feature Set in a Qwak Model |
+| [Batch Feature Set with SQL Transformation](./feature_store/batch_feature_set_sql_transformation.ipynb) | ![Guide](https://img.shields.io/badge/-Guide-blue) | ![Batch](https://img.shields.io/badge/-Batch-%23D3D3D3) | Define, register and use a Batch Feature Set with SQL Transformations |
+| [Batch Feature Set with Koalas Transformation](./feature_store/batch_feature_set_udf_transformation.ipynb) | ![Guide](https://img.shields.io/badge/-Guide-blue) | ![Batch](https://img.shields.io/badge/-Batch-%23D3D3D3) | Define, register and use a Batch Feature Set with Koalas (UDF) |
+| [Batch Feature Set with Window Aggregations](./feature_store/batch_feature_set_window_agg.ipynb) | ![Guide](https://img.shields.io/badge/-Guide-blue) | ![Batch](https://img.shields.io/badge/-Batch-%23D3D3D3) | Define, register and use a Batch Feature Set with SQL Window Aggregations |
 
 
 ## Contributing
