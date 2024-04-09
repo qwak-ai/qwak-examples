@@ -8,7 +8,7 @@
       "type": "chat"
     },
     "type": "chat",
-    "category": "Writing",
+    "category": ["Writing"],
     "parameters": {
       "temperature": 0.7,
       "maximum_length": 1000,
@@ -24,7 +24,7 @@
       "name": "gpt-3.5-turbo-1106",
       "type": "chat"
     },
-    "category": "Writing",
+    "category": ["Writing", "Agents"],
     "parameters": {
       "temperature": 0.7,
       "maximum_length": 1000,
@@ -34,7 +34,7 @@
   },
   {
     "name": "Customer Support Email Response",
-    "category": "Writing",
+    "category": ["Writing"],
     "description": "A prompt for creating a support email",
     "prompt": "Draft a polite and informative response to a customer's email, where they are inquiring about {issue}. Ensure the response addresses the customer's concern, provides a solution or next steps, and includes an apology for any inconvenience caused.",
     "model": {
@@ -51,7 +51,7 @@
   },
   {
     "name": "Create a Fictional Story",
-    "category": "Writing",
+    "category": ["Writing"],
     "description": "A prompt for creating a short",
     "prompt": "Write the beginning of a short story set in {setting}, where the main character, {character_name}, faces {challenge}. The story should introduce the setting vividly and start to build tension around the central conflict or challenge.",
     "model": {
