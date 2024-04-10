@@ -6,15 +6,12 @@ from pyspark.sql.types import (
     StructType,
     TimestampType,
 )
-from qwak.feature_store.entities import Entity, ValueType
-from pyspark.sql.functions import col, from_json
-from qwak.feature_store.sources.data_sources import KafkaSourceV1, CustomDeserializer
 
-from qwak.feature_store.features import Metadata
-from qwak.feature_store.features.aggregations import QwakAggregation
-from qwak.feature_store.features.execution_spec import StreamingExecutionSpec, ClusterTemplate, ResourceConfiguration
-from qwak.feature_store.features.streaming_feature_sets import StreamingFeatureSetV1
-from qwak.feature_store.features.transform import SqlTransformation
+from pyspark.sql.functions import col, from_json
+from qwak.feature_store.data_sources import KafkaSource, CustomDeserializer
+
+from qwak.feature_store.feature_sets import streaming
+from qwak.feature_store.feature_sets.transformations import SparkSqlTransformation, QwakAggregation
 
 
 def deser_function(df):
@@ -34,7 +31,7 @@ def deser_function(df):
     return deserialized
 
 
-deserializer = CustomDeserializer(f=deser_function)
+deserializer = CustomDeserializer(function=deser_function)
 bootstrap_servers = 'b-2.qwak-cluster.za36zh.c6.kafka.us-east-1.amazonaws.com:9094,b-1.qwak-cluster.za36zh.c6.kafka.us-east-1.amazonaws.com:9094,b-3.qwak-cluster.za36zh.c6.kafka.us-east-1.amazonaws.com:9094'
 
 passthrough_configs = {
@@ -42,7 +39,7 @@ passthrough_configs = {
     "startingOffsets": "earliest",
 }
 
-kafka_source = KafkaSourceV1(
+kafka_source = KafkaSource(
     name="transactions",
     description="Transaction Test Source",
     bootstrap_servers=bootstrap_servers,
@@ -51,32 +48,28 @@ kafka_source = KafkaSourceV1(
     passthrough_configs=passthrough_configs,
 )
 
-entity = Entity(
-    name="user_id", description="A User ID", key="user_id", value_type=ValueType.STRING
-)
 
-streaming_fs = StreamingFeatureSetV1(
-    name="transaction-aggregates-demo",
-    metadata=Metadata(
-        display_name="Transaction Aggregates",
-        description="streaming transaction aggregations over 1,15,30,60 minutes",
-        owner="hudson@qwak.com",
-    ),
+@streaming.feature_set(
+    name="credit-risk-streaming",
     data_sources=["transactions"],
-    entity="user_id",
-    transform=SqlTransformation(sql="""SELECT * FROM transactions""")
-        .aggregate(QwakAggregation.sum("transaction_amount"))
-        .aggregate(QwakAggregation.count("transaction_amount"))
-        .aggregate(QwakAggregation.max("transaction_amount"))
-        .aggregate(QwakAggregation.sample_stdev("transaction_amount"))
-        .aggregate(QwakAggregation.last_n("transaction_amount", 5))
-        .aggregate(QwakAggregation.last_distinct_n("transaction_amount", 5))
-        .aggregate(QwakAggregation.percentile("transaction_amount", 50)
-                   .alias("median_transaction_amount"))
-        .by_windows("1 minute", "15 minutes", "30 minutes", "1 hour"),
-
-    timestamp_col_name="timestamp")
-
+    key="user_id",
+    timestamp_column_name="timestamp")
+@streaming.metadata(
+        display_name="Credit Risk Streaming",
+        description="streaming transaction aggregations over 1,15,30,60 minutes",
+        owner="hudson@qwak.com"
+)
+def transform():
+    return SparkSqlTransformation(sql="""SELECT * FROM transactions""")\
+            .aggregate(QwakAggregation.sum("transaction_amount"))\
+            .aggregate(QwakAggregation.count("transaction_amount"))\
+            .aggregate(QwakAggregation.max("transaction_amount"))\
+            .aggregate(QwakAggregation.sample_stdev("transaction_amount"))\
+            .aggregate(QwakAggregation.last_n("transaction_amount", 5))\
+            .aggregate(QwakAggregation.last_distinct_n("transaction_amount", 5))\
+            .aggregate(QwakAggregation.percentile("transaction_amount", 50)\
+                    .alias("median_transaction_amount"))\
+            .by_windows("1 minute", "15 minutes", "30 minutes", "1 hour")
 # count_transaction_amount_1m             bigint
 # last_distinct_5_transaction_amount_1m   array<int>
 # sum_transaction_amount_1m               bigint
@@ -105,7 +98,3 @@ streaming_fs = StreamingFeatureSetV1(
 # median_transaction_amount_1h            int
 # last_5_transaction_amount_1h            array<int>
 # max_transaction_amount_1h               int
-
-if __name__ == "__main__":
-    df = streaming_fs.get_sample()
-    print(df)

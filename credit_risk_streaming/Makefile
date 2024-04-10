@@ -3,3 +3,6 @@ build:
 
 deploy:
 	qwak models deploy realtime --model-id credicredit_risk_streaming --pods 1
+
+features:
+	qwak features register -p main/features.py
