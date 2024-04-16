@@ -1,10 +1,11 @@
-
 # Importing the QwakModel interface
 from qwak.model.base import QwakModel
 
 # Importing the Feature Store clients used to fetch results
-from qwak.feature_store.offline.client import OfflineClient
+from qwak.feature_store.offline import OfflineClientV2
 from qwak.feature_store.online.client import OnlineClient
+from qwak.feature_store.offline.feature_set_features import FeatureSetFeatures
+from datetime import datetime
 
 # Importing the Features schema and prediction adapters
 from qwak.model.schema import ModelSchema, InferenceOutput
@@ -24,16 +25,16 @@ import qwak
 from main.utils import features_cleaning
 from main.feature_set import ENTITY_KEY, FEATURE_SET
 
+
 # CreditRiskModel class definition, inheriting from QwakModel
 class CreditRiskModel(QwakModel):
-   
-   # Class constructor - anything initialized here will be `pickled` with the Docker Image
-    def __init__(self):
 
+    # Class constructor - anything initialized here will be `pickled` with the Docker Image
+    def __init__(self):
         # Initializing CatBoost Regressor with specific hyperparameters
         # This is the model that will be trained and used for predictions
         self.model = CatBoostRegressor(
-            iterations=1000,
+            iterations=10,
             loss_function='RMSE',
             learning_rate=None
         )
@@ -44,13 +45,11 @@ class CreditRiskModel(QwakModel):
 
         # Logging training set date range for tracking and reproducibility
         # The parameters will also be available in the Qwak UI for each Model Build
-        log_param({"features_start_range": self.feature_range_start, 
+        log_param({"features_start_range": self.feature_range_start,
                    "features_end_range": self.feature_range_end})
-
 
     # Method called by the Qwak Cloud to train and build the model
     def build(self):
-
         # Define the features to be used for the model and fetched from the Offline Feature Store
         # These are the specific features that the model will be trained on
         key_to_features = {ENTITY_KEY: [
@@ -63,16 +62,19 @@ class CreditRiskModel(QwakModel):
             f'{FEATURE_SET}.purpose',
             f'{FEATURE_SET}.saving_account',
             f'{FEATURE_SET}.sex'
-            ]
+        ]
         }
 
-        offline_client = OfflineClient()
+        offline_feature_store = OfflineClientV2()
+        features = FeatureSetFeatures(feature_set_name='user-credit-risk-features',
+                                      feature_names=['checking_account', 'age', 'job', 'duration',
+                                                   'credit_amount', 'housing', 'purpose', 'saving_account', 'sex'])
 
         # Fetch data from the offline client
-        data = offline_client.get_feature_range_values(
-            entity_key_to_features=key_to_features,
-            start_date=self.feature_range_start,
-            end_date=self.feature_range_end
+        data = offline_feature_store.get_feature_range_values(
+            features=features,
+            start_date=datetime(year=2021, month=1, day=1),
+            end_date=datetime(year=2021, month=1, day=3)
         )
 
         # Logging hyperparameters for tracking and reproducibility
@@ -86,19 +88,18 @@ class CreditRiskModel(QwakModel):
         cate_features_index = np.where(x_train.dtypes != int)[0]
 
         # Train the model
-        self.model.fit(x_train, 
-                       y_train, 
-                       cat_features=cate_features_index, 
+        self.model.fit(x_train,
+                       y_train,
+                       cat_features=cate_features_index,
                        eval_set=(x_test, y_test)
-        )
-
+                       )
 
         # Create a Pool object with the categorical features
         pool_data = Pool(X, y, cat_features=cate_features_index)
 
         # Cross-validation
-        cv_data = cv(pool_data, 
-                     self.model.get_params(), 
+        cv_data = cv(pool_data,
+                     self.model.get_params(),
                      fold_count=5)
 
         max_mean_row = cv_data[cv_data["test-RMSE-mean"] == np.max(cv_data["test-RMSE-mean"])]
@@ -111,28 +112,25 @@ class CreditRiskModel(QwakModel):
             }
         )
 
-
     # Define the schema for the Model and Feature Store
-    # This tells Qwak how to deserialize the output of the Predictiom method as well as what 
+    # This tells Qwak how to deserialize the output of the Predictiom method as well as what
     # features to retrieve from the Online Feature Store for inference without explicitly specifying every time.
     def schema(self) -> ModelSchema:
-
         model_schema = ModelSchema(inputs=[
-                                        FeatureStoreInput(name=f'{FEATURE_SET}.checking_account'),
-                                        FeatureStoreInput(name=f'{FEATURE_SET}.age'),
-                                        FeatureStoreInput(name=f'{FEATURE_SET}.job'),
-                                        FeatureStoreInput(name=f'{FEATURE_SET}.duration'),
-                                        FeatureStoreInput(name=f'{FEATURE_SET}.credit_amount'),
-                                        FeatureStoreInput(name=f'{FEATURE_SET}.housing'),
-                                        FeatureStoreInput(name=f'{FEATURE_SET}.purpose'),
-                                        FeatureStoreInput(name=f'{FEATURE_SET}.saving_account'),
-                                        FeatureStoreInput(name=f'{FEATURE_SET}.sex'),
-                                    ],
-                                    outputs=[InferenceOutput(name="score", type=float)])
+            FeatureStoreInput(name=f'{FEATURE_SET}.checking_account'),
+            FeatureStoreInput(name=f'{FEATURE_SET}.age'),
+            FeatureStoreInput(name=f'{FEATURE_SET}.job'),
+            FeatureStoreInput(name=f'{FEATURE_SET}.duration'),
+            FeatureStoreInput(name=f'{FEATURE_SET}.credit_amount'),
+            FeatureStoreInput(name=f'{FEATURE_SET}.housing'),
+            FeatureStoreInput(name=f'{FEATURE_SET}.purpose'),
+            FeatureStoreInput(name=f'{FEATURE_SET}.saving_account'),
+            FeatureStoreInput(name=f'{FEATURE_SET}.sex'),
+        ],
+            outputs=[InferenceOutput(name="score", type=float)])
         return model_schema
 
-
-    # The Qwak API decorator wraps the predict function with additional functionality and wires additional adependencies. 
+    # The Qwak API decorator wraps the predict function with additional functionality and wires additional adependencies.
     # This allows external services to call this method for making predictions.
 
     @qwak.api(feature_extraction=True)
