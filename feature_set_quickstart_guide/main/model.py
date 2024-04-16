@@ -52,18 +52,6 @@ class CreditRiskModel(QwakModel):
     def build(self):
         # Define the features to be used for the model and fetched from the Offline Feature Store
         # These are the specific features that the model will be trained on
-        key_to_features = {ENTITY_KEY: [
-            f'{FEATURE_SET}.checking_account',
-            f'{FEATURE_SET}.age',
-            f'{FEATURE_SET}.job',
-            f'{FEATURE_SET}.duration',
-            f'{FEATURE_SET}.credit_amount',
-            f'{FEATURE_SET}.housing',
-            f'{FEATURE_SET}.purpose',
-            f'{FEATURE_SET}.saving_account',
-            f'{FEATURE_SET}.sex'
-        ]
-        }
 
         offline_feature_store = OfflineClientV2()
         features = FeatureSetFeatures(feature_set_name='user-credit-risk-features',
