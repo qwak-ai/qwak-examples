@@ -53,7 +53,7 @@
     "name": "Create a Fictional Story",
     "category": ["Writing"],
     "description": "A prompt for creating a short",
-    "prompt": "Write the beginning of a short story set in {setting}, where the main character, {{character_name}}, faces {{challenge}}. The story should introduce the setting vividly and start to build tension around the central conflict or challenge.",
+    "prompt": "Write the beginning of a short story set in {{setting}}, where the main character, {{character_name}}, faces {{challenge}}. The story should introduce the setting vividly and start to build tension around the central conflict or challenge.",
     "model": {
       "provider": "OpenAI",
       "name": "gpt-3.5-turbo-1106",
