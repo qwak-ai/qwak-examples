@@ -1,7 +1,7 @@
 [
   {
     "name": "Generate a Technical How-To Guide",
-    "prompt": "Write the beginning of a short story set in {setting}, where the main character, {character_name}, faces {challenge}. The story should introduce the setting vividly and start to build tension around the central conflict or challenge.",
+    "prompt": "Write the beginning of a short story set in {{setting}}, where the main character, {{character_name}}, faces {{challenge}}. The story should introduce the setting vividly and start to build tension around the central conflict or challenge.",
     "model": {
       "provider": "OpenAI",
       "name": "gpt-3.5-turbo-1106",
@@ -18,7 +18,7 @@
   },
   {
     "name": "Product Description for E-commerce",
-    "prompt": "Create a detailed product description for {product_name}, a {product_type}. Highlight its key features, benefits, and potential use cases.\nMake sure the description is appealing to potential buyers and outlines why it stands out in its category.\n",
+    "prompt": "Create a detailed product description for {{product_name}}, a {{product_type}}. Highlight its key features, benefits, and potential use cases.\nMake sure the description is appealing to potential buyers and outlines why it stands out in its category.\n",
     "model": {
       "provider": "OpenAI",
       "name": "gpt-3.5-turbo-1106",
@@ -36,7 +36,7 @@
     "name": "Customer Support Email Response",
     "category": ["Writing"],
     "description": "A prompt for creating a support email",
-    "prompt": "Draft a polite and informative response to a customer's email, where they are inquiring about {issue}. Ensure the response addresses the customer's concern, provides a solution or next steps, and includes an apology for any inconvenience caused.",
+    "prompt": "Draft a polite and informative response to a customer's email, where they are inquiring about {{issue}}. Ensure the response addresses the customer's concern, provides a solution or next steps, and includes an apology for any inconvenience caused.",
     "model": {
       "provider": "OpenAI",
       "name": "gpt-3.5-turbo-1106",
@@ -53,7 +53,7 @@
     "name": "Create a Fictional Story",
     "category": ["Writing"],
     "description": "A prompt for creating a short",
-    "prompt": "Write the beginning of a short story set in {setting}, where the main character, {character_name}, faces {challenge}. The story should introduce the setting vividly and start to build tension around the central conflict or challenge.",
+    "prompt": "Write the beginning of a short story set in {setting}, where the main character, {{character_name}}, faces {{challenge}}. The story should introduce the setting vividly and start to build tension around the central conflict or challenge.",
     "model": {
       "provider": "OpenAI",
       "name": "gpt-3.5-turbo-1106",
