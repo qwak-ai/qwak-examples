@@ -9,8 +9,9 @@ class SimpleChatbot(QwakModel):
 
     # Initialize model parameters
     def __init__(self):
-        self.prompt_manager = PromptManager()
+        self.prompt_manager = None
         self.prompt_name = "banker-agent"
+        self.prompt = None
 
     def build(self):
         pass
@@ -24,7 +25,10 @@ class SimpleChatbot(QwakModel):
         return model_schema
 
     def initialize_model(self):
-        pass
+        self.prompt_manager = PromptManager()
+        self.prompt = self.prompt_manager.get_prompt(
+            name=self.prompt_name
+        )
 
     @qwak.api()
     def predict(self, df: pd.DataFrame) -> pd.DataFrame:
@@ -33,11 +37,7 @@ class SimpleChatbot(QwakModel):
         if not user_input_prompt:
             return pd.DataFrame([])
 
-        qwak_prompt = self.prompt_manager.get_prompt(
-            name=self.prompt_name
-        )
-
-        response = qwak_prompt.invoke(
+        response = self.prompt.invoke(
             variables={"question": user_input_prompt}
         )
 
