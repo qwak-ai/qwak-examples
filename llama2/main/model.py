@@ -22,7 +22,7 @@ class Llama2MT(QwakModel):
         hf_token = secret_service.get_secret("<huggingface-secret-name>")
         login(token=hf_token)
         tokenizer = AutoTokenizer.from_pretrained(self.model_id)
-        model = AutoModelForCausalLM.from_prextrained(self.model_id)
+        model = AutoModelForCausalLM.from_pretrained(self.model_id)
 
     def schema(self):
         model_schema = ModelSchema(

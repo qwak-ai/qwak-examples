@@ -5,13 +5,13 @@ from qwak.llmops.prompt.manager import PromptManager
 def main(prompt_name: str):
     prompt_manager = PromptManager()
 
+    bank_agent_prompt = prompt_manager.get_prompt(
+        name=prompt_name
+    )
+
     while True:
         # Getting the default prompt version after several seconds
         # When the default version changes, the loaded prompt will change as well
-        bank_agent_prompt = prompt_manager.get_prompt(
-          name=prompt_name
-        )
-
         response = bank_agent_prompt.invoke(
             variables={
                 "question": "Tell me a joke please"
