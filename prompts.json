@@ -1,10 +1,11 @@
 [
   {
-    "name": "Generate a Technical How-To Guide",
+    "name": "technical-how-to-guide",
+    "label": "Generate a Technical How-To Guide",
     "prompt": [
       {
         "role": "system",
-        "message": "Write the beginning of a short story set in {{setting}}, where the main character, {{character_name}}, faces {{challenge}}. The story should introduce the setting vividly and start to build tension around the central conflict or challenge."
+        "message": "Write a detailed technical how-to guide on {{topic}}. Include step-by-step instructions, code snippets, and clear explanations of each step to help users understand and complete the task."
       }
     ],
     "model": {
@@ -14,7 +15,8 @@
     },
     "type": "chat",
     "category": [
-      "Writing"
+      "Writing",
+      "Technical"
     ],
     "parameters": {
       "temperature": 0.7,
@@ -24,11 +26,12 @@
     }
   },
   {
-    "name": "Product Description for E-commerce",
+    "name": "product-description-for-e-commerce",
+    "label": "Product Description for E-commerce",
     "prompt": [
       {
         "role": "system",
-        "message": "Create a detailed product description for {{product_name}}, a {{product_type}}. Highlight its key features, benefits, and potential use cases.\nMake sure the description is appealing to potential buyers and outlines why it stands out in its category.\n"
+        "message": "Create an engaging and detailed product description for {{product_name}}, a {{product_type}}. Highlight its key features, benefits, and potential use cases. Ensure the description is appealing to potential buyers and emphasizes why it stands out in its category."
       }
     ],
     "model": {
@@ -38,7 +41,7 @@
     },
     "category": [
       "Writing",
-      "Agents"
+      "Marketing"
     ],
     "parameters": {
       "temperature": 0.7,
@@ -48,15 +51,12 @@
     }
   },
   {
-    "name": "Customer Support Email Response",
-    "category": [
-      "Writing"
-    ],
-    "description": "A prompt for creating a support email",
+    "name": "customer-support-email-response",
+    "label": "Customer Support Email Response",
     "prompt": [
       {
         "role": "system",
-        "message": "Draft a polite and informative response to a customer's email, where they are inquiring about {{issue}}. Ensure the response addresses the customer's concern, provides a solution or next steps, and includes an apology for any inconvenience caused."
+        "message": "Draft a polite and informative response to a customer's email regarding {{issue}}. Ensure the response addresses the customer's concern, provides a solution or next steps, and includes an apology for any inconvenience caused."
       }
     ],
     "model": {
@@ -64,6 +64,35 @@
       "name": "gpt-3.5-turbo-1106",
       "type": "chat"
     },
+    "category": [
+      "Writing",
+      "Customer Support"
+    ],
+    "parameters": {
+      "temperature": 0.7,
+      "maximum_length": 500,
+      "top_p": 0.9,
+      "presence_penalty": 0.6
+    }
+  },
+  {
+    "name": "fictional-story",
+    "label": "Create a Fictional Story",
+    "prompt": [
+      {
+        "role": "system",
+        "message": "Write the beginning of a short story set in {{setting}}. The main character, {{character_name}}, faces {{challenge}}. The story should vividly introduce the setting and start building tension around the central conflict or challenge."
+      }
+    ],
+    "model": {
+      "provider": "OpenAI",
+      "name": "gpt-3.5-turbo-1106",
+      "type": "chat"
+    },
+    "category": [
+      "Writing",
+      "Creative"
+    ],
     "parameters": {
       "temperature": 0.7,
       "maximum_length": 1000,
@@ -72,15 +101,12 @@
     }
   },
   {
-    "name": "Create a Fictional Story",
-    "category": [
-      "Writing"
-    ],
-    "description": "A prompt for creating a short",
+    "name": "marketing-email-campaign",
+    "label": "Generate a Marketing Email Campaign",
     "prompt": [
       {
         "role": "system",
-        "message": "Write the beginning of a short story set in {{setting}}, where the main character, {{character_name}}, faces {{challenge}}. The story should introduce the setting vividly and start to build tension around the central conflict or challenge."
+        "message": "Create a compelling email campaign for {{product_name}}, aimed at increasing sales during {{event}}. Include a catchy subject line, engaging email body, and a clear call-to-action. Highlight the product's benefits and why it is perfect for the event."
       }
     ],
     "model": {
@@ -88,6 +114,85 @@
       "name": "gpt-3.5-turbo-1106",
       "type": "chat"
     },
+    "category": [
+      "Writing",
+      "Marketing"
+    ],
+    "parameters": {
+      "temperature": 0.7,
+      "maximum_length": 500,
+      "top_p": 0.9,
+      "presence_penalty": 0.6
+    }
+  },
+  {
+    "name": "press-release",
+    "label": "Generate a Press Release",
+    "prompt": [
+      {
+        "role": "system",
+        "message": "Draft a press release for the launch of {{product_name}}, a new {{product_type}} by {{company_name}}. Include key information about the product, its unique features, release date, and quotes from key stakeholders."
+      }
+    ],
+    "model": {
+      "provider": "OpenAI",
+      "name": "gpt-3.5-turbo-1106",
+      "type": "chat"
+    },
+    "category": [
+      "Writing",
+      "Public Relations"
+    ],
+    "parameters": {
+      "temperature": 0.7,
+      "maximum_length": 500,
+      "top_p": 0.9,
+      "presence_penalty": 0.6
+    }
+  },
+  {
+    "name": "detailed-character-profile",
+    "label": "Create a Detailed Character Profile",
+    "prompt": [
+      {
+        "role": "system",
+        "message": "Develop a detailed character profile for {{character_name}}, a {{character_role}} in a {{genre}} story. Include their background, personality traits, motivations, strengths, weaknesses, and how they contribute to the story."
+      }
+    ],
+    "model": {
+      "provider": "OpenAI",
+      "name": "gpt-3.5-turbo-1106",
+      "type": "chat"
+    },
+    "category": [
+      "Writing",
+      "Creative"
+    ],
+    "parameters": {
+      "temperature": 0.7,
+      "maximum_length": 1000,
+      "top_p": 0.9,
+      "presence_penalty": 0.6
+    }
+  },
+  {
+    "name": "interactive-chatbot-dialogue",
+    "label": "Develop an Interactive Chatbot Dialogue",
+    "prompt": [
+      {
+        "role": "system",
+        "message": "Create an interactive dialogue for a chatbot designed to assist users with {{task}}. Include greeting messages, help prompts, error messages, and friendly responses to guide users through the process smoothly."
+      }
+    ],
+    "model": {
+      "provider": "OpenAI",
+      "name": "gpt-3.5-turbo-1106",
+      "type": "chat"
+    },
+    "category": [
+      "Writing",
+      "Development"
+    ],
     "parameters": {
       "temperature": 0.7,
       "maximum_length": 1000,
