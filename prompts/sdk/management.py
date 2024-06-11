@@ -5,7 +5,9 @@ from qwak.llmops.prompt.chat.template import SystemMessagePromptTemplate, AIMess
     HumanMessagePromptTemplate, ChatPromptTemplate
 
 
-def manage_prompts(name: str, prompt_manager: PromptManager):
+def manage_prompts(name: str,
+                   description: str,
+                   prompt_manager: PromptManager):
 
     chat_template = ChatPromptTemplate(
         messages=[
@@ -27,7 +29,7 @@ def manage_prompts(name: str, prompt_manager: PromptManager):
     return prompt_manager.register(
         name=name,
         prompt=chat_prompt,
-        prompt_description="Testing a banker agent prompt",
+        prompt_description=description,
         version_description="Initial prompt"
     )
 
@@ -46,13 +48,16 @@ def generate_response(name: str, prompt_manager: PromptManager):
 
 
 if __name__ == '__main__':
-    prompt_name = "banker-agent"
+    prompt_name = "banker-agent-2"
+    description = "Testing a banker agent prompt"
 
     # Create an instance of the prompt manager
     prompt_manager = PromptManager()
 
     # Register a new prompt
-    prompt = manage_prompts(name=prompt_name, prompt_manager=prompt_manager)
+    prompt = manage_prompts(name=prompt_name,
+                            description=description,
+                            prompt_manager=prompt_manager)
 
     # Generate a response from the model
     response = generate_response(name=prompt_name, prompt_manager=prompt_manager)

@@ -8,6 +8,7 @@
         "message": "Write a detailed technical how-to guide on {{topic}}. Include step-by-step instructions, code snippets, and clear explanations of each step to help users understand and complete the task."
       }
     ],
+    "description": "Guide on performing a technical task.",
     "model": {
       "provider": "OpenAI",
       "name": "gpt-3.5-turbo-1106",
@@ -34,6 +35,7 @@
         "message": "Create an engaging and detailed product description for {{product_name}}, a {{product_type}}. Highlight its key features, benefits, and potential use cases. Ensure the description is appealing to potential buyers and emphasizes why it stands out in its category."
       }
     ],
+    "description": "Describe a product for an online store.",
     "model": {
       "provider": "OpenAI",
       "name": "gpt-3.5-turbo-1106",
@@ -59,6 +61,7 @@
         "message": "Draft a polite and informative response to a customer's email regarding {{issue}}. Ensure the response addresses the customer's concern, provides a solution or next steps, and includes an apology for any inconvenience caused."
       }
     ],
+    "description": "Respond to a customer support email.",
     "model": {
       "provider": "OpenAI",
       "name": "gpt-3.5-turbo-1106",
@@ -84,6 +87,7 @@
         "message": "Write the beginning of a short story set in {{setting}}. The main character, {{character_name}}, faces {{challenge}}. The story should vividly introduce the setting and start building tension around the central conflict or challenge."
       }
     ],
+    "description": "Start a short fictional story.",
     "model": {
       "provider": "OpenAI",
       "name": "gpt-3.5-turbo-1106",
@@ -109,6 +113,7 @@
         "message": "Create a compelling email campaign for {{product_name}}, aimed at increasing sales during {{event}}. Include a catchy subject line, engaging email body, and a clear call-to-action. Highlight the product's benefits and why it is perfect for the event."
       }
     ],
+    "description": "Create a sales-driven email campaign.",
     "model": {
       "provider": "OpenAI",
       "name": "gpt-3.5-turbo-1106",
@@ -134,6 +139,7 @@
         "message": "Draft a press release for the launch of {{product_name}}, a new {{product_type}} by {{company_name}}. Include key information about the product, its unique features, release date, and quotes from key stakeholders."
       }
     ],
+    "description": "Announce a product launch.",
     "model": {
       "provider": "OpenAI",
       "name": "gpt-3.5-turbo-1106",
@@ -159,6 +165,7 @@
         "message": "Develop a detailed character profile for {{character_name}}, a {{character_role}} in a {{genre}} story. Include their background, personality traits, motivations, strengths, weaknesses, and how they contribute to the story."
       }
     ],
+    "description": "Develop a character profile for a story.",
     "model": {
       "provider": "OpenAI",
       "name": "gpt-3.5-turbo-1106",
@@ -167,31 +174,6 @@
     "category": [
       "Writing",
       "Creative"
-    ],
-    "parameters": {
-      "temperature": 0.7,
-      "maximum_length": 1000,
-      "top_p": 0.9,
-      "presence_penalty": 0.6
-    }
-  },
-  {
-    "name": "interactive-chatbot-dialogue",
-    "label": "Develop an Interactive Chatbot Dialogue",
-    "prompt": [
-      {
-        "role": "system",
-        "message": "Create an interactive dialogue for a chatbot designed to assist users with {{task}}. Include greeting messages, help prompts, error messages, and friendly responses to guide users through the process smoothly."
-      }
-    ],
-    "model": {
-      "provider": "OpenAI",
-      "name": "gpt-3.5-turbo-1106",
-      "type": "chat"
-    },
-    "category": [
-      "Writing",
-      "Development"
     ],
     "parameters": {
       "temperature": 0.7,
