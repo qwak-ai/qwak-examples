@@ -1,10 +1,8 @@
 from time import sleep
-
-from qwak.llmops.model.descriptor import OpenAIChat
 from qwak.llmops.prompt.manager import PromptManager
 
 
-def main(prompt_name: str):
+def main(prompt_name: str, stream: bool = False):
     prompt_manager = PromptManager()
 
     prompt = prompt_manager.get_prompt(
@@ -20,18 +18,17 @@ def main(prompt_name: str):
                 "product_type": "AI Infra Platform",
                 "question": "what is Qwak?"
             },
-            stream=True
-            # model_override=OpenAIChat(
-            #         model_id="gpt-4-0613",
-            #         temperature=0.9,
-            #         max_tokens=200
-            # )
+            stream=stream
         )
 
-        for chunk in response:
-            print(chunk.choices[0].delta.content)
+        if stream:
+            for chunk in response:
+                # Print the content of the streaming output in the same line
+                if chunk.choices[0].delta.content:
+                    print(chunk.choices[0].delta.content, end='')
+        else:
+            print(response.choices[0].message.content)
 
-        # print(response.choices[0].message.content)
         sleep(10)
         print()
 
@@ -39,4 +36,4 @@ def main(prompt_name: str):
 if __name__ == '__main__':
 
     prompt_name = "product-description-for-e-commerce"
-    main(prompt_name=prompt_name)
+    main(prompt_name=prompt_name, stream=True)
