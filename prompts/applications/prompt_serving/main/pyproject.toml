@@ -1,0 +1,9 @@
+[tool.poetry]
+name = "LLM Applications"
+version = "0.1.0"
+description = "Deploy LLM applications on Qwak"
+authors = ["Qwak <info@qwak.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.10"
+pandas = "^1.3.5"
