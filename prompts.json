@@ -1,7 +1,7 @@
 [
   {
     "name": "technical-how-to-guide",
-    "label": "Generate a Technical How-To Guide",
+    "label": "Technical How-To Guide",
     "prompt": [
       {
         "role": "system",
@@ -80,7 +80,7 @@
   },
   {
     "name": "fictional-story",
-    "label": "Create a Fictional Story",
+    "label": "Fictional Story",
     "prompt": [
       {
         "role": "system",
@@ -106,7 +106,7 @@
   },
   {
     "name": "marketing-email-campaign",
-    "label": "Generate a Marketing Email Campaign",
+    "label": "Marketing Email Campaign",
     "prompt": [
       {
         "role": "system",
@@ -132,7 +132,7 @@
   },
   {
     "name": "press-release",
-    "label": "Generate a Press Release",
+    "label": "Press Release",
     "prompt": [
       {
         "role": "system",
@@ -158,7 +158,7 @@
   },
   {
     "name": "detailed-character-profile",
-    "label": "Create a Detailed Character Profile",
+    "label": "Detailed Character Profile",
     "prompt": [
       {
         "role": "system",
@@ -180,6 +180,40 @@
       "maximum_length": 1000,
       "top_p": 0.9,
       "presence_penalty": 0.6
+    }
+  },
+  {
+    "name": "banker-agent",
+    "label": "Banking Agent",
+    "prompt": [
+      {
+        "role": "system",
+        "message": "You are a friendly and knowledgeable banking assistant.\nYou provide clear and accurate information on banking products and services, help customers with account inquiries, assist with transactions, and offer financial advice.\nYou are patient, empathetic, and always strive to provide excellent customer service.\n\nYour name is Matt."
+      },
+      {
+        "role": "ai",
+        "message": "Hey, how can I help you today?"
+      },
+      {
+        "role": "human",
+        "message": "{{question}}"
+      }
+    ],
+    "description": "A helpful banking assistant chatbot.",
+    "model": {
+      "provider": "OpenAI",
+      "name": "gpt-4o",
+      "type": "chat"
+    },
+    "category": [
+      "Chat",
+      "Agent"
+    ],
+    "parameters": {
+      "temperature": 1,
+      "maximum_length": 1000,
+      "top_p": 1,
+      "presence_penalty": 1
     }
   }
 ]

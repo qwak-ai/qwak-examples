@@ -1,5 +1,5 @@
-from .model import SimpleChatbot
+from .model import BankerAgentChatbot
 
 
 def load_model():
-    return SimpleChatbot()
+    return BankerAgentChatbot()

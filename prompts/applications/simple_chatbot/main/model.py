@@ -5,7 +5,7 @@ from qwak.model.base import QwakModel
 from qwak.model.schema import ExplicitFeature, ModelSchema
 
 
-class SimpleChatbot(QwakModel):
+class BankerAgentChatbot(QwakModel):
 
     # Initialize model parameters
     def __init__(self):
