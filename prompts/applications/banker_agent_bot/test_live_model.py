@@ -5,7 +5,7 @@ from qwak_inference import RealTimeClient
 def main(model_id):
 
     input_ = [{
-        "prompt": "What are three great types of food?"
+        "prompt": "What is your name?"
     }]
      
     client = RealTimeClient(model_id=model_id)
