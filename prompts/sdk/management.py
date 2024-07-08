@@ -49,7 +49,7 @@ def generate_response(name: str, prompt_manager: PromptManager):
 
 
 if __name__ == '__main__':
-    prompt_name = "banker-agent-2"
+    prompt_name = "banker-agent-demo"
     description = "Testing a banker agent prompt"
 
     # Create an instance of the prompt manager
