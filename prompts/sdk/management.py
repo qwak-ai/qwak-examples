@@ -1,3 +1,4 @@
+from qwak import QwakClient
 from qwak.llmops.model.descriptor import OpenAIChat
 from qwak.llmops.prompt.base import ChatPrompt
 from qwak.llmops.prompt.manager import PromptManager
@@ -48,7 +49,7 @@ def generate_response(name: str, prompt_manager: PromptManager):
 
 
 if __name__ == '__main__':
-    prompt_name = "banker-agent"
+    prompt_name = "banker-agent-2"
     description = "Testing a banker agent prompt"
 
     # Create an instance of the prompt manager
