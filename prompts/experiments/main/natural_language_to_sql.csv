@@ -1,0 +1,11 @@
+prompt,query
+What is the total sales for last year?,SELECT SUM(sales) FROM sales_data WHERE year = '2023';
+Show me the names of all customers who have made a purchase.,SELECT customer_name FROM customers WHERE customer_id IN (SELECT DISTINCT customer_id FROM orders);
+List the top 5 products by revenue.,"SELECT product_name, SUM(revenue) as total_revenue FROM sales GROUP BY product_name ORDER BY total_revenue DESC LIMIT 5;"
+How many orders were placed in the month of June?,SELECT COUNT(order_id) FROM orders WHERE MONTH(order_date) = 6;
+What is the average order value?,SELECT AVG(order_value) FROM orders;
+Find all employees who work in the Sales department.,SELECT employee_name FROM employees WHERE department = 'Sales';
+Get the total number of products in each category.,"SELECT category_name, COUNT(product_id) FROM products GROUP BY category_name;"
+What is the most expensive product sold?,"SELECT product_name, MAX(price) FROM products;"
+Which customers have not made a purchase this year?,SELECT customer_name FROM customers WHERE customer_id NOT IN (SELECT DISTINCT customer_id FROM orders WHERE YEAR(order_date) = '2024');
+Show me the order details for order ID 10248.,SELECT * FROM order_details WHERE order_id = 10248;
