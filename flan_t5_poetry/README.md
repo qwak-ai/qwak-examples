@@ -30,7 +30,7 @@ The code is designed for seamless integration with Qwak's platform and serves as
     poetry -C main install
     ```
 
-3. **Install and Configure the Qwak SDK**: Use your account [Qwak API Key](https://docs-saas.qwak.com/docs/getting-started#configuring-qwak-sdk) to set up your SDK locally.
+3. **Install and Configure the Qwak SDK**: Use your account [Qwak API Key](https://docs.qwak.com/docs/getting-started#configuring-qwak-sdk) to set up your SDK locally.
 
     ```bash
     pip install qwak-sdk
