@@ -4,7 +4,7 @@
 
 This project demonstrates how to extract, process, store, and consume features using [Qwak's Feature Store](https://www.qwak.com/product/feature-store). It includes examples of defining a Data Source, working with Feature Sets, and running a Credit Risk Machine Learning model. 
 
-The code is designed to work in conjunction with the [Quickstart Guide](https://docs-saas.qwak.com/docs/getting-started-copy) provided by Qwak.
+The code is designed to work in conjunction with the [Quickstart Guide](https://docs.qwak.com/docs/getting-started-copy) provided by Qwak.
 
 
 ## How to Test Locally
@@ -19,7 +19,7 @@ The code is designed to work in conjunction with the [Quickstart Guide](https://
     conda activate feature_set_quickstart_guide
     ```
 
-3. **Install and Configure the Qwak SDK**: Use your account [Qwak API Key](https://docs-saas.qwak.com/docs/getting-started#configuring-qwak-sdk) to set up your SDK locally.
+3. **Install and Configure the Qwak SDK**: Use your account [Qwak API Key](https://docs.qwak.com/docs/getting-started#configuring-qwak-sdk) to set up your SDK locally.
 
     ```bash
     pip install qwak-sdk qwak-inference
@@ -27,7 +27,7 @@ The code is designed to work in conjunction with the [Quickstart Guide](https://
     ```
 
 
-4. **Register the Data Source and Feature Set**: Follow the instructions in the [Quickstart Guide](https://docs-saas.qwak.com/docs/feature-store-quickstart-guide) to register the data source and feature set using the code provided in this repository.
+4. **Register the Data Source and Feature Set**: Follow the instructions in the [Quickstart Guide](https://docs.qwak.com/docs/feature-store-quickstart-guide) to register the data source and feature set using the code provided in this repository.
 
     ```bash
     qwak features register
