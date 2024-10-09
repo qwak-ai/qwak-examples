@@ -104,13 +104,7 @@ class StreamingRiskModel(QwakModel):
         qwak.log_metric({'random_state': self.metrics['random_state']})
         qwak.log_metric({'test_size': self.metrics['test_size']})
         print("************************ finished")
-        
-    
-        
-
-
-
-
+ 
     def schema(self):
         from qwak.model.schema import ModelSchema, InferenceOutput, FeatureStoreInput, Entity
         user_id = Entity(name="user_id", type=str)
