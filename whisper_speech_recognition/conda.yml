@@ -1,0 +1,12 @@
+name: whisper_speech_recognition
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pytorch::pytorch=2.0.1
+  - pytorch::torchaudio
+  - transformers
+  - pip:
+    - numpy<1.26.4
