@@ -1,0 +1,51 @@
+apiVersion: "sparkoperator.k8s.io/v1beta2"
+kind: SparkApplication
+metadata:
+  name: qwak-kafka-fill
+  namespace: qwak-spark
+spec:
+  type: Python
+  pythonVersion: "3"
+  mode: cluster
+  image: "171292542837.dkr.ecr.us-east-1.amazonaws.com/qwak/data-ingestor:pyspark-v3.1.1-hadoop3_0.0.102"
+#  image: spark:python3-java17
+  imagePullPolicy: "Always"
+  imagePullSecrets:
+    - ecr-prod
+  mainApplicationFile: s3a://qwakstack-lakedbddd6f6-1ktczrap5hcul/88a42e32-28f9-4f3f-9e5a-ab7cc2b49b27/qwak-streaming-test/kafka_fill_donald.py
+  sparkVersion: "3.1.1"
+  sparkConf:
+    "spark.hadoop.fs.s3a.impl": "org.apache.hadoop.fs.s3a.S3AFileSystem"
+    "spark.driver.extraJavaOptions": "-Divy.cache.dir=/tmp -Divy.home=/tmp"
+    "spark.executor.extraJavaOptions": "-Divy.cache.dir=/tmp -Divy.home=/tmp"
+    "spark.hadoop.fs.s3a.path.style.access": "true"
+    "spark.hadoop.fs.s3a.aws.credentials.provider": "com.amazonaws.auth.WebIdentityTokenCredentialsProvider"
+  restartPolicy:
+    type: OnFailure
+    onFailureRetries: 11
+    onFailureRetryInterval: 450
+    onSubmissionFailureRetries: 1
+    onSubmissionFailureRetryInterval: 450
+  driver:
+    cores: 2
+    coreLimit: "2048m"
+    coreRequest: "1024m"
+    memory: "1024m"
+    labels:
+      version: 3.1.1
+      spark-qwak-role: spark-driver
+      featureset-name: streaming-agg-fs
+      env-id: "123456a"
+    serviceAccount: spark-operator-spark
+  executor:
+    cores: 1
+    instances: 1
+    coreLimit: "512m"
+    coreRequest: "512m"
+    memory: "512m"
+    serviceAccount: spark-operator-spark
+    labels:
+      version: 3.1.1
+      spark-qwak-role: spark-executor
+      featureset-name: streaming-agg-fs
+      env-id: "123456"

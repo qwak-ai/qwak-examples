@@ -1,0 +1,13 @@
+name: CreditRiskStreaming
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pip=23.1.2
+  - pandas=1.4.3
+  - scikit-learn=0.24
+  - pyathena
+  - s3fs
+  - pip:
+    - catboost==1.0.5
