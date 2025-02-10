@@ -1,7 +1,4 @@
 # JFrog ML Examples
-
-![JFrog ML Platform](https://github.com/qwak-ai/qwak-examples/raw/main/_static/llm_cover.png)
-
 Example projects that demonstrate how to build, train, and deploy ML features and models using JFrog ML.
 
 ## Table of Contents
