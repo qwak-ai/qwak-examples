@@ -6,10 +6,10 @@ authors = ["Qwak Team<info@qwak.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = ">=3.8,<3.10"
-pandas = "^1.5.3"
-scikit-learn = "^1.2.2"
-catboost = "^1.1.1"
+python = ">=3.10,<3.12"
+pandas = "*"
+scikit-learn = "*"
+catboost = "*"
 
 [build-system]
 requires = ["poetry-core"]
