@@ -1,8 +1,8 @@
-# Qwak Platform Examples
+# JFrog ML Examples
 
-![Qwak Platform](https://github.com/qwak-ai/qwak-examples/raw/main/_static/llm_cover.png)
+![JFrog ML Platform](https://github.com/qwak-ai/qwak-examples/raw/main/_static/llm_cover.png)
 
-Example projects that demonstrate how to build, train, and deploy ML features and models using the Qwak platform 🦅.
+Example projects that demonstrate how to build, train, and deploy ML features and models using JFrog ML.
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ Example projects that demonstrate how to build, train, and deploy ML features an
 
 ## Overview
 
-This repository contains example projects that showcase the capabilities of the Qwak platform for MLOps. Each project is designed to be a standalone example, demonstrating different aspects of machine learning, from data preprocessing to model building and deployment.
+This repository contains example projects that showcase the capabilities of the JFrog ML platform for MLOps. Each project is designed to be a standalone example, demonstrating different aspects of machine learning, from data preprocessing to model building and deployment.
 
 ## Getting Started
 
@@ -25,7 +25,7 @@ To get started with these examples:
 3. Follow the README and installation instructions within each project folder.
 
 
-## Qwak Model Examples
+## JFrog ML Model Examples
 
 | Example | Category | Model | Info |
 |---------|------|----------|------|
@@ -38,11 +38,11 @@ To get started with these examples:
 | [Text Generation](flan_t5_poetry/) | ![Generative](https://img.shields.io/badge/-Generative-green) | ![FlanT5](https://img.shields.io/badge/-flan--t5--small-%23D3D3D3) ![Transformers](https://img.shields.io/badge/-Transformers-%23D3D3D3) | A small T5 model pre-trained for generic text generation tasks.[Conda] |
 | [Financial Text Generation](./flan_t5_finetuned_poetry/) | ![Generative](https://img.shields.io/badge/-Generative-green) | ![T5 Base](https://img.shields.io/badge/-t5--base-%23D3D3D3) ![Transformers](https://img.shields.io/badge/-Transformers-%23D3D3D3) | T5 base model trained on Financial QA data for domain specific tasks.[Poetry] |
 | [Titanic Survival Prediction](./titanic_conda/) | ![Predictive](https://img.shields.io/badge/-Predictive-blue) | ![CatBoost](https://img.shields.io/badge/-CatBoost-%23D3D3D3) | Binary classification model for Titanic survival prediction.[Conda] |
-| [Sentiment Classification](./transformers_conda/) | ![Predictive](https://img.shields.io/badge/-Predictive-blue) | ![DistilBERT](https://img.shields.io/badge/-DistilBERT-%23D3D3D3) ![Transformers](https://img.shields.io/badge/-Transformers-%23D3D3D3) | DistilBERT-based text classifier for Yelp reviews on Qwak platform.[Conda] |
+| [Sentiment Classification](./transformers_conda/) | ![Predictive](https://img.shields.io/badge/-Predictive-blue) | ![DistilBERT](https://img.shields.io/badge/-DistilBERT-%23D3D3D3) ![Transformers](https://img.shields.io/badge/-Transformers-%23D3D3D3) | DistilBERT-based text classifier for Yelp reviews on JFrog ML platform.[Conda] |
 | [Vector Similarity Search](./vector_store/) | ![Embeddings](https://img.shields.io/badge/-Embeddings-orange) | ![VectorStore](https://img.shields.io/badge/-VectorStore-%23D3D3D3) | Vectorizes product descriptions for similarity-based search. |
 
 
-## Qwak Feature Store Examples
+## JFrog ML Feature Store Examples
 
 | Example | Category | FeatureSet | Info |
 |---------|------|----------|------|
