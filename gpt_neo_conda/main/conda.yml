@@ -5,7 +5,7 @@ channels:
   - huggingface
   - xformers
 dependencies:
-  - python=3.9
+  - python=3.11
   - urllib3==1.26
   - pip
   - pytorch
