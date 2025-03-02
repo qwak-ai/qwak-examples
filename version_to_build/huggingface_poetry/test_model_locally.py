@@ -1,5 +1,5 @@
+from frogml_core.model.tools import run_local
 from pandas import DataFrame
-from qwak.model.tools import run_local
 from main import *
 
 if __name__ == '__main__':

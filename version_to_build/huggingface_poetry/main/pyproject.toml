@@ -13,6 +13,10 @@ datasets = "^2.20.0"
 pyarrow = "<17.0.0"
 urllib3 = "^2.2.2"
 transformers = "^4.48.1"
+frogml = {version = "0.10.5", extras = ["transformers"]}
+qwak-core = "0.4.201"
+torch = "^2.6.0"
+pandas = "^2.2.3"
 
 
 [build-system]
