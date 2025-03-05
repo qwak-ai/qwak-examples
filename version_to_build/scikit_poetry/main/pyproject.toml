@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "huggingface-template"
+name = "scikit-template"
 version = "0.1.0"
 description = ""
 authors = ["JFrog ML Team<contact@jfrog.com>"]
@@ -7,8 +7,7 @@ package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.10, <3.12"
-frogml = {version = ">=0.10.9", extras = ["transformers"]}
-transformers = "4.49.0"
+frogml = {version = ">=0.10.9"}
 qwak-core = ">=0.4.207"
 frogml-core = ">=0.0.21"
 torch = "^2.6.0"

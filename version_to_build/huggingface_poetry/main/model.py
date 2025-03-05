@@ -1,9 +1,7 @@
 from typing import Optional
 
 import frogml
-import pandas as pd
 import torch
-from frogml_core.model.adapters import DataFrameOutputAdapter
 from pandas import DataFrame
 from qwak.model.base import QwakModel
 from transformers import DistilBertModel, DistilBertTokenizer
@@ -32,9 +30,9 @@ class HuggingFaceModel(QwakModel):
 
     def initialize_model(self):
         self.model, self.tokenizer = frogml.huggingface.load_model(
-            repository="nlp-models",
-            model_name="sentiment_analysis",
-            version="2025-02-26-08-10-15-688",
+            repository="version-to-build",
+            model_name="huggingface",
+            version="2025-03-05-08-58-21-061",
         )
         # Check if a GPU is available
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -42,7 +40,7 @@ class HuggingFaceModel(QwakModel):
         print(f"Setting device as {self.device}")
         self.model.to(self.device)
 
-    @frogml.api()
+    @frogml.api(analytics=True)
     def predict(self, df: DataFrame, analytics_logger = None) -> DataFrame:
         inputs = self.tokenizer(
             df["text"].to_list(), return_tensors="pt", padding=True, truncation=True
@@ -71,10 +69,3 @@ class HuggingFaceModel(QwakModel):
         )
 
         return results
-
-if __name__ == "__main__":
-    model = HuggingFaceModel()
-    model.build()
-    model.initialize_model()
-    input = pd.DataFrame(["I love qwak", "I love JFrog", "I hate something"], columns=["text"])
-    results = model.predict(input)

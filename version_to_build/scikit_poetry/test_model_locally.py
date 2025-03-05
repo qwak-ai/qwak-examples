@@ -1,5 +1,6 @@
 from frogml_core.model.tools import run_local
 from pandas import DataFrame
+
 from main import *
 
 if __name__ == '__main__':
@@ -8,8 +9,19 @@ if __name__ == '__main__':
 
     feature_vector = [
         {
-            "text": "An example sentence"
-        }]
+            "sepal_width": 3,
+            "sepal_length": 3.5,
+            "petal_width": 4,
+            "petal_length": 5
+        },
+        {
+            "sepal_width": 1,
+            "sepal_length": 3.5,
+            "petal_width": 1,
+            "petal_length": 1
+        }
+    ]
+
     # Create the DataFrame and convert it to JSON
     df = DataFrame(feature_vector).to_json()
     print("Predicting for: \n\n", df)
