@@ -10,8 +10,9 @@ python = "^3.10, <3.12"
 frogml = {version = ">=0.10.9"}
 qwak-core = ">=0.4.207"
 frogml-core = ">=0.0.21"
-torch = "^2.6.0"
 pandas = "^2.2.3"
+scikit-learn = "^1.6.1"
+
 
 [build-system]
 requires = ["poetry-core"]
