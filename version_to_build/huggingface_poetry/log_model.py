@@ -17,6 +17,9 @@ class HuggingFaceModel(QwakModel):
         self.device = None
         self.model_name = "distilbert/distilbert-base-uncased-finetuned-sst-2-english"
 
+        self.jfrog_repository = "version-to-build"
+        self.jfrog_model_name = "huggingface"
+
     def build(self):
         """
         The build() method is called once during the build process.
@@ -31,10 +34,16 @@ class HuggingFaceModel(QwakModel):
         )
 
         frogml.huggingface.log_model(
-            repository="nlp-models",
-            model_name="sentiment_analysis",
+            repository=self.jfrog_repository,
+            model_name=self.jfrog_model_name,
             model=self.model,
-            tokenizer=self.tokenizer
+            tokenizer=self.tokenizer,
+            parameters={
+                "evaluation": False
+            },
+            metrics={
+                "test": "test"
+            }
         )
 
     def schema(self):
@@ -46,9 +55,9 @@ class HuggingFaceModel(QwakModel):
 
     def initialize_model(self):
         self.model, self.tokenizer = frogml.huggingface.load_model(
-            repository="nlp-models",
-            model_name="sentiment_analysis",
-            version="2025-02-26-08-10-15-688",
+            repository=self.jfrog_repository,
+            model_name=self.jfrog_model_name,
+            version="2025-03-03-13-58-06-651",
         )
         # Check if a GPU is available
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
