@@ -3,13 +3,12 @@ channels:
   - defaults
   - conda-forge
   - huggingface
-  - xformers
+  - pytorch
 dependencies:
   - python=3.11
-  - urllib3==1.26
-  - pip
-  - pytorch
+  - numpy=1.26.4
+  - pandas=1.5.3
+  - pip:
+    - urllib3==1.26
+  - pytorch::pytorch
   - transformers
-  - accelerate
-  - einops
-  - xformers

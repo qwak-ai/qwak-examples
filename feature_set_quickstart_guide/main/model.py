@@ -1,6 +1,8 @@
 # Importing the QwakModel interface
 from qwak.model.base import QwakModel
 
+from frogml_core.model.base import BaseModel as FrogMlModel
+
 # Importing the Feature Store clients used to fetch results
 from qwak.feature_store.offline import OfflineClientV2
 from qwak.feature_store.online.client import OnlineClient
@@ -27,7 +29,7 @@ from main.feature_set import ENTITY_KEY, FEATURE_SET
 
 
 # CreditRiskModel class definition, inheriting from QwakModel
-class CreditRiskModel(QwakModel):
+class CreditRiskModel(FrogMlModel):
 
     # Class constructor - anything initialized here will be `pickled` with the Docker Image
     def __init__(self):
@@ -54,7 +56,7 @@ class CreditRiskModel(QwakModel):
         # These are the specific features that the model will be trained on
 
         offline_feature_store = OfflineClientV2()
-        features = FeatureSetFeatures(feature_set_name='user-credit-risk-features',
+        features = FeatureSetFeatures(feature_set_name = FEATURE_SET,
                                       feature_names=['checking_account', 'age', 'job', 'duration',
                                                    'credit_amount', 'housing', 'purpose', 'saving_account', 'sex'])
 
