@@ -15,3 +15,6 @@ csv_source = CsvSource(
     quote_character='"',                                        # Character used for quoting in the CSV file
     escape_character='"'                                        # Character used for escaping in the CSV file
 )
+
+
+csv_source.get_sample(50)

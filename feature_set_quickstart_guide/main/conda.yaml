@@ -4,9 +4,10 @@ channels:
   - conda-forge
 dependencies:
   - python=3.9
-  - scipy
-  - scikit-learn
-  - pandas
+  - scipy=1.11.1
+  - scikit-learn=1.3.0
+  - pandas=1.5.3
+  - numpy=1.26.4
   - catboost
   - pip:
     - pyathena          # Athena query engine - required for working with the Feature Store
