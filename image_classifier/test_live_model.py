@@ -8,5 +8,5 @@ img_ndarray = np.array(img)
 img_list = img_ndarray.tolist()
 img_json = json.dumps(img_list)
 
-client = RealTimeClient(model_id="image_classifier")
+client = RealTimeClient(model_id="embedded_image_classifier")
 print(client.predict(img_json))
