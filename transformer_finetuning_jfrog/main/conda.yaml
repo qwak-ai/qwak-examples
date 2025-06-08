@@ -1,0 +1,15 @@
+name: jfrog-ml-demo-gpt-fine-tuned
+channels:
+  - conda-forge
+  - defaults
+  - pytorch
+dependencies:
+  - python=3.11
+  - numpy=1.26.4
+  - pandas=1.5.3
+  - pip:
+    - transformers==4.38.0
+    - accelerate==0.28.0
+    - datasets
+    - frogml
+  - pytorch::pytorch
