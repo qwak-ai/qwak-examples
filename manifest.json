@@ -227,9 +227,12 @@
           "model.py"
         ]
       },
+      "build": {
+        "instance": "medium"
+      },
       "deploy": {
         "pods": "1",
-        "instance": "small",
+        "instance": "medium",
         "timeout": 50000
       },
       "tags": [
