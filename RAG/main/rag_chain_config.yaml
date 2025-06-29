@@ -1,0 +1,33 @@
+input_example:
+  messages:
+  - content: What country won Eurovision 2024
+    role: user
+llm_config:
+  llm_parameters:
+    model_name:  Qwen/Qwen2.5-0.5B-Instruct
+    max_tokens: 1500
+    temperature: 0.01
+  llm_prompt_template: 'You are an expert on the Eurovision 2024 song contest.  All
+    context given to you will be about the Eurovision 2024 song contest even if it
+    is not explicitly stated as such.  You will answer questions regarding the contest
+    using context provided to you.  If you cannot answer the question state that you
+    do not know the answer.  Do not make things up.  Here is some context which may
+    or may not help you answer the user''s question: {context}.  Based on this context,
+    answer this question: {question}'
+  llm_prompt_template_variables:
+  - context
+  - question
+embedding_config:
+  model_name: sentence-transformers/all-MiniLM-L6-v2
+retriever_config:
+  chunk_template: 'Passage: {chunk_text}
+
+    '
+  data_pipeline_tag: poc
+  parameters:
+    k: 6
+  schema:
+    chunk_text: Text
+    document_uri: doc
+    primary_key: chunk_id
+  vector_search_index: chroma_db_eurovision_class
