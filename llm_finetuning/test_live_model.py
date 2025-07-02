@@ -9,7 +9,7 @@ def main(model_id):
     columns = ["prompt"]
 
     # Define the data
-    data = [[""]]
+    data = [["This movie was an absolute masterpiece, the acting was incredible and the story was gripping."]]
     
     # Create the DataFrame and convert it to JSON
     _input = pd.DataFrame(data, columns=columns).to_json(orient='records')
