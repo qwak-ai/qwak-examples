@@ -1,0 +1,18 @@
+name: rag-chat-agent
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip:
+    - pandas==1.5.3
+    - langchain-core==0.3.65  # replace with actual version
+    - langgraph==0.4.8  # replace with actual version
+    - mlflow==2.21.3  # replace with actual version
+    - langchain-community
+    - sentence-transformers
+    - chromadb
+    - keras
+    - tf-keras
+    - pyyaml
+    - accelerate

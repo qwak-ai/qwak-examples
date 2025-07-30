@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "huggingface-template"
+version = "0.1.0"
+description = ""
+authors = ["JFrog ML Team<contact@jfrog.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11, <3.12"
+frogml = {version = ">=0.10.11", extras = ["transformers"]}
+transformers = "4.38.0"
+torch = ">=2.6.0"
+accelerate = "=0.28.0"
+pandas = ">=2.2.3"
+evaluate = ">=0.4.3"
+scikit-learn = ">=1.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

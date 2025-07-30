@@ -1,0 +1,14 @@
+name: image-classifier
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - numpy=1.26.4
+  - pandas=1.5.3
+  - pip:
+      - pillow
+      - imageio
+      - torch  # Install PyTorch with pip
+      - torchvision  # Install torchvision with pip (if needed)
+      - frogml

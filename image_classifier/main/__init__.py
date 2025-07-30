@@ -1,4 +1,4 @@
-from .model import ImageClassifier
+from model import ImageClassifier
 
 
 def load_model():
