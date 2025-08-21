@@ -16,7 +16,7 @@ if __name__ == '__main__':
     #os.environ['TRAIN'] = True
 
     # Define the data
-    data = [["This movie was an absolute masterpiece, the acting was incredible and the story was gripping."]]
+    data = [["How do I expose a deployment in Kubernetes using a service?"]]
     
     # Create the DataFrame and convert it to JSON
     df = DataFrame(data, columns=columns).to_json(orient="records")

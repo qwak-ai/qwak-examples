@@ -38,6 +38,10 @@ def predict(model, data_input, **kwargs) -> Any:
         return_tensors="pt", 
         padding=True
     ).to(device)
+
+
+    # Store the length of the input prompt tokens
+    input_ids_len = inputs['input_ids'].shape[1]
     
     # 5. Ensure the model is on the same device
     model = model.to(device)
@@ -49,8 +53,12 @@ def predict(model, data_input, **kwargs) -> Any:
             max_new_tokens=256,
         )
     
+
+    # We keep all batch items (:) and slice each one from the end of the input length onwards.
+    response_only_ids = generated_ids[:, input_ids_len:]
+
     # 6. Decode the generated token IDs back to text
-    decoded_responses = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)
+    decoded_responses = tokenizer.batch_decode(response_only_ids, skip_special_tokens=True)
     
     # 7. Return the results as a new DataFrame
     return pd.DataFrame({

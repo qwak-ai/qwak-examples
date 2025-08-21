@@ -1,4 +1,4 @@
-name: jfrog-ml-demo-gpt-fine-tuned
+name: jfrog-ml-demo-devops-helper
 channels:
   - conda-forge
   - defaults
