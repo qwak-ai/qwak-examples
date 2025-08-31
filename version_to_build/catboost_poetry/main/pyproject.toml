@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "catboost-template"
+version = "0.1.0"
+description = ""
+authors = ["JFrog ML Team<contact@jfrog.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+pandas = "*"
+scikit-learn = "*"
+catboost = "*"
+frogml = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
