@@ -1,4 +1,4 @@
-from qwak.model.tools import run_local
+from frogml.sdk.model.tools import run_local
 import json
 import pandas as pd
 
@@ -17,7 +17,7 @@ if __name__ == '__main__':
     print("\n\nPREDICTION REQUEST:\n\n", df)
 
     # Run local inference using the model and print the prediction
-    # The run_local function is part of the qwak library and allows for local testing of the model
+    # The run_local function is part of the frogml library and allows for local testing of the model
     prediction = run_local(m, json_df)
     prediction_data = json.loads(prediction)
 

@@ -1,14 +1,11 @@
 import pandas as pd
 import frogml
 from frogml import FrogMlModel
-from frogml_core.model.schema import ExplicitFeature, ModelSchema, InferenceOutput
-from frogml_core.tools.logger import get_qwak_logger
+from frogml.sdk.model.schema import ExplicitFeature, ModelSchema, InferenceOutput
 from sklearn.model_selection import RandomizedSearchCV, StratifiedKFold
 from catboost import CatBoostClassifier
 from main.data_processor import DataPreprocessor
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
-
-logger = get_qwak_logger()
 
 class FraudDetectionModel(FrogMlModel):
 
@@ -78,22 +75,18 @@ class FraudDetectionModel(FrogMlModel):
             'recall': recall_score(y_test, y_test_pred)
         }
 
-        qwak.log_param(random_search.best_params_)
-        qwak.log_metric(metrics)
-        qwak.log_data(pd.DataFrame(X_train), tag = 'train_data')
+        frogml.log_param(random_search.best_params_)
+        frogml.log_metric(metrics)
+        frogml.log_data(pd.DataFrame(X_train), tag = 'train_data')
 
 
     # ----- INFERENCE LOGIC ------
     @frogml.api()
-    def predict(self, df, analytics_logger):
+    def predict(self, df):
 
         prediction_data = self.data_preprocessor.preprocess_inference_data(df)
 
         predictions = self.model.predict(prediction_data)
-
-        analytics_logger.log_many(
-            values={'another_column': 'some_value', 'something_else': 123}
-        )
 
         return pd.DataFrame({'Fraud': predictions})
 

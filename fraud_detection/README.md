@@ -1,118 +1,99 @@
-# XGBoost Churn Prediction Model with Qwak
+# 🔍 Credit Card Fraud Detection Model
 
-## Overview
+## 🎯 Overview
 
-This project employs the XGBoost algorithm for customer churn prediction. It's implemented using the [Qwak's Machine Learning Platform](https://www.qwak.com/) and the XGBoost library.
+This project demonstrates a **Credit Card Fraud Detection Model** using XGBoost and the JFrogML platform. It showcases multiple deployment strategies and training approaches for production-ready fraud detection systems.
 
-### Features
+## 📋 Prerequisites
 
-- **Custom XGBoostChurnPredictionModel Class Definition**: Customizes the base QwakModel to work with the XGBoost algorithm for churn prediction.
+Before starting, ensure you have:
 
-- **Model Initialization**: Initializes the XGBoost model with user-defined or default hyperparameters. The model is trained on a customer churn dataset and fine-tuned for optimal performance.
-
-- **Churn Prediction via Qwak's Predict API**: Utilizes Qwak's Predict API for assessing the probability of customer churn based on various features like account length, area code, international plan, etc.
-
-### Functionality
-
-The primary functionality is to predict the probability of customer churn. The code is designed for seamless integration with Qwak's platform and serves as a practical example for churn prediction tasks.
-
-
+- **Python 3.9-3.11** installed
+- **JFrog account** ([Get started for free](https://jfrog.com/start-free/))
 
 <br>
 
-## How to Test Locally
+## 🚀 Quick Start
 
-
-1. **Clone the Repository**: Clone this GitHub repository to your local machine.
-
-2. **Install Dependencies**: Make sure you have the required dependencies installed, as specified in the `conda.yml` file.
-
-    ```bash
-    conda env create -f main/conda.yaml
-    conda activate churn_model
-    ```
-
-3. **Install and Configure the Qwak SDK**: Use your account [Qwak API Key](https://docs.qwak.com/docs/getting-started#configuring-qwak-sdk) to set up your SDK locally.
-
-    ```bash
-    pip install qwak-sdk
-    qwak configure
-    ```
-
-5. **Run the Model Locally**: Execute the following command to test the model locally:
-
-   ```bash
-   python test_model_locally.py
-   ```
+Choose your preferred approach:
 
 <br>
 
-<br>
+### 🏠 **Option 1: Local Model Experimentation & Registry**
 
-## How to Run Remotely on Qwak
-
-1. **Build on the Qwak Platform**:
-
-    Create a new model on Qwak using the command:
-
-    ```bash
-    qwak models create "Churn Prediction Model" --project "Sample Project"
-    ```
-
-
-    Initiate a model build with:
-
-    ```bash
-    qwak models build --model-id <your-model-id> ./churn_model_new
-    ```
-
-
-2. **Deploy the Model on the Qwak Platform with a Real-Time Endpoint**:
-
-    To deploy your model via the CLI, use the following command:
-
-    ```bash
-    qwak models deploy realtime --model-id <your-model-id> --build-id <your-build-id>
-    ```
-
-3. **Test the Live Model with a Sample Request**:
-
-    Install the Qwak Inference SDK:
-
-    ```bash
-    pip install qwak-inference
-    ```
-
-    Call the Real-Time endpoint using your Model ID from the Qwak platform:
-
-    ```bash
-    python test_live_mode.py <your-qwak-model-id>
-    ```
-
-<br>
-
-
-## Project Structure
-
-```bash
-.
-├── main                   # Main directory containing core code
-│   ├── __init__.py        # An empty file that indicates this directory is a Python package
-│   ├── model.py           # Defines the Churn Model
-│   ├── data.csv           # Defines the data to train the Model
-│   └── conda.yaml         # Conda environment configurationdata
-|
-├── test_model_locally.py  # Script to test the model locally
-├── test_live_model.py     # Script to test the live model with a sample REST request
-└── README.md              # Documentation
+```
+┌─────────────────────┐    ┌─────────────────────────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   🔧 Local Model    │ -> │   📦 JFrog ML Registry              │ -> │   🏗️ Build      │ -> │   🚀 Deploy     │
+│   Experimentation   │    │   (Artifactory)                     │    │   Container     │    │   ML Serving    │
+│   (Training)        │    │                                     │    │   Image         │    │   API Endpoint  │
+└─────────────────────┘    └─────────────────────────────────────┘    └─────────────────┘    └─────────────────┘
+     FrogML Python SDK              FrogML Python SDK                     JFrogML UI              JFrogML UI
 ```
 
+**Complete workflow**: [📓 Training Notebook](credit-card-fraud-detection.ipynb)
+
+**Best for**: Experimentation, model versioning, and custom serving behavior development
+
+---
+<br>
+
+### ☁️ **Option 2: ML App Code → Build → Deploy**
+
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   💻 Local ML   │ -> │   🏗️ Build      │ -> │   🚀 Deploy     │
+│   App Code      │    │    Process      │    │   ML Serving    │
+│   (or GitHub)   │    │(w/ Training Job)│    │   API Endpoint  │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+     Local IDE              FrogML CLI           FrogML CLI
+```
+
+**Complete workflow**: [🚀 Remote Training & Deployment Guide](remote-training-and-deployment.md)
+
+**Best for**: Standardized, replicable, production-ready workflows with integrated training and serving
+
+---
+
+**💡 Recommendation**: 
+- **Choose Option 1** if you want to experiment locally and push experiments to model registry (JFrog Artifactory) with all metadata
+- **Choose Option 2** if you want a standardized, production-ready workflow with integrated training and serving
 
 <br>
+
+
+## 📁 Project Structure
+
+```
+fraud_detection/
+├── main/                       # Main directory containing core code
+│   ├── __init__.py             # Python package initialization
+│   ├── model.py                # FrogMLModel with fraud detection logic
+│   ├── data_processor.py       # Data preprocessing utilities
+│   ├── small_fraud_dataset.csv # Training dataset
+│   └── conda.yml              # Environment dependencies
+```
+
 <br>
 
-## Try Qwak's MLOps Platform for Free
+## 🔗 Related Resources
 
-Are you looking to deploy your machine learning models in a production-ready environment within minutes? [Qwak](https://www.qwak.com/) offers a seamless platform to build, train, and deploy your models with ease.
+- [JFrogML Documentation](https://jfrog.com/help/r/jfrog-ml-documentation/jfrog-ml-introduction)
+- [Feature Store Example](../feature_set_quickstart_guide/README.md)
 
-Whether you're a data scientist, ML engineer, or developer, Qwak provides the tools and support to take your models from development to deployment effortlessly. Explore the platform and start deploying your models today. [Try Qwak for free!](https://www.qwak.com/)
+## 🤝 Contributing
+
+Found an issue or have a suggestion? Please:
+1. Check existing [issues](../../issues)
+2. Review the relevant guide
+3. Submit a pull request with improvements
+
+## 📚 Next Steps
+
+1. **Choose your deployment path** from the guides above
+2. **Follow the step-by-step instructions** in your chosen guide
+3. **Customize the model** for your specific fraud detection needs
+4. **Scale up** with larger datasets and more complex feature engineering
+
+---
+
+**Ready to get started?** Pick a guide above and begin your fraud detection journey! 🚀
