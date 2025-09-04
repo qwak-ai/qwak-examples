@@ -1,9 +1,11 @@
-from qwak_inference import BatchInferenceClient
+from frogml_inference import BatchInferenceClient
 import pandas as pd
 import os
 
+JFROGML_MODEL_ID = 'churn_prediction_model'
+
 # You can also set the QWAK_MODEL_ID environment variable instead of passing it
-batch_inference_client = BatchInferenceClient(model_id='batch_churn_model')
+batch_inference_client = BatchInferenceClient(model_id=JFROGML_MODEL_ID)
 
 file_absolute_path = os.path.dirname(os.path.abspath(__file__))
 df = pd.read_csv(f"{file_absolute_path}/main/data.csv")

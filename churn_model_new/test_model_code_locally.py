@@ -1,5 +1,5 @@
 from pandas import DataFrame
-from qwak.model.tools import run_local
+from frogml.sdk.model.tools import run_local
 import json
 
 from main import *

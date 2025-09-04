@@ -1,14 +1,14 @@
 import os
 
 import pandas as pd
-import qwak
+import frogml
 import xgboost as xgb
-from qwak.model.base import QwakModel
-from qwak.model.schema import ExplicitFeature, ModelSchema, InferenceOutput
+from frogml import FrogMlModel
+from frogml.sdk.model.schema import ExplicitFeature, ModelSchema, InferenceOutput
 from sklearn.model_selection import train_test_split
 
 
-class XGBoostChurnPredictionModel(QwakModel):
+class XGBoostChurnPredictionModel(FrogMlModel):
 
     def __init__(self):
         self.params = {
@@ -21,7 +21,7 @@ class XGBoostChurnPredictionModel(QwakModel):
         self.model = xgb.XGBClassifier(**self.params)
 
         # Log model parameters to Qwak for tracking purposes
-        qwak.log_param(self.params)
+        frogml.log_param(self.params)
 
     def build(self):
         file_absolute_path = os.path.dirname(os.path.abspath(__file__))
@@ -46,10 +46,10 @@ class XGBoostChurnPredictionModel(QwakModel):
 
         # Log metrics into Qwak
         accuracy = self.model.score(X_validation, y_validation)
-        qwak.log_metric({"val_accuracy": accuracy})
-        qwak.log_data(dataframe=X, tag="train_data")
+        frogml.log_metric({"val_accuracy": accuracy})
+        frogml.log_data(dataframe=X, tag="train_data")
 
-    @qwak.api()
+    @frogml.api()
     def predict(self, df):
         """
         The predict(df) method is the actual inference method.

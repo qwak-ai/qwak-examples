@@ -1,7 +1,7 @@
-from qwak.feature_store.data_sources import CsvSource
+from frogml.feature_store.data_sources import CsvSource
 
 # The S3 anonymous config class is required for public S3 buckets
-from qwak.feature_store.data_sources import AnonymousS3Configuration
+from frogml.feature_store.data_sources import AnonymousS3Configuration
 
 
 # Create a CsvSource object to represent a CSV data source 

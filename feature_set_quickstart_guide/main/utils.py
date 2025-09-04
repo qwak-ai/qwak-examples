@@ -1,7 +1,7 @@
 from typing import Tuple
 import pandas as pd
 
-from main.feature_set import FEATURE_SET
+FEATURE_SET = "user-credit-risk-features"
 
 # Utility function
 def features_cleaning(data: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:

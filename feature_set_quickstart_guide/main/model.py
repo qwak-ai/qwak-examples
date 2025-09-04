@@ -1,33 +1,31 @@
-# Importing the QwakModel interface
-from qwak.model.base import QwakModel
+# Importing the FrogMlModel interface
+from frogml import FrogMlModel
 
 # Importing the Feature Store clients used to fetch results
-from qwak.feature_store.offline import OfflineClientV2
-from qwak.feature_store.online.client import OnlineClient
-from qwak.feature_store.offline.feature_set_features import FeatureSetFeatures
+from frogml.feature_store.offline import OfflineClientV2
+from frogml.core.feature_store.offline.feature_set_features import FeatureSetFeatures
 from datetime import datetime
 
 # Importing the Features schema and prediction adapters
-from qwak.model.schema import ModelSchema, InferenceOutput
-from qwak.model.schema_entities import FeatureStoreInput
+from frogml.sdk.model.schema import ModelSchema, InferenceOutput
+from frogml.sdk.model.schema_entities import FeatureStoreInput
 
 from catboost import cv, CatBoostRegressor, Pool
 from sklearn.model_selection import train_test_split
 
-# Utility methods to log metrics and model parameters to Qwak Cloud
-from qwak import log_param, log_metric
-
 from datetime import date
 import pandas as pd
 import numpy as np
-import qwak
+import frogml
 
 from main.utils import features_cleaning
-from main.feature_set import ENTITY_KEY, FEATURE_SET
+
+FEATURE_SET = "user-credit-risk-features"
+ENTITY_KEY = "user_id"
 
 
-# CreditRiskModel class definition, inheriting from QwakModel
-class CreditRiskModel(QwakModel):
+# CreditRiskModel class definition, inheriting from FrogMlModel
+class CreditRiskModel(FrogMlModel):
 
     # Class constructor - anything initialized here will be `pickled` with the Docker Image
     def __init__(self):
@@ -44,11 +42,11 @@ class CreditRiskModel(QwakModel):
         self.feature_range_end = date.today()
 
         # Logging training set date range for tracking and reproducibility
-        # The parameters will also be available in the Qwak UI for each Model Build
-        log_param({"features_start_range": self.feature_range_start,
+        # The parameters will also be available in the JFrogML UI for each Model Build
+        frogml.log_param({"features_start_range": self.feature_range_start,
                    "features_end_range": self.feature_range_end})
 
-    # Method called by the Qwak Cloud to train and build the model
+    # Method called by the JFrogML Cloud to train and build the model
     def build(self):
         # Define the features to be used for the model and fetched from the Offline Feature Store
         # These are the specific features that the model will be trained on
@@ -66,9 +64,9 @@ class CreditRiskModel(QwakModel):
         )
 
         # Logging hyperparameters for tracking and reproducibility
-        # The parameters will also be available in the Qwak UI for each Model Build
+        # The parameters will also be available in the JFrogML UI for each Model Build
         params = self.model.get_params()
-        log_param({"iterations": params['iterations'], "loss_function": params['loss_function']})
+        frogml.log_param({"iterations": params['iterations'], "loss_function": params['loss_function']})
 
         # Clean and split the features
         X, y = features_cleaning(data)
@@ -92,8 +90,8 @@ class CreditRiskModel(QwakModel):
 
         max_mean_row = cv_data[cv_data["test-RMSE-mean"] == np.max(cv_data["test-RMSE-mean"])]
 
-        # Log the metrics to Qwak to have a basis of performance comparison between Model Builds
-        log_metric(
+        # Log the metrics to JFrogML to have a basis of performance comparison between Model Builds
+        frogml.log_metric(
             {
                 "val_rmse_mean": max_mean_row["test-RMSE-mean"][0],
                 "val_rmse_std": max_mean_row["test-RMSE-std"][0],
@@ -101,7 +99,7 @@ class CreditRiskModel(QwakModel):
         )
 
     # Define the schema for the Model and Feature Store
-    # This tells Qwak how to deserialize the output of the Predictiom method as well as what
+    # This tells JFrogML how to deserialize the output of the Prediction method as well as what
     # features to retrieve from the Online Feature Store for inference without explicitly specifying every time.
     def schema(self) -> ModelSchema:
         model_schema = ModelSchema(inputs=[
@@ -118,10 +116,10 @@ class CreditRiskModel(QwakModel):
             outputs=[InferenceOutput(name="score", type=float)])
         return model_schema
 
-    # The Qwak API decorator wraps the predict function with additional functionality and wires additional adependencies.
+    # The JFrogML API decorator wraps the predict function with additional functionality and wires additional dependencies.
     # This allows external services to call this method for making predictions.
 
-    @qwak.api(feature_extraction=True)
+    @frogml.api(feature_extraction=True)
     def predict(self, df: pd.DataFrame, extracted_df: pd.DataFrame) -> pd.DataFrame:
         # Prediction method that takes a DataFrame with the User IDs as input, enriches it with Features and returns predictions
 

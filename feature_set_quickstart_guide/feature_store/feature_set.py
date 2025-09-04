@@ -1,24 +1,16 @@
-from qwak.feature_store.entities.entity import Entity
 from datetime import datetime
 
-# Import the batch decorator from Qwak's feature_store module
-from qwak.feature_store.feature_sets import batch
+# Import the batch decorator from JFrogML's feature_store module
+from frogml.feature_store.feature_sets import batch
 
 # Import the SQL Spark Transformation to be used as output in our feature set method definition
-from qwak.feature_store.feature_sets.transformations import SparkSqlTransformation
+from frogml.core.feature_store.feature_sets.transformations import SparkSqlTransformation
 
 
 # Constants to use across the project to identify FeatureSet objects
 FEATURE_SET = "user-credit-risk-features"
-ENTITY_KEY = "user"
+ENTITY_KEY = "user_id"
 
-"""
-Entity is the key that uniquely identifies each feature vector in the Feature Set.
-"""
-entity = Entity(
-     name='user',
-     description='A Registered User'
-)
 
 """
 @batch.feature_set()    -> Defining the FeatureSet with its Data Source and Entity key
@@ -31,7 +23,7 @@ entity = Entity(
 """
 @batch.feature_set(
     name=FEATURE_SET,
-    entity=ENTITY_KEY,
+    key=ENTITY_KEY,
     data_sources=["credit_risk_data"],
 )
 @batch.metadata(
@@ -44,7 +36,7 @@ entity = Entity(
 def user_features():
     return SparkSqlTransformation(
         """
-        SELECT user_id as user,
+        SELECT user_id,
                age,
                sex,
                job,
